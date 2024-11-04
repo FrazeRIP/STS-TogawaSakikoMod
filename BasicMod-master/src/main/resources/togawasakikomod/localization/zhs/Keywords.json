@@ -1,0 +1,113 @@
+﻿  [
+    {
+       "ID": "{modID}:DazzlingPower",
+       "NAMES": [
+         "闪耀",
+         "DazzlingPower"
+        ],
+        "DESCRIPTION": "每当你获得正面状态时，对一名随机敌人造成等同于 #y闪耀 层数的伤害。"
+    },
+    {
+       "ID": "{modID}:HypePower",
+       "NAMES": [
+         "狂热",
+         "HypePower"
+        ],
+        "DESCRIPTION": "每当你即将失去 #y格挡 时，消耗一层 #y狂热 来代替。"
+    },
+    {
+       "ID": "{modID}:DolorisPower",
+       "NAMES": [
+         "悲伤"
+        ],
+        "DESCRIPTION": "受到的伤害无视你的 #y格挡 。"
+    },
+    {
+       "ID": "{modID}:MortisPower",
+       "NAMES": [
+         "死亡"
+        ],
+        "DESCRIPTION": "每当你受到伤害，将一张 #y受伤 加入你的抽牌堆。"
+    },
+    {
+       "ID": "{modID}:OblivionisPower",
+       "NAMES": [
+         "遗忘"
+        ],
+        "DESCRIPTION": "你打出的攻击牌会被 #y消耗 。"
+    },
+    {
+       "ID": "{modID}:TimorisPower",
+       "NAMES": [
+         "恐惧"
+        ],
+        "DESCRIPTION": "回合开始时将所有 #y恐惧 转化为等量层数的 #y易伤 。"
+    },
+    {
+       "ID": "{modID}:Remove",
+       "NAMES": [
+         "移除"
+        ],
+        "DESCRIPTION": "将卡牌从本局游戏中移除（包括卡组和战斗中卡组）。"
+    },
+    {
+       "ID": "{modID}:GodsCreationPower",
+       "NAMES": [
+         "神的造物"
+        ],
+        "DESCRIPTION": "你每次受到伤害时，减少受到 #y神的造物 层数的伤害。"
+    },
+    { 
+       "ID": "{modID}:Unremoveable",
+       "PROPER_NAME": "无法被移除",
+       "NAMES": [
+         "无法被移除",
+         "Unremoveable"
+        ],
+        "DESCRIPTION": "无法被卡牌，商店和事件等效果从卡组 #y移除 。"
+    },
+    { 
+       "ID": "{modID}:KingsPower",
+       "PROPER_NAME": "王者",
+       "NAMES": [
+         "王者"
+        ],
+        "DESCRIPTION": "本场战斗卡牌奖励可供选择的牌数减少一张。"
+    },
+    { 
+       "ID": "{modID}:Symbol",
+       "PROPER_NAME": "元素",
+       "NAMES": [
+         "元素",
+         "Symobl"
+        ],
+        "DESCRIPTION": " #y第一元素：恐惧之火 ， #y第二元素：爱恋之风 ， #y第三元素：悲伤之水 ， #y第四元素：葬送之土 和 #y遗忘之光 。"
+    },
+    { 
+       "ID": "{modID}:Symbol+",
+       "PROPER_NAME": "元素+",
+       "NAMES": [
+         "元素+",
+         "Symobl+"
+        ],
+        "DESCRIPTION": " #y第一元素：恐惧之火+ ， #y第二元素：爱恋之风+ ， #y第三元素：悲伤之水+ ， #y第四元素：葬送之土+ 和 #y遗忘之光+ 。"
+    },
+    { 
+       "ID": "{modID}:Phantoms",
+       "PROPER_NAME": "幻影",
+       "NAMES": [
+         "幻影",
+         "Phantoms"
+        ],
+        "DESCRIPTION": " #y*祥子*的幻影 ， #y睦的幻影 ， #y灯的幻影 ， #y素世的幻影 和 #y立希的幻影 。"
+    },
+    { 
+       "ID": "{modID}:Phantoms+",
+       "PROPER_NAME": "幻影+",
+       "NAMES": [
+         "幻影+",
+         "Phantoms+"
+        ],
+        "DESCRIPTION": " #y*祥子*的幻影+ ， #y睦的幻影+ ， #y灯的幻影+ ， #y素世的幻影+ 和 #y立希的幻影+ 。"
+    }
+  ]

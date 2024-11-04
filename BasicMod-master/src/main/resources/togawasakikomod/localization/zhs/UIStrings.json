@@ -1,0 +1,65 @@
+﻿{
+  "${modID}:Example": {
+    "TEXT": [
+      "This is",
+      "an array of Strings."
+    ],
+    "EXTRA_TEXT": [
+      "This is another",
+      "array of Strings."
+    ],
+    "TEXT_DICT": {
+      "This": "Contains pairs of Strings, used to get values based on keys.",
+      "This is a key": "This is a value."
+    }
+  },
+  "${modID}:PurgeReward": {
+    "TEXT": [
+      "选择并移除一张卡牌",
+      "选择一张卡牌并移除"
+    ]
+  },
+  "${modID}:AddCardsFromDiscardedToHandAction": {
+    "TEXT": [
+      "选择一张卡牌加入手卡",
+      "选择一张卡牌加入手卡"
+    ]
+  },
+  "${modID}:UnremoveableModifier": {
+    "TEXT": [
+      "%s NL  togawasakikomod:无法被移除 。",
+      "togawasakikomod:无法被移除 。"
+    ]
+  },
+  "${modID}:SelfRetainModifier": {
+    "TEXT": [
+      " 保留 。 NL %s",
+      " 保留 。"
+    ]
+  },
+  "${modID}:ChooseExistCardAndAddToDeckAction": {
+    "TEXT": [
+      "复制并加入卡组。"
+    ]
+  },
+  "${modID}:PerfectionAction": {
+    "TEXT": [
+      "选择一张牌加入手中，本回合消耗为0能量。"
+    ]
+  },
+  "${modID}:MaskAction": {
+    "TEXT": [
+      "选择一张牌，将其变成假面的复制。"
+    ]
+  },
+  "${modID}:ChooseCardGainSelfRetainAction": {
+    "TEXT": [
+      "选择一张牌，使其本场战斗获得保留。"
+    ]
+  },
+  "${modID}:RemoveCardFromHandAction": {
+    "TEXT": [
+      "选择一张牌并移除。"
+    ]
+  }
+}

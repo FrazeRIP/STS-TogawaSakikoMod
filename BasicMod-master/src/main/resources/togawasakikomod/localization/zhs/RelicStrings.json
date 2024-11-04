@@ -1,0 +1,53 @@
+﻿{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },  
+  "${modID}:MonochromeHairband": {
+    "NAME": "黑白色发带",
+    "FLAVOR": "黑白色的发带，象征着她的意志：对于音乐无尽的追求与渴望。",
+    "DESCRIPTIONS": [
+      "在战斗结束时，将一张 #y渴望 ",
+      "加入卡组。"
+    ]
+  },  
+  "${modID}:TheThirdMovement": {
+    "NAME": "第三乐章",
+    "FLAVOR": "乐曲迈入高潮，故事迎来终结。",
+    "DESCRIPTIONS": [
+      "接下来打出的 #b3 张 #y月光奏鸣曲  造成 #b3 倍伤害。",
+      "这副乐章已演奏完毕。"
+    ]
+  },  
+  "${modID}:ColorfulNotebook": {
+    "NAME": "彩色笔记本",
+    "FLAVOR": "五颜六色的笔记本，上面印着各种动植物图片。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b1 层 #y闪耀 。"
+    ]
+  },  
+  "${modID}:CuteAnimalBandAid": {
+    "NAME": "可爱动物创口贴",
+    "FLAVOR": "五颜六色，印着各种可爱动物图案的创口贴。",
+    "DESCRIPTIONS": [
+      "拾取时，恢复 #b10 点生命。"
+    ]
+  },  
+  "${modID}:FountainDrink": {
+    "NAME": "饮料机饮料",
+    "FLAVOR": "按下按钮就会有饮料出来，真的是太神奇了！",
+    "DESCRIPTIONS": [
+      "使用药水时，恢复 #b2 点生命。"
+    ]
+  },  
+  "${modID}:Maracas": {
+    "NAME": "沙锤",
+    "FLAVOR": "可以让木头人都笑出来的神秘妙妙工具。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b1 层 #y狂热 。"
+    ]
+  }
+}

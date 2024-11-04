@@ -1,0 +1,364 @@
+﻿{
+  "${modID}:Strike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${modID}:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "${modID}:Desire": {
+    "NAME": "渴望",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "${modID}:TheMoonlightSonata": {
+    "NAME": "月光奏鸣曲",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  斩杀 时，掉落一次 NL  togawasakikomod:移除 卡牌奖励。 NL  消耗 。"
+  },
+  "${modID}:TheGirlWithFlaxenHair": {
+    "NAME": "亚麻色头发的少女",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  本回合每当你触发 togawasakikomod:闪耀 时，获得 !M! 点 格挡 。"
+  },
+  "${modID}:MasqueradeRhapsodyRequest": {
+    "NAME": "假？面舞会的邀？请",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每在战斗里 togawasakikomod:移除 一张牌，这张牌在本局游戏中的伤害永久性增加 !M! 。"
+  },
+  "${modID}:WishToBecomeHuman": {
+    "NAME": "想要成为人类",
+    "DESCRIPTION": "造成 !D! 点伤害2次。 NL 获得与所造成的未被格挡的伤害相等层数的 togawasakikomod:闪耀 。"
+  },
+  "${modID}:DarkHeaven": {
+    "NAME": "暗黑天国",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 力量 ，窃取 !M! 层。"
+  },
+  "${modID}:Angles": {
+    "NAME": "角度",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你和敌人获得 NL  !M! 层 togawasakikomod:神的造物 。 NL  消耗 。"
+  },
+  "${modID}:Utopia": {
+    "NAME": "不存在的乌托邦",
+    "DESCRIPTION": "使敌人失去 !M! 点生命。 NL 这张牌在战斗中被 togawasakikomod:移除 时，改为将其打出。"
+  },
+  "${modID}:Daten": {
+    "NAME": "堕天",
+    "DESCRIPTION": "从牌组的随机三张牌中选择一张 togawasakikomod:移除 。 NL 造成 !D! 点伤害。 NL  消耗 。"
+  },
+  "${modID}:MementoMori": {
+    "NAME": "愚神",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将抽牌堆顶的7张牌 NL 从牌组中 togawasakikomod:移除 。 NL 进入 神格 。"
+  },
+  "${modID}:TwoMoons": {
+    "NAME": "双月",
+    "DESCRIPTION": "造成 !D! 点伤害。 如果你有 togawasakikomod:闪耀 ， NL 则再次造成 !D! 点伤害。"
+  },
+  "${modID}:BlackBirthday": {
+    "NAME": "黑色生日",
+    "DESCRIPTION": "清除自身所有效果。 NL 每清除一种效果时， NL 对所有敌人造成 !D! 点伤害。 NL  消耗 。"
+  },
+  "${modID}:IWantToBeYourGod": {
+    "NAME": "想要成为你的神明",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 直到你有10层 真言 为止，将 togawasakikomod:闪耀 转化为 NL 等量 真言 。"
+  },
+  "${modID}:Kings": {
+    "NAME": "王者",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗卡牌奖励可供选择的牌数减少一张。"
+  },
+  "${modID}:SymbolIFire": {
+    "NAME": "第一元素：恐惧之火",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 打出上一张除 *恐惧之火 以外的攻击牌 !M! 次。 NL 将一张 *恐惧 加入牌组。"
+  },
+  "${modID}:SymbolIIAir": {
+    "NAME": "第二元素：爱恋之风",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 将一张 *爱 加入牌组。"
+  },
+  "${modID}:SymbolIIIWater": {
+    "NAME": "第三元素：悲伤之水",
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害。 NL 结束并额外获得一个你的回合。 NL 将一张 *悲伤 加入牌组。"
+  },
+  "${modID}:SymbolIVEarth": {
+    "NAME": "第四元素：葬送之土",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成你当前格挡值的伤害。 NL 将一张 *死亡 加入牌组。",
+    "EXTENDED_DESCRIPTION": [" NL （当前造成 !D! 点伤害。）"]
+  },
+  "${modID}:Ether": {
+    "NAME": "遗忘之光",
+    "DESCRIPTION": " 消耗 抽牌堆顶的所有非攻击牌。 NL 每张被 消耗 的牌造成 !D! 点伤害。 NL 将一张 *遗忘 加入牌组。"
+  },
+  "${modID}:ChoirSChoir": {
+    "NAME": "齐唱圣歌",
+    "DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害三次。 NL 每打出一张 *渴望 ，这张牌的耗能就减少1 [E] 。"
+  },
+  "${modID}:PhantomOfSakiko": {
+    "NAME": "*祥子*的幻影",
+    "DESCRIPTION": "造成 !D! 点伤害三次。 NL 将1张 *耀眼 加入牌组。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。 NL 将1张 *耀眼+ 加入牌组。 NL  消耗 。"
+  },
+  "${modID}:PhantomOfMutsumi": {
+    "NAME": "睦的幻影",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将1张 *守护 加入牌组。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将1张 *守护+ 加入牌组。 NL  消耗 。"
+  },
+  "${modID}:PhantomOfTomori": {
+    "NAME": "灯的幻影",
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害。 NL 将1张 *心声 加入牌组。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "随机对敌人造成 !D! 点伤害。 NL 将1张 *心声+ 加入牌组。 NL  消耗 。"
+  },
+  "${modID}:PhantomOfSoyo": {
+    "NAME": "素世的幻影",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 将1张 *温柔 加入牌组。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 将1张 *温柔+ 加入牌组。 NL  消耗 。"
+  },
+  "${modID}:PhantomOfTaki": {
+    "NAME": "立希的幻影",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将1张 *理想 加入牌组。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将1张 *理想+ 加入牌组。 NL  消耗 。"
+  },
+  "${modID}:AveMujica": {
+    "NAME": "Ave Mujica",
+    "DESCRIPTION": "从3张 togawasakikomod:元素 中选择一张，将这张牌加入你的牌组并打出。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "从3张 togawasakikomod:元素+ 中选择一张，将这张牌加入你的牌组并打出。 NL  消耗 。"
+  },
+  "${modID}:RhinocerosBeetle": {
+    "NAME": "独角仙",
+    "DESCRIPTION": "获得 !M! 点 格挡 。 NL 这张卡的格挡受一半的 togawasakikomod:闪耀 层数加成而非 敏捷 。"
+  },
+  "${modID}:ASplitMoment": {
+    "NAME": "小小的瞬间",
+    "DESCRIPTION": "获得 !M! 层 togawasakikomod:闪耀 。 NL 获得 !B! 点 格挡 。"
+  },
+  "${modID}:NeverGiveYouUp": {
+    "NAME": "从此再不放手",
+    "DESCRIPTION": "将弃牌堆中的一张牌 NL 放入你的手牌。 NL 其 togawasakikomod:无法被移除 。 NL 消耗 。"
+  },
+  "${modID}:FallenFlowers": {
+    "NAME": "落花有时",
+    "DESCRIPTION": " 虚无 。 NL 获得 !M! 层 togawasakikomod:闪耀 。"
+  },
+  "${modID}:CountingStars": {
+    "NAME": "漫数繁星",
+    "DESCRIPTION": "下一回合获得1 [E] 。 NL 每有一种正面状态， NL 获得 !M! 层 togawasakikomod:闪耀 。"
+  },
+  "${modID}:StayElegance": {
+    "NAME": "保持优雅",
+    "DESCRIPTION": "获得一瓶随机药水。 NL  消耗 。"
+  },
+  "${modID}:EdgeOfBreakdown": {
+    "NAME": "崩溃边缘",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 脆弱 。"
+  },
+  "${modID}:OurSong": {
+    "NAME": "我们的歌",
+    "DESCRIPTION": "在这个回合，你打出的下张攻击牌造成的未被格挡的伤害时，你获得相等的 格挡 。"
+  },
+  "${modID}:Masks": {
+    "NAME": "假面",
+    "DESCRIPTION": "失去 !M! 点 togawasakikomod:闪耀 。 NL 获得 !M! 点 力量 。 NL 将一张手牌变为本牌的复制。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 失去 !M! 点 togawasakikomod:闪耀 。 NL 获得 !M! 点 力量 。 NL 将一张手牌变为本牌的复制。"
+  },
+  "${modID}:AreTheseLyrics": {
+    "NAME": "是歌词吗?",
+    "DESCRIPTION": "丢弃所有非攻击牌。 NL 每丢弃一张牌，在你的手牌中增加一张 NL  *旋律 。",
+    "UPGRADE_DESCRIPTION": "丢弃所有非攻击牌。 NL 每丢弃一张牌，在你的手牌中增加一张 NL  *旋律+ 。"
+  },
+  "${modID}:BandInvitation": {
+    "NAME": "乐队邀请",
+    "DESCRIPTION": "只有当这张牌是你手中唯一的一张技能牌时才可以被打出。 NL 抽牌直到这些牌的 NL 耗能之和大于或等于 !M! 。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "只有当这张牌是你手中唯一的一张技能牌时才可以被打出。 NL 抽牌直到这些牌的 NL 耗能之和大于 !M! 。",
+    "EXTENDED_DESCRIPTION": ["这张牌必须是我唯一的 #b技能牌 ！"]
+  },
+  "${modID}:Veritas": {
+    "NAME": "真理",
+    "DESCRIPTION": "抽 !M! 张牌。 NL  togawasakikomod:移除 其中的非攻击牌。"
+  },
+  "${modID}:Carefree": {
+    "NAME": "衣食无忧",
+    "DESCRIPTION": "抽 !M! 张牌。 NL  选择一张手牌，其在本场战斗获得 保留 。"
+  },
+  "${modID}:SilentFarewell": {
+    "NAME": "不告而别",
+    "DESCRIPTION": "给予所有敌人 !M! 层 易伤 。"
+  },
+  "${modID}:BlackAndWhiteKeys": {
+    "NAME": "黑白琴键",
+    "DESCRIPTION": "选择：获得 !M! 层 togawasakikomod:闪耀 或 力量 。 NL 敌人获得未选择的那项。"
+  },
+  "${modID}:BlackKeys": {
+    "NAME": "黑键",
+    "DESCRIPTION": "获得 !M! 层 力量 。 NL 敌人获得 !M! 层 togawasakikomod:闪耀 。"
+  },
+  "${modID}:WhiteKeys": {
+    "NAME": "白键",
+    "DESCRIPTION": "获得 !M! 层 togawasakikomod:闪耀 。 NL 敌人获得 !M! 层 力量 。"
+  },
+  "${modID}:WishFulfilled": {
+    "NAME": "如愿以偿",
+    "DESCRIPTION": "从牌组中选择一张卡牌并 togawasakikomod:移除 。 NL  消耗 。 NL  虚无 。",
+    "UPGRADE_DESCRIPTION": "从牌组中选择一张卡牌并 togawasakikomod:移除 。 NL  消耗 。"
+  },
+  "${modID}:RaiseTheBet": {
+    "NAME": "加注",
+    "DESCRIPTION": " 保留 。 NL 获得 !M! 点 格挡 和 !M! 层 togawasakikomod:狂热 。 NL 敌人获得 !${modID}:Strength! 点 力量 。 NL  消耗 。"
+  },
+  "${modID}:AsYourHeartDesires": {
+    "NAME": "纵心所欲",
+    "DESCRIPTION": "选择一张手牌，将它复制 !M! 张并加入牌组。 NL  消耗 。"
+  },
+  "${modID}:Perfection": {
+    "NAME": "完美无缺",
+    "DESCRIPTION": "从20张牌中选择1张牌放入你的手牌。 NL 这张牌在本回合的耗能变为0。 NL  消耗 。"
+  },
+  "${modID}:NumbersAndFaces": {
+    "NAME": "数字和脸",
+    "DESCRIPTION": " 保留 。 NL 获得 !M! 层 togawasakikomod:狂热 。 NL 每当敌人获得增益效果时，将这张牌的数字+2。"
+  },
+  "${modID}:PrimoDieInScaena": {
+    "NAME": "首演",
+    "DESCRIPTION": "给予所有敌人 NL  !${modID}:Hype! 层 togawasakikomod:狂热 。 NL 获得 !M! 层 togawasakikomod:闪耀 。"
+  },
+  "${modID}:Melody": {
+    "NAME": "旋律",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${modID}:Greetings": {
+    "NAME": "贵安",
+    "DESCRIPTION": " 固有 。 NL 获得 !M! [E] 。 NL 消耗 。"
+  },
+  "${modID}:DesuWa": {
+    "NAME": "跌丝袜",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 你每次打出非攻击牌时，将这张牌从弃牌堆放回你的手牌。"
+  },
+  "${modID}:InnerCry": {
+    "NAME": "内心的呐喊",
+    "DESCRIPTION": "获得 !M! 层 真言 。 NL 获得 !B! 点 格挡 。"
+  },
+  "${modID}:ClockOut": {
+    "NAME": "下班打卡",
+    "DESCRIPTION": "获得 !M! 金币。 NL 将一张 *疲惫 加入牌组。 NL  消耗 。"
+  },
+  "${modID}:QuaerereLumina": {
+    "NAME": "寻找光明",
+    "DESCRIPTION": "预见 !M! 。 NL 获得等同于丢弃卡牌数量的 格挡 。"
+  },
+  "${modID}:Tiredness": {
+    "NAME": "疲惫",
+    "DESCRIPTION": "抽 !M! 张牌。 NL  消耗 。"
+  },
+  "${modID}:BudgetBento": {
+    "NAME": "廉价便当",
+    "DESCRIPTION": "获得 !M! 层 再生 。 NL 将一张 *疲惫 加入牌组。 NL  消耗 。"
+  },
+  "${modID}:HeartsBarrier": {
+    "NAME": "心之壁",
+    "DESCRIPTION": "获得你牌组牌数量的 格挡 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得你牌组牌数量的 格挡 。",
+    "EXTENDED_DESCRIPTION": [" NL （当前获得 !B! 点 格挡 。）"]
+  },
+  "${modID}:Passion": {
+    "NAME": "热情",
+    "DESCRIPTION": "你的下一张攻击牌造成 !M! 点额外伤害。"
+  },
+  "${modID}:Accomplice": {
+    "NAME": "一丘之貉",
+    "DESCRIPTION": "将 !M! 张 *渴望 置入手牌，本回合它们的耗能为0。"
+  },
+  "${modID}:AleaIactaEst": {
+    "NAME": "骰子已经掷下",
+    "DESCRIPTION": "本张战斗中 升级 手牌中的所有牌。 NL 本回合不能再抽牌。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "本张战斗中 升级 手牌和抽牌堆中的所有牌。 NL 本回合不能再抽牌。 NL  消耗 。"
+  },
+  "${modID}:AuthorityRestoration": {
+    "NAME": "复权",
+    "DESCRIPTION": "清除所有人的 人工制品 。 NL 你获得等量层数+ !M! 的 togawasakikomod:狂热 和 格挡 。 NL  消耗 。"
+  },
+  "${modID}:SpringSunlight": {
+    "NAME": "春日影",
+    "DESCRIPTION": "卡组中每有 !M! 张牌 NL 消耗增加1 [E] 。 NL 造成 !D! 点伤害。"
+  },
+  "${modID}:SharedDestiny": {
+    "NAME": "命运共同体",
+    "DESCRIPTION": "每当你获得一种新的正面状态，抽 !M! 张牌。"
+  },
+  "${modID}:Endurance": {
+    "NAME": "背负",
+    "DESCRIPTION": "每当你将一张牌加入或移除牌组，获得 !M! 点格挡。"
+  },
+  "${modID}:SeizeTheFate": {
+    "NAME": "我命由我",
+    "DESCRIPTION": "回合结束时，获得 !M! 层 togawasakikomod:狂热 。"
+  },
+  "${modID}:Cruelty": {
+    "NAME": "绝情",
+    "DESCRIPTION": "获得 !M! 层易伤。 NL 每当你打出 *渴望 ，抽一张牌。"
+  },
+  "${modID}:Pride": {
+    "NAME": "骄傲",
+    "DESCRIPTION": " 固有 。 NL 抽一张攻击牌。 NL 回合结束时，在抽牌堆顶部加入一张这张牌的复制品。 NL  消耗 。"
+  },
+  "${modID}:WishYouGoodLuck": {
+    "NAME": "祝你幸福",
+    "DESCRIPTION": "每当受到攻击并未受到伤害时，获得 !M! 层 荆棘 。"
+  },
+  "${modID}:CharismaticForm": {
+    "NAME": "魅魔形态",
+    "DESCRIPTION": "每当敌人获得增益效果时，使你也获得之。 NL 给予所有敌人 !M! 层 togawasakikomod:狂热 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当敌人获得增益效果时，使你也获得之。 NL 给予所有敌人 !M! 层 togawasakikomod:狂热 。"
+  },
+  "${modID}:Crychic": {
+    "NAME": "Crychic",
+    "DESCRIPTION": "下X个回合开始时，增加一张耗能变为0的随机 togawasakikomod:幻影 到你的手牌。 NL  虚无 。",
+    "UPGRADE_DESCRIPTION": "下X+1个回合开始时，增加一张耗能变为0的随机 togawasakikomod:幻影 到你的手牌。 NL  虚无 。"
+  },
+  "${modID}:Worldview": {
+    "NAME": "世界观",
+    "DESCRIPTION": "每当你抽到不能打出的卡牌时，将其变为一张 *旋律 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每当你抽到不能打出的卡牌时，将其变为一张 *旋律 。"
+  },
+  "${modID}:Fearless": {
+    "NAME": "无畏",
+    "DESCRIPTION": "下 !M! 个回合结束时，选择并 togawasakikomod:移除 一张手牌。"
+  },
+  "${modID}:Radiance": {
+    "NAME": "耀眼",
+    "DESCRIPTION": "获得2层 togawasakikomod:闪耀 !M! 次。"
+  },
+  "${modID}:Protection": {
+    "NAME": "守护",
+    "DESCRIPTION": "获得1层 人工制品 !M! 次。"
+  },
+  "${modID}:Voice": {
+    "NAME": "心声",
+    "DESCRIPTION": "获得2层 真言 !M! 次。"
+  },
+  "${modID}:Ideal": {
+    "NAME": "理想",
+    "DESCRIPTION": "下 !M! 张攻击牌耗能变为0。"
+  },
+  "${modID}:Curiosity": {
+    "NAME": "好奇",
+    "DESCRIPTION": "每打出一张 NL 能力牌，你便获得1点 力量 。"
+  },
+  "${modID}:Kindness": {
+    "NAME": "温柔",
+    "DESCRIPTION": "重新获得所有自上回合起失去的正面效果。"
+  },
+  "${modID}:Amoris": {
+    "NAME": "爱",
+    "DESCRIPTION": " 保留 。 NL  不能被打出 。"
+  },
+  "${modID}:Timoris": {
+    "NAME": "恐惧",
+    "DESCRIPTION": " 不能被打出 。 NL 回合结束时仍在手牌内时，下回合开始时获得一层 易伤 。"
+  },
+  "${modID}:Mortis": {
+    "NAME": "死亡",
+    "DESCRIPTION": " 不能被打出 。 NL 回合结束时仍在手牌内时，本回合每次受到伤害将一张 *受伤 加入你的抽牌堆。"
+  },
+  "${modID}:Oblivionis": {
+    "NAME": "遗忘",
+    "DESCRIPTION": " 不能被打出 。 NL 在手牌中时，你打出的 NL 攻击牌会被 消耗 。"
+  },
+  "${modID}:Doloris": {
+    "NAME": "悲伤",
+    "DESCRIPTION": " 不能被打出 。 NL 回合结束时仍在手牌内时，受到 !M! 点伤害。"
+  }
+}
