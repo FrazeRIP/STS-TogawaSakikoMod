@@ -1,23 +1,99 @@
 [
   {
-    "PROPER_NAME": "This is displayed in the tooltip.",
+    "ID": "{modID}:DazzlingPower",
     "NAMES": [
-      "these",
-      "are",
-      "detected",
-      "in",
-      "the",
-      "text"
+      "Dazzling"
     ],
-    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
+    "DESCRIPTION": "Whenever you gain a buff, deal damage equal to the number of #yDazzling to a random enemy."
   },
   {
-    "PROPER_NAME": "Multiword Keyword",
+    "ID": "{modID}:HypePower",
     "NAMES": [
-      "multiword keyword",
-      "multiword_keyword",
-      "multiword_keywords"
+      "Hype"
     ],
-    "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+    "DESCRIPTION": "Whenever you are about to lose #yBlock, consume 1 #yHype instead."
+  },
+  {
+    "ID": "{modID}:DolorisPower",
+    "NAMES": [
+      "Doloris"
+    ],
+    "DESCRIPTION": "Damage taken ignores your #yBlock."
+  },
+  {
+    "ID": "{modID}:MortisPower",
+    "NAMES": [
+      "Mortis"
+    ],
+    "DESCRIPTION": "Whenever you take damage, add an #yInjury card to your draw pile."
+  },
+  {
+    "ID": "{modID}:OblivionisPower",
+    "NAMES": [
+      "Oblivionis"
+    ],
+    "DESCRIPTION": "Attack cards you play will be #yExhausted."
+  },
+  {
+    "ID": "{modID}:TimorisPower",
+    "NAMES": [
+      "Timoris"
+    ],
+    "DESCRIPTION": "At the start of your turn, convert all #yTimoris into an equivalent number of #yVulnerable."
+  },
+  {
+    "ID": "{modID}:Purge",
+    "NAMES": [
+      "Purge"
+    ],
+    "DESCRIPTION": "Remove a card from your deck."
+  },
+  {
+    "ID": "{modID}:GodsCreationPower",
+    "NAMES": [
+      "God's Creation",
+      "God's_Creation"
+    ],
+    "DESCRIPTION": "Whenever you take damage, reduce it by the number of #yGod's #yCreation."
+  },
+  { 
+    "ID": "{modID}:Unremoveable",
+    "PROPER_NAME": "Unremoveable",
+    "NAMES": [
+      "Unremoveable"
+    ],
+    "DESCRIPTION": "Cannot be #yPurge by cards effects, shop service, or event effects."
+  }, 
+  { 
+     "ID": "{modID}:KingsPower",
+     "PROPER_NAME": "Kings",
+     "NAMES": [
+       "Kings"
+      ],
+      "DESCRIPTION": "Reduces the number of card rewards available for selection by 1 in this battle.."
+  },
+  { 
+     "ID": "{modID}:Symbol",
+     "PROPER_NAME": "Symbol",
+     "NAMES": [
+       "Symbol"
+      ],
+      "DESCRIPTION": " #ySymbol #yI: #yFire , #ySymbol #yII: #yAir , #ySymbol #yIII: #yWater , #ySymbol #yIV: #yEarth and #yEther ."
+  },
+  { 
+     "ID": "{modID}:Phantoms",
+     "PROPER_NAME": "Phantoms",
+     "NAMES": [
+       "Phantoms"
+      ],
+      "DESCRIPTION": " #yPhantom #yof #y*Sakiko* , #yPhantom #yof #yMutsumi , #yPhantom #yof #yTomori , #yPhantom #yof #ySoyo and #yPhantom #yof #yTaki ."
+  },
+  { 
+     "ID": "{modID}:Phantoms+",
+     "PROPER_NAME": "Phantoms+",
+     "NAMES": [
+       "Phantoms+"
+      ],
+      "DESCRIPTION": " #yPhantom #yof #y*Sakiko*+ , #yPhantom #yof #yMutsumi+ , #yPhantom #yof #yTomori+ , #yPhantom #yof #ySoyo+ and #yPhantom #yof #yTaki+ ."
   }
 ]

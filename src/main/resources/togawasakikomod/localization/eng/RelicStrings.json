@@ -5,5 +5,49 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. [E] is an energy icon."
     ]
+  },  
+  "${modID}:MonochromeHairband": {
+    "NAME": "Monochrome Hairband",
+    "FLAVOR": "A black and white hairband symbolizing her will: an endless pursuit and desire for music.",
+    "DESCRIPTIONS": [
+      "At the end of combat, add a #yDesire ",
+      "to your deck."
+    ]
+  },  
+  "${modID}:TheThirdMovement": {
+    "NAME": "The Third Movement",
+    "FLAVOR": "The music reaches its climax, and the story comes to an end.",
+    "DESCRIPTIONS": [
+      "The next #b3 #yMoonlight #ySonata cards you play deal #b3 times damage.",
+      "This movement has been completed."
+    ]
+  },  
+  "${modID}:ColorfulNotebook": {
+    "NAME": "Colorful Notebook",
+    "FLAVOR": "A colorful notebook adorned with various pictures of animals and plants.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b1 #yDazzling."
+    ]
+  },  
+  "${modID}:CuteAnimalBandAid": {
+    "NAME": "Cute Animal Band-Aid",
+    "FLAVOR": "A brightly colored band-aid printed with various cute animal patterns.",
+    "DESCRIPTIONS": [
+      "Upon pickup, heal #b10 HP."
+    ]
+  },  
+  "${modID}:FountainDrink": {
+    "NAME": "Vending Machine Drinks",
+    "FLAVOR": "A drink comes out when you press the button,  it's truly amazing!",
+    "DESCRIPTIONS": [
+      "When using a potion, heal #b2 HP."
+    ]
+  },  
+  "${modID}:Maracas": {
+    "NAME": "Maracas",
+    "FLAVOR": "A mystical tool that could make even a wooden doll smile.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain #b1 #yHype."
+    ]
   }
 }

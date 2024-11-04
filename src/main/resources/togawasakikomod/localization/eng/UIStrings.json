@@ -12,5 +12,54 @@
       "This": "Contains pairs of Strings, used to get values based on keys.",
       "This is a key": "This is a value."
     }
+  },
+  "${modID}:PurgeReward": {
+    "TEXT": [
+      "Choose and remove a card",
+      "Choose a card and remove it"
+    ]
+  },
+  "${modID}:AddCardsFromDiscardedToHandAction": {
+    "TEXT": [
+      "Choose a card to add to your hand",
+      "Choose a card to add to your hand"
+    ]
+  },
+  "${modID}:UnremoveableModifier": {
+    "TEXT": [
+      "%s NL togawasakikomod:Unremoveable.",
+      "togawasakikomod:Unremoveable."
+    ]
+  },
+  "${modID}:SelfRetainModifier": {
+    "TEXT": [
+      " Retain. NL %s",
+      " Retain."
+    ]
+  },
+  "${modID}:ChooseExistCardAndAddToDeckAction": {
+    "TEXT": [
+      "Copy and add to your deck."
+    ]
+  },
+  "${modID}:PerfectionAction": {
+    "TEXT": [
+      "Choose a card to add to your hand; it costs 0 energy this turn."
+    ]
+  },
+  "${modID}:MaskAction": {
+    "TEXT": [
+      "Choose a card to turn into a copy of Masks."
+    ]
+  },
+  "${modID}:ChooseCardGainSelfRetainAction": {
+    "TEXT": [
+      "Choose a card to grant Retain for this combat."
+    ]
+  },
+  "${modID}:RemoveCardFromHandAction": {
+    "TEXT": [
+      "Choose a card and remove it."
+    ]
   }
 }

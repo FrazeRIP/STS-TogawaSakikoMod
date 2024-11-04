@@ -1,8 +1,131 @@
 {
-  "${modID}:PowerID": {
-    "NAME": "Ultimate Power",
+  "${modID}:DazzlingPower": {
+    "NAME": "Dazzling",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "Whenever you gain a buff, deal damage equal to the number of #yDazzling to a random enemy."
+    ]
+  },
+  "${modID}:HypePower": {
+    "NAME": "Hype",
+    "DESCRIPTIONS": [
+      "Whenever you are about to lose #yBlock, consume one #yHype instead."
+    ]
+  },
+  "${modID}:GodsCreationPower": {
+    "NAME": "God's Creation",
+    "DESCRIPTIONS": [
+      "Whenever you take damage, reduce the damage taken by #b",
+      "."
+    ]
+  },
+  "${modID}:GirlOfSpringPower": {
+    "NAME": "Girl of Spring",
+    "DESCRIPTIONS": [
+      "Whenever you trigger #yDazzling this turn, gain #b", 
+      " #yBlock."
+    ]
+  },
+  "${modID}:OurSongPower": {
+    "NAME": "Our Song",
+    "DESCRIPTIONS": [
+      "This turn, when you deal unblocked damage with your next attack, gain an equal amount of Block."
+    ]
+  },
+  "${modID}:SharedDestinyPower": {
+    "NAME": "Shared Destiny",
+    "DESCRIPTIONS": [
+      "Whenever you gain a new type of buff, draw #b",
+      " cards."
+    ]
+  },
+  "${modID}:FearlessPower": {
+    "NAME": "Fearless",
+    "DESCRIPTIONS": [
+      "At the end of the next #b",
+      " turns, choose and #yPurge a card."
+    ]
+  },
+  "${modID}:WishYouGoodLuckPower": {
+    "NAME": "Wish You Good Luck",
+    "DESCRIPTIONS": [
+      "Whenever you take an attack and do not receive damage, gain #b",
+      " #yThorns."
+    ]
+  },
+  "${modID}:EndurancePower": {
+    "NAME": "Endurance",
+    "DESCRIPTIONS": [
+      "Whenever you add or #yPurge a card from your deck, gain #b",
+      " #yBlock."
+    ]
+  },
+  "${modID}:SeizeTheFatePower": {
+    "NAME": "Seize The Fate",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yHype."
+    ]
+  },
+  "${modID}:CrueltyPower": {
+    "NAME": "Cruelty",
+    "DESCRIPTIONS": [
+      "Whenever you play #yDesire, draw #b",
+      " cards."
+    ]
+  },
+  "${modID}:PridePower": {
+    "NAME": "Pride",
+    "DESCRIPTIONS": [
+      "At the end of your turn, place a copy of #yPride on top of your draw pile. Currently placing #b",
+      " copies."
+    ]
+  },
+  "${modID}:CharismaticFormPower": {
+    "NAME": "Charismatic Form",
+    "DESCRIPTIONS": [
+      "Whenever an enemy gains a buff, you gain the same buff. Does not stack."
+    ]
+  },
+  "${modID}:CrychicPower": {
+    "NAME": "Crychic",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random #yPhantom card with 0 cost to your hand."
+    ]
+  },
+  "${modID}:WorldviewPower": {
+    "NAME": "Worldview",
+    "DESCRIPTIONS": [
+      "Whenever you draw an unplayable card, transform it into a #yMelody. Does not stack."
+    ]
+  },
+  "${modID}:DolorisPower": {
+    "NAME": "Doloris",
+    "DESCRIPTIONS": [
+      "Damage taken ignores your #yBlock."
+    ]
+  },
+  "${modID}:MortisPower": {
+    "NAME": "Mortis",
+    "DESCRIPTIONS": [
+      "Whenever you take damage, add an #yInjury card to your draw pile."
+    ]
+  },
+  "${modID}:OblivionisPower": {
+    "NAME": "Oblivionis",
+    "DESCRIPTIONS": [
+      "Attack cards you play will be #yExhausted."
+    ]
+  },
+  "${modID}:TimorisPower": {
+    "NAME": "Timoris",
+    "DESCRIPTIONS": [
+      "At the start of your turn, convert all #yTimoris into an equivalent number of #yVulnerable."
+    ]
+  },
+  "${modID}:KingsPower": {
+    "NAME": "Kings",
+    "DESCRIPTIONS": [
+      "Reduces the number of card rewards available for selection by 1 in this battle. Does not stack."
     ]
   }
 }

@@ -1,12 +1,365 @@
 {
-  "togawasakikomod:ExampleCard": {
-    "NAME": "Name",
-    "DESCRIPTION": "Description.",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+  "togawasakikomod:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "togawasakikomod:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "togawasakikomod:Desire": {
+    "NAME": "Desire",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "togawasakikomod:TheMoonlightSonata": {
+    "NAME": "Moonlight Sonata",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain a togawasakikomod:Purge reward. NL Exhaust."
+  },
+  "togawasakikomod:TheGirlWithFlaxenHair": {
+    "NAME": "The Girl with Flaxen Hair",
+    "DESCRIPTION": "Deal !D! damage. NL Each time you trigger togawasakikomod:Dazzling this turn, gain !M! Block."
+  },
+  "togawasakikomod:MasqueradeRhapsodyRequest": {
+    "NAME": "Mas?uerade Rhapsody Re?uest",
+    "DESCRIPTION": "Deal !D! damage. NL Every time a card is togawasakikomod:Purge during battle, this card's damage permanently increases by !M!."
+  },
+  "togawasakikomod:WishToBecomeHuman": {
+    "NAME": "Wish to Become Human",
+    "DESCRIPTION": "Deal !D! damage twice. NL Gain togawasakikomod:Dazzling equal to the unblocked damage dealt."
+  },
+  "togawasakikomod:DarkHeaven": {
+    "NAME": "Dark Heaven",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal !M! Strength."
+  },
+  "togawasakikomod:Angles": {
+    "NAME": "Angles",
+    "DESCRIPTION": "Deal !D! damage. NL You and the enemy gain !M! togawasakikomod:God's_Creation. NL Exhaust."
+  },
+  "togawasakikomod:Utopia": {
+    "NAME": "Utopia",
+    "DESCRIPTION": "Make the enemy lose !M! HP. NL When this card is togawasakikomod:Purge during battle, play this card instead."
+  },
+  "togawasakikomod:Daten": {
+    "NAME": "Daten",
+    "DESCRIPTION": "Choose 1 of 3 random cards from your deck to togawasakikomod:Purge. NL Deal !D! damage. NL Exhaust."
+  },
+  "togawasakikomod:MementoMori": {
+    "NAME": "MementoMori",
+    "DESCRIPTION": "Deal !D! damage. NL togawasakikomod:Purge the top 7 cards from the draw pile. NL Enter Divinity."
+  },
+  "togawasakikomod:TwoMoons": {
+    "NAME": "Two Moons",
+    "DESCRIPTION": "Deal !D! damage. If you have togawasakikomod:Dazzling, deal !D! damage again."
+  },
+  "togawasakikomod:BlackBirthday": {
+    "NAME": "Black Birthday",
+    "DESCRIPTION": "Remove all buffs. NL For each type of buff removed, deal !D! damage to all enemies. NL Exhaust."
+  },
+  "togawasakikomod:IWantToBeYourGod": {
+    "NAME": "I Want to Be Your God",
+    "DESCRIPTION": "Deal !D! damage. NL Convert togawasakikomod:Dazzling to Mantra until you enter Divinity."
+  },
+  "togawasakikomod:Kings": {
+    "NAME": "Kings",
+    "DESCRIPTION": "Deal !D! damage. NL Reduces the number of card rewards available for selection by 1 after this battle."
+  },
+  "togawasakikomod:SymbolIFire": {
+    "NAME": "Symbol I: Fire",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Play the previous attack card that is not *Symbol *I* *: *Fire !M! times. NL Add a *Timoris to your deck."
+  },
+  "togawasakikomod:SymbolIIAir": {
+    "NAME": "Symbol II: Air",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Add a *Amoris to your deck."
+  },
+  "togawasakikomod:SymbolIIIWater": {
+    "NAME": "Symbol III: Water",
+    "DESCRIPTION": "Deal !D! damage to random enemies. NL End your turn and gain an additional turn. NL Add a *Doloris to your deck."
+  },
+  "togawasakikomod:SymbolIVEarth": {
+    "NAME": "Symbol IV: Earth",
+    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL Add a *Mortis to your deck.",
+    "EXTENDED_DESCRIPTION": [" NL (Currently deals !D! damage.)"]
+  },
+  "togawasakikomod:Ether": {
+    "NAME": "Ether",
+    "DESCRIPTION": "Exhaust all non-Attack cards from your draw pile. NL Deal !D! damage for each Exhausted card. NL Add a *Oblivionis to your deck."
+  },
+  "togawasakikomod:ChoirSChoir": {
+    "NAME": "Choir 'S' Choir",
+    "DESCRIPTION": "Retain. NL Deal !D! damage three times. NL For each *Desire played, reduce this card's cost by 1 [E]."
+  },
+  "togawasakikomod:PhantomOfSakiko": {
+    "NAME": "Phantom of Sakiko",
+    "DESCRIPTION": "Deal !D! damage three times. NL Add a *Radiance to your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage three times. NL Add a *Radiance+ to your deck. NL Exhaust."
+  },
+  "togawasakikomod:PhantomOfMutsumi": {
+    "NAME": "Phantom of Mutsumi",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a *Protection to your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a *Protection+ to your deck. NL Exhaust."
+  },
+  "togawasakikomod:PhantomOfTomori": {
+    "NAME": "Phantom of Tomori",
+    "DESCRIPTION": "Deal !D! damage to random enemy. NL Add a *Voice to your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to random enemy. NL Add a *Voice+ to your deck. NL Exhaust."
+  },
+  "togawasakikomod:PhantomOfSoyo": {
+    "NAME": "Phantom of Soyo",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Add a *Kindness to your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies. NL Add a *Kindness+ to your deck. NL Exhaust."
+  },
+  "togawasakikomod:PhantomOfTaki": {
+    "NAME": "Phantom of Taki",
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Ideal to your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a *Ideal+ to your deck. NL Exhaust."
+  },
+  "togawasakikomod:AveMujica": {
+    "NAME": "Ave Mujica",
+    "DESCRIPTION": "Choose 1 of 3 togawasakikomod:Symbol cards to add to your deck and play it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 upgraded togawasakikomod:Symbol cards to add to your deck and play it. NL Exhaust."
+  },
+  "togawasakikomod:RhinocerosBeetle": {
+    "NAME": "Rhinoceros Beetle",
+    "DESCRIPTION": "Gain !M! Block. NL This card's Block scales with half the togawasakikomod:Dazzling instead of Dexterity."
+  },
+  "togawasakikomod:ASplitMoment": {
+    "NAME": "A Split Moment",
+    "DESCRIPTION": "Gain !M! togawasakikomod:Dazzling. NL Gain !B! Block."
+  },
+  "togawasakikomod:NeverGiveYouUp": {
+    "NAME": "Never Give You Up",
+    "DESCRIPTION": "Return a card from your discard pile to your hand and make it togawasakikomod:Unremoveable. NL Exhaust."
+  },
+  "togawasakikomod:FallenFlowers": {
+    "NAME": "Fallen Flowers",
+    "DESCRIPTION": "Ethereal. NL Gain !M! togawasakikomod:Dazzling."
+  },
+  "togawasakikomod:CountingStars": {
+    "NAME": "Counting Stars",
+    "DESCRIPTION": "Gain 1 [E] next turn. NL Gain !M! togawasakikomod:Dazzling for each type of buff you have."
+  },
+  "togawasakikomod:StayElegance": {
+    "NAME": "Stay Elegant",
+    "DESCRIPTION": "Gain a random potion. NL Exhaust."
+  },
+  "togawasakikomod:EdgeOfBreakdown": {
+    "NAME": "Edge of Breakdown",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vulnerable."
+  },
+  "togawasakikomod:OurSong": {
+    "NAME": "Our Song",
+    "DESCRIPTION": "The next Attack card you play this turn grants you Block equal to the unblocked damage dealt."
+  },
+  "togawasakikomod:Masks": {
+    "NAME": "Masks",
+    "DESCRIPTION": "Lose !M! togawasakikomod:Dazzling. NL Gain !M! Strength. NL Replace a card in your hand into a copy of this card.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Lose !M! togawasakikomod:Dazzling. NL Gain !M! Strength. NL Replace a card in your hand into a copy of this card."
+  },
+  "togawasakikomod:AreTheseLyrics": {
+    "NAME": "Are These Lyrics?",
+    "DESCRIPTION": "Discard all non-Attack cards. NL For each discarded card, add a *Melody to your deck.",
+    "UPGRADE_DESCRIPTION": "Discard all non-Attack cards. NL For each discarded card, add a *Melody+ to your deck."
+  },
+  "togawasakikomod:BandInvitation": {
+    "NAME": "Band Invitation",
+    "DESCRIPTION": "Can only be played if it is the only skill card in your hand. NL Draw cards until the total cost of those cards is greater than or equal to !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Can only be played if it is the only skill card in your hand. NL Draw cards until the total cost of those cards is greater than !M!.",
+    "EXTENDED_DESCRIPTION": ["This card must be my only #bskill card!"]
+  },
+  "togawasakikomod:Veritas": {
+    "NAME": "Veritas",
+    "DESCRIPTION": "Draw !M! cards. NL togawasakikomod:Purge all non-attack cards among them."
+  },
+  "togawasakikomod:Carefree": {
+    "NAME": "Carefree",
+    "DESCRIPTION": "Draw !M! cards. NL Choose a card in your hand, it gains Retain for the rest of combat."
+  },
+  "togawasakikomod:SilentFarewell": {
+    "NAME": "Silent Farewell",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies."
+  },
+  "togawasakikomod:BlackAndWhiteKeys": {
+    "NAME": "Black and White Keys",
+    "DESCRIPTION": "Choose: Gain !M! togawasakikomod:Dazzling or Strength. NL The enemy gains the other option."
+  },
+  "togawasakikomod:BlackKeys": {
+    "NAME": "Black Keys",
+    "DESCRIPTION": "Gain !M! Strength. NL The enemy gains !M! togawasakikomod:Dazzling."
+  },
+  "togawasakikomod:WhiteKeys": {
+    "NAME": "White Keys",
+    "DESCRIPTION": "Gain !M! togawasakikomod:Dazzling. NL The enemy gains !M! Strength."
+  },
+  "togawasakikomod:WishFulfilled": {
+    "NAME": "Wish Fulfilled",
+    "DESCRIPTION": "Choose a card from your deck and togawasakikomod:Purge it. NL Exhaust. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Choose a card from your deck and togawasakikomod:Purge it. NL Exhaust."
+  },
+  "togawasakikomod:RaiseTheBet": {
+    "NAME": "Raise the Bet",
+    "DESCRIPTION": "Retain. NL Gain !M! Block and !M! togawasakikomod:Hype. NL The enemy gains !togawasakikomod:Strength! Strength. NL Exhaust."
+  },
+  "togawasakikomod:AsYourHeartDesires": {
+    "NAME": "As Your Heart Desires",
+    "DESCRIPTION": "Choose a card in your hand, add a copy of the card to your deck. NL Exhaust."
+  },
+  "togawasakikomod:Perfection": {
+    "NAME": "Perfection",
+    "DESCRIPTION": "Choose 1 card from 20 to add to your hand. NL It costs 0 energy this turn. NL Exhaust."
+  },
+  "togawasakikomod:NumbersAndFaces": {
+    "NAME": "Numbers and Faces",
+    "DESCRIPTION": "Retain. NL Gain !M! togawasakikomod:Hype. NL Whenever an enemy gains a buff, increase this card's value by 2."
+  },
+  "togawasakikomod:PrimoDieInScaena": {
+    "NAME": "Primo Die In Scaena",
+    "DESCRIPTION": "Apply !togawasakikomod:Hype! togawasakikomod:Hype to all enemies. NL Gain !M! togawasakikomod:Dazzling."
+  },
+  "togawasakikomod:Melody": {
+    "NAME": "Melody",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "togawasakikomod:Greetings": {
+    "NAME": "Greetings",
+    "DESCRIPTION": "Innate. NL Gain !M! [E]. NL Exhaust."
+  },
+  "togawasakikomod:DesuWa": {
+    "NAME": "Desuwa",
+    "DESCRIPTION": "Draw !M! cards. NL Each time you play a non-Attack card, return this card from the discard pile to your hand."
+  },
+  "togawasakikomod:InnerCry": {
+    "NAME": "Inner Cry",
+    "DESCRIPTION": "Gain !M! Mantra. NL Gain !B! Block."
+  },
+  "togawasakikomod:ClockOut": {
+    "NAME": "Clock Out",
+    "DESCRIPTION": "Gain !M! Gold. NL Add an *Tiredness to your deck. NL Exhaust."
+  },
+  "togawasakikomod:QuaerereLumina": {
+    "NAME": "Quaerere Lumina",
+    "DESCRIPTION": "Scry !M!. NL Gain Block equal to the number of cards discarded."
+  },
+  "togawasakikomod:Tiredness": {
+    "NAME": "Tiredness",
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust."
+  },
+  "togawasakikomod:BudgetBento": {
+    "NAME": "Budget Bento",
+    "DESCRIPTION": "Gain !M! Regen. NL Add an *Tiredness to your deck. NL Exhaust."
+  },
+  "togawasakikomod:HeartsBarrier": {
+    "NAME": "Heart's Barrier",
+    "DESCRIPTION": "Gain Block equal to the number of cards in your deck.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain Block equal to the number of cards in your deck.",
+    "EXTENDED_DESCRIPTION": ["NL (Currently gains !B! Block.)"]
+  },
+  "togawasakikomod:Passion": {
+    "NAME": "Passion",
+    "DESCRIPTION": "Your next attack deals !M! additional damage."
+  },
+  "togawasakikomod:Accomplice": {
+    "NAME": "Accomplice",
+    "DESCRIPTION": "Add !M! *Desire to your hand. They cost 0 energy this turn."
+  },
+  "togawasakikomod:AleaIactaEst": {
+    "NAME": "Alea Iacta Est",
+    "DESCRIPTION": "Upgrade all cards in your hand for the rest of combat. NL Cannot draw cards this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Upgrade all cards for the rest of combat. NL Cannot draw cards this turn. NL Exhaust."
+  },
+  "togawasakikomod:AuthorityRestoration": {
+    "NAME": "Authority Restoration",
+    "DESCRIPTION": "Remove all Artifact from everyone. NL You gain equal number of +!M! togawasakikomod:Hype and Block. NL Exhaust."
+  },
+  "togawasakikomod:SpringSunlight": {
+    "NAME": "Spring Sunlight",
+    "DESCRIPTION": "Increase energy cost by 1 [E] for every !M! cards in your deck. NL Deal !D! damage."
+  },
+  "togawasakikomod:SharedDestiny": {
+    "NAME": "Shared Destiny",
+    "DESCRIPTION": "Whenever you gain a new type of buff, draw !M! cards."
+  },
+  "togawasakikomod:Endurance": {
+    "NAME": "Endurance",
+    "DESCRIPTION": "Whenever you add or togawasakikomod:Purge a card from your deck, gain !M! Block."
+  },
+  "togawasakikomod:SeizeTheFate": {
+    "NAME": "Seize the Fate",
+    "DESCRIPTION": "At the end of your turn, gain !M! togawasakikomod:Hype."
+  },
+  "togawasakikomod:Cruelty": {
+    "NAME": "Cruelty",
+    "DESCRIPTION": "Gain !M! Vulnerable. NL Whenever you play *Desire, draw a card."
+  },
+  "togawasakikomod:Pride": {
+    "NAME": "Pride",
+    "DESCRIPTION": "Innate. NL Draw an Attack card. NL At the end of your turn, add a copy of this card to the top of your draw pile. NL Exhaust."
+  },
+  "togawasakikomod:WishYouGoodLuck": {
+    "NAME": "Wish You Good Luck",
+    "DESCRIPTION": "Whenever you are attacked but take no damage, gain !M! Thorns."
+  },
+  "togawasakikomod:CharismaticForm": {
+    "NAME": "Charismatic Form",
+    "DESCRIPTION": "Whenever an enemy gains a buff, you gain it as well. NL Apply !M! togawasakikomod:Hype to all enemies.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever an enemy gains a buff, you gain it as well. NL Apply !M! togawasakikomod:Hype to all enemies."
+  },
+  "togawasakikomod:Crychic": {
+    "NAME": "Crychic",
+    "DESCRIPTION": "At the start of the next X turns, add a random 0 cost togawasakikomod:Phantoms to your hand. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "At the start of the next X+1 turns, add a random 0 cost togawasakikomod:Phantoms to your hand. NL Ethereal."
+  },
+  "togawasakikomod:Worldview": {
+    "NAME": "Worldview",
+    "DESCRIPTION": "Whenever you draw an Unplayable card, repalce it with a *Melody.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw an unplayable card, repalce it with a *Melody."
+  },
+  "togawasakikomod:Fearless": {
+    "NAME": "Fearless",
+    "DESCRIPTION": "At the end of the next !M! turns, choose and togawasakikomod:Purge a card from your hand."
+  },
+  "togawasakikomod:Radiance": {
+    "NAME": "Radiance",
+    "DESCRIPTION": "Gain 2 togawasakikomod:Dazzling !M! times."
+  },
+  "togawasakikomod:Protection": {
+    "NAME": "Protection",
+    "DESCRIPTION": "Gain 1 Artifact !M! times."
+  },
+  "togawasakikomod:Voice": {
+    "NAME": "Voice",
+    "DESCRIPTION": "Gain 2 Mantra !M! times."
+  },
+  "togawasakikomod:Ideal": {
+    "NAME": "Ideal",
+    "DESCRIPTION": "The next !M! Attack cards cost 0 energy."
+  },
+  "togawasakikomod:Curiosity": {
+    "NAME": "Curiosity",
+    "DESCRIPTION": "Whenever you play a power card, gain 1 Strength."
+  },
+  "togawasakikomod:Kindness": {
+    "NAME": "Kindness",
+    "DESCRIPTION": "Regain all buffs lost since the last turn."
+  },
+  "togawasakikomod:Amoris": {
+    "NAME": "Amoris",
+    "DESCRIPTION": "Retain. NL Unplayable."
+  },
+  "togawasakikomod:Timoris": {
+    "NAME": "Timoris",
+    "DESCRIPTION": "Unplayable. NL If this card remains in your hand at the end of the turn, gain 1 Vulnerable at the start of the next turn."
+  },
+  "togawasakikomod:Mortis": {
+    "NAME": "Mortis",
+    "DESCRIPTION": "Unplayable. NL If this card remains in your hand at the end of the turn, add 1 *Injury to your draw pile each time you take damage this turn."
+  },
+  "togawasakikomod:Oblivionis": {
+    "NAME": "Oblivion",
+    "DESCRIPTION": "Unplayable. NL While in your hand, any Attack cards you played are Exhausted."
+  },
+  "togawasakikomod:Doloris": {
+    "NAME": "Doloris",
+    "DESCRIPTION": "Unplayable. NL If this card remains in your hand at the end of the turn, take !M! damage."
   }
 }
+

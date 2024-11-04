@@ -1,8 +1,131 @@
 {
-  "togawasakikomod:PowerID": {
-    "NAME": "Ultimate Power",
+  "togawasakikomod:DazzlingPower": {
+    "NAME": "Dazzling",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "Whenever you gain a buff, deal damage equal to the number of #yDazzling to a random enemy."
+    ]
+  },
+  "togawasakikomod:HypePower": {
+    "NAME": "Hype",
+    "DESCRIPTIONS": [
+      "Whenever you are about to lose #yBlock, consume one #yHype instead."
+    ]
+  },
+  "togawasakikomod:GodsCreationPower": {
+    "NAME": "God's Creation",
+    "DESCRIPTIONS": [
+      "Whenever you take damage, reduce the damage taken by #b",
+      "."
+    ]
+  },
+  "togawasakikomod:GirlOfSpringPower": {
+    "NAME": "Girl of Spring",
+    "DESCRIPTIONS": [
+      "Whenever you trigger #yDazzling this turn, gain #b", 
+      " #yBlock."
+    ]
+  },
+  "togawasakikomod:OurSongPower": {
+    "NAME": "Our Song",
+    "DESCRIPTIONS": [
+      "This turn, when you deal unblocked damage with your next attack, gain an equal amount of Block."
+    ]
+  },
+  "togawasakikomod:SharedDestinyPower": {
+    "NAME": "Shared Destiny",
+    "DESCRIPTIONS": [
+      "Whenever you gain a new type of buff, draw #b",
+      " cards."
+    ]
+  },
+  "togawasakikomod:FearlessPower": {
+    "NAME": "Fearless",
+    "DESCRIPTIONS": [
+      "At the end of the next #b",
+      " turns, choose and #yPurge a card."
+    ]
+  },
+  "togawasakikomod:WishYouGoodLuckPower": {
+    "NAME": "Wish You Good Luck",
+    "DESCRIPTIONS": [
+      "Whenever you take an attack and do not receive damage, gain #b",
+      " #yThorns."
+    ]
+  },
+  "togawasakikomod:EndurancePower": {
+    "NAME": "Endurance",
+    "DESCRIPTIONS": [
+      "Whenever you add or #yPurge a card from your deck, gain #b",
+      " #yBlock."
+    ]
+  },
+  "togawasakikomod:SeizeTheFatePower": {
+    "NAME": "Seize The Fate",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yHype."
+    ]
+  },
+  "togawasakikomod:CrueltyPower": {
+    "NAME": "Cruelty",
+    "DESCRIPTIONS": [
+      "Whenever you play #yDesire, draw #b",
+      " cards."
+    ]
+  },
+  "togawasakikomod:PridePower": {
+    "NAME": "Pride",
+    "DESCRIPTIONS": [
+      "At the end of your turn, place a copy of #yPride on top of your draw pile. Currently placing #b",
+      " copies."
+    ]
+  },
+  "togawasakikomod:CharismaticFormPower": {
+    "NAME": "Charismatic Form",
+    "DESCRIPTIONS": [
+      "Whenever an enemy gains a buff, you gain the same buff. Does not stack."
+    ]
+  },
+  "togawasakikomod:CrychicPower": {
+    "NAME": "Crychic",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random #yPhantom card with 0 cost to your hand."
+    ]
+  },
+  "togawasakikomod:WorldviewPower": {
+    "NAME": "Worldview",
+    "DESCRIPTIONS": [
+      "Whenever you draw an unplayable card, transform it into a #yMelody. Does not stack."
+    ]
+  },
+  "togawasakikomod:DolorisPower": {
+    "NAME": "Doloris",
+    "DESCRIPTIONS": [
+      "Damage taken ignores your #yBlock."
+    ]
+  },
+  "togawasakikomod:MortisPower": {
+    "NAME": "Mortis",
+    "DESCRIPTIONS": [
+      "Whenever you take damage, add an #yInjury card to your draw pile."
+    ]
+  },
+  "togawasakikomod:OblivionisPower": {
+    "NAME": "Oblivionis",
+    "DESCRIPTIONS": [
+      "Attack cards you play will be #yExhausted."
+    ]
+  },
+  "togawasakikomod:TimorisPower": {
+    "NAME": "Timoris",
+    "DESCRIPTIONS": [
+      "At the start of your turn, convert all #yTimoris into an equivalent number of #yVulnerable."
+    ]
+  },
+  "togawasakikomod:KingsPower": {
+    "NAME": "Kings",
+    "DESCRIPTIONS": [
+      "Reduces the number of card rewards available for selection by 1 in this battle. Does not stack."
     ]
   }
 }
