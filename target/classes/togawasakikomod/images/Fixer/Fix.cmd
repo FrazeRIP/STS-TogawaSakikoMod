@@ -1,0 +1,1 @@
+fixalpha.exe mul energy_orb_p.png energy_orb_p_f.png

@@ -1,0 +1,131 @@
+﻿{
+  "togawasakikomod:DazzlingPower": {
+    "NAME": "闪耀",
+    "DESCRIPTIONS": [
+      "每当你获得正面状态时，对一名随机敌人造成等同于 #y闪耀 层数的伤害。"
+    ]
+  },
+  "togawasakikomod:HypePower": {
+    "NAME": "狂热",
+    "DESCRIPTIONS": [
+      "每当你即将失去 #y格挡 时，消耗一层 #y狂热 来代替。"
+    ]
+  },
+  "togawasakikomod:GodsCreationPower": {
+    "NAME": "神的造物",
+    "DESCRIPTIONS": [
+      "你每次受到伤害时，减少受到的伤害 #b",
+      " 点。"
+    ]
+  },
+  "togawasakikomod:GirlOfSpringPower": {
+    "NAME": "春日的少女",
+    "DESCRIPTIONS": [
+      "本回合每当你触发 #y闪耀 时，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "togawasakikomod:OurSongPower": {
+    "NAME": "我们的歌",
+    "DESCRIPTIONS": [
+      "在这个回合，你打出的下张攻击牌造成的未被格挡的伤害时，你获得相等的 格挡 。"
+    ]
+  },
+  "togawasakikomod:SharedDestinyPower": {
+    "NAME": "命运共同体",
+    "DESCRIPTIONS": [
+      "每当你获得一种新的正面状态，抽 #b",
+      " 张牌。"
+    ]
+  },
+  "togawasakikomod:FearlessPower": {
+    "NAME": "无畏",
+    "DESCRIPTIONS": [
+      "下 #b",
+      " 个回合的结束阶段，选择并 #y移除 一张牌。"
+    ]
+  },
+  "togawasakikomod:WishYouGoodLuckPower": {
+    "NAME": "祝你幸福",
+    "DESCRIPTIONS": [
+      "每当受到攻击并未受到伤害时，获得 #b",
+      " 层 #y荆棘 。"
+    ]
+  },
+  "togawasakikomod:EndurancePower": {
+    "NAME": "背负",
+    "DESCRIPTIONS": [
+      "每当你将一张牌加入或 #y移除 牌组，获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "togawasakikomod:SeizeTheFatePower": {
+    "NAME": "我命由我",
+    "DESCRIPTIONS": [
+      "回合结束时，获得 #b",
+      " 层 #y狂热 。"
+    ]
+  },
+  "togawasakikomod:CrueltyPower": {
+    "NAME": "绝情",
+    "DESCRIPTIONS": [
+      "每当你打出 #y渴望 ，抽 #b",
+      " 张牌。"
+    ]
+  },
+  "togawasakikomod:PridePower": {
+    "NAME": "骄傲",
+    "DESCRIPTIONS": [
+      "回合结束时，将 #y骄傲 的复制放入你的牌堆顶。目前放入 #b",
+      " 张。"
+    ]
+  },
+  "togawasakikomod:CharismaticFormPower": {
+    "NAME": "魅魔形态",
+    "DESCRIPTIONS": [
+      "每当敌人获得增益效果时，使你也获得之。不可叠加。"
+    ]
+  },
+  "togawasakikomod:CrychicPower": {
+    "NAME": "Crychic",
+    "DESCRIPTIONS": [
+      "回合开始时，增加一张耗能变为0的随机 #y幻影 到你的手牌。"
+    ]
+  },
+  "togawasakikomod:WorldviewPower": {
+    "NAME": "世界观",
+    "DESCRIPTIONS": [
+      "每当你抽到不能打出的卡牌时，将其变为一张 #y旋律 。不可叠加。"
+    ]
+  },
+  "togawasakikomod:DolorisPower": {
+    "NAME": "悲伤",
+    "DESCRIPTIONS": [
+      "受到的伤害无视你的 #y格挡 。"
+    ]
+  },
+  "togawasakikomod:MortisPower": {
+    "NAME": "死亡",
+    "DESCRIPTIONS": [
+      "每当你受到伤害，将一张 #y受伤 加入你的抽牌堆。"
+    ]
+  },
+  "togawasakikomod:OblivionisPower": {
+    "NAME": "遗忘",
+    "DESCRIPTIONS": [
+      "你打出的攻击牌会被 #y消耗 。"
+    ]
+  },
+  "togawasakikomod:TimorisPower": {
+    "NAME": "恐惧",
+    "DESCRIPTIONS": [
+      "回合开始时将所有 #y恐惧 转化为等量层数的 #y易伤 。"
+    ]
+  },
+  "togawasakikomod:KingsPower": {
+    "NAME": "王者",
+    "DESCRIPTIONS": [
+      "本场战斗卡牌奖励可供选择的牌数减少一张。不可叠加。"
+    ]
+  }
+}
