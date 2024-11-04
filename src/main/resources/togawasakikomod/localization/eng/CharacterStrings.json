@@ -1,4 +1,4 @@
-{
+﻿{
   "${modID}:TogawaSakiko": {
     "NAMES": [
       "Togawa Sakiko",
@@ -8,6 +8,78 @@
       "Once full of talent and passion, she now has nothing. NL Under the sway of fate, what path will she take...",
       " NL Text displayed when smacking the heart. The next one is used for the Vampires event. Usually you just change the last bit.",
       "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~basic~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+    ]
+  },
+  "${modID}:AltNeowEvent": {
+    "NAMES": [
+      "???"
+    ],
+    "TEXT": [
+      "~Greetings...~ NL ~I..~ ~am~ ~Neow...~",
+      "~Hello...~ NL ~Again..~",
+      "~Greetings...~",
+      "~Another~ NL ~try...?~",
+      "~Reach~ ~the~ ~boss...~ NL ~to~ ~receive~ ~more..~ ~blessings...~",
+      "~At~ ~least...~ ~confront~ NL ~the~ ~first~ ~boss...~",
+      "~I~ ~brought~ ~you~ ~back...~",
+      "~Choose...~",
+      "~Granted...~",
+      "~Risk...~ NL ~..reward....~",
+      "~Time~ ~for~ ~a~ NL ~CHALLENGE...~",
+      "Rewards",
+	  "~Let's~ ~keep~ ~going...~",
+	  "~It~ ~only~ ~gets~ ~harder...~",
+	  "~Impressive...~ ~more...~",
+	  "Cursed!",
+	  "Scatterbrain!",
+	  "Transformation!"
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Talk]",
+      "[Skip]",
+      "[Leave]",
+	  "Choose 10 cards to add to your deck."
+    ]
+  },
+  "${modID}:AltNeowReward": {
+    "NAMES": [],
+    "TEXT": [
+      "[ #gChoose #ga #gCard #gto #gobtain ]",
+      "[ #gObtain #ga #grandom #grare #gCard ]",
+      "[ #gRemove #ga #gCard #gfrom #gyour #gdeck ]",
+      "[ #gUpgrade #ga #gCard ]",
+      "[ #gTransform #ga #gCard ]",
+      "[ #gObtain #g3 #grandom #gPotions ]",
+      "[ #gObtain #ga #grandom #gcommon #gRelic ]",
+      "[ #gMax #gHP #g+",
+      "[ #gObtain #g",
+      " #gGold ]",
+      "#gRemove #g2 #gCards ]",
+      "#gObtain #ga #grandom #grare #gRelic ]",
+      "#gChoose #ga #grare #gCard #gto #gobtain ]",
+      "#gGain #g",
+      " #gGold ]",
+      "#gTransform #g2 #gCards ]",
+      "#gMax #gHP #g+",
+      "[ #rLose #r",
+      " #rMax #rHP ",
+      "[ #rLose #rall #rGold ",
+      "[ #rObtain #ra #rCurse ",
+      "[ #rTake #r",
+      "Choose a Card",
+      "Select a Card to Remove",
+      "Select 2 Cards to Remove",
+      "Select a Card to Transform",
+      "Select 2 Cards to Transform",
+      "Select a Card to Upgrade",
+      "[ #gEnemies #gin #gyour #gnext #gthree #gcombats #ghave #g1 #gHP ]",
+      " #rdamage",
+      "[ #gChoose #ga #gcolorless #gCard #gto #gobtain ]",
+      "#gChoose #ga #grare #gcolorless #gCard #gto #gobtain ]"
+    ],
+    "UNIQUE_REWARDS": [
+      "[ #rlose #yMonochrome #yHairband, #greplace all #yDefend into #yDesire. #r(Easy #rMode) ]"
     ]
   }
 }
