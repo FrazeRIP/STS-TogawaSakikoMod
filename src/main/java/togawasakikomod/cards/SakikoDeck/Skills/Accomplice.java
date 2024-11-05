@@ -27,8 +27,7 @@ public class Accomplice extends BaseCard {
     public Accomplice() {
         super(ID, info);
         setMagic(MAGIC_NUMBER,UPG_MAGIC_NUMBER);
-        AbstractCard card = new Desire();
-        cardsToPreview = card;
+        cardsToPreview = new Desire();
     }
 
 

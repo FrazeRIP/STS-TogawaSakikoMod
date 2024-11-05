@@ -6,7 +6,7 @@
     ],
     "TEXT": [
       "Once full of talent and passion, she now has nothing. NL Under the sway of fate, what path will she take...",
-      " NL Text displayed when smacking the heart. The next one is used for the Vampires event. Usually you just change the last bit.",
+      " NL You strike the Heart with your greatest strength.",
       "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~basic~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
     ]
   },
@@ -79,7 +79,7 @@
       "#gChoose #ga #grare #gcolorless #gCard #gto #gobtain ]"
     ],
     "UNIQUE_REWARDS": [
-      "[ #rlose #yMonochrome #yHairband, #greplace all #yDefend into #yDesire. #r(Easy #rMode) ]"
+      "[ #rLose #yMonochrome #yHairband, #greplace all #yDefend into #yDesire. #r(Easy #rMode) ]"
     ]
   }
 }

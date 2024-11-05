@@ -8,14 +8,18 @@ package togawasakikomod.Actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.utility.ShowCardAction;
+import com.megacrit.cardcrawl.actions.utility.ShowCardAndPoofAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import togawasakikomod.effects.ShowAndExhaustCardEffect;
 
 import java.util.ArrayList;
 
@@ -35,15 +39,20 @@ public class EtherAction extends AbstractGameAction {
     public void update() {
         ArrayList<AbstractCard> nonAttackCard = new ArrayList<>();
 
-        for(AbstractCard card : AbstractDungeon.player.drawPile.group){
+        for(AbstractCard card : AbstractDungeon.player.discardPile.group){
+            if(card.type != AbstractCard.CardType.ATTACK){
+                nonAttackCard.add(card);
+            }
+        }
+        for(AbstractCard card : AbstractDungeon.player.hand.group){
             if(card.type != AbstractCard.CardType.ATTACK){
                 nonAttackCard.add(card);
             }
         }
 
         for(AbstractCard card : nonAttackCard){
-            addToTop(new ExhaustSpecificCardAction(card,AbstractDungeon.player.drawPile,true));
             addToTop(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT));
+            addToTop(new ShowAndExhaustCardAction(card));
         }
 
         this.isDone = true;

@@ -82,7 +82,7 @@
   },
   "${modID}:Ether": {
     "NAME": "Ether",
-    "DESCRIPTION": "Exhaust all non-Attack cards from your draw pile. NL Deal !D! damage for each Exhausted card. NL Add a *Oblivionis to your deck."
+    "DESCRIPTION": "Exhaust all non-Attack cards from your hand and discard pile. NL Deal !D! damage for each Exhausted card. NL Add a *Oblivionis to your deck."
   },
   "${modID}:ChoirSChoir": {
     "NAME": "Choir 'S' Choir",
@@ -225,7 +225,7 @@
   },
   "${modID}:DesuWa": {
     "NAME": "Desuwa",
-    "DESCRIPTION": "Draw !M! cards. NL Each time you play a non-Attack card, return this card from the discard pile to your hand."
+    "DESCRIPTION": "Draw !M! cards that matches the type of the last card you played in this battle."
   },
   "${modID}:InnerCry": {
     "NAME": "Inner Cry",
@@ -292,7 +292,7 @@
   },
   "${modID}:Pride": {
     "NAME": "Pride",
-    "DESCRIPTION": "Innate. NL Draw an Attack card. NL At the end of your turn, add a copy of this card to the top of your draw pile. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Draw a random Attack card. NL At the end of your turn, add a copy of this card to the top of your draw pile. NL Exhaust."
   },
   "${modID}:WishYouGoodLuck": {
     "NAME": "Wish You Good Luck",
@@ -305,8 +305,8 @@
   },
   "${modID}:Crychic": {
     "NAME": "Crychic",
-    "DESCRIPTION": "At the start of the next X turns, add a random 0 cost togawasakikomod:Phantoms to your hand. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "At the start of the next X+1 turns, add a random 0 cost togawasakikomod:Phantoms to your hand. NL Ethereal."
+    "DESCRIPTION": "Add X random togawasakikomod:Phantoms to your hand. They cost 0 energy this battle. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add X+1 random togawasakikomod:Phantoms to your hand. They cost 0 energy this battle. NL Exhaust."
   },
   "${modID}:Worldview": {
     "NAME": "Worldview",

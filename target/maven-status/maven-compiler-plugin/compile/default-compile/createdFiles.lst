@@ -76,6 +76,7 @@ togawasakikomod\Actions\AveMujicaAction.class
 togawasakikomod\powers\buffs\SeizeTheFatePower.class
 togawasakikomod\cards\SakikoDeck\Attacks\TheMoonlightSonata.class
 togawasakikomod\cards\SakikoDeck\Skills\Utopia.class
+togawasakikomod\cards\SakikoDeck\Skills\Crychic.class
 togawasakikomod\cards\SakikoDeck\Skills\Defend.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordReducedPowerInstanceVer.class
 togawasakikomod\cards\SakikoDeck\Skills\Pride.class
@@ -96,6 +97,8 @@ togawasakikomod\powers\debuffs\TimorisPower.class
 togawasakikomod\Actions\BlackBirthdayAction.class
 togawasakikomod\cards\SakikoDeck\Powers\Passion.class
 togawasakikomod\modifiers\UnremoveableModifier.class
+togawasakikomod\effects\ShowAndExhaustCardEffect.class
+togawasakikomod\Actions\RandomCardFromDrawPileToHandAction.class
 togawasakikomod\relics\MonochromeHairband.class
 togawasakikomod\Actions\KillGainPurgeRewardAction.class
 togawasakikomod\relics\CuteAnimalBandAid.class
@@ -126,6 +129,7 @@ togawasakikomod\patches\ReducedPowerRecorderPatch$RecordReducedPowerInstanceVer$
 togawasakikomod\powers\buffs\WorldviewPower.class
 togawasakikomod\cards\SpecialDeck\Powers\Radiance.class
 togawasakikomod\Actions\ManualSaveGameAction.class
+togawasakikomod\Actions\DesuWaAction.class
 togawasakikomod\Actions\PurgeRewardAction.class
 togawasakikomod\Actions\VeritasAction.class
 togawasakikomod\powers\buffs\OurSongPower.class
@@ -160,9 +164,9 @@ togawasakikomod\cards\SakikoDeck\Attacks\ChoirSChoir.class
 togawasakikomod\relics\FountainDrink.class
 togawasakikomod\cards\SpecialDeck\Curses\Mortis.class
 togawasakikomod\cards\SakikoDeck\Skills\QuaerereLumina.class
-togawasakikomod\cards\SakikoDeck\Powers\Crychic.class
 togawasakikomod\powers\buffs\GodsCreationPower$GodsCreationMonsters.class
 togawasakikomod\powers\buffs\GodsCreationPower.class
+togawasakikomod\Actions\ShowAndExhaustCardAction.class
 togawasakikomod\rewards\AltNeowReward$1.class
 togawasakikomod\cards\SakikoDeck\Skills\WishFulfilled.class
 togawasakikomod\cards\SakikoDeck\Attacks\DarkHeaven.class
@@ -199,6 +203,7 @@ togawasakikomod\cards\SakikoDeck\Attacks\Angles.class
 togawasakikomod\cards\SakikoDeck\Attacks\MasqueradeRhapsodyRequest.class
 togawasakikomod\powers\debuffs\DolorisPower.class
 togawasakikomod\Actions\AuthorityRestorationAction.class
+togawasakikomod\Actions\CrychicAction.class
 togawasakikomod\cards\SpecialDeck\Powers\WhiteKeys.class
 togawasakikomod\cards\SakikoDeck\Attacks\Daten.class
 togawasakikomod\cards\SakikoDeck\Skills\BlackAndWhiteKeys.class
