@@ -2,13 +2,14 @@
   "${modID}:DazzlingPower": {
     "NAME": "Dazzling",
     "DESCRIPTIONS": [
-      "Whenever you gain a buff, deal damage equal to the number of #yDazzling to a random enemy."
+      "Whenever you gain a buff, deal #b",
+      " damage to a random enemy."
     ]
   },
   "${modID}:HypePower": {
     "NAME": "Hype",
     "DESCRIPTIONS": [
-      "Whenever you are about to lose #yBlock, consume one #yHype instead."
+      "Whenever you are about to lose #yBlock, consume 1 #yHype instead."
     ]
   },
   "${modID}:GodsCreationPower": {
@@ -28,7 +29,7 @@
   "${modID}:OurSongPower": {
     "NAME": "Our Song",
     "DESCRIPTIONS": [
-      "This turn, when you deal unblocked damage with your next attack, gain an equal amount of Block."
+      "This turn, when you deal unblocked damage with your next attack, gain an equal amount of #yBlock."
     ]
   },
   "${modID}:SharedDestinyPower": {
@@ -96,6 +97,13 @@
     "NAME": "Worldview",
     "DESCRIPTIONS": [
       "Whenever you draw an unplayable card, transform it into a #yMelody. Does not stack."
+    ]
+  },
+  "${modID}:PrimoDieInScaenaPower": {
+    "NAME": "Primo Die In Scaena",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " [E] at the start of each turn, until your next shuffle."
     ]
   },
   "${modID}:DolorisPower": {

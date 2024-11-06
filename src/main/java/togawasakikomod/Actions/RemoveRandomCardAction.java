@@ -3,12 +3,9 @@ package togawasakikomod.Actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.random.Random;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class RemoveRandomCardAction extends AbstractGameAction {
 

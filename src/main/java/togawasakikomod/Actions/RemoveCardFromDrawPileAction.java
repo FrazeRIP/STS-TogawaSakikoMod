@@ -1,17 +1,13 @@
 package togawasakikomod.Actions;
 
 import basemod.helpers.CardModifierManager;
-import com.evacipated.cardcrawl.mod.stslib.patches.relicInterfaces.OnRemoveCardFromMasterDeckPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
-import togawasakikomod.cards.CustomTags;
 import togawasakikomod.modifiers.UnremoveableModifier;
-import togawasakikomod.patches.CustomEnumPatch;
 
 import java.util.Iterator;
 

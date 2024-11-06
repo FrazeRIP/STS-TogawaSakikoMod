@@ -1,18 +1,8 @@
 package togawasakikomod.relics;
 
-import basemod.BaseMod;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.SaveHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.NeowsLament;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import togawasakikomod.Actions.ManualSaveGameAction;
-import togawasakikomod.cards.SpecialDeck.Skills.Desire;
 import togawasakikomod.character.TogawaSakiko;
-import togawasakikomod.effects.ShowCardAndObtainEffect2;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 

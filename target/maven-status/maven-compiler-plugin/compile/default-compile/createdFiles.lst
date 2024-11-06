@@ -47,6 +47,7 @@ togawasakikomod\cards\SpecialDeck\Powers\Voice.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRegenLostInstanceVar.class
 togawasakikomod\potions\BasePotion.class
 togawasakikomod\cards\SakikoDeck\Skills\BandInvitation.class
+togawasakikomod\powers\buffs\PrimoDieInScaenaPower$ShuffleActionPatch.class
 togawasakikomod\util\TextureLoader.class
 togawasakikomod\rewards\AltNeowReward$NeowRewardDrawbackDef.class
 togawasakikomod\Actions\BandInvitationAction.class
@@ -139,6 +140,7 @@ togawasakikomod\saveable\KingsSaveable.class
 togawasakikomod\modifiers\SelfRetainModifier.class
 togawasakikomod\cards\SakikoDeck\Skills\ClockOut.class
 togawasakikomod\Actions\MakeCardUnremoveableAction.class
+togawasakikomod\annotations\CardEnable.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfTaki.class
 togawasakikomod\cards\SakikoDeck\Skills\Perfection.class
 togawasakikomod\cards\SakikoDeck\Skills\NeverGiveYouUp.class
@@ -158,6 +160,7 @@ togawasakikomod\powers\debuffs\KingsPower.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRemovedPowerInstanceVar$RemoveLocator.class
 togawasakikomod\Actions\SymbolIFireAction.class
 togawasakikomod\cards\SpecialDeck\Powers\BlackKeys.class
+togawasakikomod\powers\buffs\PrimoDieInScaenaPower.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIIAir.class
 togawasakikomod\powers\debuffs\KingsPower$ReduceCardReward.class
 togawasakikomod\cards\SakikoDeck\Attacks\ChoirSChoir.class
@@ -212,4 +215,5 @@ togawasakikomod\cards\SakikoDeck\Skills\FallenFlowers.class
 togawasakikomod\effects\ShowCardAndObtainEffect2.class
 togawasakikomod\cards\SpecialDeck\Skills\Tiredness.class
 togawasakikomod\cards\BaseCard$QuickDynamicVariable.class
+togawasakikomod\powers\buffs\PrimoDieInScaenaPower$EmptyDeckShuffleActionPatch.class
 togawasakikomod\cards\SakikoDeck\Powers\Endurance.class

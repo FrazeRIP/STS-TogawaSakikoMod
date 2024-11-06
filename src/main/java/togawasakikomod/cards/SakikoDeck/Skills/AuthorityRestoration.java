@@ -1,17 +1,15 @@
 package togawasakikomod.cards.SakikoDeck.Skills;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.AuthorityRestorationAction;
 import togawasakikomod.Actions.PlayAudioAction;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SpecialDeck.Skills.Tiredness;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
+@CardEnable(enable = false)
 public class AuthorityRestoration extends BaseCard {
     public static final String ID = makeID(AuthorityRestoration.class.getSimpleName());
     private static final CardStats info = new CardStats(

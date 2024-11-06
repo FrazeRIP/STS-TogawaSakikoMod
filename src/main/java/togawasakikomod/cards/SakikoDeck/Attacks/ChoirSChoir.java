@@ -10,7 +10,6 @@ import togawasakikomod.Actions.AdjustCostAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.cards.SpecialDeck.Skills.Desire;
 import togawasakikomod.character.TogawaSakiko;
-import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.util.CardStats;
 
 //月光奏鸣曲

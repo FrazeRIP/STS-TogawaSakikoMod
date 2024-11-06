@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SakikoDeck.Powers.Endurance;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.util.CardStats;

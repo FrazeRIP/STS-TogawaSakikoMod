@@ -27,7 +27,7 @@ public class DazzlingPower extends BasePower implements CloneablePowerInterface 
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override

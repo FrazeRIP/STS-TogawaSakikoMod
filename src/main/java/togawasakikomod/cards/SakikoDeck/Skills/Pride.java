@@ -1,15 +1,10 @@
 package togawasakikomod.cards.SakikoDeck.Skills;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.AttackFromDeckToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.PirdeAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
-import togawasakikomod.powers.buffs.PridePower;
 import togawasakikomod.util.CardStats;
 
 public class Pride extends BaseCard {

@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SakikoDeck.Attacks.PhantomOfTomori;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.util.CardStats;

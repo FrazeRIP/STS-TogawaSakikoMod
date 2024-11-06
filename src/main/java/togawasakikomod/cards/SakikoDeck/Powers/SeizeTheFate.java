@@ -4,12 +4,14 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.EndurancePower;
 import togawasakikomod.powers.buffs.SeizeTheFatePower;
 import togawasakikomod.util.CardStats;
 
+@CardEnable(enable = false)
 public class SeizeTheFate extends BaseCard {
     public static final String ID = makeID(SeizeTheFate.class.getSimpleName());
     private static final CardStats info = new CardStats(

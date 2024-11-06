@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import java.util.ArrayList;
-
 public class BlackBirthdayAction extends AbstractGameAction {
 
 

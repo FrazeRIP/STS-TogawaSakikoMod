@@ -6,10 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SpecialDeck.Attacks.Melody;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.WishYouGoodLuckPower;
-import togawasakikomod.powers.buffs.WorldviewPower;
 import togawasakikomod.util.CardStats;
 
 public class WishYouGoodLuck extends BaseCard {

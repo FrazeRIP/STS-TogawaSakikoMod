@@ -2,12 +2,9 @@ package togawasakikomod.powers.buffs;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import togawasakikomod.Actions.RemoveCardFromDrawPileAction;
 import togawasakikomod.Actions.RemoveCardFromHandAction;
-import togawasakikomod.Actions.SeizeTheFateAction;
 import togawasakikomod.powers.BasePower;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;

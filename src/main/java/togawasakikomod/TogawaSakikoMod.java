@@ -2,7 +2,6 @@ package togawasakikomod;
 
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.abstracts.CustomSavableRaw;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -12,15 +11,14 @@ import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import org.lwjgl.Sys;
 import togawasakikomod.Actions.CharismaticIntangibleAction;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.cards.SakikoDeck.Powers.NumbersAndFaces;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
@@ -96,7 +94,14 @@ public class TogawaSakikoMod implements
         new AutoAdd(modID) //Loads files from this mod
                 .packageFilter(BaseCard.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
-                .cards(); //Adds the cards
+                .any(AbstractCard.class,(info,card)->{
+                    if(card.getClass().isAnnotationPresent(CardEnable.class)){
+                        CardEnable enable = card.getClass().getAnnotation(CardEnable.class);
+                        if(enable.enable()){BaseMod.addCard(card);}
+                    }else{
+                        BaseMod.addCard(card);
+                    }
+                }); //Adds the cards
     }
 
     @Override

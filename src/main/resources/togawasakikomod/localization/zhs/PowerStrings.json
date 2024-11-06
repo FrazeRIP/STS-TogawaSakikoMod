@@ -2,7 +2,8 @@
   "${modID}:DazzlingPower": {
     "NAME": "闪耀",
     "DESCRIPTIONS": [
-      "每当你获得正面状态时，对一名随机敌人造成等同于 #y闪耀 层数的伤害。"
+      "每当你获得正面状态时，对一名随机敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "${modID}:HypePower": {
@@ -28,7 +29,7 @@
   "${modID}:OurSongPower": {
     "NAME": "我们的歌",
     "DESCRIPTIONS": [
-      "在这个回合，你打出的下张攻击牌造成的未被格挡的伤害时，你获得相等的 格挡 。"
+      "在这个回合，你打出的下张攻击牌造成的未被格挡的伤害时，你获得相等的 #y格挡 。"
     ]
   },
   "${modID}:SharedDestinyPower": {
@@ -96,6 +97,13 @@
     "NAME": "世界观",
     "DESCRIPTIONS": [
       "每当你抽到不能打出的卡牌时，将其变为一张 #y旋律 。不可叠加。"
+    ]
+  },
+  "${modID}:PrimoDieInScaenaPower": {
+    "NAME": "首演",
+    "DESCRIPTIONS": [
+      "直到你的下次洗牌，每回合开始获得 #b",
+      " [E] 。"
     ]
   },
   "${modID}:DolorisPower": {

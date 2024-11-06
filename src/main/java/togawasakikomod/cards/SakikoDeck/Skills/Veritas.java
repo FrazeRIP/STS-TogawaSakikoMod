@@ -3,7 +3,6 @@ package togawasakikomod.cards.SakikoDeck.Skills;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import togawasakikomod.Actions.AuthorityRestorationAction;
 import togawasakikomod.Actions.VeritasAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;

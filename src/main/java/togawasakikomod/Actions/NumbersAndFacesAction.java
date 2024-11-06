@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import togawasakikomod.cards.SakikoDeck.Powers.NumbersAndFaces;
 import togawasakikomod.powers.buffs.HypePower;
 
 public class NumbersAndFacesAction extends AbstractGameAction {

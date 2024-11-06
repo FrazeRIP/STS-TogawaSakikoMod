@@ -43,6 +43,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\VeritasAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\WishFulfilledAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\WishToBecomeHumanAction.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\annotations\CardEnable.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\cards\BaseCard.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\cards\CustomTags.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\cards\SakikoDeck\Attacks\Angles.java
@@ -156,6 +157,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\HypePower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\OurSongPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\PridePower.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\PrimoDieInScaenaPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\SeizeTheFatePower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\SharedDestinyPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\WishYouGoodLuckPower.java

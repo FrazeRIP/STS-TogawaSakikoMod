@@ -7,11 +7,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SakikoDeck.Skills.BandInvitation;
 import togawasakikomod.cards.SpecialDeck.Skills.Desire;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.CrueltyPower;
-import togawasakikomod.powers.buffs.SeizeTheFatePower;
 import togawasakikomod.util.CardStats;
 
 public class Cruelty extends BaseCard {

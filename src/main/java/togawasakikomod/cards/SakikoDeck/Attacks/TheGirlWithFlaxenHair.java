@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import togawasakikomod.Actions.AddBackLostPowersAction;
-import togawasakikomod.Actions.RemoveAddedLostPowersAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.GirlOfSpringPower;

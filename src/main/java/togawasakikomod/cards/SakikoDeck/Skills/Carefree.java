@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.ChooseCardGainSelfRetainAction;
 import togawasakikomod.Actions.PlayAudioAction;
-import togawasakikomod.Actions.VeritasAction;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SakikoDeck.Attacks.AveMujica;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
+@CardEnable(enable = false)
 public class Carefree extends BaseCard {
     public static final String ID = makeID(Carefree.class.getSimpleName());
     private static final CardStats info = new CardStats(

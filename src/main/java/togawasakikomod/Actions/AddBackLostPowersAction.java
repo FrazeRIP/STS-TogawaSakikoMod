@@ -6,25 +6,11 @@
 package togawasakikomod.Actions;
 
 import basemod.interfaces.CloneablePowerInterface;
-import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.RemoveExcludedCardsFromPools;
-import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import togawasakikomod.character.TogawaSakiko;
-import togawasakikomod.patches.CustomEnumPatch;
-import togawasakikomod.rewards.PurgeReward;
 
 import java.util.ArrayList;
 import java.util.List;

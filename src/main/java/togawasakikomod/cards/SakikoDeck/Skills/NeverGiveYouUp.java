@@ -3,10 +3,12 @@ package togawasakikomod.cards.SakikoDeck.Skills;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.AddCardsFromDiscardedToHandAction;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
+@CardEnable(enable = false)
 public class NeverGiveYouUp extends BaseCard {
     public static final String ID = makeID(NeverGiveYouUp.class.getSimpleName());
     private static final CardStats info = new CardStats(

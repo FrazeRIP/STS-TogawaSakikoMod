@@ -1,6 +1,5 @@
 package togawasakikomod.cards.SakikoDeck.Attacks;
 
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;

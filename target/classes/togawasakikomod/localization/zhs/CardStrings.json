@@ -82,7 +82,7 @@
   },
   "togawasakikomod:Ether": {
     "NAME": "遗忘之光",
-    "DESCRIPTION": " 消耗 弃牌堆的所有非攻击牌。 NL 每张被 消耗 的牌造成 !D! 点伤害。 NL 将1张 *遗忘 加入牌组。"
+    "DESCRIPTION": " 消耗 弃牌堆和手牌中的所有非攻击牌。 NL 每张被 消耗 的牌造成 !D! 点伤害。 NL 将1张 *遗忘 加入牌组。"
   },
   "togawasakikomod:ChoirSChoir": {
     "NAME": "齐唱圣歌",
@@ -205,7 +205,7 @@
   },
   "togawasakikomod:Perfection": {
     "NAME": "完美无缺",
-    "DESCRIPTION": "从20张牌中选择1张牌放入你的手牌。 NL 这张牌在本回合的耗能变为0。 NL  消耗 。"
+    "DESCRIPTION": "丢弃所有手牌。 NL 每丢弃一张牌，在你的手牌中随机增加一张牌。 NL  消耗 。"
   },
   "togawasakikomod:NumbersAndFaces": {
     "NAME": "数字和脸",
@@ -213,7 +213,8 @@
   },
   "togawasakikomod:PrimoDieInScaena": {
     "NAME": "首演",
-    "DESCRIPTION": "给予所有敌人 NL  !togawasakikomod:Hype! 层 togawasakikomod:狂热 。 NL 获得 !M! 层 togawasakikomod:闪耀 。"
+    "DESCRIPTION": "直到你下次洗牌前，每回合开始获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 直到你下次洗牌前，每回合开始获得 [E] 。"
   },
   "togawasakikomod:Melody": {
     "NAME": "旋律",

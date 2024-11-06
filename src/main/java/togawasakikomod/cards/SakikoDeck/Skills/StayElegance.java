@@ -1,13 +1,11 @@
 package togawasakikomod.cards.SakikoDeck.Skills;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SakikoDeck.Powers.SharedDestiny;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 

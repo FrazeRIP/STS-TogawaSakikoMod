@@ -65,7 +65,7 @@
   },
   "${modID}:SymbolIFire": {
     "NAME": "Symbol I: Fire",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Play the previous attack card that is not *Symbol *I* *: *Fire !M! times. NL Add a *Timoris to your deck."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Play the previous attack card that is not *Symbol *I: *Fire !M! times. NL Add a *Timoris to your deck."
   },
   "${modID}:SymbolIIAir": {
     "NAME": "Symbol II: Air",
@@ -205,7 +205,7 @@
   },
   "${modID}:Perfection": {
     "NAME": "Perfection",
-    "DESCRIPTION": "Choose 1 card from 20 to add to your hand. NL It costs 0 energy this turn. NL Exhaust."
+    "DESCRIPTION": "Discard your hand. NL Add 1 random card into your hand for each card discarded. NL Exhaust."
   },
   "${modID}:NumbersAndFaces": {
     "NAME": "Numbers and Faces",
@@ -213,7 +213,8 @@
   },
   "${modID}:PrimoDieInScaena": {
     "NAME": "Primo Die In Scaena",
-    "DESCRIPTION": "Apply !${modID}:Hype! togawasakikomod:Hype to all enemies. NL Gain !M! togawasakikomod:Dazzling."
+    "DESCRIPTION": "Gain [E] at the start of each turn, until your next shuffle.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain [E] at the start of each turn, until your next shuffle."
   },
   "${modID}:Melody": {
     "NAME": "Melody",

@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SakikoDeck.Powers.PrimoDieInScaena;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
