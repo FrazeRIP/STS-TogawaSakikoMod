@@ -81,6 +81,13 @@
       " 张。"
     ]
   },
+  "togawasakikomod:PerdereOmniaPower": {
+    "NAME": "破坏一切",
+    "DESCRIPTIONS": [
+      "#y移除 接下来抽到的 #b",
+      " 张 #y无法被打出 的牌。"
+    ]
+  },
   "togawasakikomod:CharismaticFormPower": {
     "NAME": "魅魔形态",
     "DESCRIPTIONS": [

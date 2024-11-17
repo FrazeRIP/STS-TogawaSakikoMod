@@ -81,6 +81,13 @@
       " copies."
     ]
   },
+  "${modID}:PerdereOmniaPower": {
+    "NAME": "Perdere Omnia",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " #yUnplayable cards that you draw will be #yPurged."
+    ]
+  },
   "${modID}:CharismaticFormPower": {
     "NAME": "Charismatic Form",
     "DESCRIPTIONS": [

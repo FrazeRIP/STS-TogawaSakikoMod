@@ -81,6 +81,13 @@
       " copies."
     ]
   },
+  "togawasakikomod:PerdereOmniaPower": {
+    "NAME": "Perdere Omnia",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " #yUnplayable cards that you draw will be #yPurged."
+    ]
+  },
   "togawasakikomod:CharismaticFormPower": {
     "NAME": "Charismatic Form",
     "DESCRIPTIONS": [

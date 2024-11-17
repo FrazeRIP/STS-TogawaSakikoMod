@@ -27,6 +27,10 @@
     "NAME": "Wish to Become Human",
     "DESCRIPTION": "Deal !D! damage twice. NL Gain togawasakikomod:Dazzling equal to the unblocked damage dealt."
   },
+  "togawasakikomod:PerdereOmnia": {
+    "NAME": "Perdere Omnia",
+    "DESCRIPTION": " Unplayable. NL When drawn, togawasakikomod:Purge the next !M! cards you draw that is Unplayable."
+  },
   "togawasakikomod:DarkHeaven": {
     "NAME": "Dark Heaven",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy has Strength, steal !M! Strength."
@@ -361,6 +365,10 @@
   "togawasakikomod:Doloris": {
     "NAME": "Doloris",
     "DESCRIPTION": "Unplayable. NL If this card remains in your hand at the end of the turn, take !M! damage."
+  },
+  "togawasakikomod:Weakness": {
+    "NAME": "Weakness",
+    "DESCRIPTION": "Unplayable. NL Start each combat with this card in your discard pile."
   }
 }
 

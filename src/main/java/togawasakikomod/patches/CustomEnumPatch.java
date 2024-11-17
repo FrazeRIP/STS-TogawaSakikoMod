@@ -9,4 +9,5 @@ public class CustomEnumPatch {
 
     @SpireEnum public static AbstractCard.CardTags TOGAWASAKIKO_UNREMOVEABLE;
     @SpireEnum public static AbstractCard.CardTags TOGAWASAKIKO_UTOPIA;
+    @SpireEnum public static AbstractCard.CardTags TOGAWASAKIKO_GRAVE;
 }

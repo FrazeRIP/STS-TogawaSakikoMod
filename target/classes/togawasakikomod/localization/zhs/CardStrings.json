@@ -27,6 +27,10 @@
     "NAME": "想要成为人类",
     "DESCRIPTION": "造成 !D! 点伤害2次。 NL 获得与所造成的未被格挡的伤害相等层数的 togawasakikomod:闪耀 。"
   },
+  "togawasakikomod:PerdereOmnia": {
+    "NAME": "破坏一切",
+    "DESCRIPTION": " 不能被打出 。 NL 抽到后， togawasakikomod:移除 接下来抽到的 !M! 张 不能被打出 的牌。"
+  },
   "togawasakikomod:DarkHeaven": {
     "NAME": "暗黑天国",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 力量 ，窃取 !M! 层。"
@@ -361,5 +365,9 @@
   "togawasakikomod:Doloris": {
     "NAME": "悲伤",
     "DESCRIPTION": " 不能被打出 。 NL 回合结束时仍在手牌内时，受到 !M! 点伤害。"
+  },
+  "togawasakikomod:Weakness": {
+    "NAME": "软弱",
+    "DESCRIPTION": " 不能被打出 。 NL 回合开始时将这张卡置入你的弃牌堆。"
   }
 }
