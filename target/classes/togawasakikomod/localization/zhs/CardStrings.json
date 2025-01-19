@@ -13,7 +13,7 @@
   },
   "togawasakikomod:TheMoonlightSonata": {
     "NAME": "月光奏鸣曲",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL  斩杀 时，掉落1次 NL  togawasakikomod:移除 卡牌奖励。 NL  消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 战斗结束时获得1次 NL  togawasakikomod:移除 卡牌奖励。 NL  消耗 。"
   },
   "togawasakikomod:TheGirlWithFlaxenHair": {
     "NAME": "亚麻色头发的少女",
@@ -49,7 +49,8 @@
   },
   "togawasakikomod:MementoMori": {
     "NAME": "愚神",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将抽牌堆顶的7张牌 NL 从牌组中 togawasakikomod:移除 。 NL 进入 神格 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将抽牌堆顶的7张牌 消耗 。 NL 进入 神格 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 将抽牌堆顶的7张牌 NL 从牌组中 togawasakikomod:移除 。 NL 进入 神格 。"
   },
   "togawasakikomod:TwoMoons": {
     "NAME": "双月",
@@ -148,7 +149,7 @@
   },
   "togawasakikomod:EdgeOfBreakdown": {
     "NAME": "崩溃边缘",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 获得 !M! 层 脆弱 。"
+    "DESCRIPTION": "选择弃牌堆中的1张牌并 togawasakikomod:移除 。 NL 获得 !M! 层 脆弱 。"
   },
   "togawasakikomod:OurSong": {
     "NAME": "我们的歌",
@@ -172,7 +173,7 @@
   },
   "togawasakikomod:Veritas": {
     "NAME": "真理",
-    "DESCRIPTION": "抽 !M! 张牌。 NL  togawasakikomod:移除 其中的非攻击牌。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL  每当你 消耗 卡时，将这张牌从弃牌堆放回你的手牌。。"
   },
   "togawasakikomod:Carefree": {
     "NAME": "衣食无忧",
@@ -209,7 +210,7 @@
   },
   "togawasakikomod:Perfection": {
     "NAME": "完美无缺",
-    "DESCRIPTION": "丢弃所有手牌。 NL 每丢弃一张牌，在你的手牌中随机增加一张牌。 NL  消耗 。"
+    "DESCRIPTION": "从20张牌中选择1张牌放入你的手牌。 NL 这张牌在本回合的耗能变为0。 NL  消耗 。"
   },
   "togawasakikomod:NumbersAndFaces": {
     "NAME": "数字和脸",
@@ -289,7 +290,8 @@
   },
   "togawasakikomod:SeizeTheFate": {
     "NAME": "我命由我",
-    "DESCRIPTION": "回合结束时，获得 !M! 层 togawasakikomod:狂热 。"
+    "DESCRIPTION": "获得 !M! 层 togawasakikomod:狂热 。每打出一次，这张牌在本局游戏中给予的 togawasakikomod:狂热 永久减少1。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 togawasakikomod:狂热 。"
   },
   "togawasakikomod:Cruelty": {
     "NAME": "绝情",

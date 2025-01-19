@@ -13,7 +13,7 @@
   },
   "togawasakikomod:TheMoonlightSonata": {
     "NAME": "Moonlight Sonata",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain a togawasakikomod:Purge reward. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a togawasakikomod:Purge reward at the end of the battle. NL Exhaust."
   },
   "togawasakikomod:TheGirlWithFlaxenHair": {
     "NAME": "The Girl with Flaxen Hair",
@@ -49,7 +49,8 @@
   },
   "togawasakikomod:MementoMori": {
     "NAME": "MementoMori",
-    "DESCRIPTION": "Deal !D! damage. NL togawasakikomod:Purge the top 7 cards from the draw pile. NL Enter Divinity."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust the top 7 cards from the draw pile. NL Enter Divinity.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL togawasakikomod:Purge the top 7 cards from the draw pile. NL Enter Divinity."
   },
   "togawasakikomod:TwoMoons": {
     "NAME": "Two Moons",
@@ -148,7 +149,7 @@
   },
   "togawasakikomod:EdgeOfBreakdown": {
     "NAME": "Edge of Breakdown",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Vulnerable."
+    "DESCRIPTION": "Choose a card in your discard pile and togawasakikomod:Purge it. NL Gain !M! Vulnerable."
   },
   "togawasakikomod:OurSong": {
     "NAME": "Our Song",
@@ -172,7 +173,7 @@
   },
   "togawasakikomod:Veritas": {
     "NAME": "Veritas",
-    "DESCRIPTION": "Draw !M! cards. NL togawasakikomod:Purge all non-attack cards among them."
+    "DESCRIPTION": "Draw !M! cards. NL Whenever you Exhaust cards, add this card back to your hand."
   },
   "togawasakikomod:Carefree": {
     "NAME": "Carefree",
@@ -209,7 +210,7 @@
   },
   "togawasakikomod:Perfection": {
     "NAME": "Perfection",
-    "DESCRIPTION": "Discard your hand. NL Add 1 random card into your hand for each card discarded. NL Exhaust."
+    "DESCRIPTION": "Choose 1 card from 20 to add to your hand. NL It costs 0 energy this turn. NL Exhaust."
   },
   "togawasakikomod:NumbersAndFaces": {
     "NAME": "Numbers and Faces",
@@ -289,7 +290,8 @@
   },
   "togawasakikomod:SeizeTheFate": {
     "NAME": "Seize the Fate",
-    "DESCRIPTION": "At the end of your turn, gain !M! togawasakikomod:Hype."
+    "DESCRIPTION": "Gain !M! togawasakikomod:Hype. NL Permanently decrease this card's togawasakikomod:Hype by 1.",
+    "UPGRADE_DESCRIPTION": "Gain !M! togawasakikomod:Hype. NL Permanently decrease this card's togawasakikomod:Hype by 1."
   },
   "togawasakikomod:Cruelty": {
     "NAME": "Cruelty",

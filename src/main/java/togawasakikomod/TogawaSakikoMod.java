@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -18,9 +19,11 @@ import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import togawasakikomod.Actions.CharismaticIntangibleAction;
+import togawasakikomod.Actions.VeritasAction;
 import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.cards.SakikoDeck.Powers.NumbersAndFaces;
+import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.patches.CustomEnumPatch;
@@ -64,6 +67,7 @@ public class TogawaSakikoMod implements
         OnCardUseSubscriber,
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
+        PostExhaustSubscriber,
         OnPlayerLoseBlockSubscriber {
     public static ModInfo info;
     public static String modID; //Edit your pom.xml to change this
@@ -357,6 +361,8 @@ public class TogawaSakikoMod implements
                 if(Objects.equals(abstractPower.ID, ModeShiftPower.POWER_ID)){return;}
                 if(Objects.equals(abstractPower.ID, PainfulStabsPower.POWER_ID)){return;}
                 if(Objects.equals(abstractPower.ID, BeatOfDeathPower.POWER_ID)){return;}
+                if(Objects.equals(abstractPower.ID, SharpHidePower.POWER_ID)){return;}
+                //if(Objects.equals(abstractPower.ID, FlightPower.POWER_ID)){return;}
 
                 AbstractPower copy = null;
 
@@ -379,7 +385,11 @@ public class TogawaSakikoMod implements
                     copy.owner = AbstractDungeon.player;
                     if (copy.ID.equals(IntangiblePlayerPower.POWER_ID)) {
                         AbstractDungeon.actionManager.addToTop(new CharismaticIntangibleAction(copy));
-                    } else {
+                    }else if(copy.ID.equals(FlightPower.POWER_ID)){
+                        AbstractPower flight = new PlayerFilightPower(AbstractDungeon.player,copy.amount);
+                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, flight));
+                    }
+                    else {
                         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, copy, copy.amount));
                     }
                 }
@@ -458,6 +468,15 @@ public class TogawaSakikoMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         KingsSaveable.IsKing = false;
         PridePower.copies.clear();
+    }
+
+    @Override
+    public void receivePostExhaust(AbstractCard abstractCard) {
+        for(AbstractCard card : AbstractDungeon.player.discardPile.group){
+            if(Objects.equals(card.cardID, Veritas.ID)){
+                AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(card));
+            }
+        }
     }
 
 //    @Override

@@ -8,6 +8,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\BlackBirthdayAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\BodySlamEXAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\CharismaticIntangibleAction.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\ChooseCardAndRemoveFormDiscardPileAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\ChooseCardGainSelfRetainAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\ChooseExistCardAndAddToDeckAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\CountingStarsAction.java
@@ -15,6 +16,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\DatenAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\DesuWaAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\EtherAction.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\ExhaustCardFromDrawPileAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\ForcePlayCardAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\HeartsBarrierAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\KillGainPurgeRewardAction.java
@@ -160,6 +162,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\HypePower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\OurSongPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\PerdereOmniaPower.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\PlayerFilightPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\PridePower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\PrimoDieInScaenaPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\SeizeTheFatePower.java

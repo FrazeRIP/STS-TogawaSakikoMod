@@ -7,7 +7,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.DivinityStance;
+import togawasakikomod.Actions.ExhaustCardFromDrawPileAction;
 import togawasakikomod.Actions.RemoveCardFromDrawPileAction;
+import togawasakikomod.Actions.ShowAndExhaustCardAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
@@ -38,8 +40,18 @@ public class MementoMori extends BaseCard {
     }
 
     @Override
+    public void upgrade() {
+        super.upgrade();
+    }
+
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new RemoveCardFromDrawPileAction(CARD_REMOVE_AMOUNT));
+        if(upgraded){
+            addToBot(new RemoveCardFromDrawPileAction(CARD_REMOVE_AMOUNT));
+        }else{
+            addToBot(new ExhaustCardFromDrawPileAction(CARD_REMOVE_AMOUNT));
+        }
+
         addToBot(new ChangeStanceAction(new DivinityStance()));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }

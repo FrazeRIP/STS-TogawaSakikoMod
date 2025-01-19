@@ -25,6 +25,12 @@
       "Choose a card to add to your hand"
     ]
   },
+  "${modID}:ChooseCardAndRemoveFormDiscardPileAction": {
+    "TEXT": [
+      "Choose and remove a card",
+      "Choose a card and remove it"
+    ]
+  },
   "${modID}:UnremoveableModifier": {
     "TEXT": [
       "%s NL togawasakikomod:Unremoveable.",

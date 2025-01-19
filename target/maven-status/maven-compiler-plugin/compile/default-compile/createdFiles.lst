@@ -21,6 +21,7 @@ togawasakikomod\util\KeywordInfo.class
 togawasakikomod\cards\SakikoDeck\Skills\AsYourHeartDesires.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfSakiko.class
 togawasakikomod\effects\ShowCardAndAddToDiscardPileEffect2.class
+togawasakikomod\Actions\ChooseCardAndRemoveFormDiscardPileAction.class
 togawasakikomod\rewards\AltNeowReward$NeowRewardDrawback.class
 togawasakikomod\cards\SakikoDeck\Powers\Worldview.class
 togawasakikomod\character\TogawaSakiko.class
@@ -33,6 +34,7 @@ togawasakikomod\cards\SakikoDeck\Skills\Carefree.class
 togawasakikomod\TogawaSakikoMod.class
 togawasakikomod\Actions\NumbersAndFacesAction.class
 togawasakikomod\cards\SakikoDeck\Skills\InnerCry.class
+togawasakikomod\Actions\ExhaustCardFromDrawPileAction.class
 togawasakikomod\rewards\AltNeowReward.class
 togawasakikomod\cards\SakikoDeck\Skills\HeartsBarrier.class
 togawasakikomod\Actions\HeartsBarrierAction.class
@@ -91,6 +93,7 @@ togawasakikomod\patches\AltNeowPatch$Locator.class
 togawasakikomod\cards\SakikoDeck\Skills\StayElegance.class
 togawasakikomod\cards\SakikoDeck\Skills\CountingStars.class
 togawasakikomod\powers\buffs\EndurancePower.class
+togawasakikomod\powers\buffs\PlayerFilightPower.class
 togawasakikomod\powers\buffs\SharedDestinyPower.class
 togawasakikomod\rewards\AltNeowReward$NeowRewardDef.class
 togawasakikomod\Actions\EtherAction.class

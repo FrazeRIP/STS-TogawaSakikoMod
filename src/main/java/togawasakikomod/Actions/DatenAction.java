@@ -26,7 +26,7 @@ public class DatenAction extends AbstractGameAction {
 
     public void update() {
         ArrayList generatedCards;
-        generatedCards = this.generateCardChoices(this.cardType);
+        generatedCards = this.generateCardChoices();
 
         if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
             AbstractDungeon.cardRewardScreen.discoveryCard = null;
@@ -57,7 +57,7 @@ public class DatenAction extends AbstractGameAction {
         }
     }
 
-    private ArrayList<AbstractCard> generateCardChoices(AbstractCard.CardType type) {
+    private ArrayList<AbstractCard> generateCardChoices() {
         ArrayList<AbstractCard> derp = new ArrayList<>(AbstractDungeon.player.hand.group);
         derp.addAll(AbstractDungeon.player.discardPile.group);
         derp.addAll(AbstractDungeon.player.drawPile.group);
@@ -79,5 +79,4 @@ public class DatenAction extends AbstractGameAction {
             return null;
         }
     }
-
 }

@@ -1,6 +1,7 @@
 package togawasakikomod.cards.SakikoDeck.Powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMiscAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -8,10 +9,10 @@ import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.EndurancePower;
+import togawasakikomod.powers.buffs.HypePower;
 import togawasakikomod.powers.buffs.SeizeTheFatePower;
 import togawasakikomod.util.CardStats;
 
-@CardEnable(enable = false)
 public class SeizeTheFate extends BaseCard {
     public static final String ID = makeID(SeizeTheFate.class.getSimpleName());
     private static final CardStats info = new CardStats(
@@ -22,17 +23,30 @@ public class SeizeTheFate extends BaseCard {
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int MAGIC_NUMBER = 1;
-    private static final int UPG_MAGIC_NUMBER = 0;
-
     public SeizeTheFate() {
         super(ID, info);
-        setCostUpgrade(1);
-        setMagic(MAGIC_NUMBER);
+        this.misc = 6;
+        this.magicNumber = 6;
+    }
+
+    public void applyPowers() {
+        this.baseMagicNumber = this.misc;
+        this.magicNumber = this.misc;
+        super.applyPowers();
+        this.initializeDescription();
+    }
+
+    @Override
+    public void initializeDescription() {
+        this.magicNumber = this.misc;
+        super.initializeDescription();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new SeizeTheFatePower(AbstractDungeon.player, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new HypePower(AbstractDungeon.player, misc), misc));
+        if(!upgraded){
+            this.addToBot(new IncreaseMiscAction(this.uuid, this.misc, -1));
+        }
     }
 }

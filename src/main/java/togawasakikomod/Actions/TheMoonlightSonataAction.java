@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import togawasakikomod.relics.TheThirdMovement;
+import togawasakikomod.rewards.PurgeReward;
 
 public class TheMoonlightSonataAction extends AbstractGameAction {
 
@@ -19,8 +20,8 @@ public class TheMoonlightSonataAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        addToTop(new KillGainPurgeRewardAction(m,dmgInfo));
-
+        //addToTop(new KillGainPurgeRewardAction(m,dmgInfo));
+        AbstractDungeon.getCurrRoom().rewards.add(new PurgeReward());
         if(AbstractDungeon.player.hasRelic(TheThirdMovement.ID)){
             AbstractRelic relic = AbstractDungeon.player.getRelic(TheThirdMovement.ID);
             if(!relic.usedUp && relic.counter>0){

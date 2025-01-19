@@ -1,6 +1,8 @@
 package togawasakikomod.cards.SakikoDeck.Skills;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.VeritasAction;
@@ -18,7 +20,7 @@ public class Veritas extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int MAGIC_NUMBER = 3;
+    private static final int MAGIC_NUMBER = 2;
     private static final int UPG_MAGIC_NUMBER = 1;
     public Veritas() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
@@ -29,6 +31,5 @@ public class Veritas extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
             addToBot(new DrawCardAction(magicNumber,true));
-            addToBot(new VeritasAction());
     }
 }

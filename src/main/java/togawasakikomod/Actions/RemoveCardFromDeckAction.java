@@ -72,8 +72,12 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
             }
         }
         AbstractDungeon.player.drawPile.group.remove(card);
+        AbstractDungeon.player.drawPile.refreshHandLayout();
         AbstractDungeon.player.hand.group.remove(card);
+        AbstractDungeon.player.hand.refreshHandLayout();
         AbstractDungeon.player.discardPile.group.remove(card);
+        AbstractDungeon.player.discardPile.refreshHandLayout();
+
         AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(card, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
 
         if(enduranceCheck){

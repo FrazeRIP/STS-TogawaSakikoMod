@@ -25,6 +25,12 @@
       "选择一张卡牌加入手卡"
     ]
   },
+  "${modID}:ChooseCardAndRemoveFormDiscardPileAction": {
+    "TEXT": [
+      "选择并移除一张卡牌",
+      "选择一张卡牌并移除"
+    ]
+  },
   "${modID}:UnremoveableModifier": {
     "TEXT": [
       "%s NL  togawasakikomod:无法被移除 。",
