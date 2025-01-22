@@ -190,6 +190,7 @@ togawasakikomod\cards\SpecialDeck\Curses\Oblivionis.class
 togawasakikomod\cards\SakikoDeck\Powers\SharedDestiny.class
 togawasakikomod\powers\debuffs\OblivionisPower.class
 togawasakikomod\Actions\ChooseCardGainSelfRetainAction.class
+togawasakikomod\patches\RemoveCursedRelatedRelicsPatch.class
 togawasakikomod\Actions\PerfectionAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\Kings.class
 togawasakikomod\cards\SpecialDeck\Powers\Ideal.class

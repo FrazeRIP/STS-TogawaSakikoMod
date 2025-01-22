@@ -264,7 +264,7 @@
     "DESCRIPTION": "你的下1张攻击牌造成 !M! 点额外伤害。"
   },
   "togawasakikomod:Accomplice": {
-    "NAME": "1丘之貉",
+    "NAME": "一丘之貉",
     "DESCRIPTION": "将 !M! 张 *渴望 置入手牌，本回合它们的耗能为0。"
   },
   "togawasakikomod:AleaIactaEst": {
