@@ -15,11 +15,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
+import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import togawasakikomod.Actions.CharismaticIntangibleAction;
-import togawasakikomod.Actions.VeritasAction;
 import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.cards.SakikoDeck.Powers.NumbersAndFaces;
@@ -27,6 +28,7 @@ import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.patches.CustomEnumPatch;
+import togawasakikomod.potions.BasePotion;
 import togawasakikomod.powers.buffs.*;
 import togawasakikomod.relics.BaseRelic;
 import togawasakikomod.rewards.PurgeReward;
@@ -68,7 +70,10 @@ public class TogawaSakikoMod implements
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
         PostExhaustSubscriber,
-        OnPlayerLoseBlockSubscriber {
+        OnPlayerLoseBlockSubscriber,
+        StartGameSubscriber,
+        StartActSubscriber
+    {
     public static ModInfo info;
     public static String modID; //Edit your pom.xml to change this
     static { loadModInfo(); }
@@ -133,6 +138,9 @@ public class TogawaSakikoMod implements
 
     @Override
     public void receivePostInitialize() {
+
+        //registerPotions();
+
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
@@ -152,6 +160,17 @@ public class TogawaSakikoMod implements
                 });
     }
 
+    public static void registerPotions() {
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(BasePotion.class) //In the same package as this class
+                .any(BasePotion.class, (info, potion) -> { //Run this code for any classes that extend this class
+                    //These three null parameters are colors.
+                    //If they're not null, they'll overwrite whatever color is set in the potions themselves.
+                    //This is an old feature added before having potions determine their own color was possible.
+                    BaseMod.addPotion(potion.getClass(), null, null, null, potion.ID, potion.playerClass);
+                    //playerClass will make a potion character-specific. By default, it's null and will do nothing.
+                });
+    }
     /*----------Localization----------*/
 
     //This is used to load the appropriate localization files based on language.
@@ -479,6 +498,26 @@ public class TogawaSakikoMod implements
         }
     }
 
+        @Override
+        public void receiveStartGame() {
+            removeItems(AbstractDungeon.commonRelicPool,DuVuDoll.ID);
+            removeItems(AbstractDungeon.commonRelicPool, DarkstonePeriapt.ID);
+            removeItems(AbstractDungeon.uncommonRelicPool,DuVuDoll.ID);
+            removeItems(AbstractDungeon.uncommonRelicPool,DarkstonePeriapt.ID);
+            removeItems(AbstractDungeon.rareRelicPool,DuVuDoll.ID);
+            removeItems(AbstractDungeon.rareRelicPool,DarkstonePeriapt.ID);
+        }
+
+        @Override
+        public void receiveStartAct() {
+            removeItems(AbstractDungeon.commonRelicPool,DuVuDoll.ID);
+            removeItems(AbstractDungeon.commonRelicPool, DarkstonePeriapt.ID);
+            removeItems(AbstractDungeon.uncommonRelicPool,DuVuDoll.ID);
+            removeItems(AbstractDungeon.uncommonRelicPool,DarkstonePeriapt.ID);
+            removeItems(AbstractDungeon.rareRelicPool,DuVuDoll.ID);
+            removeItems(AbstractDungeon.rareRelicPool,DarkstonePeriapt.ID);
+        }
+
 //    @Override
 //    public void receiveCardUsed(AbstractCard abstractCard) {
 //        if(AbstractDungeon.player.hasPower(OblivionisPower.POWER_ID)){
@@ -490,4 +529,15 @@ public class TogawaSakikoMod implements
 //        }
 //
 //    }
-}
+
+        public static void removeItems(ArrayList<String> list, String typeToRemove) {
+            Iterator<String> iterator = list.iterator();
+            while (iterator.hasNext()) {
+                String item = iterator.next();
+                if (Objects.equals(typeToRemove, item)) {
+                    iterator.remove();
+                }
+            }
+        }
+
+    }

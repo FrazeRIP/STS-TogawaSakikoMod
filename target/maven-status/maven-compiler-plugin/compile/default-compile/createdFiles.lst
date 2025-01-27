@@ -137,6 +137,7 @@ togawasakikomod\cards\SpecialDeck\Powers\Radiance.class
 togawasakikomod\Actions\ManualSaveGameAction.class
 togawasakikomod\Actions\DesuWaAction.class
 togawasakikomod\Actions\PurgeRewardAction.class
+togawasakikomod\patches\ReducedPowerRecorderPatch$ApplyPowerActionPatch.class
 togawasakikomod\Actions\VeritasAction.class
 togawasakikomod\powers\buffs\OurSongPower.class
 togawasakikomod\Actions\PirdeAction.class
@@ -165,6 +166,7 @@ togawasakikomod\cards\SakikoDeck\Skills\BudgetBento.class
 togawasakikomod\powers\debuffs\KingsPower.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRemovedPowerInstanceVar$RemoveLocator.class
 togawasakikomod\Actions\SymbolIFireAction.class
+togawasakikomod\potions\OrangePannaCotta.class
 togawasakikomod\patches\GraveCardPatch$StartInGravePatch.class
 togawasakikomod\cards\SpecialDeck\Powers\BlackKeys.class
 togawasakikomod\powers\buffs\PrimoDieInScaenaPower.class
@@ -190,7 +192,6 @@ togawasakikomod\cards\SpecialDeck\Curses\Oblivionis.class
 togawasakikomod\cards\SakikoDeck\Powers\SharedDestiny.class
 togawasakikomod\powers\debuffs\OblivionisPower.class
 togawasakikomod\Actions\ChooseCardGainSelfRetainAction.class
-togawasakikomod\patches\RemoveCursedRelatedRelicsPatch.class
 togawasakikomod\Actions\PerfectionAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\Kings.class
 togawasakikomod\cards\SpecialDeck\Powers\Ideal.class
