@@ -1,9 +1,15 @@
 package togawasakikomod.relics;
 
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rewards.RewardItem;
 import togawasakikomod.character.TogawaSakiko;
+import togawasakikomod.patches.ObtainRewardEventPatch;
 import togawasakikomod.powers.buffs.DazzlingPower;
+
+import java.util.Objects;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
@@ -21,11 +27,11 @@ public class CuteAnimalBandAid extends BaseRelic{
     public void onEquip() {
         super.onEquip();
         this.flash();
-        AbstractDungeon.player.heal(10);
     }
 
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }
+
 }

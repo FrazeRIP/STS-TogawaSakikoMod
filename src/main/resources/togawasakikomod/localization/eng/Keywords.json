@@ -46,7 +46,7 @@
     "NAMES": [
       "Purge"
     ],
-    "DESCRIPTION": "Remove a card from your deck."
+    "DESCRIPTION": "Remove cards from your deck permanently."
   },
   {
     "ID": "{modID}:GodsCreationPower",

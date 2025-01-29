@@ -9,8 +9,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import togawasakikomod.patches.CustomEnumPatch;
+import togawasakikomod.relics.CuteAnimalBandAid;
+
+import java.util.Objects;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
@@ -27,8 +31,14 @@ public class PurgeReward extends CustomReward {
     @Override
     public boolean claimReward() {
         if(isDoneDone){
+            for(AbstractRelic relic : AbstractDungeon.player.relics){
+                if(Objects.equals(relic.relicId, CuteAnimalBandAid.ID)){
+                    AbstractDungeon.player.heal(1);
+                }
+            }
             return true;
         }else{
+
             if (!CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).isEmpty()) {
                 AbstractDungeon.gridSelectScreen.open(
                         CardGroup.getGroupWithoutBottledCards(

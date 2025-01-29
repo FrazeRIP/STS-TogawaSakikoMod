@@ -48,7 +48,7 @@
        "NAMES": [
          "移除"
         ],
-        "DESCRIPTION": "将卡牌从本局游戏中移除（包括卡组和战斗中卡组）。"
+        "DESCRIPTION": "将卡牌从卡组中永久移除。"
     },
     {
        "ID": "{modID}:GodsCreationPower",

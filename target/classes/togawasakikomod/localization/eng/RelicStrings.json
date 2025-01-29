@@ -33,14 +33,14 @@
     "NAME": "Cute Animal Band-Aid",
     "FLAVOR": "A brightly colored band-aid printed with various cute animal patterns.",
     "DESCRIPTIONS": [
-      "Upon pickup, heal #b10 HP."
+      "When obtaining a reward, heal #b1 HP."
     ]
   },  
   "togawasakikomod:FountainDrink": {
     "NAME": "Vending Machine Drinks",
     "FLAVOR": "A drink comes out when you press the button,  it's truly amazing!",
     "DESCRIPTIONS": [
-      "When using a potion, heal #b2 HP."
+      "Whenever your potion slots are full, gain a potion at the end of combat."
     ]
   },  
   "togawasakikomod:Maracas": {
@@ -48,6 +48,34 @@
     "FLAVOR": "A mystical tool that could make even a wooden doll smile.",
     "DESCRIPTIONS": [
       "At the start of combat, gain #b1 #yHype."
+    ]
+  },  
+  "togawasakikomod:GoldenPocketWatch": {
+    "NAME": "Golden Pocket Watch",
+    "FLAVOR": "Every 12 cards played, gain #b2 #yStrength.",
+    "DESCRIPTIONS": [
+      "Every 12 cards played, gain #b2 #yStrength."
+    ]
+  },  
+  "togawasakikomod:MasqueradeMask": {
+    "NAME": "Masquerade Mask",
+    "FLAVOR": "Whenever you #yTogawaSakikoMod:Purge 3 card during battle, gain a #yTogawaSakikoMod:Purge reward at the end of the battle.",
+    "DESCRIPTIONS": [
+      "Whenever you #yTogawaSakikoMod:Purge 3 card during battle, gain a #yTogawaSakikoMod:Purge reward at the end of the battle."
+    ]
+  },  
+  "togawasakikomod:TheCompass": {
+    "NAME": "The Compass",
+    "FLAVOR": "Like the needle spinning between two poles of fate, our destinies align in its eternal dance.",
+    "DESCRIPTIONS": [
+      "Whenever your turn ends, you gain #b2 #yTogawaSakikoMod:Dazzling , all enemires gain #b1 #yTogawaSakikoMod:Dazzling ."
+    ]
+  },  
+  "togawasakikomod:TheDoll": {
+    "NAME": "The Doll",
+    "FLAVOR": "At the start of your 2nd turn, gain #b2 #yTogawaSakikoMod:Hype .",
+    "DESCRIPTIONS": [
+      "At the start of your 2nd turn, gain #b2 #yTogawaSakikoMod:Hype ."
     ]
   }
 }

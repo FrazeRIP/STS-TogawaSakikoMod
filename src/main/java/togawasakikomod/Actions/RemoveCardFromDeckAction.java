@@ -15,11 +15,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import togawasakikomod.cards.SakikoDeck.Attacks.MasqueradeRhapsodyRequest;
 import togawasakikomod.modifiers.UnremoveableModifier;
 import togawasakikomod.patches.CustomEnumPatch;
 import togawasakikomod.powers.buffs.EndurancePower;
+import togawasakikomod.relics.MasqueradeMask;
 
 import java.util.ArrayList;
 
@@ -93,6 +95,11 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
                     addToTop(new IncreaseMiscAction(card.uuid,card.misc,card.magicNumber));
                 }
             }
+        }
+
+        if(AbstractDungeon.player.hasRelic(MasqueradeMask.ID)){
+            AbstractRelic mm = AbstractDungeon.player.getRelic(MasqueradeMask.ID);
+            ((MasqueradeMask)mm).OnRemoveCard();
         }
 
         this.isDone = true;

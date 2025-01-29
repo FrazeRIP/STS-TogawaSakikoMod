@@ -146,6 +146,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\patches\AltNeowPatch.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\patches\CustomEnumPatch.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\patches\GraveCardPatch.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\patches\ObtainRewardEventPatch.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\patches\ReducedPowerRecorderPatch.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\patches\RemoveCursedRelatedRelicsPatch.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\patches\ScryCallbackPatch.java
@@ -180,8 +181,12 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\ColorfulNotebook.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\CuteAnimalBandAid.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\FountainDrink.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\GoldenPocketWatch.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\Maracas.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\MasqueradeMask.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\MonochromeHairband.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\TheCompass.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\TheDoll.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\TheThirdMovement.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\rewards\AltNeowReward.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\rewards\PurgeReward.java
@@ -189,6 +194,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\saveable\MasqueradeSaveable.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\TogawaSakikoMod.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\util\CardStats.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\util\Delegate.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\util\GeneralUtils.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\util\KeywordInfo.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\util\TextureLoader.java

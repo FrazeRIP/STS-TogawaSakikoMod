@@ -33,21 +33,49 @@
     "NAME": "可爱动物创口贴",
     "FLAVOR": "五颜六色，印着各种可爱动物图案的创口贴。",
     "DESCRIPTIONS": [
-      "拾取时，恢复 #b10 点生命。"
+      "拾取奖励时，恢复 #b1 点生命。"
     ]
   },  
   "togawasakikomod:FountainDrink": {
     "NAME": "饮料机饮料",
     "FLAVOR": "按下按钮就会有饮料出来，真的是太神奇了！",
     "DESCRIPTIONS": [
-      "使用药水时，恢复 #b2 点生命。"
+      "药水栏满时，战斗结束后必定掉落药水。"
     ]
   },  
   "togawasakikomod:Maracas": {
     "NAME": "沙锤",
-    "FLAVOR": "可以让木头人都笑出来的神秘妙妙工具。",
+    "FLAVOR": "可以让睦头人笑出来的神秘妙妙工具。",
     "DESCRIPTIONS": [
       "战斗开始时，获得 #b1 层 #y狂热 。"
+    ]
+  },  
+  "togawasakikomod:GoldenPocketWatch": {
+    "NAME": "金色怀表",
+    "FLAVOR": "每打出12张牌，获得 #b2 点 #y力量 。",
+    "DESCRIPTIONS": [
+      "每打出12张牌，获得 #b2 点 #y力量 。"
+    ]
+  },  
+  "togawasakikomod:MasqueradeMask": {
+    "NAME": "舞会假面",
+    "FLAVOR": "你每在战斗中 #yTogawaSakikoMod:移除 3张牌，获得一次移除卡牌奖励。",
+    "DESCRIPTIONS": [
+      "你每在战斗中 #yTogawaSakikoMod:移除 3张牌，获得一次移除卡牌奖励。"
+    ]
+  },  
+  "togawasakikomod:TheCompass": {
+    "NAME": "指南针",
+    "FLAVOR": "指针旋转，命运的两端分别指向你我。",
+    "DESCRIPTIONS": [
+      "你的回合结束时，你获得 #b2 #yTogawaSakikoMod:Dazzling ，所有敌人也获得 #b1 #yTogawaSakikoMod:Dazzling。"
+    ]
+  },  
+  "togawasakikomod:TheDoll": {
+    "NAME": "人偶",
+    "FLAVOR": "指针旋转，命运的两端分别指向你我。",
+    "DESCRIPTIONS": [
+      "在你的第二回合开始时，获得 #b2 层 #yTogawaSakikoMod:Hype 。"
     ]
   }
 }

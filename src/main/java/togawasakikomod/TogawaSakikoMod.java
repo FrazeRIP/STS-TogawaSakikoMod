@@ -28,6 +28,7 @@ import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.patches.CustomEnumPatch;
+import togawasakikomod.patches.ObtainRewardEventPatch;
 import togawasakikomod.potions.BasePotion;
 import togawasakikomod.powers.buffs.*;
 import togawasakikomod.relics.BaseRelic;
@@ -506,6 +507,7 @@ public class TogawaSakikoMod implements
             removeItems(AbstractDungeon.uncommonRelicPool,DarkstonePeriapt.ID);
             removeItems(AbstractDungeon.rareRelicPool,DuVuDoll.ID);
             removeItems(AbstractDungeon.rareRelicPool,DarkstonePeriapt.ID);
+            ObtainRewardEventPatch.removeAll();
         }
 
         @Override
