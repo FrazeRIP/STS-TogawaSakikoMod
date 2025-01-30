@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import togawasakikomod.Actions.CharismaticIntangibleAction;
 import togawasakikomod.annotations.CardEnable;
+import togawasakikomod.annotations.RelicEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.cards.SakikoDeck.Powers.NumbersAndFaces;
 import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
@@ -119,15 +120,25 @@ public class TogawaSakikoMod implements
         new AutoAdd(modID) //Loads files from this mod
                 .packageFilter(BaseRelic.class) //In the same package as this class
                 .any(BaseRelic.class, (info, relic) -> { //Run this code for any classes that extend this class
-                    if (relic.pool != null)
+                    if(relic.getClass().isAnnotationPresent(RelicEnable.class)){
+                        RelicEnable enable = relic.getClass().getAnnotation(RelicEnable.class);
+                        if(!enable.enable()){
+                            return;
+                        }
+                    }
+
+                    if (relic.pool != null){
                         BaseMod.addRelicToCustomPool(relic, relic.pool); //Register a custom character specific relic
-                    else
+                    }
+                    else{
                         BaseMod.addRelic(relic, relic.relicType); //Register a shared or base game character specific relic
+                    }
 
                     //If the class is annotated with @AutoAdd.Seen, it will be marked as seen, making it visible in the relic library.
                     //If you want all your relics to be visible by default, just remove this if statement.
-                    if (info.seen)
+                    if (info.seen){
                         UnlockTracker.markRelicAsSeen(relic.relicId);
+                    }
                 });
     }
 
@@ -139,8 +150,7 @@ public class TogawaSakikoMod implements
 
     @Override
     public void receivePostInitialize() {
-
-        //registerPotions();
+        registerPotions();
 
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
@@ -280,6 +290,9 @@ public class TogawaSakikoMod implements
         return resourcesFolder + "/images/relics/" + file;
     }
 
+    public static String potionPath(String file) {
+            return resourcesFolder + "/images/potions/" + file;
+    }
     /**
      * Checks the expected resources path based on the package name.
      */

@@ -9,10 +9,40 @@
       " Exactly how depends on the potion, and you can set it up however you want."
     ]
   },
-  "${modID}:OrangePannaCotta": {
-    "NAME": "Orange Panna Cotta",
+  "${modID}:OrangeMilkJelly": {
+    "NAME": "Orange Milk Jelly",
     "DESCRIPTIONS": [
-      "Heal HP equal to the cards amount in your deck. Currently heal #b%d HP."
+      "Gain #b%d #yDouble #yTap."
+    ]
+  },
+  "${modID}:ChocolateMilkJelly": {
+    "NAME": "Chocolate Milk Jelly",
+    "DESCRIPTIONS": [
+      "Gain #b%d #yFree #yAttack."
+    ]
+  },
+  "${modID}:HallucinationPotion": {
+    "NAME": "Hallucination Potion",
+    "DESCRIPTIONS": [
+      "Gain #b%d #yDazzling . At the end of your turn, lose #b%d #yDazzling ."
+    ]
+  },
+  "${modID}:MatchaParfait": {
+    "NAME": "Matcha Parfait",
+    "DESCRIPTIONS": [
+      "Add #b%d #yMelody to your hand that deals random damage between #b6 and #b30."
+    ]
+  },
+  "${modID}:FreshlySqueezedCucumber": {
+    "NAME": "Freshly Squeezed Cucumber",
+    "DESCRIPTIONS": [
+      "At the begining of your next turn, gain #b%d #Block."
+    ]
+  },
+  "${modID}:EarlGreyTea": {
+    "NAME": "Earl Grey Tea",
+    "DESCRIPTIONS": [
+      "Gain #b%d #yDazzling."
     ]
   }
 }

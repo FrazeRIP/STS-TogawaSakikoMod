@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,6 +27,14 @@ public class DazzlingPower extends BasePower implements CloneablePowerInterface 
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
+    @Override
+    public void reducePower(int reduceAmount) {
+        super.reducePower(reduceAmount);
+        if (this.amount == 0) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        }
+    }
+
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
@@ -34,4 +43,5 @@ public class DazzlingPower extends BasePower implements CloneablePowerInterface 
     public AbstractPower makeCopy() {
         return new DazzlingPower(this.owner,amount);
     }
+
 }

@@ -1,22 +1,24 @@
 package togawasakikomod.potions;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.powers.DoubleTapPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import togawasakikomod.Actions.MatchaParfaitAction;
 import togawasakikomod.character.TogawaSakiko;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
-public class OrangePannaCotta extends BasePotion {
-    public static final String ID = makeID( OrangePannaCotta.class.getSimpleName());
+public class MatchaParfait extends BasePotion {
+    public static final String ID = makeID( MatchaParfait.class.getSimpleName());
     private static final Color LIQUID_COLOR = CardHelper.getColor(255, 0, 255);
     private static final Color HYBRID_COLOR = CardHelper.getColor(255, 0, 255);
     private static final Color SPOTS_COLOR = null;
 
-    public OrangePannaCotta() {
-        super(ID, 0, PotionRarity.COMMON, PotionSize.MOON, LIQUID_COLOR, HYBRID_COLOR, SPOTS_COLOR);
+    public MatchaParfait() {
+        super(ID, 1, PotionRarity.UNCOMMON, PotionSize.MOON, LIQUID_COLOR, HYBRID_COLOR, SPOTS_COLOR);
         playerClass = TogawaSakiko.Meta.TOGAWA_SAKIKO;
         isThrown = false;
         targetRequired = false;
@@ -24,7 +26,7 @@ public class OrangePannaCotta extends BasePotion {
 
     @Override
     public String getDescription() {
-        return String.format(DESCRIPTIONS[0],"");
+        return String.format(DESCRIPTIONS[0], potency);
     }
 
     @Override
@@ -34,11 +36,10 @@ public class OrangePannaCotta extends BasePotion {
 
     @Override
     public void use(AbstractCreature abstractCreature) {
-        if(AbstractDungeon.player!=null){
-            this.potency = AbstractDungeon.player.masterDeck.size();
+        for(int i =0; i<potency;i++){
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+                this.addToBot(new MatchaParfaitAction());
+            }
         }
-        if(AbstractDungeon.player!=null){
-        AbstractDungeon.player.heal(potency);
-     }
     }
 }

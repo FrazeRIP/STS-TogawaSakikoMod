@@ -31,12 +31,18 @@ public class EtherAction extends AbstractGameAction {
     public void update() {
         ArrayList<AbstractCard> nonAttackCard = new ArrayList<>();
 
-        for(AbstractCard card : AbstractDungeon.player.discardPile.group){
-            if(card.type != AbstractCard.CardType.ATTACK){
-                nonAttackCard.add(card);
-            }
-        }
-        for(AbstractCard card : AbstractDungeon.player.hand.group){
+//        for(AbstractCard card : AbstractDungeon.player.discardPile.group){
+//            if(card.type != AbstractCard.CardType.ATTACK){
+//                nonAttackCard.add(card);
+//            }
+//        }
+//        for(AbstractCard card : AbstractDungeon.player.hand.group){
+//            if(card.type != AbstractCard.CardType.ATTACK){
+//                nonAttackCard.add(card);
+//            }
+//        }
+
+        for(AbstractCard card : AbstractDungeon.player.drawPile.group){
             if(card.type != AbstractCard.CardType.ATTACK){
                 nonAttackCard.add(card);
             }

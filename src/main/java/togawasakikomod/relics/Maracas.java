@@ -2,12 +2,15 @@ package togawasakikomod.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import togawasakikomod.annotations.CardEnable;
+import togawasakikomod.annotations.RelicEnable;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.powers.buffs.HypePower;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
+@RelicEnable(enable = false)
 public class Maracas extends BaseRelic{
     private static final String NAME = Maracas.class.getSimpleName(); //The name will be used for determining the image file as well as the ID.
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic

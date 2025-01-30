@@ -36,7 +36,7 @@ public class Cruelty extends BaseCard {
         addToBot(new PlayAudioAction(Cruelty.class.getSimpleName()));
 
         this.addToBot(new ApplyPowerAction(p, p, new VulnerablePower(AbstractDungeon.player, magicNumber,false), magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new CrueltyPower(AbstractDungeon.player, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new CrueltyPower(AbstractDungeon.player, 2), 2));
 
 
     }

@@ -142,5 +142,19 @@
     "DESCRIPTIONS": [
       "Reduces the number of card rewards available for selection by 1 in this battle. Does not stack."
     ]
+  },
+  "${modID}:DazzlingDownPower": {
+    "NAME": "Dazzling Down",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose #b",
+      " #yDazzling ."
+    ]
+  },
+  "${modID}:FreshlySqueezedCucumberPower": {
+    "NAME": "Freshly Squeezed Cucumber!",
+    "DESCRIPTIONS": [
+      "At the begining of your turn, gain #b",
+      " #yBlock ."
+    ]
   }
 }

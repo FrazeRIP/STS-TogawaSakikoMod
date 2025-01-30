@@ -1,4 +1,4 @@
-{
+﻿{
   "${modID}:PotionID": {
     "NAME": "Some Kind of Potion",
     "DESCRIPTIONS": [
@@ -9,10 +9,40 @@
       " Exactly how depends on the potion, and you can set it up however you want."
     ]
   },
-  "${modID}:OrangePannaCotta": {
-    "NAME": "Orange Panna Cotta",
+  "${modID}:OrangeMilkJelly": {
+    "NAME": "橘子奶冻",
     "DESCRIPTIONS": [
-      "Heal HP equal to the cards amount in your deck. Currently heal #b%d HP."
+      "获得 #b%d 层 #y双发 。"
+    ]
+  },
+  "${modID}:ChocolateMilkJelly": {
+    "NAME": "巧克力奶冻",
+    "DESCRIPTIONS": [
+      "获得 #b%d 层 #y免费攻击 。"
+    ]
+  },
+  "${modID}:HallucinationPotion": {
+    "NAME": "幻觉药水",
+    "DESCRIPTIONS": [
+      "获得 #b%d 层 闪耀 。在你的回合结束时，失去 #b%d 层 #y闪耀 。"
+    ]
+  },
+  "${modID}:MatchaParfait": {
+    "NAME": "抹茶芭菲",
+    "DESCRIPTIONS": [
+      "将 #b%d 张伤害随机为 #b6 ~ #b30 之间的 #y旋律 置入手牌。"
+    ]
+  },
+  "${modID}:FreshlySqueezedCucumber": {
+    "NAME": "鲜榨黄瓜",
+    "DESCRIPTIONS": [
+      "下个回合开始时，获得 #b%d 点 #y格挡 。"
+    ]
+  },
+  "${modID}:EarlGreyTea": {
+    "NAME": "伯爵红茶",
+    "DESCRIPTIONS": [
+      "获得 #b%d 层 #y闪耀 。"
     ]
   }
 }

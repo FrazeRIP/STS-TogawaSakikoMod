@@ -24,21 +24,21 @@
   },  
   "togawasakikomod:ColorfulNotebook": {
     "NAME": "Colorful Notebook",
-    "FLAVOR": "A colorful notebook adorned with various pictures of animals and plants.",
+    "FLAVOR": "\"This is our song!\"",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b1 #yDazzling."
+      "At the start of combat, gain #b1 #yTogawaSakikoMod:Dazzling."
     ]
   },  
   "togawasakikomod:CuteAnimalBandAid": {
     "NAME": "Cute Animal Band-Aid",
-    "FLAVOR": "A brightly colored band-aid printed with various cute animal patterns.",
+    "FLAVOR": "A box of assorted small animal-themed band-aids, perfect for healing bumps and bruises!",
     "DESCRIPTIONS": [
-      "When obtaining a reward, heal #b1 HP."
+      "When obtaining a reward after battle, heal #b1 HP."
     ]
   },  
   "togawasakikomod:FountainDrink": {
     "NAME": "Vending Machine Drinks",
-    "FLAVOR": "A drink comes out when you press the button,  it's truly amazing!",
+    "FLAVOR": "You feel that this mystery machine contains mythical power, and only you don't quite know how to use it.",
     "DESCRIPTIONS": [
       "Whenever your potion slots are full, gain a potion at the end of combat."
     ]
@@ -47,19 +47,19 @@
     "NAME": "Maracas",
     "FLAVOR": "A mystical tool that could make even a wooden doll smile.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b1 #yHype."
+      "At the start of combat, gain #b1 #yTogawaSakikoMod:Hype."
     ]
   },  
   "togawasakikomod:GoldenPocketWatch": {
     "NAME": "Golden Pocket Watch",
-    "FLAVOR": "Every 12 cards played, gain #b2 #yStrength.",
+    "FLAVOR": "Guess what time it is.",
     "DESCRIPTIONS": [
       "Every 12 cards played, gain #b2 #yStrength."
     ]
   },  
   "togawasakikomod:MasqueradeMask": {
     "NAME": "Masquerade Mask",
-    "FLAVOR": "Whenever you #yTogawaSakikoMod:Purge 3 card during battle, gain a #yTogawaSakikoMod:Purge reward at the end of the battle.",
+    "FLAVOR": "An abandoned mask lay right on the floor. Seems cheaply made.",
     "DESCRIPTIONS": [
       "Whenever you #yTogawaSakikoMod:Purge 3 card during battle, gain a #yTogawaSakikoMod:Purge reward at the end of the battle."
     ]
@@ -68,14 +68,14 @@
     "NAME": "The Compass",
     "FLAVOR": "Like the needle spinning between two poles of fate, our destinies align in its eternal dance.",
     "DESCRIPTIONS": [
-      "Whenever your turn ends, you gain #b2 #yTogawaSakikoMod:Dazzling , all enemires gain #b1 #yTogawaSakikoMod:Dazzling ."
+      "Whenever your turn ends, you gain #b2 #yTogawaSakikoMod:Dazzling, all enemires gain #b1 #yTogawaSakikoMod:Dazzling."
     ]
   },  
   "togawasakikomod:TheDoll": {
     "NAME": "The Doll",
-    "FLAVOR": "At the start of your 2nd turn, gain #b2 #yTogawaSakikoMod:Hype .",
+    "FLAVOR": "There is nothing left but the warmth of her doll's embrace.",
     "DESCRIPTIONS": [
-      "At the start of your 2nd turn, gain #b2 #yTogawaSakikoMod:Hype ."
+      "At the start of your 2nd turn, gain #b2 #yTogawaSakikoMod:Hype."
     ]
   }
 }

@@ -87,7 +87,7 @@
   },
   "togawasakikomod:Ether": {
     "NAME": "遗忘之光",
-    "DESCRIPTION": " 消耗 弃牌堆和手牌中的所有非攻击牌。 NL 每张被 消耗 的牌造成 !D! 点伤害。 NL 将1张 *遗忘 加入牌组。"
+    "DESCRIPTION": " 消耗 抽牌堆中的所有非攻击牌。 NL 每张被 消耗 的牌造成 !D! 点伤害。 NL 将1张 *遗忘 加入牌组。"
   },
   "togawasakikomod:ChoirSChoir": {
     "NAME": "齐唱圣歌",
@@ -295,7 +295,7 @@
   },
   "togawasakikomod:Cruelty": {
     "NAME": "绝情",
-    "DESCRIPTION": "获得 !M! 层易伤。 NL 每当你打出 *渴望 ，抽1张牌。"
+    "DESCRIPTION": "获得 !M! 层易伤。 NL 每当你打出 *渴望 ，抽 2 张牌。"
   },
   "togawasakikomod:Pride": {
     "NAME": "骄傲",

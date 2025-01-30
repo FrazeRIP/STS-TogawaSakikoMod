@@ -28,6 +28,11 @@ public class Melody extends BaseCard {
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
     }
 
+    public Melody(int overwriteDamage) {
+        super(ID, info); //Pass the required information to the BaseCard constructor.
+        setDamage(overwriteDamage, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
+    }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));

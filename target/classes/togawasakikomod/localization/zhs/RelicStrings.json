@@ -24,21 +24,21 @@
   },  
   "togawasakikomod:ColorfulNotebook": {
     "NAME": "彩色笔记本",
-    "FLAVOR": "五颜六色的笔记本，上面印着各种动植物图片。",
+    "FLAVOR": "“这是我们的歌啊!”",
     "DESCRIPTIONS": [
       "战斗开始时，获得 #b1 层 #y闪耀 。"
     ]
   },  
   "togawasakikomod:CuteAnimalBandAid": {
     "NAME": "可爱动物创口贴",
-    "FLAVOR": "五颜六色，印着各种可爱动物图案的创口贴。",
+    "FLAVOR": "一盒各种不同款式的小动物创口贴，适合治愈跌打损伤！",
     "DESCRIPTIONS": [
       "拾取奖励时，恢复 #b1 点生命。"
     ]
   },  
   "togawasakikomod:FountainDrink": {
     "NAME": "饮料机饮料",
-    "FLAVOR": "按下按钮就会有饮料出来，真的是太神奇了！",
+    "FLAVOR": "你感觉到这台炼药机器蕴含着神秘的力量，只是你不太会用。",
     "DESCRIPTIONS": [
       "药水栏满时，战斗结束后必定掉落药水。"
     ]
@@ -52,14 +52,14 @@
   },  
   "togawasakikomod:GoldenPocketWatch": {
     "NAME": "金色怀表",
-    "FLAVOR": "每打出12张牌，获得 #b2 点 #y力量 。",
+    "FLAVOR": "看看这都几点了。",
     "DESCRIPTIONS": [
       "每打出12张牌，获得 #b2 点 #y力量 。"
     ]
   },  
   "togawasakikomod:MasqueradeMask": {
     "NAME": "舞会假面",
-    "FLAVOR": "你每在战斗中 #yTogawaSakikoMod:移除 3张牌，获得一次移除卡牌奖励。",
+    "FLAVOR": "被谁遗落在地上的假面，看上去很廉价。",
     "DESCRIPTIONS": [
       "你每在战斗中 #yTogawaSakikoMod:移除 3张牌，获得一次移除卡牌奖励。"
     ]
@@ -73,7 +73,7 @@
   },  
   "togawasakikomod:TheDoll": {
     "NAME": "人偶",
-    "FLAVOR": "指针旋转，命运的两端分别指向你我。",
+    "FLAVOR": "除此以外，了无一物。",
     "DESCRIPTIONS": [
       "在你的第二回合开始时，获得 #b2 层 #yTogawaSakikoMod:Hype 。"
     ]

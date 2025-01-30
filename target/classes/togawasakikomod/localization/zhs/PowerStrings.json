@@ -142,5 +142,19 @@
     "DESCRIPTIONS": [
       "本场战斗卡牌奖励可供选择的牌数减少一张。不可叠加。"
     ]
+  },
+  "togawasakikomod:DazzlingDownPower": {
+    "NAME": "失去闪耀",
+    "DESCRIPTIONS": [
+      "你的回合结束时，失去 #b",
+      " #y闪耀 。"
+    ]
+  },
+  "togawasakikomod:FreshlySqueezedCucumberPower": {
+    "NAME": "鲜榨黄瓜!",
+    "DESCRIPTIONS": [
+      "你的回合开始时，获得 #b",
+      " #y格挡 。"
+    ]
   }
 }

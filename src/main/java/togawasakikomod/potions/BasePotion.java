@@ -31,6 +31,8 @@ public abstract class BasePotion extends AbstractPotion {
         }
     }
 
+    protected static final String emptyTexPath = "images/blank.png";
+
     public PotionStrings potionStrings;
     public String[] DESCRIPTIONS;
     public int basePotency;
@@ -163,4 +165,6 @@ public abstract class BasePotion extends AbstractPotion {
             throw new RuntimeException("Failed to auto-generate makeCopy for potion: " + this.ID);
         }
     }
+
+
 }

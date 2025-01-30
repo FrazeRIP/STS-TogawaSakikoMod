@@ -87,7 +87,7 @@
   },
   "${modID}:Ether": {
     "NAME": "Ether",
-    "DESCRIPTION": "Exhaust all non-Attack cards from your hand and discard pile. NL Deal !D! damage for each Exhausted card. NL Add a *Oblivionis to your deck."
+    "DESCRIPTION": "Exhaust all non-Attack cards from your draw pile. NL Deal !D! damage for each Exhausted card. NL Add a *Oblivionis to your deck."
   },
   "${modID}:ChoirSChoir": {
     "NAME": "Choir 'S' Choir",
@@ -295,7 +295,7 @@
   },
   "${modID}:Cruelty": {
     "NAME": "Cruelty",
-    "DESCRIPTION": "Gain !M! Vulnerable. NL Whenever you play *Desire, draw a card."
+    "DESCRIPTION": "Gain !M! Vulnerable. NL Whenever you play *Desire, draw 2 cards."
   },
   "${modID}:Pride": {
     "NAME": "Pride",

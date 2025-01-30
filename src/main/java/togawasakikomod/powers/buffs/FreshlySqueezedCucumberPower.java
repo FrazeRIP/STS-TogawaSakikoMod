@@ -1,8 +1,9 @@
 package togawasakikomod.powers.buffs;
 
 import basemod.interfaces.CloneablePowerInterface;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,8 +15,8 @@ import java.util.Objects;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
-public class CrueltyPower extends BasePower implements CloneablePowerInterface {
-    public static final String POWER_ID = makeID(CrueltyPower.class.getSimpleName());
+public class FreshlySqueezedCucumberPower extends BasePower implements CloneablePowerInterface {
+    public static final String POWER_ID = makeID(FreshlySqueezedCucumberPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
     //The only thing TURN_BASED controls is the color of the number on the power icon.
@@ -23,17 +24,15 @@ public class CrueltyPower extends BasePower implements CloneablePowerInterface {
     //For a power to actually decrease/go away on its own they do it themselves.
     //Look at powers that do this like VulnerablePower and DoubleTapPower.
 
-    public CrueltyPower(AbstractCreature owner, int amount) {
+    public FreshlySqueezedCucumberPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
     @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        super.onPlayCard(card, m);
-        if(Objects.equals(card.cardID, Desire.ID)){
-            this.flash();
-            addToBot(new DrawCardAction(amount));
-        }
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+        addToBot(new GainBlockAction(owner,amount));
+        addToBot(new RemoveSpecificPowerAction(owner,owner,this));
     }
 
     public void updateDescription() {
@@ -42,6 +41,6 @@ public class CrueltyPower extends BasePower implements CloneablePowerInterface {
 
     @Override
     public AbstractPower makeCopy() {
-        return new CrueltyPower(this.owner,amount);
+        return new FreshlySqueezedCucumberPower(this.owner,amount);
     }
 }
