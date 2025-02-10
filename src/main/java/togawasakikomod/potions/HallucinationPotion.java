@@ -8,20 +8,30 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.powers.debuffs.DazzlingDownPower;
+import togawasakikomod.util.TextureLoader;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
+import static togawasakikomod.TogawaSakikoMod.potionPath;
 
 public class HallucinationPotion extends BasePotion {
     public static final String ID = makeID( HallucinationPotion.class.getSimpleName());
     private static final Color LIQUID_COLOR = CardHelper.getColor(255, 0, 255);
-    private static final Color HYBRID_COLOR = CardHelper.getColor(255, 0, 255);
+    private static final Color HYBRID_COLOR = null;
     private static final Color SPOTS_COLOR = null;
 
+    private static final String containerTexPath = potionPath(HallucinationPotion.class.getSimpleName()+"/container.png");
+    private static final String outlineTexPath = potionPath(HallucinationPotion.class.getSimpleName()+"/outline.png");
+    private static final String liquidTexPath = potionPath(HallucinationPotion.class.getSimpleName()+"/liquid.png");
+
     public HallucinationPotion() {
-        super(ID, 5, PotionRarity.COMMON, PotionSize.MOON, LIQUID_COLOR, HYBRID_COLOR, SPOTS_COLOR);
+        super(ID, 5, PotionRarity.COMMON, PotionSize.MOON, LIQUID_COLOR, HYBRID_COLOR, SPOTS_COLOR, PotionEffect.RAINBOW);
         playerClass = TogawaSakiko.Meta.TOGAWA_SAKIKO;
         isThrown = false;
         targetRequired = false;
+
+        setContainerImg(TextureLoader.getTexture(containerTexPath));
+        setOutlineImg(TextureLoader.getTexture(outlineTexPath));
+        setLiquidImg(TextureLoader.getTexture(liquidTexPath));
     }
 
     @Override

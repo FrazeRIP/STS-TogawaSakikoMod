@@ -45,6 +45,13 @@ public abstract class BasePotion extends AbstractPotion {
         initializeData();
     }
 
+    public BasePotion(String id, int potency, PotionRarity rarity, PotionSize shape, Color liquidColor, Color hybridColor, Color spotsColor, PotionEffect effect) {
+        super("", id, rarity, shape, effect, liquidColor, hybridColor, spotsColor);
+        basePotency = potency;
+        checkColors();
+        initializeData();
+    }
+
     public BasePotion(String id, int potency, PotionRarity rarity, PotionSize size, PotionColor color) {
         super("", id, rarity, size, color);
         basePotency = potency;

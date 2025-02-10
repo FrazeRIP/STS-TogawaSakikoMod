@@ -7,20 +7,28 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.powers.DoubleTapPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import togawasakikomod.character.TogawaSakiko;
+import togawasakikomod.util.TextureLoader;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
+import static togawasakikomod.TogawaSakikoMod.potionPath;
 
 public class OrangeMilkJelly extends BasePotion {
     public static final String ID = makeID( OrangeMilkJelly.class.getSimpleName());
     private static final Color LIQUID_COLOR = CardHelper.getColor(255, 0, 255);
-    private static final Color HYBRID_COLOR = CardHelper.getColor(255, 0, 255);
+    private static final Color HYBRID_COLOR = null;
     private static final Color SPOTS_COLOR = null;
+
+    private static final String containerTexPath = potionPath(OrangeMilkJelly.class.getSimpleName()+"/container.png");
+    private static final String outlineTexPath = potionPath(OrangeMilkJelly.class.getSimpleName()+"/outline.png");
 
     public OrangeMilkJelly() {
         super(ID, 1, PotionRarity.UNCOMMON, PotionSize.MOON, LIQUID_COLOR, HYBRID_COLOR, SPOTS_COLOR);
         //playerClass = TogawaSakiko.Meta.TOGAWA_SAKIKO;
         isThrown = false;
         targetRequired = false;
+        setContainerImg(TextureLoader.getTexture(containerTexPath));
+        setOutlineImg(TextureLoader.getTexture(outlineTexPath));
+        setLiquidImg(TextureLoader.getTexture(emptyTexPath));
     }
 
     @Override

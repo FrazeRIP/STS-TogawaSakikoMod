@@ -24,7 +24,7 @@
 
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
     <name>Togawa Sakiko Mod</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
     <description>Togawa Sakiko is a character from the multimedia project BanG Dream!.\n
