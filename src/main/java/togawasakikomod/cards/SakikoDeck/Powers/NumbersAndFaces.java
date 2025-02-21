@@ -43,7 +43,7 @@ public class NumbersAndFaces extends BaseCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        this.magicNumber = this.misc+(upgraded?UPG_MAGIC_NUMBER:MAGIC_NUMBER);
+        this.magicNumber = this.misc+(upgraded?UPG_MAGIC_NUMBER+MAGIC_NUMBER:MAGIC_NUMBER);
         this.initializeDescription();
     }
 

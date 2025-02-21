@@ -17,7 +17,6 @@ public class NumbersAndFacesAction extends AbstractGameAction {
     @Override
     public void update() {
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HypePower(AbstractDungeon.player, card.magicNumber), card.magicNumber));
-        card.resetAttributes();
         card.misc = 0;
         this.isDone = true;
     }

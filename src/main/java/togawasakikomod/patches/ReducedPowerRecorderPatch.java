@@ -54,12 +54,12 @@ public class ReducedPowerRecorderPatch {
             }
         }
 
-        public static class ReduceLocator
-              extends SpireInsertLocator {
-             public int[] Locate(CtBehavior ctBehavior) throws Exception {
-                Matcher.MethodCallMatcher methodCallMatcher = new Matcher.MethodCallMatcher(AbstractPower.class, "updateDescription");
-              return LineFinder.findInOrder(ctBehavior, (Matcher)methodCallMatcher); }
-            }
+            public static class ReduceLocator
+                  extends SpireInsertLocator {
+                 public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                    Matcher.MethodCallMatcher methodCallMatcher = new Matcher.MethodCallMatcher(AbstractPower.class, "updateDescription");
+                  return LineFinder.findInOrder(ctBehavior, (Matcher)methodCallMatcher); }
+                }
     }
 
 

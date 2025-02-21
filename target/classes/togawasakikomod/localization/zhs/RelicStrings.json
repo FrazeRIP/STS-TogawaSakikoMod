@@ -77,5 +77,12 @@
     "DESCRIPTIONS": [
       "在你的第二回合开始时，获得 #b2 层 #yTogawaSakikoMod:Hype 。"
     ]
+  },  
+  "togawasakikomod:WarmthInfusedPorcelainCup": {
+    "NAME": "温热瓷盏",
+    "FLAVOR": "或是出于保温的愿景而被加固的茶杯。杯盖嵌紧，难以取下。",
+    "DESCRIPTIONS": [
+      "大幅增加 #y心之壁 的出现概率。"
+    ]
   }
 }
