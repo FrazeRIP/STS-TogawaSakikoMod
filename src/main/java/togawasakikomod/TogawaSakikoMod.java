@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
 import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.rewards.RewardSave;
@@ -389,7 +390,6 @@ public class TogawaSakikoMod implements
     private void CharismaticFormEvent(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source){
         if(target!= AbstractDungeon.player && abstractPower.type == AbstractPower.PowerType.BUFF){
             if(AbstractDungeon.player.hasPower(CharismaticFormPower.POWER_ID)){
-
                 //Exceptions
                 if(Objects.equals(abstractPower.ID, ModeShiftPower.POWER_ID)){return;}
                 if(Objects.equals(abstractPower.ID, PainfulStabsPower.POWER_ID)){return;}
@@ -408,6 +408,12 @@ public class TogawaSakikoMod implements
                         logger.error("e: ", e);
                     }
                 }
+
+//                if(abstractPower.ID.equals(FreeAttackPower.POWER_ID)){
+//                    int freeAttackAmount = abstractPower.amount;
+//                    if(freeAttackAmount <= 0){freeAttackAmount = 1;}
+//                    copy = new FreeAttackPower(AbstractDungeon.player,abstractPower.amount);
+//                }
 
                 if(copy!=null){
                     //Flash
@@ -501,6 +507,8 @@ public class TogawaSakikoMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         KingsSaveable.IsKing = false;
         PridePower.copies.clear();
+       TogawaSakiko.LastRoundPowerLost.clear();
+       TogawaSakiko.CurrentRoundPowerLost.clear();
     }
 
     @Override

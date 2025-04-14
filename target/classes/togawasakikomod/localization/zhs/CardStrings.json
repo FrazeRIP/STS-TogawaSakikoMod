@@ -29,7 +29,7 @@
   },
   "togawasakikomod:PerdereOmnia": {
     "NAME": "破坏一切",
-    "DESCRIPTION": " 不能被打出 。 NL 抽到后， togawasakikomod:移除 接下来抽到的 !M! 张 不能被打出 的牌。"
+    "DESCRIPTION": " 不能被打出 。 NL 抽到后， togawasakikomod:移除 接下来抽到的 !M! 张 不能被打出 的牌并抽1张牌。"
   },
   "togawasakikomod:DarkHeaven": {
     "NAME": "暗黑天国",
@@ -125,7 +125,7 @@
   },
   "togawasakikomod:RhinocerosBeetle": {
     "NAME": "独角仙",
-    "DESCRIPTION": "获得 !M! 点 格挡 。 NL 这张卡的格挡受1半的 togawasakikomod:闪耀 层数加成而非 敏捷 。"
+    "DESCRIPTION": "获得 !M! 点 格挡 。 NL 这张卡的格挡受一半的 togawasakikomod:闪耀 层数加成而非 敏捷 。"
   },
   "togawasakikomod:ASplitMoment": {
     "NAME": "小小的瞬间",
@@ -167,13 +167,12 @@
   },
   "togawasakikomod:BandInvitation": {
     "NAME": "乐队邀请",
-    "DESCRIPTION": "只有当这张牌是你手中唯1的1张技能牌时才可以被打出。 NL 抽牌直到这些牌的 NL 耗能之和大于或等于 !M! 。 NL  消耗 。",
-    "UPGRADE_DESCRIPTION": "只有当这张牌是你手中唯1的1张技能牌时才可以被打出。 NL 抽牌直到这些牌的 NL 耗能之和大于 !M! 。",
-    "EXTENDED_DESCRIPTION": ["这张牌必须是我唯1的 #b技能牌 ！"]
+    "DESCRIPTION": "只有当这张牌是你手中唯1的1张技能牌时才可以被打出。 NL 抽牌直到这些牌的 NL 耗能之和大于或等于 !M! 。",
+    "EXTENDED_DESCRIPTION": ["这张牌必须是我唯一的 #b技能牌 ！"]
   },
   "togawasakikomod:Veritas": {
     "NAME": "真理",
-    "DESCRIPTION": "抽 !M! 张牌。 NL  每当你 消耗 卡时，将这张牌从弃牌堆放回你的手牌。。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL  每当你 消耗 卡时，将这张牌从弃牌堆放回你的手牌。"
   },
   "togawasakikomod:Carefree": {
     "NAME": "衣食无忧",
@@ -219,7 +218,7 @@
   "togawasakikomod:PrimoDieInScaena": {
     "NAME": "首演",
     "DESCRIPTION": "直到你下次洗牌前，每回合开始获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "固有。 NL 直到你下次洗牌前，每回合开始获得 [E] 。"
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 直到你下次洗牌前，每回合开始获得 [E] 。"
   },
   "togawasakikomod:Melody": {
     "NAME": "旋律",
@@ -256,7 +255,7 @@
   "togawasakikomod:HeartsBarrier": {
     "NAME": "心之壁",
     "DESCRIPTION": "获得你牌组牌数量的 格挡 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得你牌组牌数量的 格挡 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 获得你牌组牌数量的 格挡 。",
     "EXTENDED_DESCRIPTION": [" NL （当前获得 !B! 点 格挡 。）"]
   },
   "togawasakikomod:Passion": {
@@ -265,12 +264,12 @@
   },
   "togawasakikomod:Accomplice": {
     "NAME": "一丘之貉",
-    "DESCRIPTION": "将 !M! 张 *渴望 置入手牌，本回合它们的耗能为0。"
+    "DESCRIPTION": "将 !M! 张 *渴望 置入手牌。 NL 当前手牌中所有的 *渴望 耗能为0。"
   },
   "togawasakikomod:AleaIactaEst": {
     "NAME": "骰子已经掷下",
-    "DESCRIPTION": "本张战斗中 升级 手牌中的所有牌。 NL 本回合不能再抽牌。 NL  消耗 。",
-    "UPGRADE_DESCRIPTION": "本张战斗中 升级 手牌和抽牌堆中的所有牌。 NL 本回合不能再抽牌。 NL  消耗 。"
+    "DESCRIPTION": "本场战斗中 升级 手牌中的所有牌。 NL 本回合不能再抽牌。 NL  消耗 。",
+    "UPGRADE_DESCRIPTION": "本场战斗中 升级 手牌和抽牌堆中的所有牌。 NL 本回合不能再抽牌。 NL  消耗 。"
   },
   "togawasakikomod:AuthorityRestoration": {
     "NAME": "复权",
@@ -299,7 +298,7 @@
   },
   "togawasakikomod:Pride": {
     "NAME": "骄傲",
-    "DESCRIPTION": " 固有 。 NL 随机抽1张攻击牌。 NL 回合结束时，在抽牌堆顶部加入1张这张牌的复制品。 NL  消耗 。"
+    "DESCRIPTION": " 固有 。 NL 随机抽 !M! 张攻击牌。 NL 回合结束时，在抽牌堆顶部加入一张这张牌的复制品。 NL  消耗 。"
   },
   "togawasakikomod:WishYouGoodLuck": {
     "NAME": "祝你幸福",
@@ -317,8 +316,8 @@
   },
   "togawasakikomod:Worldview": {
     "NAME": "世界观",
-    "DESCRIPTION": "每当你抽到不能打出的卡牌时，将其变为1张 *旋律 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 每当你抽到不能打出的卡牌时，将其变为1张 *旋律 。"
+    "DESCRIPTION": "每当你抽到不能打出的卡牌时，将其变为1张随机攻击牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每当你抽到不能打出的卡牌时，将其变为1张随机攻击牌。"
   },
   "togawasakikomod:Fearless": {
     "NAME": "无畏",

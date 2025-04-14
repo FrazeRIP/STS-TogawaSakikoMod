@@ -1,6 +1,8 @@
 package togawasakikomod.powers.buffs;
 
+import basemod.helpers.CardModifierManager;
 import basemod.interfaces.CloneablePowerInterface;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import togawasakikomod.Actions.RemoveCardFromDeckAction;
 import togawasakikomod.cards.SpecialDeck.Attacks.Melody;
+import togawasakikomod.modifiers.UnremoveableModifier;
+import togawasakikomod.patches.CustomEnumPatch;
 import togawasakikomod.powers.BasePower;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
@@ -35,11 +39,22 @@ public class PerdereOmniaPower extends BasePower implements CloneablePowerInterf
     @Override
     public void onCardDraw(AbstractCard card) {
         super.onCardDraw(card);
-        if(card.cost<=-2){
+        if (card.cardID.equals("Necronomicurse") ||
+                card.cardID.equals("CurseOfTheBell") ||
+                card.cardID.equals("AscendersBane") ||
+                card.hasTag(CustomEnumPatch.TOGAWASAKIKO_UNREMOVEABLE) ||
+                CardModifierManager.hasModifier(card, UnremoveableModifier.ID)
+        ) {
+            return;
+        }
+
+        if(card.cost<=-2 && this.amount>0){
             this.flash();
+            this.reducePower(1);
             AbstractPlayer p = AbstractDungeon.player;
-            addToBot(new ReducePowerAction(p,p,this,1));
-            addToBot(new RemoveCardFromDeckAction(card,true,true,true));
+            addToTop(new ReducePowerAction(p,p,this,0));
+            addToTop(new RemoveCardFromDeckAction(card,true,true,true));
+            addToBot(new DrawCardAction(1));
         }
     }
 

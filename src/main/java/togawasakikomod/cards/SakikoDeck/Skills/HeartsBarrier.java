@@ -21,8 +21,7 @@ public class HeartsBarrier extends BaseCard {
     //but constants at the top of the file are easy to adjust.
     public HeartsBarrier() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        setCostUpgrade(1);
-        setInnate(false,true);
+        setSelfRetain(false,true);
     }
 
     @Override

@@ -24,10 +24,12 @@ public class StealStrengthAction extends AbstractGameAction {
             if(power.amount>0){
                 if(power.amount<=this.amount){
                     addToTop(new RemoveSpecificPowerAction(target,source,power));
-                    addToTop(new ApplyPowerAction(source,source,new StrengthPower(source,power.amount),power.amount));
+
+                    addToTop(new ApplyPowerAction(source,source,new StrengthPower(source,amount),amount));
                 }else{
                     addToTop(new ReducePowerAction(target,source,power,this.amount));
-                    addToTop(new ApplyPowerAction(source,source,new StrengthPower(source,power.amount),this.amount));
+
+                    addToTop(new ApplyPowerAction(source,source,new StrengthPower(source,amount),amount));
                 }
             }
         }

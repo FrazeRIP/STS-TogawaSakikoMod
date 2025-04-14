@@ -36,7 +36,6 @@ public class Kings extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(!p.hasPower(KingsPower.POWER_ID)){
             addToBot(new ApplyPowerAction(p,p, new KingsPower(p,-1),0));
-            KingsSaveable.IsKing = true;
         }
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 

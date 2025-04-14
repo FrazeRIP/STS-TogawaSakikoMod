@@ -23,12 +23,11 @@ public class FearlessPower extends BasePower implements CloneablePowerInterface 
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        super.atEndOfTurn(isPlayer);
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         if(isPlayer){
             this.flash();
-            addToBot(new ReducePowerAction(owner,owner,this,1));
-            addToBot(new RemoveCardFromHandAction(1));
+            addToTop(new RemoveCardFromHandAction(1,true));
+            addToTop(new ReducePowerAction(owner,owner,this,1));
         }
     }
 

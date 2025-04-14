@@ -30,6 +30,12 @@ public class CuteAnimalBandAid extends BaseRelic{
     }
 
     @Override
+    public void onVictory() {
+        super.onVictory();
+        AbstractDungeon.player.heal(AbstractDungeon.getCurrRoom().rewards.size());
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

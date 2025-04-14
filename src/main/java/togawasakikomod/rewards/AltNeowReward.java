@@ -35,6 +35,7 @@ import org.apache.logging.log4j.Logger;
 import sun.security.krb5.internal.crypto.Des;
 import togawasakikomod.cards.SpecialDeck.Skills.Desire;
 import togawasakikomod.events.AltNeowEvent;
+import togawasakikomod.relics.BlazingHairband;
 import togawasakikomod.relics.TheThirdMovement;
 
 import javax.rmi.CORBA.Util;
@@ -139,6 +140,10 @@ public class AltNeowReward {
                 break;
             case 3:
                 rewardOptions.add(new NeowRewardDef(AltNeowReward.NeowRewardType.BOSS_RELIC, UNIQUE_REWARDS[0]));
+                break;
+            case 4:
+                rewardOptions.add(new NeowRewardDef(NeowRewardType.UPGRADE_BASE_RELIC, UNIQUE_REWARDS[1]));
+                break;
         }
 
         return rewardOptions;
@@ -273,8 +278,13 @@ public class AltNeowReward {
                     AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(new Desire(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
 
                 }
-
                 break;
+
+            case UPGRADE_BASE_RELIC:
+                AbstractDungeon.player.loseRelic(((AbstractRelic)AbstractDungeon.player.relics.get(0)).relicId);
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new BlazingHairband());
+                break;
+
             case THREE_ENEMY_KILL:
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new TheThirdMovement());
                 break;
@@ -446,7 +456,8 @@ public class AltNeowReward {
         THREE_RARE_CARDS,
         TWO_FIFTY_GOLD,
         TWENTY_PERCENT_HP_BONUS,
-        BOSS_RELIC;
+        BOSS_RELIC,
+        UPGRADE_BASE_RELIC;
 
         private NeowRewardType() {
         }

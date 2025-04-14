@@ -6,7 +6,6 @@
 package togawasakikomod.Actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -48,25 +47,19 @@ public class MaskAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (tmp.size() == 1) {
                 card = tmp.getTopCard();
-                addToTop(new MakeTempCardInHandAction(cardToMake.makeStatEquivalentCopy()));
-                addToTop(new RemoveCardFromDeckAction(card,false,false,false));
+                addToTop(new ReplaceCardAction(card,cardToMake));
                 this.isDone = true;
             } else {
                 AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0], false);
                 this.tickDuration();
             }
         } else {
-            if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
-                Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
-
-                while(var1.hasNext()) {
-                    card = (AbstractCard)var1.next();
+            if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+                for (AbstractCard abstractCard : AbstractDungeon.gridSelectScreen.selectedCards) {
+                    card = abstractCard;
                     card.unhover();
-
-                    addToTop(new MakeTempCardInHandAction(cardToMake.makeStatEquivalentCopy()));
-                    addToTop(new RemoveCardFromDeckAction(card,false,false,false));
+                    addToTop(new ReplaceCardAction(card, cardToMake));
                 }
-
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 this.p.hand.refreshHandLayout();
             }

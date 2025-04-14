@@ -5,11 +5,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.AreTheseLyricsAction;
 import togawasakikomod.Actions.PlayAudioAction;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.SpecialDeck.Attacks.Melody;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
+@CardEnable(enable = false)
 public class AreTheseLyrics extends BaseCard {
     public static final String ID = makeID(AreTheseLyrics.class.getSimpleName());
     private static final CardStats info = new CardStats(

@@ -22,13 +22,12 @@ public class BandInvitation extends BaseCard {
     //These will be used in the constructor. Technically you can just use the values directly,
     //but constants at the top of the file are easy to adjust.
     private static final int MAGIC_NUMBER = 4;
-    private static final int UPG_MAGIC_NUMBER = 2;
+    private static final int UPG_MAGIC_NUMBER = 1;
 
 
     public BandInvitation() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
-        setMagic(MAGIC_NUMBER); //Sets the card's damage and how much it changes when upgraded.
-        setExhaust(true);
+        setMagic(MAGIC_NUMBER,UPG_MAGIC_NUMBER); //Sets the card's damage and how much it changes when upgraded.
     }
 
     @Override
@@ -47,7 +46,7 @@ public class BandInvitation extends BaseCard {
             this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
             return false;
         } else {
-            return canUse;
+            return true;
         }
     }
 

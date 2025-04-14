@@ -62,7 +62,7 @@ public class Crychic extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //this.addToBot(new ApplyPowerAction(p, p, new CrychicPower(AbstractDungeon.player, energyOnUse+magicNumber), energyOnUse+magicNumber));
-        addToBot(new CrychicAction(energyOnUse));
+        addToBot(new CrychicAction(energyOnUse + magicNumber));
         addToBot(new LoseEnergyAction(energyOnUse));
     }
 }

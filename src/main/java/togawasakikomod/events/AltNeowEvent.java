@@ -388,11 +388,13 @@ public class AltNeowEvent extends AbstractEvent {
         this.talk(TEXT[MathUtils.random(4, 6)]);
         this.rewards.add(new AltNeowReward(true));
         this.rewards.add(new AltNeowReward(false));
+        this.rewards.add(new AltNeowReward(4));
         this.rewards.add(new AltNeowReward(3));
         this.roomEventText.clearRemainingOptions();
         this.roomEventText.updateDialogOption(0, ((AltNeowReward)this.rewards.get(0)).optionLabel);
         this.roomEventText.addDialogOption(((AltNeowReward)this.rewards.get(1)).optionLabel);
         this.roomEventText.addDialogOption(((AltNeowReward)this.rewards.get(2)).optionLabel);
+        this.roomEventText.addDialogOption(((AltNeowReward)this.rewards.get(3)).optionLabel);
         this.screenNum = 3;
     }
 
@@ -406,13 +408,14 @@ public class AltNeowEvent extends AbstractEvent {
         this.rewards.add(new AltNeowReward(0));
         this.rewards.add(new AltNeowReward(1));
         this.rewards.add(new AltNeowReward(2));
+        this.rewards.add(new AltNeowReward(4));
         this.rewards.add(new AltNeowReward(3));
         this.roomEventText.clearRemainingOptions();
-         this.roomEventText.updateDialogOption(0, ((AltNeowReward)this.rewards.get(0)).optionLabel);
          this.roomEventText.updateDialogOption(0, ((AltNeowReward)this.rewards.get(0)).optionLabel);
          this.roomEventText.addDialogOption(((AltNeowReward)this.rewards.get(1)).optionLabel);
          this.roomEventText.addDialogOption(((AltNeowReward)this.rewards.get(2)).optionLabel);
          this.roomEventText.addDialogOption(((AltNeowReward)this.rewards.get(3)).optionLabel);
+        this.roomEventText.addDialogOption(((AltNeowReward)this.rewards.get(4)).optionLabel);
         this.screenNum = 3;
     }
 

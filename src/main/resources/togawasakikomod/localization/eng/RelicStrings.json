@@ -14,6 +14,14 @@
       "to your deck."
     ]
   },  
+  "${modID}:BlazingHairband": {
+    "NAME": "Blazing Hairband",
+    "FLAVOR": "A black and white hairband symbolizing her will: an endless pursuit and desire for music.",
+    "DESCRIPTIONS": [
+      "Replace #rMonochrome #rHairband. At the end of combat, add a random card ",
+      "to your deck."
+    ]
+  },  
   "${modID}:TheThirdMovement": {
     "NAME": "The Third Movement",
     "FLAVOR": "The music reaches its climax, and the story comes to an end.",
@@ -26,7 +34,7 @@
     "NAME": "Colorful Notebook",
     "FLAVOR": "\"This is our song!\"",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b1 #yTogawaSakikoMod:Dazzling."
+      "At the start of combat, gain #b1 #yDazzling."
     ]
   },  
   "${modID}:CuteAnimalBandAid": {
@@ -43,13 +51,6 @@
       "Whenever your potion slots are full, gain a potion at the end of combat."
     ]
   },  
-  "${modID}:Maracas": {
-    "NAME": "Maracas",
-    "FLAVOR": "A mystical tool that could make even a wooden doll smile.",
-    "DESCRIPTIONS": [
-      "At the start of combat, gain #b1 #yTogawaSakikoMod:Hype."
-    ]
-  },  
   "${modID}:GoldenPocketWatch": {
     "NAME": "Golden Pocket Watch",
     "FLAVOR": "Guess what time it is.",
@@ -61,21 +62,21 @@
     "NAME": "Masquerade Mask",
     "FLAVOR": "An abandoned mask lay right on the floor. Seems cheaply made.",
     "DESCRIPTIONS": [
-      "Whenever you #yTogawaSakikoMod:Purge 3 card during battle, gain a #yTogawaSakikoMod:Purge reward at the end of the battle."
+      "Whenever you #yPurge 3 card during battle, gain a #yPurge reward at the end of the battle."
     ]
   },  
   "${modID}:TheCompass": {
     "NAME": "The Compass",
     "FLAVOR": "Like the needle spinning between two poles of fate, our destinies align in its eternal dance.",
     "DESCRIPTIONS": [
-      "Whenever your turn ends, you gain #b2 #yTogawaSakikoMod:Dazzling, all enemires gain #b1 #yTogawaSakikoMod:Dazzling."
+      "Whenever your turn ends, you gain #b2 #yDazzling, all enemires gain #b1 #yDazzling."
     ]
   },  
   "${modID}:TheDoll": {
     "NAME": "The Doll",
     "FLAVOR": "There is nothing left but the warmth of her doll's embrace.",
     "DESCRIPTIONS": [
-      "At the start of your 2nd turn, gain #b2 #yTogawaSakikoMod:Hype."
+      "At the start of your 2nd turn, gain #b2 #yHype."
     ]
   },  
   "${modID}:WarmthInfusedPorcelainCup": {

@@ -17,7 +17,6 @@ public class PirdeAction extends AbstractGameAction {
     @Override
     public void update() {
         PridePower.copies.add(card);
-        addToTop(new RandomCardFromDrawPileToHandAction(AbstractCard.CardType.ATTACK));
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PridePower(AbstractDungeon.player, 1), 1));
         isDone = true;
     }

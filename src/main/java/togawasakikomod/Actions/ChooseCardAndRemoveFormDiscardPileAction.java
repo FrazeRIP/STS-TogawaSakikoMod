@@ -41,9 +41,7 @@ public class ChooseCardAndRemoveFormDiscardPileAction extends AbstractGameAction
 
             while(var5.hasNext()) {
                 AbstractCard c = (AbstractCard)var5.next();
-                if(!c.selfRetain && !CardModifierManager.hasModifier(c, SelfRetainModifier.ID)){
-                    tmp.addToRandomSpot(c);
-                }
+                tmp.addToRandomSpot(c);
             }
 
             if (tmp.isEmpty()) {
@@ -67,9 +65,7 @@ public class ChooseCardAndRemoveFormDiscardPileAction extends AbstractGameAction
                 while(var1.hasNext()) {
                     card = (AbstractCard)var1.next();
                     card.unhover();
-
                     card.flash();
-                    card.selfRetain = true;
                     addToTop(new RemoveCardFromDeckAction(card));
                 }
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();

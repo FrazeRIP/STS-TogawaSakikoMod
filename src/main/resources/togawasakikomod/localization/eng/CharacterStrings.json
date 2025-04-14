@@ -73,13 +73,14 @@
       "Select a Card to Transform",
       "Select 2 Cards to Transform",
       "Select a Card to Upgrade",
-      "[ The next #g3 #yMoonlight #ySonata will deal #gtriple damage. ]",
+      "[ The next #g3 #yMoonlight #ySonata will deal #gtriple damage ]",
       " #rdamage",
       "[ #gChoose #ga #gcolorless #gCard #gto #gobtain ]",
       "#gChoose #ga #grare #gcolorless #gCard #gto #gobtain ]"
     ],
     "UNIQUE_REWARDS": [
-      "[ #rLose #yMonochrome #yHairband, #greplace all #yDefend into #yDesire. #r(Easy #rMode) ]"
+      "[ #rLose #yMonochrome #yHairband, #greplace all #yDefend into #yDesire. #r(Easy #rMode) ]",
+      "[ Upgrade #yMonochrome #yHairband to #yBlazing #yHairband ]"
     ]
   }
 }

@@ -40,7 +40,7 @@ public class SymbolIFire extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAllEnemiesAction(p,damage, DamageInfo.DamageType.NORMAL,AbstractGameAction.AttackEffect.FIRE));
+        addToBot(new DamageAllEnemiesAction(p,multiDamage, DamageInfo.DamageType.NORMAL,AbstractGameAction.AttackEffect.FIRE));
         addToBot(new SymbolIFireAction(m,upgraded));
 
         AbstractCard card = new Timoris();

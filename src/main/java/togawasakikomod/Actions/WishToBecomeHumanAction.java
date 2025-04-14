@@ -34,6 +34,10 @@ public class WishToBecomeHumanAction extends AbstractGameAction {
 
     public void update() {
         if (this.shouldCancelAction() && this.info.type != DamageType.THORNS) {
+            this.callback.accept(amount);
+            if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+                AbstractDungeon.actionManager.clearPostCombatActions();
+            }
             this.isDone = true;
         } else {
             if (this.duration == 0.1F) {

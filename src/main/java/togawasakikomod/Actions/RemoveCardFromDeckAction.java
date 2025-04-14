@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -30,6 +31,7 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
     private boolean removeCardFromDeck = true;
     private boolean enduranceCheck = true;
     private boolean masqueradeCheck = true;
+    private  boolean isForced = false;
 
     public RemoveCardFromDeckAction(AbstractCard card) {
         this.card = card;
@@ -40,6 +42,7 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
         this.removeCardFromDeck = removeActualCard;
         this.enduranceCheck = enduranceCheck;
         this.masqueradeCheck = masquerade;
+        this.isForced = isForced;
     }
 
     public void update() {
@@ -79,6 +82,17 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
         AbstractDungeon.player.hand.refreshHandLayout();
         AbstractDungeon.player.discardPile.group.remove(card);
         AbstractDungeon.player.discardPile.refreshHandLayout();
+
+        ArrayList<CardQueueItem> targetItems = new ArrayList<>();
+        for(CardQueueItem item : AbstractDungeon.actionManager.cardQueue){
+            if(item.card == card){
+                targetItems.add(item);
+            }
+        }
+
+        for (CardQueueItem item : targetItems){
+            AbstractDungeon.actionManager.cardQueue.remove(item);
+        }
 
         AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(card, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
 

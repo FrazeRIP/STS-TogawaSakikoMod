@@ -28,7 +28,6 @@ public class AddBackLostPowersAction extends AbstractGameAction {
 
         List<AbstractPower> powers = new ArrayList<>();
         for (AbstractPower power :TogawaSakiko.CurrentRoundPowerLost){
-
             if(power.type == AbstractPower.PowerType.BUFF){
                 try{
                     AbstractPower copy= ((CloneablePowerInterface) power).makeCopy();
@@ -56,7 +55,7 @@ public class AddBackLostPowersAction extends AbstractGameAction {
                     }
 
                     if(!isFound){
-                        System.out.println("Power: Add "+power.ID+"from previous. amunt:"+power.amount);
+                        System.out.println("Power: Add "+power.ID+"from previous. amount:"+power.amount);
                         powers.add(power);
                     }
                 }
@@ -67,7 +66,7 @@ public class AddBackLostPowersAction extends AbstractGameAction {
             if(power.type == AbstractPower.PowerType.BUFF){
                 try{
                     AbstractPower copy= ((CloneablePowerInterface) power).makeCopy();
-                    if(copy!=null){
+                    if(copy!=null && copy.amount != 0){
                         addToTop(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,copy,copy.amount));
                     }
                 }catch (Exception e){

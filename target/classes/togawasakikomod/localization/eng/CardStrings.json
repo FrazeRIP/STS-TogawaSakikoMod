@@ -29,7 +29,7 @@
   },
   "togawasakikomod:PerdereOmnia": {
     "NAME": "Perdere Omnia",
-    "DESCRIPTION": " Unplayable. NL When drawn, togawasakikomod:Purge the next !M! cards you draw that is Unplayable."
+    "DESCRIPTION": " Unplayable. NL When drawn, togawasakikomod:Purge the next !M! cards you draw that is Unplayable then draw a card."
   },
   "togawasakikomod:DarkHeaven": {
     "NAME": "Dark Heaven",
@@ -167,8 +167,7 @@
   },
   "togawasakikomod:BandInvitation": {
     "NAME": "Band Invitation",
-    "DESCRIPTION": "Can only be played if it is the only skill card in your hand. NL Draw cards until the total cost of those cards is greater than or equal to !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Can only be played if it is the only skill card in your hand. NL Draw cards until the total cost of those cards is greater than !M!.",
+    "DESCRIPTION": "Can only be played if it is the only skill card in your hand. NL Draw cards until the total cost of those cards is greater than or equal to !M!.",
     "EXTENDED_DESCRIPTION": ["This card must be my only #bskill card!"]
   },
   "togawasakikomod:Veritas": {
@@ -256,7 +255,7 @@
   "togawasakikomod:HeartsBarrier": {
     "NAME": "Heart's Barrier",
     "DESCRIPTION": "Gain Block equal to the number of cards in your deck.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain Block equal to the number of cards in your deck.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain Block equal to the number of cards in your deck.",
     "EXTENDED_DESCRIPTION": ["NL (Currently gains !B! Block.)"]
   },
   "togawasakikomod:Passion": {
@@ -265,7 +264,7 @@
   },
   "togawasakikomod:Accomplice": {
     "NAME": "Accomplice",
-    "DESCRIPTION": "Add !M! *Desire to your hand. They cost 0 energy this turn."
+    "DESCRIPTION": "Add !M! *Desire to your hand. NL All *Desire in your hand cost 0 energy this turn."
   },
   "togawasakikomod:AleaIactaEst": {
     "NAME": "Alea Iacta Est",
@@ -299,7 +298,7 @@
   },
   "togawasakikomod:Pride": {
     "NAME": "Pride",
-    "DESCRIPTION": "Innate. NL Draw a random Attack card. NL At the end of your turn, add a copy of this card to the top of your draw pile. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Draw !M! random Attack card. NL At the end of your turn, add a copy of this card to the top of your draw pile. NL Exhaust."
   },
   "togawasakikomod:WishYouGoodLuck": {
     "NAME": "Wish You Good Luck",
@@ -317,8 +316,8 @@
   },
   "togawasakikomod:Worldview": {
     "NAME": "Worldview",
-    "DESCRIPTION": "Whenever you draw an Unplayable card, repalce it with a *Melody.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw an unplayable card, repalce it with a *Melody."
+    "DESCRIPTION": "Whenever you draw an Unplayable card, repalce it with a random Attack card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw an unplayable card, repalce it with a random Attack card."
   },
   "togawasakikomod:Fearless": {
     "NAME": "Fearless",

@@ -17,22 +17,24 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import javassist.CtBehavior;
+import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.cards.SakikoDeck.Skills.Defend;
 import togawasakikomod.cards.SakikoDeck.Attacks.Strike;
 import togawasakikomod.cards.SakikoDeck.Attacks.TheMoonlightSonata;
 import togawasakikomod.relics.MonochromeHairband;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Random;
 
-import static togawasakikomod.TogawaSakikoMod.characterPath;
-import static togawasakikomod.TogawaSakikoMod.makeID;
+import static togawasakikomod.TogawaSakikoMod.*;
 
 public class TogawaSakiko extends CustomPlayer {
     //Stats
@@ -298,13 +300,6 @@ public class TogawaSakiko extends CustomPlayer {
     }
 
     @Override
-    public void onVictory() {
-        super.onVictory();
-        LastRoundPowerLost.clear();
-        CurrentRoundPowerLost.clear();
-    }
-
-    @Override
     public void update(){
         super.update();
         if(CardAudioTimer >0){
@@ -316,6 +311,7 @@ public class TogawaSakiko extends CustomPlayer {
     }
 
     public static void TryPlayCardAudio(String className){
+        if( AbstractDungeon.player.chosenClass != TogawaSakiko.Meta.TOGAWA_SAKIKO){return;}
         if(CardAudioTimer <=0 ){
             CardAudioTimer = CARD_AUDIO_COOLDOWN;
             CardCrawlGame.sound.playA(makeID("Sakiko-"+className), 0);
@@ -323,6 +319,7 @@ public class TogawaSakiko extends CustomPlayer {
     }
 
     public static void TryPlayHurtAudio(String audioName){
+        if( AbstractDungeon.player.chosenClass != TogawaSakiko.Meta.TOGAWA_SAKIKO){return;}
         if(HurtAudioTimer <=0 ){
             HurtAudioTimer = HURT_AUDIO_COOLDOWN;
             CardCrawlGame.sound.playA(makeID("Sakiko-"+audioName), 0);
@@ -352,6 +349,8 @@ public class TogawaSakiko extends CustomPlayer {
             }
         }
     }
+
+
     private static int lastNumber = Integer.MIN_VALUE;
     private static final Random random = new Random();
 

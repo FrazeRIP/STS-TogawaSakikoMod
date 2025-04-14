@@ -85,7 +85,7 @@
     "NAME": "Perdere Omnia",
     "DESCRIPTIONS": [
       "The next #b",
-      " #yUnplayable cards that you draw will be #yPurged."
+      " #yUnplayable cards that you draw will be #yPurged and draw a card."
     ]
   },
   "${modID}:CharismaticFormPower": {

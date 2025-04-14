@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 import com.megacrit.cardcrawl.stances.DivinityStance;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.DazzlingPower;
@@ -19,7 +20,7 @@ import togawasakikomod.util.CardStats;
 
 import java.util.Objects;
 
-//月光奏鸣曲
+@CardEnable(enable = false)
 public class IWantToBeYourGod extends BaseCard {
     public static final String ID = makeID(IWantToBeYourGod.class.getSimpleName());
     private static final CardStats info = new CardStats(

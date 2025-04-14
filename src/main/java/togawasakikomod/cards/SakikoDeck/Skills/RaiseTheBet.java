@@ -5,11 +5,13 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.HypePower;
 import togawasakikomod.util.CardStats;
 
+@CardEnable(enable = false)
 public class RaiseTheBet extends BaseCard {
     public static final String ID = makeID(RaiseTheBet.class.getSimpleName());
     private static final CardStats info = new CardStats(

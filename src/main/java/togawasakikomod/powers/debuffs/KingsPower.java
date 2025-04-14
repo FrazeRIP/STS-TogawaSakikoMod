@@ -48,6 +48,24 @@ public class KingsPower extends BasePower
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
+//    @Override
+//    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+//        super.onApplyPower(power, target, source);
+//        if(power instanceof KingsPower){
+//        }
+//    }
+
+    @Override
+    public void onVictory() {
+        super.onVictory();
+        KingsSaveable.IsKing = true;
+    }
+
+//    @Override
+//    public void onRemove() {
+//        super.onRemove();
+//        KingsSaveable.IsKing = false;
+//    }
 
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];

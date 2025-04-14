@@ -3,12 +3,14 @@ package togawasakikomod.cards.SakikoDeck.Powers;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.NumbersAndFacesAction;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
 import java.util.List;
 
+@CardEnable(enable = false)
 public class NumbersAndFaces extends BaseCard {
     public static final String ID = makeID(NumbersAndFaces.class.getSimpleName());
     private static final CardStats info = new CardStats(

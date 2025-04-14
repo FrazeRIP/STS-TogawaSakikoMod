@@ -23,12 +23,15 @@ public class RemoveCardFromHandAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private AbstractPlayer p;
+    private  boolean canCancel = false;
 
-    public RemoveCardFromHandAction(int amount) {
+
+    public RemoveCardFromHandAction(int amount, boolean canCanel) {
         this.p = AbstractDungeon.player;
         this.setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
+        this.canCancel = canCanel;
     }
 
     public void update() {
@@ -49,7 +52,7 @@ public class RemoveCardFromHandAction extends AbstractGameAction {
                 addToTop(new RemoveCardFromDeckAction(card));
                 this.isDone = true;
             } else {
-                AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0], false);
+                AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0], false,false,canCancel,true);
                 this.tickDuration();
             }
         } else {

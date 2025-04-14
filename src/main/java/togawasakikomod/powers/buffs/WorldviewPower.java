@@ -4,8 +4,10 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import togawasakikomod.Actions.RemoveCardFromDeckAction;
+import togawasakikomod.Actions.ReplaceCardAction;
 import togawasakikomod.cards.SpecialDeck.Attacks.Melody;
 import togawasakikomod.powers.BasePower;
 
@@ -33,8 +35,8 @@ public class WorldviewPower extends BasePower implements CloneablePowerInterface
         super.onCardDraw(card);
         if(card.cost<=-2){
             this.flash();
-            addToBot(new RemoveCardFromDeckAction(card,false,false,false));
-            addToBot(new MakeTempCardInHandAction(new Melody()));
+            AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();
+            addToBot(new ReplaceCardAction(card,c));
         }
     }
 

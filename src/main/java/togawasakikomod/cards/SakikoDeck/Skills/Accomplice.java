@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.Actions.AccompliceAction;
 import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.cards.SpecialDeck.Skills.Desire;
@@ -33,10 +34,8 @@ public class Accomplice extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new PlayAudioAction(Accomplice.class.getSimpleName()));
-
         AbstractCard card = new Desire();
-        card.setCostForTurn(0);
         addToBot(new MakeTempCardInHandAction(card,magicNumber));
-
+        addToBot(new AccompliceAction());
     }
 }
