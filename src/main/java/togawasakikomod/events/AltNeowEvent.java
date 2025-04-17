@@ -234,6 +234,9 @@ public class AltNeowEvent extends AbstractEvent {
                     case 3:
                         ((AltNeowReward)this.rewards.get(3)).activate();
                         this.talk(TEXT[9]);
+                    case 4:
+                        ((AltNeowReward)this.rewards.get(4)).activate();
+                        this.talk(TEXT[9]);
                 }
 
                 this.screenNum = 99;

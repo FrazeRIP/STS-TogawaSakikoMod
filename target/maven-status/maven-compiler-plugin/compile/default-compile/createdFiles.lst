@@ -224,7 +224,6 @@ togawasakikomod\cards\SakikoDeck\Powers\SharedDestiny.class
 togawasakikomod\powers\debuffs\OblivionisPower.class
 togawasakikomod\Actions\ChooseCardGainSelfRetainAction.class
 togawasakikomod\Actions\PerfectionAction.class
-togawasakikomod\patches\CutscenePanelImagePatch.class
 togawasakikomod\relics\FountainDrink$FountainDrinkPatch$Locator.class
 togawasakikomod\cards\SakikoDeck\Attacks\Kings.class
 togawasakikomod\cards\SpecialDeck\Powers\Ideal.class
