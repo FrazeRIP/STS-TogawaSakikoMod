@@ -31,6 +31,6 @@ public class CharismaticFormPower extends BasePower implements CloneablePowerInt
 
     @Override
     public AbstractPower makeCopy() {
-        return new CharismaticFormPower(this.owner,-1);
+        return new CharismaticFormPower(this.owner,this.amount);
     }
 }

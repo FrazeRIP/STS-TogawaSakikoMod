@@ -14,8 +14,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.Prefs;
 import com.megacrit.cardcrawl.powers.*;
-import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
 import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.rewards.RewardSave;
@@ -25,7 +25,7 @@ import togawasakikomod.Actions.CharismaticIntangibleAction;
 import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.annotations.RelicEnable;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SakikoDeck.Powers.NumbersAndFaces;
+import togawasakikomod.cards.SakikoDeck.Attacks.Kao;
 import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
@@ -109,9 +109,14 @@ public class TogawaSakikoMod implements
                 .any(AbstractCard.class,(info,card)->{
                     if(card.getClass().isAnnotationPresent(CardEnable.class)){
                         CardEnable enable = card.getClass().getAnnotation(CardEnable.class);
-                        if(enable.enable()){BaseMod.addCard(card);}
+                        if(enable.enable())
+                        {
+                            BaseMod.addCard(card);
+                            UnlockTracker.unlockCard(card.cardID);
+                        }
                     }else{
                         BaseMod.addCard(card);
+                        UnlockTracker.unlockCard(card.cardID);
                     }
                 }); //Adds the cards
     }
@@ -170,6 +175,20 @@ public class TogawaSakikoMod implements
                 (customReward) -> { // this handles what to do when this quest type is saved.
                     return new RewardSave(customReward.type.toString(), null, 0, 0);
                 });
+
+        BaseMod.getModdedCharacters().forEach(character ->{
+            if(character instanceof TogawaSakiko){
+                Prefs prefs = character.getPrefs();
+                if(prefs.getInteger("WIN_COUNT",0)<20){
+                    prefs.getInteger("WIN_COUNT",20);
+                }
+                prefs.putBoolean(character.chosenClass.name()+"_WIN",true);
+                prefs.putBoolean("ASCEND_0",true);
+                prefs.putInteger("ASCENSION_LEVEL",20);
+                //prefs.putInteger("LAST_ASCENSION_LEVEL",20);
+                prefs.flush();
+            }
+        });
     }
 
     public static void registerPotions() {
@@ -278,6 +297,9 @@ public class TogawaSakikoMod implements
     public static String imagePath(String file) {
         return resourcesFolder + "/images/" + file;
     }
+        public static String vfxPath(String file) {
+            return resourcesFolder + "/images/vfx/" + file;
+        }
     public static String audioPath(String file) {
         return resourcesFolder + "/audio/" + file;
     }
@@ -344,7 +366,7 @@ public class TogawaSakikoMod implements
        //@Override
     public void receivePostPowerApplySubscriber(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source) {
         DazzlingEvent(abstractPower,target,source);
-        NumbersAndFacesEvent(abstractPower,target,source);
+        KaoEvent(abstractPower,target,source);
         CharismaticFormEvent(abstractPower,target,source);
     }
 
@@ -368,7 +390,7 @@ public class TogawaSakikoMod implements
         }
     }
 
-    private void NumbersAndFacesEvent(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source){
+    private void KaoEvent(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source){
         if(target!= AbstractDungeon.player && abstractPower.type == AbstractPower.PowerType.BUFF){
 
             ArrayList<AbstractCard> allCards = new ArrayList<>(AbstractDungeon.player.hand.group);
@@ -376,11 +398,11 @@ public class TogawaSakikoMod implements
             //allCards.addAll(AbstractDungeon.player.drawPile.group);
 
             for(AbstractCard card : allCards){
-                if(card.cardID.equals(NumbersAndFaces.ID)){
+                if(card.cardID.equals(Kao.ID)){
                     card.flash();
                     card.glowColor = Color.YELLOW;
-                    card.isMagicNumberModified = true;
-                    card.misc+=2;
+                    //card.isMagicNumberModified = true;
+                    card.misc+=1;
                     card.applyPowers();
                 }
             }
@@ -419,17 +441,18 @@ public class TogawaSakikoMod implements
                     //Flash
                     AbstractPower form = AbstractDungeon.player.getPower(CharismaticFormPower.POWER_ID);
                     form.flash();
-
-                    //Apply copy
-                    copy.owner = AbstractDungeon.player;
-                    if (copy.ID.equals(IntangiblePlayerPower.POWER_ID)) {
-                        AbstractDungeon.actionManager.addToTop(new CharismaticIntangibleAction(copy));
-                    }else if(copy.ID.equals(FlightPower.POWER_ID)){
-                        AbstractPower flight = new PlayerFilightPower(AbstractDungeon.player,copy.amount);
-                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, flight));
-                    }
-                    else {
-                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, copy, copy.amount));
+                    for(int i = 0; i<form.amount;i++){
+                        //Apply copy
+                        copy.owner = AbstractDungeon.player;
+                        if (copy.ID.equals(IntangiblePlayerPower.POWER_ID)) {
+                            AbstractDungeon.actionManager.addToTop(new CharismaticIntangibleAction(copy));
+                        }else if(copy.ID.equals(FlightPower.POWER_ID)){
+                            AbstractPower flight = new PlayerFilightPower(AbstractDungeon.player,copy.amount);
+                            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, flight));
+                        }
+                        else {
+                            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, copy, copy.amount));
+                        }
                     }
                 }
             }
@@ -496,7 +519,10 @@ public class TogawaSakikoMod implements
         BaseMod.addAudio(makeID("Sakiko-AsYourHeartDesires"),audioPath("sakiko/AsYourHeartDesires.wav"));
         BaseMod.addAudio(makeID("Sakiko-Carefree"),audioPath("sakiko/Carefree.wav"));
 
+        BaseMod.addAudio(makeID("Sakiko-Cutscene-Ending1"),audioPath("cutscene/ending1.wav"));
+        BaseMod.addAudio(makeID("Sakiko-Cutscene-Ending2"),audioPath("cutscene/ending2.wav"));
 
+        BaseMod.addAudio(makeID("MusicPulseAttackEffect"),audioPath("vfx/MusicPulseAttackEffect.wav"));
 
         BaseMod.addAudio(makeID("Sakiko-Hurt1"),audioPath("sakiko/Hurt1.wav"));
         BaseMod.addAudio(makeID("Sakiko-Hurt2"),audioPath("sakiko/Hurt2.wav"));

@@ -29,11 +29,14 @@ togawasakikomod\rewards\AltNeowReward$NeowRewardDrawback.class
 togawasakikomod\cards\SakikoDeck\Powers\Worldview.class
 togawasakikomod\character\TogawaSakiko.class
 togawasakikomod\relics\MasqueradeMask.class
+togawasakikomod\Actions\RandomCardToHandByIDAction.class
 togawasakikomod\cards\BaseCard$1.class
 togawasakikomod\powers\buffs\FreshlySqueezedCucumberPower.class
+togawasakikomod\Actions\SoraNoMusicaAction.class
 togawasakikomod\powers\buffs\HypePower$PreventBlockLossForEnemy.class
 togawasakikomod\cards\CustomTags.class
 togawasakikomod\Actions\MaskAction.class
+togawasakikomod\cards\SakikoDeck\Attacks\Kao.class
 togawasakikomod\cards\SakikoDeck\Skills\Carefree.class
 togawasakikomod\TogawaSakikoMod.class
 togawasakikomod\Actions\NumbersAndFacesAction.class
@@ -79,6 +82,7 @@ togawasakikomod\cards\SakikoDeck\Powers\NumbersAndFaces.class
 togawasakikomod\patches\ObtainRewardEventPatch.class
 togawasakikomod\cards\SakikoDeck\Powers\Masks.class
 togawasakikomod\rewards\PurgeReward.class
+togawasakikomod\others\SakikoCutscenePanel.class
 togawasakikomod\relics\BaseRelic.class
 togawasakikomod\Actions\AdjustCostAction.class
 togawasakikomod\Actions\UpgradeAllCardInDrawPileAction.class
@@ -96,12 +100,16 @@ togawasakikomod\powers\buffs\CrychicPower.class
 togawasakikomod\powers\buffs\PridePower.class
 togawasakikomod\patches\UnremoveablePatcher$RemoveUnremoveableFromPurge.class
 togawasakikomod\cards\SpecialDeck\Curses\Weakness.class
+togawasakikomod\Actions\CricifuxXAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIIIWater.class
+togawasakikomod\cards\SakikoDeck\Attacks\GeorgetteMeGeorgetteYou.class
 togawasakikomod\patches\AltNeowPatch$Locator.class
 togawasakikomod\potions\HallucinationPotion.class
 togawasakikomod\cards\SakikoDeck\Skills\StayElegance.class
 togawasakikomod\relics\FountainDrink$FountainDrinkPatch.class
 togawasakikomod\cards\SakikoDeck\Skills\CountingStars.class
+togawasakikomod\cards\SakikoDeck\Attacks\CricifuxX.class
+togawasakikomod\effects\MusicPulseAttackEffect.class
 togawasakikomod\powers\buffs\EndurancePower.class
 togawasakikomod\powers\buffs\PlayerFilightPower.class
 togawasakikomod\powers\buffs\SharedDestinyPower.class
@@ -113,8 +121,8 @@ togawasakikomod\powers\debuffs\TimorisPower.class
 togawasakikomod\Actions\BlackBirthdayAction.class
 togawasakikomod\cards\SakikoDeck\Powers\Passion.class
 togawasakikomod\modifiers\UnremoveableModifier.class
+togawasakikomod\Actions\RandomCardToHandByTypeAction.class
 togawasakikomod\effects\ShowAndExhaustCardEffect.class
-togawasakikomod\Actions\RandomCardFromDrawPileToHandAction.class
 togawasakikomod\relics\MonochromeHairband.class
 togawasakikomod\Actions\KillGainPurgeRewardAction.class
 togawasakikomod\relics\CuteAnimalBandAid.class
@@ -143,6 +151,7 @@ togawasakikomod\relics\BlazingHairband.class
 togawasakikomod\Actions\BodySlamEXAction.class
 togawasakikomod\patches\FreeAttackPowerReducePatch.class
 togawasakikomod\patches\ScryCallbackPatch$Field.class
+togawasakikomod\cards\SakikoDeck\Attacks\HachibouseiDance.class
 togawasakikomod\patches\ObtainRewardEventPatch$ObtainRewardEventPatcher.class
 togawasakikomod\relics\ColorfulNotebook.class
 togawasakikomod\Actions\RemoveAddedLostPowersAction.class
@@ -188,6 +197,7 @@ togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRemovedPowerInstanceVar$
 togawasakikomod\Actions\SymbolIFireAction.class
 togawasakikomod\patches\GraveCardPatch$StartInGravePatch.class
 togawasakikomod\patches\FreeAttackPowerReducePatch$ReplaceAmountPatch.class
+togawasakikomod\cards\SakikoDeck\Attacks\KillKiSS.class
 togawasakikomod\cards\SpecialDeck\Powers\BlackKeys.class
 togawasakikomod\relics\GoldenPocketWatch.class
 togawasakikomod\powers\buffs\PrimoDieInScaenaPower.class
@@ -214,9 +224,11 @@ togawasakikomod\cards\SakikoDeck\Powers\SharedDestiny.class
 togawasakikomod\powers\debuffs\OblivionisPower.class
 togawasakikomod\Actions\ChooseCardGainSelfRetainAction.class
 togawasakikomod\Actions\PerfectionAction.class
+togawasakikomod\patches\CutscenePanelImagePatch.class
 togawasakikomod\relics\FountainDrink$FountainDrinkPatch$Locator.class
 togawasakikomod\cards\SakikoDeck\Attacks\Kings.class
 togawasakikomod\cards\SpecialDeck\Powers\Ideal.class
+togawasakikomod\cards\SakikoDeck\Attacks\ImprisonedXII.class
 togawasakikomod\cards\SakikoDeck\Powers\Curiosity.class
 togawasakikomod\Actions\AccompliceAction.class
 togawasakikomod\Actions\SeizeTheFateAction.class
@@ -252,4 +264,5 @@ togawasakikomod\Actions\MatchaParfaitAction.class
 togawasakikomod\cards\SpecialDeck\Skills\Tiredness.class
 togawasakikomod\cards\BaseCard$QuickDynamicVariable.class
 togawasakikomod\powers\buffs\PrimoDieInScaenaPower$EmptyDeckShuffleActionPatch.class
+togawasakikomod\cards\SakikoDeck\Attacks\SoraNoMusica.class
 togawasakikomod\cards\SakikoDeck\Powers\Endurance.class

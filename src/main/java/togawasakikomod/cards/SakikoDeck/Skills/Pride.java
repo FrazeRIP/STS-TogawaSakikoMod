@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.PirdeAction;
-import togawasakikomod.Actions.RandomCardFromDrawPileToHandAction;
+import togawasakikomod.Actions.RandomCardToHandByTypeAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
@@ -33,7 +33,7 @@ public class Pride extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i<magicNumber;i++){
-            addToTop(new RandomCardFromDrawPileToHandAction(AbstractCard.CardType.ATTACK));
+            addToTop(new RandomCardToHandByTypeAction(AbstractCard.CardType.ATTACK));
         }
         addToBot(new PirdeAction(this.makeStatEquivalentCopy()));
     }

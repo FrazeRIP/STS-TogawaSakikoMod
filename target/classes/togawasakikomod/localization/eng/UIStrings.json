@@ -25,6 +25,13 @@
       "Choose a card to add to your hand"
     ]
   },
+  "togawasakikomod:SoraNoMusicaAction": {
+    "TEXT": [
+      "Choose cards to move to the top of the Draw Pile.",
+      "Choose ",
+      " Cards to move to the top of the Draw Pile."
+    ]
+  },
   "togawasakikomod:ChooseCardAndRemoveFormDiscardPileAction": {
     "TEXT": [
       "Choose and remove a card",

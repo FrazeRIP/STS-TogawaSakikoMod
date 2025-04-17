@@ -75,7 +75,7 @@ public class SymbolIVEarth extends BaseCard {
 
         this.baseDamage = p.currentBlock + block;
         this.calculateCardDamage(m);
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SHIELD));
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
 

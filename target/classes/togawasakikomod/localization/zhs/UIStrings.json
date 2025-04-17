@@ -25,6 +25,13 @@
       "选择一张卡牌加入手卡"
     ]
   },
+  "togawasakikomod:SoraNoMusicaAction": {
+    "TEXT": [
+      "选择卡牌并移动到抽牌堆顶部。",
+      "选择",
+      " 张牌移动到抽牌堆顶部。"
+    ]
+  },
   "togawasakikomod:ChooseCardAndRemoveFormDiscardPileAction": {
     "TEXT": [
       "选择并移除一张卡牌",

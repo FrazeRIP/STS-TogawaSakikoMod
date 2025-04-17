@@ -27,9 +27,39 @@
     "NAME": "想要成为人类",
     "DESCRIPTION": "造成 !D! 点伤害2次。 NL 获得与所造成的未被格挡的伤害相等层数的 togawasakikomod:闪耀 。"
   },
+  "${modID}:GeorgetteMeGeorgetteYou": {
+    "NAME": "绞织你我",
+    "DESCRIPTION": "造成 !D! 点伤害3次。 NL 给予敌人1层 力量 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害3次。 NL 给予敌人1层 力量 和 togawasakikomod:狂热 。"
+  },
   "${modID}:PerdereOmnia": {
     "NAME": "破坏一切",
     "DESCRIPTION": " 不能被打出 。 NL 抽到后， togawasakikomod:移除 接下来抽到的 !M! 张 不能被打出 的牌并抽1张牌。"
+  },
+  "${modID}:ImprisonedXII": {
+    "NAME": "徒囚 XII",
+    "DESCRIPTION": "你在本场战斗中每打出一张 *渴望 ，随机造成一次 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [" NL （当前造成 !M! 次。）"]
+  },
+  "${modID}:CricifuxX": {
+    "NAME": "十架 X",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 重复X次。"
+  },
+  "${modID}:HachibouseiDance": {
+    "NAME": "八芒星调",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 层 多层护甲 。"
+  },
+  "${modID}:Kao": {
+    "NAME": "颜",
+    "DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL 每当敌人获得增益效果时，将手牌里这张牌的数字+ !M! 。"
+  },
+  "${modID}:SoraNoMusica": {
+    "NAME": "无何有之颂乐",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 从抽牌堆中选择 !M! 张牌置于牌堆顶。 NL  消耗 。"
+  },
+  "${modID}:KillKiSS": {
+    "NAME": "以吻作结",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机抽取 !M! 张 *渴望 。"
   },
   "${modID}:DarkHeaven": {
     "NAME": "暗黑天国",
@@ -149,7 +179,7 @@
   },
   "${modID}:EdgeOfBreakdown": {
     "NAME": "崩溃边缘",
-    "DESCRIPTION": "选择弃牌堆中的1张牌并 togawasakikomod:移除 。 NL 获得 !M! 层 脆弱 。"
+    "DESCRIPTION": "选择弃牌堆中的1张牌并 togawasakikomod:移除 。 NL 获得 !M! 层 脆弱 。 NL 消耗 。"
   },
   "${modID}:OurSong": {
     "NAME": "我们的歌",
@@ -230,7 +260,7 @@
   },
   "${modID}:DesuWa": {
     "NAME": "跌丝袜",
-    "DESCRIPTION": "抽 !M! 张和本场战斗中打出的上1张牌相同类型的牌。"
+    "DESCRIPTION": "随机抽 !M! 张和本场战斗中打出的上一张牌相同类型的牌。"
   },
   "${modID}:InnerCry": {
     "NAME": "内心的呐喊",
@@ -238,7 +268,7 @@
   },
   "${modID}:ClockOut": {
     "NAME": "下班打卡",
-    "DESCRIPTION": "获得 !M! 金币。 NL 将1张 *疲惫 加入牌组。 NL  消耗 。"
+    "DESCRIPTION": "获得 !M! 金币。 NL 将一张 *疲惫 加入牌组。 NL  消耗 。"
   },
   "${modID}:QuaerereLumina": {
     "NAME": "寻找光明",
@@ -250,7 +280,7 @@
   },
   "${modID}:BudgetBento": {
     "NAME": "廉价便当",
-    "DESCRIPTION": "获得 !M! 层 再生 。 NL 将1张 *疲惫 加入牌组。 NL  消耗 。"
+    "DESCRIPTION": "获得 !M! 层 再生 。 NL 将一张 *疲惫 加入牌组。 NL  消耗 。"
   },
   "${modID}:HeartsBarrier": {
     "NAME": "心之壁",

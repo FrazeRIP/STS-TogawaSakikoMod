@@ -6,6 +6,7 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -17,9 +18,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -28,9 +31,11 @@ import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.cards.SakikoDeck.Skills.Defend;
 import togawasakikomod.cards.SakikoDeck.Attacks.Strike;
 import togawasakikomod.cards.SakikoDeck.Attacks.TheMoonlightSonata;
+import togawasakikomod.others.SakikoCutscenePanel;
 import togawasakikomod.relics.MonochromeHairband;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
@@ -308,6 +313,20 @@ public class TogawaSakiko extends CustomPlayer {
         if(HurtAudioTimer >0){
             HurtAudioTimer -= Gdx.graphics.getDeltaTime();
         }
+    }
+
+    @Override
+    public Texture getCutsceneBg() {
+        return ImageMaster.loadImage("images/scenes/blueBg.jpg");
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        ArrayList<CutscenePanel> panels = new ArrayList<>();
+        panels.add(new SakikoCutscenePanel(characterPath("cutscene/ending1.png"),makeID("Sakiko-Cutscene-Ending1")));
+        panels.add(new SakikoCutscenePanel(characterPath("cutscene/ending2.png"),makeID("Sakiko-Cutscene-Ending2")));
+        panels.add(new SakikoCutscenePanel(characterPath("cutscene/ending3.png"),makeID("Sakiko-Cutscene-Ending2")));
+        return panels;
     }
 
     public static void TryPlayCardAudio(String className){

@@ -25,6 +25,7 @@ public class EdgeOfBreakdown extends BaseCard {
     public EdgeOfBreakdown() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setMagic(MAGIC_NUMBER,UPG_MAGIC_NUMBER);
+        setExhaust(true);
     }
 
     @Override

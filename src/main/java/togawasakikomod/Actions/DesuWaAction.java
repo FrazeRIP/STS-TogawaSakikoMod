@@ -20,7 +20,7 @@ public class DesuWaAction extends AbstractGameAction {
                 type = card.type;
             }
             for(int i =0; i<amount;i++){
-                addToTop(new RandomCardFromDrawPileToHandAction(type));
+                addToTop(new RandomCardToHandByTypeAction(type));
             }
         }
         this.isDone = true;

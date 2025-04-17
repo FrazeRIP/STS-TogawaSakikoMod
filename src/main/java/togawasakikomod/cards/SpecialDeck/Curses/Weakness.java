@@ -3,12 +3,14 @@ package togawasakikomod.cards.SpecialDeck.Curses;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
 import static togawasakikomod.patches.CustomEnumPatch.TOGAWASAKIKO_GRAVE;
 
+@CardEnable(enable = false)
 public class Weakness extends BaseCard {
     public static final String ID = makeID(Weakness.class.getSimpleName());
     private static final CardStats info = new CardStats(

@@ -43,7 +43,7 @@ public class CharismaticForm extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new CharismaticFormPower(AbstractDungeon.player, -1), 0));
+        this.addToBot(new ApplyPowerAction(p, p, new CharismaticFormPower(AbstractDungeon.player, 1)));
 
         for(AbstractCreature c : AbstractDungeon.getCurrRoom().monsters.monsters){
             addToBot(new ApplyPowerAction(c,p,new HypePower(c,magicNumber)));

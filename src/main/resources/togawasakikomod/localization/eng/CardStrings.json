@@ -27,9 +27,39 @@
     "NAME": "Wish to Become Human",
     "DESCRIPTION": "Deal !D! damage twice. NL Gain togawasakikomod:Dazzling equal to the unblocked damage dealt."
   },
+  "${modID}:GeorgetteMeGeorgetteYou": {
+    "NAME": "Georgette Me, Georgette You",
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Your enemy gains Strength.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Your enemy gains Strength and togawasakikomod:Hype."
+  },
+  "${modID}:SoraNoMusica": {
+    "NAME": "Sora no Musica",
+    "DESCRIPTION": "Deal !D! damage. NL Move !M! cards from your draw pile to the top of the deck. NL Exhaust."
+  },
+  "${modID}:KillKiSS": {
+    "NAME": "KillKiSS",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! random *Desire."
+  },
   "${modID}:PerdereOmnia": {
     "NAME": "Perdere Omnia",
     "DESCRIPTION": " Unplayable. NL When drawn, togawasakikomod:Purge the next !M! cards you draw that is Unplayable then draw a card."
+  },
+  "${modID}:ImprisonedXII": {
+    "NAME": "Imprisoned XII",
+    "DESCRIPTION": "Deal !M! damage to a random enemy for each *Desire played this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Currently deals !M! times.)"]
+  },
+  "${modID}:CricifuxX": {
+    "NAME": "Cricifux X",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Repeat X times."
+  },
+  "${modID}:HachibouseiDance": {
+    "NAME": "Hachibousei Dance",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Plated Armor."
+  },
+  "${modID}:Kao": {
+    "NAME": "Kao",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever an enemy gains a buff, increase this card's value by !M!."
   },
   "${modID}:DarkHeaven": {
     "NAME": "Dark Heaven",
@@ -149,7 +179,7 @@
   },
   "${modID}:EdgeOfBreakdown": {
     "NAME": "Edge of Breakdown",
-    "DESCRIPTION": "Choose a card in your discard pile and togawasakikomod:Purge it. NL Gain !M! Vulnerable."
+    "DESCRIPTION": "Choose a card in your discard pile and togawasakikomod:Purge it. NL Gain !M! Vulnerable. NL Exhaust."
   },
   "${modID}:OurSong": {
     "NAME": "Our Song",
@@ -230,7 +260,7 @@
   },
   "${modID}:DesuWa": {
     "NAME": "Desuwa",
-    "DESCRIPTION": "Draw !M! cards that matches the type of the last card you played in this battle."
+    "DESCRIPTION": "Draw !M! random cards that matches the type of the last card you played in this battle."
   },
   "${modID}:InnerCry": {
     "NAME": "Inner Cry",

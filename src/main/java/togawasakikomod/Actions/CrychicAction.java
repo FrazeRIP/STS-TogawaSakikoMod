@@ -24,6 +24,10 @@ public class CrychicAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if (AbstractDungeon.player.hasRelic("Chemical X")) {
+            amount += 2;
+            AbstractDungeon.player.getRelic("Chemical X").flash();
+        }
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         group.group = phantoms;
         for (int i = 0; i < amount; i++) {
