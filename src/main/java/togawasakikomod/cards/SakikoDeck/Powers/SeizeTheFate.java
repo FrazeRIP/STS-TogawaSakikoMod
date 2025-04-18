@@ -46,9 +46,9 @@ public class SeizeTheFate extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(!upgraded){
+        if(!upgraded && this.misc<MAGIC){
             this.addToBot(new IncreaseMiscAction(this.uuid, this.misc, 1));
         }
-        this.addToBot(new ApplyPowerAction(p, p, new HypePower(AbstractDungeon.player, misc), misc));
+        this.addToBot(new ApplyPowerAction(p, p, new HypePower(AbstractDungeon.player, MAGIC-misc), MAGIC-misc));
     }
 }

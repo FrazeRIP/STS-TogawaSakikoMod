@@ -3,7 +3,7 @@
   "name": "Togawa Sakiko Mod",
   "author_list": ["Project Despair"],
   "description": "Togawa Sakiko is a character from the multimedia project BanG Dream!.\n\nShe is a first-year student at Haneoka Girls’ High School and a member of the band Ave Mujica, where she serves as the producer, composer, and keyboardist.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "sts_version": "12-18-2022",
   "mts_version": "3.30.0",
   "dependencies": ["basemod", "stslib"],
