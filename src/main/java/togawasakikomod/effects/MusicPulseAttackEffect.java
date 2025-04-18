@@ -41,17 +41,28 @@ public class MusicPulseAttackEffect extends AbstractGameEffect {
     }
 
     public void update() {
-        super.update();
         if(this.duration<=this.startingDuration*.95f && !targetTinted){
             targetTinted = true;
             target.tint.color.set(Color.CYAN.cpy());
             target.tint.changeColor(Color.WHITE.cpy());
         }
+
+        this.duration -= Gdx.graphics.getDeltaTime();
+        if (this.duration < this.startingDuration / 2.0F) {
+            this.color.a = this.duration / (this.startingDuration / 2.0F);
+        }
+
+        this.scale = Interpolation.exp5In.apply(1.8F, 0.3F, this.duration / this.startingDuration);
+
+        if (this.duration < 0.0F) {
+            this.isDone = true;
+            this.color.a = 0.0F;
+        }
     }
 
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
-        sb.draw(this.img, this.x, this.y);
+        sb.draw(this.img, this.x, this.y, (float) this.img.getWidth() /2, (float) this.img.getHeight() /2,this.img.getWidth(),this.img.getHeight(),scale,scale,0,0, 0, this.img.getWidth(), this.img.getHeight(), false, false);
     }
 
     public void dispose() {

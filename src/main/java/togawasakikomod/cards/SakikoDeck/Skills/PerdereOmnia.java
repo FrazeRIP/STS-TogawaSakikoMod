@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.Actions.VeritasAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
@@ -40,6 +41,7 @@ public class PerdereOmnia extends BaseCard {
         super.triggerWhenDrawn();
         this.flash();
         AbstractPlayer p = AbstractDungeon.player;
+        addToBot(new PlayAudioAction(PerdereOmnia.class.getSimpleName()));
         addToBot(new ApplyPowerAction(p,p,new PerdereOmniaPower(p,magicNumber),magicNumber));
     }
 

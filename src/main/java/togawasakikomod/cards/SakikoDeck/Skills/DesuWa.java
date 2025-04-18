@@ -3,6 +3,7 @@ package togawasakikomod.cards.SakikoDeck.Skills;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.DesuWaAction;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
@@ -29,6 +30,8 @@ public class DesuWa extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        addToBot(new PlayAudioAction(DesuWa.class.getSimpleName()));
         addToBot(new DesuWaAction(magicNumber));
     }
 }

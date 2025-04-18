@@ -218,26 +218,29 @@ public class AltNeowEvent extends AbstractEvent {
             case 3:
                 this.dismissBubble();
                 this.roomEventText.clearRemainingOptions();
-                switch (buttonPressed) {
-                    case 0:
-                        ((AltNeowReward)this.rewards.get(0)).activate();
-                        this.talk(TEXT[8]);
-                        break;
-                    case 1:
-                        ((AltNeowReward)this.rewards.get(1)).activate();
-                        this.talk(TEXT[8]);
-                        break;
-                    case 2:
-                        ((AltNeowReward)this.rewards.get(2)).activate();
-                        this.talk(TEXT[9]);
-                        break;
-                    case 3:
-                        ((AltNeowReward)this.rewards.get(3)).activate();
-                        this.talk(TEXT[9]);
-                    case 4:
-                        ((AltNeowReward)this.rewards.get(4)).activate();
-                        this.talk(TEXT[9]);
-                }
+                    switch (buttonPressed) {
+                        case 0:
+                            ((AltNeowReward)this.rewards.get(0)).activate();
+                            this.talk(TEXT[8]);
+                            break;
+                        case 1:
+                            ((AltNeowReward)this.rewards.get(1)).activate();
+                            this.talk(TEXT[8]);
+                            break;
+                        case 2:
+                            ((AltNeowReward)this.rewards.get(2)).activate();
+                            this.talk(TEXT[9]);
+                            break;
+                        case 3:
+                            ((AltNeowReward)this.rewards.get(3)).activate();
+                            this.talk(TEXT[9]);
+                            break;
+                        case 4:
+                            ((AltNeowReward)this.rewards.get(4)).activate();
+                            this.talk(TEXT[9]);
+                            break;
+                    }
+
 
                 this.screenNum = 99;
                 this.roomEventText.updateDialogOption(0, OPTIONS[3]);
@@ -405,7 +408,7 @@ public class AltNeowEvent extends AbstractEvent {
         logger.info("BLESSING");
         rng = new Random(Settings.seed);
         logger.info("COUNTER: " + rng.counter);
-        AbstractDungeon.bossCount = 0;
+        AbstractDungeon.bossCount = 1;
         this.dismissBubble();
         this.talk(TEXT[7]);
         this.rewards.add(new AltNeowReward(0));

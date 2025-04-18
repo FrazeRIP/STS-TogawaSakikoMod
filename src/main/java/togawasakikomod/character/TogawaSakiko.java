@@ -323,9 +323,9 @@ public class TogawaSakiko extends CustomPlayer {
     @Override
     public List<CutscenePanel> getCutscenePanels() {
         ArrayList<CutscenePanel> panels = new ArrayList<>();
-        panels.add(new SakikoCutscenePanel(characterPath("cutscene/ending1.png"),makeID("Sakiko-Cutscene-Ending1")));
+        panels.add(new CutscenePanel(characterPath("cutscene/ending1.png"),makeID("Sakiko-Cutscene-Ending1")));
         panels.add(new SakikoCutscenePanel(characterPath("cutscene/ending2.png"),makeID("Sakiko-Cutscene-Ending2")));
-        panels.add(new SakikoCutscenePanel(characterPath("cutscene/ending3.png"),makeID("Sakiko-Cutscene-Ending2")));
+        panels.add(new SakikoCutscenePanel(characterPath("cutscene/ending3.png"),makeID("Sakiko-Cutscene-Ending3")));
         return panels;
     }
 

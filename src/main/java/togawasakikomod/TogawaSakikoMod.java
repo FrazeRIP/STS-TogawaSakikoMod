@@ -5,6 +5,7 @@ import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Prefs;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
 import com.megacrit.cardcrawl.relics.DuVuDoll;
@@ -25,10 +27,12 @@ import togawasakikomod.Actions.CharismaticIntangibleAction;
 import togawasakikomod.annotations.CardEnable;
 import togawasakikomod.annotations.RelicEnable;
 import togawasakikomod.cards.BaseCard;
+import togawasakikomod.cards.SakikoDeck.Attacks.DazzlingDamageAction;
 import togawasakikomod.cards.SakikoDeck.Attacks.Kao;
 import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
+import togawasakikomod.effects.DazzlingAttackEffect;
 import togawasakikomod.patches.CustomEnumPatch;
 import togawasakikomod.patches.ObtainRewardEventPatch;
 import togawasakikomod.potions.BasePotion;
@@ -375,8 +379,9 @@ public class TogawaSakikoMod implements
             abstractPower.flash();
             if(abstractPower.owner == target){
                 if(abstractPower.owner == AbstractDungeon.player){
-                    AbstractDungeon.actionManager.addToTop(new DamageRandomEnemyAction(new DamageInfo(abstractPower.owner, abstractPower.owner.getPower(DazzlingPower.POWER_ID).amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                    AbstractDungeon.actionManager.addToTop(new DazzlingDamageAction(new DamageInfo(abstractPower.owner, abstractPower.owner.getPower(DazzlingPower.POWER_ID).amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                 }else{
+                    AbstractDungeon.actionManager.addToTop(new VFXAction(new DazzlingAttackEffect(AbstractDungeon.player,false)));
                     AbstractDungeon.actionManager.addToTop(new DamageAction(AbstractDungeon.player,new DamageInfo(abstractPower.owner, abstractPower.owner.getPower(DazzlingPower.POWER_ID).amount, DamageInfo.DamageType.THORNS)));
                 }
 
@@ -518,9 +523,23 @@ public class TogawaSakikoMod implements
         BaseMod.addAudio(makeID("Sakiko-Perfection"),audioPath("sakiko/Perfection.wav"));
         BaseMod.addAudio(makeID("Sakiko-AsYourHeartDesires"),audioPath("sakiko/AsYourHeartDesires.wav"));
         BaseMod.addAudio(makeID("Sakiko-Carefree"),audioPath("sakiko/Carefree.wav"));
+        BaseMod.addAudio(makeID("Sakiko-ASplitMoment"),audioPath("sakiko/ASplitMoment.wav"));
+        BaseMod.addAudio(makeID("Sakiko-AveMujica"),audioPath("sakiko/AveMujica.wav"));
+        BaseMod.addAudio(makeID("Sakiko-CountingStars"),audioPath("sakiko/CountingStars.wav"));
+        BaseMod.addAudio(makeID("Sakiko-EdgeOfBreakdown"),audioPath("sakiko/EdgeOfBreakdown.wav"));
+        BaseMod.addAudio(makeID("Sakiko-Fearless"),audioPath("sakiko/Fearless.wav"));
+        BaseMod.addAudio(makeID("Sakiko-HeartsBarrier"),audioPath("sakiko/HeartsBarrier.wav"));
+        BaseMod.addAudio(makeID("Sakiko-MasqueradeRhapsodyRequest"),audioPath("sakiko/MasqueradeRhapsodyRequest.wav"));
+        BaseMod.addAudio(makeID("Sakiko-PerdereOmnia"),audioPath("sakiko/PerdereOmnia.wav"));
+        BaseMod.addAudio(makeID("Sakiko-Pride"),audioPath("sakiko/Pride.wav"));
+        BaseMod.addAudio(makeID("Sakiko-TheGirlWithFlaxenHair"),audioPath("sakiko/TheGirlWithFlaxenHair.wav"));
+        BaseMod.addAudio(makeID("Sakiko-WishFulfilled"),audioPath("sakiko/WishFulfilled.wav"));
+        BaseMod.addAudio(makeID("Sakiko-ClockOut"),audioPath("sakiko/ClockOut.wav"));
+        BaseMod.addAudio(makeID("Sakiko-DesuWa"),audioPath("sakiko/DesuWa.wav"));
 
         BaseMod.addAudio(makeID("Sakiko-Cutscene-Ending1"),audioPath("cutscene/ending1.wav"));
         BaseMod.addAudio(makeID("Sakiko-Cutscene-Ending2"),audioPath("cutscene/ending2.wav"));
+        BaseMod.addAudio(makeID("Sakiko-Cutscene-Ending3"),audioPath("cutscene/ending3.wav"));
 
         BaseMod.addAudio(makeID("MusicPulseAttackEffect"),audioPath("vfx/MusicPulseAttackEffect.wav"));
 

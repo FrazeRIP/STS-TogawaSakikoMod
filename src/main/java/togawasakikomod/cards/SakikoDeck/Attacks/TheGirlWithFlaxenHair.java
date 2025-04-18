@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.GirlOfSpringPower;
@@ -35,6 +36,8 @@ public class TheGirlWithFlaxenHair extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new PlayAudioAction(TheGirlWithFlaxenHair.class.getSimpleName()));
+
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p,p,new GirlOfSpringPower(p,magicNumber),magicNumber));
     }

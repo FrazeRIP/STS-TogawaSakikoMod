@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.MakeCardInDiscardPileAction;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.cards.SpecialDeck.Skills.Tiredness;
 import togawasakikomod.character.TogawaSakiko;
@@ -35,6 +36,8 @@ public class ClockOut extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new PlayAudioAction(ClockOut.class.getSimpleName()));
+
         addToBot(new GainGoldAction(magicNumber));
 
         AbstractCard card = new Tiredness();

@@ -41,7 +41,7 @@
     "DESCRIPTION": "你在本场战斗中每打出一张 *渴望 ，随机造成一次 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [" NL （当前造成 !M! 次。）"]
   },
-  "togawasakikomod:CricifuxX": {
+  "togawasakikomod:CrucifixX": {
     "NAME": "十架 X",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 重复X次。"
   },

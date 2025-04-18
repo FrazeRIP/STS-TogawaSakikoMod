@@ -142,7 +142,7 @@ public class AltNeowReward {
                 rewardOptions.add(new NeowRewardDef(AltNeowReward.NeowRewardType.BOSS_RELIC, UNIQUE_REWARDS[0]));
                 break;
             case 4:
-                rewardOptions.add(new NeowRewardDef(NeowRewardType.UPGRADE_BASE_RELIC, UNIQUE_REWARDS[1]));
+                rewardOptions.add(new NeowRewardDef(AltNeowReward.NeowRewardType.UPGRADE_BASE_RELIC, UNIQUE_REWARDS[1]));
                 break;
         }
 
@@ -264,7 +264,9 @@ public class AltNeowReward {
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(RelicTier.RARE));
                 break;
             case BOSS_RELIC:
+                if(!AbstractDungeon.player.relics.isEmpty()){
                 AbstractDungeon.player.loseRelic(((AbstractRelic)AbstractDungeon.player.relics.get(0)).relicId);
+                }
                 //AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(RelicTier.BOSS));
                 List<AbstractCard> defends = new ArrayList<>();
                 for(AbstractCard card : AbstractDungeon.player.masterDeck.group){

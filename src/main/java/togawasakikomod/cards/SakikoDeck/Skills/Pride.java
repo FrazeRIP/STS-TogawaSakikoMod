@@ -4,8 +4,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.PirdeAction;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.Actions.RandomCardToHandByTypeAction;
 import togawasakikomod.cards.BaseCard;
+import togawasakikomod.cards.SakikoDeck.Attacks.AveMujica;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
@@ -32,6 +34,8 @@ public class Pride extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new PlayAudioAction(Pride.class.getSimpleName()));
+
         for(int i = 0; i<magicNumber;i++){
             addToTop(new RandomCardToHandByTypeAction(AbstractCard.CardType.ATTACK));
         }

@@ -1,6 +1,7 @@
 togawasakikomod\Actions\WishFulfilledAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\IWantToBeYourGod.class
 togawasakikomod\cards\BaseCard$LocalVarInfo.class
+togawasakikomod\effects\DazzlingAttackEffect.class
 togawasakikomod\cards\SpecialDeck\Curses\Doloris.class
 togawasakikomod\cards\SakikoDeck\Attacks\TwoMoons.class
 togawasakikomod\util\TextureLoader$1.class
@@ -41,6 +42,7 @@ togawasakikomod\cards\SakikoDeck\Skills\Carefree.class
 togawasakikomod\TogawaSakikoMod.class
 togawasakikomod\Actions\NumbersAndFacesAction.class
 togawasakikomod\cards\SakikoDeck\Skills\InnerCry.class
+togawasakikomod\cards\SakikoDeck\Attacks\CrucifixX.class
 togawasakikomod\Actions\ExhaustCardFromDrawPileAction.class
 togawasakikomod\Actions\ReplaceCardAction.class
 togawasakikomod\rewards\AltNeowReward.class
@@ -105,10 +107,10 @@ togawasakikomod\cards\SakikoDeck\Attacks\SymbolIIIWater.class
 togawasakikomod\cards\SakikoDeck\Attacks\GeorgetteMeGeorgetteYou.class
 togawasakikomod\patches\AltNeowPatch$Locator.class
 togawasakikomod\potions\HallucinationPotion.class
+togawasakikomod\cards\SakikoDeck\Attacks\DazzlingDamageAction.class
 togawasakikomod\cards\SakikoDeck\Skills\StayElegance.class
 togawasakikomod\relics\FountainDrink$FountainDrinkPatch.class
 togawasakikomod\cards\SakikoDeck\Skills\CountingStars.class
-togawasakikomod\cards\SakikoDeck\Attacks\CricifuxX.class
 togawasakikomod\effects\MusicPulseAttackEffect.class
 togawasakikomod\powers\buffs\EndurancePower.class
 togawasakikomod\powers\buffs\PlayerFilightPower.class

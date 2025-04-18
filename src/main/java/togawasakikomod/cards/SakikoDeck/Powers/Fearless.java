@@ -4,7 +4,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
+import togawasakikomod.cards.SakikoDeck.Skills.WishFulfilled;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.FearlessPower;
 import togawasakikomod.util.CardStats;
@@ -35,7 +37,7 @@ public class Fearless extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //addToBot(new PlayAudioAction(Fearless.class.getSimpleName()));
+        addToBot(new PlayAudioAction(Fearless.class.getSimpleName()));
 
         this.addToBot(new ApplyPowerAction(p, p, new FearlessPower(AbstractDungeon.player, magicNumber), magicNumber));
 

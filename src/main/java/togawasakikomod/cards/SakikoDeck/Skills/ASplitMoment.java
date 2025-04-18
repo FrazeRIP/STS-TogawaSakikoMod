@@ -4,7 +4,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
+import togawasakikomod.cards.SakikoDeck.Attacks.TheGirlWithFlaxenHair;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.util.CardStats;
@@ -36,6 +38,8 @@ public class ASplitMoment extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new PlayAudioAction(ASplitMoment.class.getSimpleName()));
+
         addToBot(new GainBlockAction(p,block));
         addToBot(new ApplyPowerAction(p,p,new DazzlingPower(p,this.magicNumber),this.magicNumber));
     }

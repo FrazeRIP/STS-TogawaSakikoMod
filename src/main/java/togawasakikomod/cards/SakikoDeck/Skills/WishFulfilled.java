@@ -2,6 +2,7 @@ package togawasakikomod.cards.SakikoDeck.Skills;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.Actions.WishFulfilledAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
@@ -27,6 +28,7 @@ public class WishFulfilled extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new PlayAudioAction(WishFulfilled.class.getSimpleName()));
         addToBot(new WishFulfilledAction(1));
     }
 }

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import togawasakikomod.Actions.CountingStarsAction;
+import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
@@ -28,7 +29,8 @@ public class CountingStars extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //addToBot(new PlayAudioAction(CountingStars.class.getSimpleName()));
+        addToBot(new PlayAudioAction(CountingStars.class.getSimpleName()));
+
         addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, 1), 1));
         addToBot(new CountingStarsAction(p,magicNumber));
     }
