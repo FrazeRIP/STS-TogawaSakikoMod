@@ -64,7 +64,7 @@ public class AveMujicaAction extends AbstractGameAction {
 
                     disCard.current_x = -1000.0F * Settings.xScale;
 
-                    addToTop(new ForcePlayCardAction(target,disCard.makeSameInstanceOf()));
+                    addToTop(new ForcePlayCardAction(target,disCard.makeStatEquivalentCopy()));
                     addToTop(new WaitAction(0.5f));
 //                    addToBot(new MakeCardInDiscardPileAction(disCard,1,true,true,false));
 //                    addToTop(new WaitAction(0.5f));

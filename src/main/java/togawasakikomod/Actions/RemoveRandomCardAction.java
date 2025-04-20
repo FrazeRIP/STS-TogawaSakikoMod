@@ -23,7 +23,7 @@ public class RemoveRandomCardAction extends AbstractGameAction {
         derp.addAll(AbstractDungeon.player.discardPile.group);
         derp.addAll(AbstractDungeon.player.drawPile.group);
 
-        if(excludedCard!=null && derp.contains(excludedCard)){
+        if(excludedCard!=null){
             derp.remove(excludedCard);
         }
 

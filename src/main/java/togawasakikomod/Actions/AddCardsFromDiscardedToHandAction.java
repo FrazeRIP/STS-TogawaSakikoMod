@@ -36,7 +36,7 @@ public class AddCardsFromDiscardedToHandAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_MED) {
             CardGroup tmp = this.p.discardPile;
 
-            if (tmp.size() == 0) {
+            if (tmp.isEmpty()) {
                 this.isDone = true;
             } else if (tmp.size() == 1) {
                 card = tmp.getTopCard();
@@ -66,18 +66,17 @@ public class AddCardsFromDiscardedToHandAction extends AbstractGameAction {
                 this.tickDuration();
             }
         } else {
-            if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
-                Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
+            if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 
-                while(var1.hasNext()) {
-                    card = (AbstractCard)var1.next();
+                for (AbstractCard abstractCard : AbstractDungeon.gridSelectScreen.selectedCards) {
+                    card = abstractCard;
                     card.unhover();
                     if (this.p.hand.size() == 10) {
                         this.p.createHandIsFullDialog();
                     } else {
                         this.p.discardPile.removeCard(card);
                         this.p.hand.addToTop(card);
-                        if(makeCardUnremoveable){
+                        if (makeCardUnremoveable) {
                             addToTop(new MakeCardUnremoveableAction(card));
                         }
                     }

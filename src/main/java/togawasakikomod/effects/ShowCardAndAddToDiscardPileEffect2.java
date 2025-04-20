@@ -48,16 +48,13 @@ public class ShowCardAndAddToDiscardPileEffect2 extends AbstractGameEffect {
         if (card.type != CardType.CURSE && card.type != CardType.STATUS && AbstractDungeon.player.hasPower("MasterRealityPower")) {
             card.upgrade();
         }
-
         AbstractDungeon.player.discardPile.addToTop(card);
     }
 
     private void identifySpawnLocation(float x, float y) {
         int effectCount = 0;
-        Iterator var4 = AbstractDungeon.effectList.iterator();
 
-        while(var4.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect)var4.next();
+        for (AbstractGameEffect e : AbstractDungeon.effectList) {
             if (e instanceof ShowCardAndAddToDiscardPileEffect2) {
                 ++effectCount;
             }

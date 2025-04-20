@@ -25,7 +25,6 @@ public class Veritas extends BaseCard {
     public Veritas() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setMagic(MAGIC_NUMBER,UPG_MAGIC_NUMBER);
-        tags.add(CardTags.HEALING);
     }
 
     @Override

@@ -37,8 +37,8 @@ public class BlazingHairband extends BaseRelic{
     public void onVictory() {
         this.flash();
         AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat();
-        AbstractDungeon.player.masterDeck.group.add(card);
-        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect2(card,
+        AbstractDungeon.player.masterDeck.group.add(card.makeStatEquivalentCopy());
+        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect2(card.makeStatEquivalentCopy(),
                 (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
     }
 

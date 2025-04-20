@@ -12,6 +12,8 @@ import togawasakikomod.cards.SpecialDeck.Skills.Desire;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
+import java.util.Objects;
+
 //月光奏鸣曲
 public class ChoirSChoir extends BaseCard {
     public static final String ID = makeID(ChoirSChoir.class.getSimpleName());
@@ -20,7 +22,7 @@ public class ChoirSChoir extends BaseCard {
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardRarity.UNCOMMON, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
-           4 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
+            3//The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
     //These will be used in the constructor. Technically you can just use the values directly,
     //but constants at the top of the file are easy to adjust.
@@ -36,7 +38,7 @@ public class ChoirSChoir extends BaseCard {
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if(c.cardID == Desire.ID){
+        if(Objects.equals(c.cardID, Desire.ID)){
             this.updateCost(-1);
         }
         super.onPlayCard(c, m);

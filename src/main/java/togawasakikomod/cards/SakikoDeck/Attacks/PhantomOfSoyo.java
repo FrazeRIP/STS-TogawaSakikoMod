@@ -33,6 +33,7 @@ public class PhantomOfSoyo extends BaseCard {
         setDamage(DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         cardsToPreview = new Kindness();
         setExhaust(true);
+        isMultiDamage = true;
     }
 
     @Override
@@ -46,7 +47,7 @@ public class PhantomOfSoyo extends BaseCard {
         addToBot(new PlayAudioAction(PhantomOfSoyo.class.getSimpleName()));
 
 
-        addToBot(new DamageAllEnemiesAction(p, damage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         AbstractCard card = new Kindness();
         if(upgraded){

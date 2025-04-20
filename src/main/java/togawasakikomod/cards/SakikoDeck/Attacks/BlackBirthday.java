@@ -26,10 +26,11 @@ public class BlackBirthday extends BaseCard {
 
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         setExhaust(true);
+        isMultiDamage = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BlackBirthdayAction(damage));
+        addToBot(new BlackBirthdayAction(multiDamage));
     }
 }

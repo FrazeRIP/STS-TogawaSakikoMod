@@ -58,6 +58,7 @@ togawasakikomod\powers\buffs\HypePower.class
 togawasakikomod\cards\SakikoDeck\Skills\EdgeOfBreakdown.class
 togawasakikomod\cards\SpecialDeck\Powers\Voice.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRegenLostInstanceVar.class
+togawasakikomod\powers\buffs\OurSongPower$OurSongPowerPatcher.class
 togawasakikomod\potions\BasePotion.class
 togawasakikomod\cards\SakikoDeck\Skills\BandInvitation.class
 togawasakikomod\powers\buffs\PrimoDieInScaenaPower$ShuffleActionPatch.class
@@ -226,6 +227,8 @@ togawasakikomod\cards\SakikoDeck\Powers\SharedDestiny.class
 togawasakikomod\powers\debuffs\OblivionisPower.class
 togawasakikomod\Actions\ChooseCardGainSelfRetainAction.class
 togawasakikomod\Actions\PerfectionAction.class
+togawasakikomod\powers\buffs\OurSongPower$OurSongPowerPatcher$Locator.class
+togawasakikomod\saveable\KingsSaveable$KingsPatch.class
 togawasakikomod\relics\FountainDrink$FountainDrinkPatch$Locator.class
 togawasakikomod\cards\SakikoDeck\Attacks\Kings.class
 togawasakikomod\cards\SpecialDeck\Powers\Ideal.class

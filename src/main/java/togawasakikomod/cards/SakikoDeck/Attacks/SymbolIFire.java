@@ -34,7 +34,7 @@ public class SymbolIFire extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setDamage(DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         setMagic(MAGIC,UPG_MAGIC);
-
+        isMultiDamage = true;
         cardsToPreview = new Timoris();
     }
 

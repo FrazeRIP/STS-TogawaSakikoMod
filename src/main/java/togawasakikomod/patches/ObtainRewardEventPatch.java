@@ -1,19 +1,17 @@
 package togawasakikomod.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.potions.PotionSlot;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
+import com.megacrit.cardcrawl.rewards.RewardItem.RewardType;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
-import com.megacrit.cardcrawl.screens.CombatRewardScreen;
 import javassist.CtBehavior;
-import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.relics.CuteAnimalBandAid;
+import togawasakikomod.saveable.KingsSaveable;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -39,15 +37,28 @@ public class ObtainRewardEventPatch {
 
     @SpirePatch(clz = RewardItem.class, method = "claimReward")
     public static class ObtainRewardEventPatcher{
-        public static void Postfix(RewardItem __instance)
+        public static void Prefix(RewardItem __instance)
         {
-            if(__instance.type!= RewardItem.RewardType.CARD){
+            if(__instance.type== RewardType.CARD){
+                return;
+            }else if(__instance.type == RewardType.POTION){
+                boolean hasSlot =false;
+                for(AbstractPotion potion : AbstractDungeon.player.potions){
+                    if(potion instanceof PotionSlot){
+                        hasSlot = true;
+                        break;
+                    }
+                }
+                if(!hasSlot){
+                    return;
+                }
+            }
+
             for(AbstractRelic relic : AbstractDungeon.player.relics){
                 if(Objects.equals(relic.relicId, CuteAnimalBandAid.ID)){
                     AbstractDungeon.player.heal(1);
                     return;
                 }
-            }
             }
         }
     }
@@ -62,6 +73,7 @@ public class ObtainRewardEventPatch {
                     AbstractDungeon.player.heal(1);
                 }
             }
+            KingsSaveable.IsKing = false;
             return SpireReturn.Continue();
         }
 
@@ -73,6 +85,4 @@ public class ObtainRewardEventPatch {
             }
         }
     }
-
-
 }

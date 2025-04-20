@@ -53,7 +53,7 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
             //AbstractDungeon.getCurrRoom().souls.remove(card);
             //AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(card, false));
             addToTop(new WaitAction(0.25f));
-            card.use(AbstractDungeon.player,AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true));
+            //card.use(AbstractDungeon.player,AbstractDungeon.getCurrRoom().monsters.getRandomMonster(true));
             this.addToBot(new NewQueueCardAction(card, true, false, true));
             this.isDone = true;
             return;

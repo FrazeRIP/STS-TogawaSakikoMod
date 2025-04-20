@@ -91,7 +91,7 @@
   "${modID}:CharismaticFormPower": {
     "NAME": "Charismatic Form",
     "DESCRIPTIONS": [
-      "Whenever an enemy gains a buff, you gain the same buff. Does not stack."
+      "Whenever an enemy gains a buff, you gain the same buff."
     ]
   },
   "${modID}:CrychicPower": {
@@ -103,7 +103,7 @@
   "${modID}:WorldviewPower": {
     "NAME": "Worldview",
     "DESCRIPTIONS": [
-      "Whenever you draw an unplayable card, transform it into a #yMelody. Does not stack."
+      "Whenever you draw an unplayable card, transform it into a random card. Does not stack."
     ]
   },
   "${modID}:PrimoDieInScaenaPower": {

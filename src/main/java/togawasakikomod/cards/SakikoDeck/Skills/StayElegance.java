@@ -23,6 +23,7 @@ public class StayElegance extends BaseCard {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setCostUpgrade(0);
         setExhaust(true);
+        tags.add(CardTags.HEALING);
     }
 
     @Override

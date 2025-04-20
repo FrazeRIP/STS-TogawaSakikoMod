@@ -542,6 +542,7 @@ public class TogawaSakikoMod implements
         BaseMod.addAudio(makeID("Sakiko-Cutscene-Ending3"),audioPath("cutscene/ending3.wav"));
 
         BaseMod.addAudio(makeID("MusicPulseAttackEffect"),audioPath("vfx/MusicPulseAttackEffect.wav"));
+        BaseMod.addAudio(makeID("DazzlingAttackEffect"),audioPath("vfx/DazzlingAttackEffect.wav"));
 
         BaseMod.addAudio(makeID("Sakiko-Hurt1"),audioPath("sakiko/Hurt1.wav"));
         BaseMod.addAudio(makeID("Sakiko-Hurt2"),audioPath("sakiko/Hurt2.wav"));

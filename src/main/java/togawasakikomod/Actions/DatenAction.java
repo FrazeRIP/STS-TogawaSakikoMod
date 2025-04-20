@@ -68,10 +68,10 @@ public class DatenAction extends AbstractGameAction {
 
         int chooseAmount = Math.min(derp.size(), amount);
 
-        if(derp.size()>0){
+        if(!derp.isEmpty()){
             for(int i = chooseAmount; i >0;i--){
                 AbstractCard card = group.getRandomCard(AbstractDungeon.cardRandomRng);
-                result.add(card);
+                result.add(card.makeSameInstanceOf());
                 group.removeCard(card);
             }
             return result;

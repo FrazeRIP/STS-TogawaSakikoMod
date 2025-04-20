@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import togawasakikomod.modifiers.SelfRetainModifier;
 
 import java.util.Iterator;
 
@@ -48,11 +47,8 @@ public class ChooseCardAndRemoveFormDiscardPileAction extends AbstractGameAction
                 this.isDone = true;
             } else if (tmp.size() == 1) {
                 card = tmp.getTopCard();
-
                 card.flash();
-                card.selfRetain = true;
                 addToTop(new RemoveCardFromDeckAction(card));
-
                 this.isDone = true;
             } else {
                 AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0], false);
@@ -60,10 +56,8 @@ public class ChooseCardAndRemoveFormDiscardPileAction extends AbstractGameAction
             }
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
-
-                while(var1.hasNext()) {
-                    card = (AbstractCard)var1.next();
+                for (AbstractCard abstractCard : AbstractDungeon.gridSelectScreen.selectedCards) {
+                    card = abstractCard;
                     card.unhover();
                     card.flash();
                     addToTop(new RemoveCardFromDeckAction(card));

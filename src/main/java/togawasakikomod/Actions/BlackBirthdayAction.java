@@ -9,15 +9,16 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class BlackBirthdayAction extends AbstractGameAction {
 
+    int[] multiDamage;
+    public BlackBirthdayAction(int[] multiDamage){
+        this.multiDamage = multiDamage;
 
-    public BlackBirthdayAction(int damage){
-        this.amount = damage;
     }
 
     @Override
     public void update() {
         for (AbstractPower power : AbstractDungeon.player.powers){
-            addToTop(new DamageAllEnemiesAction(AbstractDungeon.player,amount, DamageInfo.DamageType.NORMAL,AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            addToTop(new DamageAllEnemiesAction(AbstractDungeon.player,multiDamage, DamageInfo.DamageType.NORMAL,AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             addToTop(new RemoveSpecificPowerAction(AbstractDungeon.player,AbstractDungeon.player,power));
         }
         this.isDone = true;

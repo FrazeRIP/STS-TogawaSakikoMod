@@ -6,12 +6,14 @@
 package togawasakikomod.Actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import togawasakikomod.effects.DazzlingAttackEffect;
 
 import java.util.ArrayList;
 
@@ -49,7 +51,8 @@ public class EtherAction extends AbstractGameAction {
         }
 
         for(AbstractCard card : nonAttackCard){
-            addToTop(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT));
+            addToTop(new DamageAction(this.target, this.info, AttackEffect.NONE));
+            addToTop(new VFXAction(new DazzlingAttackEffect(this.target,false)));
             addToTop(new ShowAndExhaustCardAction(card));
         }
 

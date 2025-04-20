@@ -21,6 +21,9 @@ public class DazzlingAttackEffect extends AbstractGameEffect {
     private AbstractCreature target;
 
     private boolean targetTinted = false;
+    private boolean mute = false;
+
+    private boolean isPlayed = false;
 
     public DazzlingAttackEffect(AbstractCreature c, boolean mute) {
         this.img = new Texture(TogawaSakikoMod.vfxPath(DazzlingAttackEffect.class.getSimpleName()+".png")); // Replace with the actual path
@@ -31,14 +34,18 @@ public class DazzlingAttackEffect extends AbstractGameEffect {
         this.target = c;
         this.color = Color.WHITE.cpy();
         this.scale = Settings.scale;
-        if (!mute) {
-            //CardCrawlGame.sound.play(makeID(DazzlingAttackEffect.class.getSimpleName()));
-        }
         this.targetTinted = false;
+        this.mute = mute;
     }
 
     public void update() {
         super.update();
+        if(!isPlayed){
+            if (!mute) {
+                CardCrawlGame.sound.play(makeID(DazzlingAttackEffect.class.getSimpleName()));
+                isPlayed = true;
+            }
+        }
         if(this.duration<=this.startingDuration*.95f && !targetTinted){
             targetTinted = true;
             target.tint.color.set(Color.YELLOW.cpy());

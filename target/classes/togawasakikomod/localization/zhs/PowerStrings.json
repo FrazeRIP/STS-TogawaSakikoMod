@@ -91,7 +91,7 @@
   "togawasakikomod:CharismaticFormPower": {
     "NAME": "魅魔形态",
     "DESCRIPTIONS": [
-      "每当敌人获得增益效果时，使你也获得之。不可叠加。"
+      "每当敌人获得增益效果时，使你也获得之。"
     ]
   },
   "togawasakikomod:CrychicPower": {
@@ -103,7 +103,7 @@
   "togawasakikomod:WorldviewPower": {
     "NAME": "世界观",
     "DESCRIPTIONS": [
-      "每当你抽到不能打出的卡牌时，将其变为一张 #y旋律 。不可叠加。"
+      "每当你抽到不能打出的卡牌时，将其变为一张随机卡。不可叠加。"
     ]
   },
   "togawasakikomod:PrimoDieInScaenaPower": {

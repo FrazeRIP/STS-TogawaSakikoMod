@@ -25,12 +25,10 @@ public class DesuWa extends BaseCard {
     public DesuWa() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
         setMagic(MAGIC_NUMBER,UPG_MAGIC_NUMBER);
-        this.isMultiDamage = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         addToBot(new PlayAudioAction(DesuWa.class.getSimpleName()));
         addToBot(new DesuWaAction(magicNumber));
     }
