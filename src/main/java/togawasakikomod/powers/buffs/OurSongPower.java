@@ -40,14 +40,14 @@ public class OurSongPower extends BasePower implements CloneablePowerInterface {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
-//    @Override
-//    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-//        if(this.amount>0 && info.type == DamageInfo.DamageType.NORMAL){
-//            addToTop(new GainBlockAction(owner,(int)damageAmount));
-//            addToTop(new ReducePowerAction(owner,owner,this,1));
-//        }
-//        super.onAttack(info, damageAmount, target);
-//    }
+    @Override
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        if(this.amount>0 && info.type == DamageInfo.DamageType.NORMAL){
+            //addToTop(new GainBlockAction(owner,(int)damageAmount));
+            addToBot(new ReducePowerAction(owner,owner,this,1));
+        }
+        super.onAttack(info, damageAmount, target);
+    }
 
     @SpirePatch (clz = AbstractMonster.class, method = "damage", paramtypez = {DamageInfo.class})
     public static class OurSongPowerPatcher{
@@ -59,7 +59,7 @@ public class OurSongPower extends BasePower implements CloneablePowerInterface {
                     OurSongPower power = (OurSongPower) p.getPower(OurSongPower.POWER_ID);
                     if(power.amount>0){
                       AbstractDungeon.actionManager.addToTop(new GainBlockAction(p,(int)damageAmount[0]));
-                        AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p,p,OurSongPower.POWER_ID,1));
+                      //AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p,p,OurSongPower.POWER_ID,1));
                     }
                 }
             }
