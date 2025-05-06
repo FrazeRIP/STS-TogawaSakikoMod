@@ -94,6 +94,7 @@ public class ChooseExistCardAndAddToDeckAction extends AbstractGameAction {
 
             while(var1.hasNext()) {
                 c = (AbstractCard)var1.next();
+                c = c.makeStatEquivalentCopy();
                 this.addToTop(new MakeTempCardInHandAction(c.makeSameInstanceOf()));
 
                 for(i = 0; i < this.dupeAmount; ++i) {
@@ -132,9 +133,7 @@ public class ChooseExistCardAndAddToDeckAction extends AbstractGameAction {
 
 
     private void AddCard(AbstractCard c){
-        AbstractCard tempCard = c.makeStatEquivalentCopy();
-        this.addToTop(new AddCardToDeckAction(tempCard));
-        this.addToTop(new MakeCardInDiscardPileAction(tempCard,1,true,true,false));
-
+        this.addToTop(new AddCardToDeckAction(c));
+        //this.addToTop(new MakeCardInDiscardPileAction(c,1,true,true,false));
     }
 }

@@ -69,6 +69,8 @@ public class SpringSunlight extends BaseCard {
 
 
     private void RecalculateCost(){
+        if(freeToPlayOnce){updateCost(0);return;}
+
         int actualCost = 0;
         if(AbstractDungeon.player.masterDeck.size()>=magicNumber){
             actualCost = AbstractDungeon.player.masterDeck.size() /magicNumber;
