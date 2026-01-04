@@ -19,6 +19,7 @@ public class DesuWaAction extends AbstractGameAction {
                 AbstractCard card = AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size()-2);
                 type = card.type;
             }
+
             for(int i =0; i<amount;i++){
                 addToTop(new RandomCardToHandByTypeAction(type));
             }

@@ -7,7 +7,6 @@ package togawasakikomod.Actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -133,7 +132,7 @@ public class ChooseExistCardAndAddToDeckAction extends AbstractGameAction {
 
 
     private void AddCard(AbstractCard c){
-        this.addToTop(new AddCardToDeckAction(c));
+        this.addToTop(new AddCardToDeckEXAction(c));
         //this.addToTop(new MakeCardInDiscardPileAction(c,1,true,true,false));
     }
 }

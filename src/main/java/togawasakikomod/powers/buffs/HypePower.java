@@ -30,6 +30,10 @@ public class HypePower extends BasePower implements CloneablePowerInterface
         @SpirePrefixPatch()
         public static SpireReturn<Integer> BlockLossForEnemy(AbstractCreature _inst, @ByRef int[] amount, boolean noAnimation){
             if(_inst.currentBlock >0 && _inst.hasPower(HypePower.POWER_ID)){
+                if(amount[0] <= 0)
+                {
+                    return SpireReturn.Continue();
+                }
                 AbstractPower power = _inst.getPower(HypePower.POWER_ID);
                 AbstractDungeon.actionManager.addToTop(new ReducePowerAction(power.owner,power.owner,power,1));
                 power.flash();

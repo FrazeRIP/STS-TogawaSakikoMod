@@ -6,7 +6,6 @@
 package togawasakikomod.Actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -36,7 +35,7 @@ public class AveMujicaAction extends AbstractGameAction {
         symbols.add(new SymbolIIIWater());
         symbols.add(new SymbolIVEarth());
         symbols.add(new Ether());
-        if(isUpgraded){
+        if(isUpgraded || AbstractDungeon.player.hasRelic("Molten Egg 2")){
             for(AbstractCard card : symbols){
                 card.upgrade();
             }
@@ -44,7 +43,6 @@ public class AveMujicaAction extends AbstractGameAction {
     }
 
     public void update() {
-
         if (this.duration == Settings.ACTION_DUR_FAST) {
             CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             group.group = symbols;
@@ -68,7 +66,7 @@ public class AveMujicaAction extends AbstractGameAction {
                     addToTop(new WaitAction(0.5f));
 //                    addToBot(new MakeCardInDiscardPileAction(disCard,1,true,true,false));
 //                    addToTop(new WaitAction(0.5f));
-                    addToTop(new AddCardToDeckAction(disCard));
+                    addToTop(new AddCardToDeckEXAction(disCard));
 
 //                    if (this.amount == 1) {
 //                        if (AbstractDungeon.player.hand.size() < 10) {

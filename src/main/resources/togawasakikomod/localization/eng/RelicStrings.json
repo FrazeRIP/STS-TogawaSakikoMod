@@ -8,7 +8,7 @@
   },  
   "${modID}:MonochromeHairband": {
     "NAME": "Monochrome Hairband",
-    "FLAVOR": "A black and white hairband symbolizing her will: an endless pursuit and desire for music.",
+    "FLAVOR": "The past sustained, the self constrained, and the knot of conflicting desire.",
     "DESCRIPTIONS": [
       "At the end of combat, add a #yDesire ",
       "to your deck."
@@ -16,7 +16,7 @@
   },  
   "${modID}:BlazingHairband": {
     "NAME": "Blazing Hairband",
-    "FLAVOR": "A black and white hairband symbolizing her will: an endless pursuit and desire for music.",
+    "FLAVOR": "The past turns into ashes.",
     "DESCRIPTIONS": [
       "Replace #rMonochrome #rHairband. At the end of combat, add a random card ",
       "to your deck."

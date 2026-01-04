@@ -1,10 +1,10 @@
 package togawasakikomod.cards.SakikoDeck.Attacks;
 
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.Actions.AddCardToDeckEXAction;
 import togawasakikomod.Actions.EtherAction;
 import togawasakikomod.Actions.MakeCardInDiscardPileAction;
 import togawasakikomod.cards.BaseCard;
@@ -38,7 +38,7 @@ public class Ether extends BaseCard {
         addToBot(new EtherAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL)));
 
         AbstractCard card = new Oblivionis();
-        addToBot(new AddCardToDeckAction(card));
+        addToBot(new AddCardToDeckEXAction(card));
         addToBot(new MakeCardInDiscardPileAction(card,1,true,true,false));
     }
 }

@@ -46,8 +46,8 @@
   },
   "${modID}:ImprisonedXII": {
     "NAME": "Imprisoned XII",
-    "DESCRIPTION": "Deal !M! damage to a random enemy for each *Desire played this combat.",
-    "EXTENDED_DESCRIPTION": [" NL (Currently deals !M! times.)"]
+    "DESCRIPTION": "Deal !M! damage. NL Gain [E] for each *Desire played this combat.",
+    "EXTENDED_DESCRIPTION": [" NL (Currently gain !M! [E] .)"]
   },
   "${modID}:CrucifixX": {
     "NAME": "Crucifix X",

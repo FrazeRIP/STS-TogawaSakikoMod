@@ -69,8 +69,6 @@ public class AveMujica extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new PlayAudioAction(AveMujica.class.getSimpleName()));
-
         addToBot(new AveMujicaAction(m,upgraded));
-
     }
 }

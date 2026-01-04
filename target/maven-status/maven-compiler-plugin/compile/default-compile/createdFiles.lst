@@ -211,10 +211,12 @@ togawasakikomod\relics\FountainDrink.class
 togawasakikomod\cards\SpecialDeck\Curses\Mortis.class
 togawasakikomod\cards\SakikoDeck\Skills\QuaerereLumina.class
 togawasakikomod\powers\buffs\GodsCreationPower$GodsCreationMonsters.class
+togawasakikomod\Actions\AddCardToDeckEXAction.class
 togawasakikomod\powers\buffs\GodsCreationPower.class
 togawasakikomod\Actions\ShowAndExhaustCardAction.class
 togawasakikomod\rewards\AltNeowReward$1.class
 togawasakikomod\cards\SakikoDeck\Skills\WishFulfilled.class
+togawasakikomod\Actions\AddCardToDeckEXAction$1.class
 togawasakikomod\cards\SakikoDeck\Attacks\DarkHeaven.class
 togawasakikomod\Actions\StealStrengthAction.class
 togawasakikomod\powers\buffs\DazzlingPower.class

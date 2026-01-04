@@ -2,7 +2,7 @@ package togawasakikomod.cards.SakikoDeck.Attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
+import togawasakikomod.Actions.AddCardToDeckEXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -44,7 +44,7 @@ public class SymbolIFire extends BaseCard {
         addToBot(new SymbolIFireAction(m,upgraded));
 
         AbstractCard card = new Timoris();
-        addToBot(new AddCardToDeckAction(card));
+        addToBot(new AddCardToDeckEXAction(card));
         addToBot(new MakeCardInDiscardPileAction(card,1,true,true,false));
     }
 }

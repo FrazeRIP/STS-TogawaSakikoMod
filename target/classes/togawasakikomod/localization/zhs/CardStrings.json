@@ -38,8 +38,8 @@
   },
   "togawasakikomod:ImprisonedXII": {
     "NAME": "徒囚 XII",
-    "DESCRIPTION": "你在本场战斗中每打出一张 *渴望 ，随机造成一次 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [" NL （当前造成 !M! 次。）"]
+    "DESCRIPTION": "造成一次 !D! 点伤害。 NL 获得你在本场战斗中打出 *渴望 数量的 [E] 。",
+    "EXTENDED_DESCRIPTION": [" NL （当前获得 !M! [E] 。）"]
   },
   "togawasakikomod:CrucifixX": {
     "NAME": "十架 X",
@@ -66,7 +66,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 力量 ，窃取 !M! 层。"
   },
   "togawasakikomod:Angles": {
-    "NAME": "角度",
+    "NAME": "交角",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 你和敌人获得 NL  !M! 层 togawasakikomod:神的造物 。 NL  消耗 。"
   },
   "togawasakikomod:Utopia": {

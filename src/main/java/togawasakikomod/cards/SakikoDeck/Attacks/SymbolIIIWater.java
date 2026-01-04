@@ -2,7 +2,7 @@ package togawasakikomod.cards.SakikoDeck.Attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
+import togawasakikomod.Actions.AddCardToDeckEXAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -42,7 +42,7 @@ public class SymbolIIIWater extends BaseCard {
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
         AbstractCard card = new Doloris();
-        addToBot(new AddCardToDeckAction(card));
+        addToBot(new AddCardToDeckEXAction(card));
         addToBot(new MakeCardInDiscardPileAction(card,1,true,true,false));
 
         this.addToBot(new SkipEnemiesTurnAction());

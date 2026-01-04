@@ -11,6 +11,7 @@ public class ShowAndExhaustCardAction extends AbstractGameAction {
     AbstractCard card;
     public ShowAndExhaustCardAction(AbstractCard card){
         this.card = card;
+        this.duration = 0.05f;
     }
 
     @Override

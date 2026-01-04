@@ -8,15 +8,15 @@
   },  
   "togawasakikomod:MonochromeHairband": {
     "NAME": "黑白色发带",
-    "FLAVOR": "黑白色的发带，象征着她的意志：对于音乐无尽的追求与渴望。",
+    "FLAVOR": "过往的维系，自我的束成，与矛盾缠结的渴望。",
     "DESCRIPTIONS": [
       "在战斗结束时，将一张 #y渴望 ",
       "加入卡组。"
     ]
   },  
   "togawasakikomod:BlazingHairband": {
-    "NAME": "灼色的发带",
-    "FLAVOR": "火红色的发带，象征着她的意志：对于音乐无尽的追求与渴望。",
+    "NAME": "炽色的发带",
+    "FLAVOR": "过往成焰。",
     "DESCRIPTIONS": [
       "替换 #r黑白色发带 。在战斗结束时，将一张随机卡牌",
       "加入卡组。"

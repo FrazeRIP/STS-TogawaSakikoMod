@@ -50,7 +50,7 @@ public class Doloris extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {  if (this.dontTriggerOnUseCard) {
         //this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DolorisPower(AbstractDungeon.player, 1,false), 1));
-            addToTop(new DamageAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.HP_LOSS)));
+            addToTop(new DamageAction(p,new DamageInfo(p,magicNumber, DamageInfo.DamageType.THORNS)));
         }
     }
 }

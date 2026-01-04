@@ -3,11 +3,11 @@ package togawasakikomod.cards.SakikoDeck.Attacks;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import togawasakikomod.Actions.AddCardToDeckEXAction;
 import togawasakikomod.Actions.MakeCardInDiscardPileAction;
 import togawasakikomod.Actions.PlayAudioAction;
 import togawasakikomod.cards.BaseCard;
@@ -55,7 +55,7 @@ public class PhantomOfMutsumi extends BaseCard {
         if(upgraded){
             card.upgrade();
         }
-        addToBot(new AddCardToDeckAction(card));
+        addToBot(new AddCardToDeckEXAction(card));
         addToBot(new MakeCardInDiscardPileAction(card,1,true,true,false));
 
 

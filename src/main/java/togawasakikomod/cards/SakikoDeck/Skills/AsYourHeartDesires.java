@@ -34,7 +34,6 @@ public class AsYourHeartDesires extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new PlayAudioAction(AsYourHeartDesires.class.getSimpleName()));
-
         addToBot(new ChooseExistCardAndAddToDeckAction(p,magicNumber));
     }
 }

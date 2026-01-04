@@ -1,7 +1,7 @@
 package togawasakikomod.cards.SakikoDeck.Skills;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
+import togawasakikomod.Actions.AddCardToDeckEXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -39,7 +39,7 @@ public class BudgetBento extends BaseCard {
         addToBot(new ApplyPowerAction(p,p, new RegenPower(p,magicNumber)));
 
         AbstractCard card = new Tiredness();
-        addToBot(new AddCardToDeckAction(card));
+        addToBot(new AddCardToDeckEXAction(card));
         addToBot(new MakeCardInDiscardPileAction(card,1,true,true,false));
     }
 }

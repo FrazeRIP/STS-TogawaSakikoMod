@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import togawasakikomod.effects.DazzlingAttackEffect;
@@ -26,7 +27,7 @@ public class EtherAction extends AbstractGameAction {
         this.setValues(target, info);
         this.actionType = ActionType.WAIT;
         this.attackEffect = AttackEffect.FIRE;
-        this.startingDuration = Settings.ACTION_DUR_FAST;
+        this.startingDuration = 0.02f;
         this.duration = this.startingDuration;
     }
 
@@ -54,8 +55,12 @@ public class EtherAction extends AbstractGameAction {
             addToTop(new DamageAction(this.target, this.info, AttackEffect.NONE));
             addToTop(new VFXAction(new DazzlingAttackEffect(this.target,false)));
             addToTop(new ShowAndExhaustCardAction(card));
-        }
 
+            AbstractDungeon.player.drawPile.moveToExhaustPile(card);
+            CardCrawlGame.dungeon.checkForPactAchievement();
+            card.exhaustOnUseOnce = false;
+            card.freeToPlayOnce = false;
+        }
         this.isDone = true;
     }
 }

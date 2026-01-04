@@ -1,6 +1,7 @@
 package togawasakikomod.Actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,32 +25,36 @@ public class RandomCardToHandByIDAction extends AbstractGameAction {
 
     public void update() {
         if(ID!=null){
-        CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
         for(AbstractCard c: this.p.drawPile.group){
            if(Objects.equals(c.cardID, ID)){
-               group.group.add(c);
+               if (this.p.hand.size() == 10) {
+               this.p.drawPile.moveToDiscardPile(c);
+               this.p.createHandIsFullDialog();
+               isDone = true;
+               return;
+           } else {
+                   c.unhover();
+                   c.lighten(true);
+                   c.setAngle(0.0F);
+                   c.drawScale = 0.12F;
+                   c.targetDrawScale = 0.75F;
+                   c.current_x = CardGroup.DRAW_PILE_X;
+                   c.current_y = CardGroup.DRAW_PILE_Y;
+               this.p.drawPile.removeCard(c);
+               AbstractDungeon.player.hand.addToTop(c);
+               AbstractDungeon.player.hand.refreshHandLayout();
+               AbstractDungeon.player.hand.applyPowers();
+                   isDone = true;
+                   return;
+           }
            }
         }
 
-        if(group.group.isEmpty()){
             for(AbstractCard c: this.p.discardPile.group){
                 if(Objects.equals(c.cardID, ID)){
-                    group.group.add(c);
+                    addToTop(new DiscardToHandAction(c));
                 }
             }
-        }
-
-        if(!group.group.isEmpty()){
-            AbstractCard card = group.getRandomCard(true);
-            if(card!=null){
-                this.p.hand.addToHand(card);
-                card.lighten(false);
-                this.p.drawPile.removeCard(card);
-                this.p.discardPile.removeCard(card);
-                this.p.hand.refreshHandLayout();
-            }
-        }
         }
 
         this.tickDuration();

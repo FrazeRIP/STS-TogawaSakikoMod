@@ -47,10 +47,6 @@ public class RemoveCardFromHandAction extends AbstractGameAction {
 
             if (tmp.size() == 0) {
                 this.isDone = true;
-            } else if (tmp.size() == 1) {
-                card = tmp.getTopCard();
-                addToTop(new RemoveCardFromDeckAction(card));
-                this.isDone = true;
             } else {
                 AbstractDungeon.gridSelectScreen.open(tmp, this.amount, TEXT[0], false,false,canCancel,true);
                 this.tickDuration();
