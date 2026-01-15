@@ -117,7 +117,7 @@
   },
   "${modID}:Ether": {
     "NAME": "Ether",
-    "DESCRIPTION": "Exhaust all non-Attack cards from your draw pile. NL Deal !D! damage for each Exhausted card. NL Add a *Oblivionis to your deck."
+    "DESCRIPTION": "Exhaust non-Attack cards from your draw pile (12 max). NL Deal !D! damage for each Exhausted card. NL Add a *Oblivionis to your deck."
   },
   "${modID}:ChoirSChoir": {
     "NAME": "Choir 'S' Choir",
@@ -342,7 +342,7 @@
   "${modID}:Crychic": {
     "NAME": "Crychic",
     "DESCRIPTION": "Add X random togawasakikomod:Phantoms to your hand. They cost 0 energy this battle. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add X+1 random togawasakikomod:Phantoms to your hand. They cost 0 energy this battle. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Add X random togawasakikomod:Phantoms+ to your hand. They cost 0 energy this battle. NL Exhaust."
   },
   "${modID}:Worldview": {
     "NAME": "Worldview",

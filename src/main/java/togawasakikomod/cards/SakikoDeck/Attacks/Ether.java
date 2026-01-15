@@ -12,7 +12,6 @@ import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.util.CardStats;
 
-//月光奏鸣曲
 public class Ether extends BaseCard {
     public static final String ID = makeID(Ether.class.getSimpleName());
     private static final CardStats info = new CardStats(
@@ -26,6 +25,7 @@ public class Ether extends BaseCard {
     //but constants at the top of the file are easy to adjust.
     private static final int DAMAGE = 2;
     private static final int UPG_DAMAGE = 1;
+    private  static final int EXHAUST_COUNT = 12;
 
     public Ether() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
@@ -35,8 +35,7 @@ public class Ether extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new EtherAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL)));
-
+        addToBot(new EtherAction(m,EXHAUST_COUNT,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL)));
         AbstractCard card = new Oblivionis();
         addToBot(new AddCardToDeckEXAction(card));
         addToBot(new MakeCardInDiscardPileAction(card,1,true,true,false));

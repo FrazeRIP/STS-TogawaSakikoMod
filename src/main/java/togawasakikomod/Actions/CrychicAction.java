@@ -13,13 +13,19 @@ public class CrychicAction extends AbstractGameAction {
 
     ArrayList<AbstractCard> phantoms = new ArrayList<AbstractCard>();
 
-    public CrychicAction(int amount){
+    public CrychicAction(int amount,boolean upgraded){
         this.amount = amount;
         phantoms.add(new PhantomOfMutsumi());
         phantoms.add(new PhantomOfSakiko());
         phantoms.add(new PhantomOfSoyo());
         phantoms.add(new PhantomOfTaki());
         phantoms.add(new PhantomOfTomori());
+
+        if(upgraded){
+            for(AbstractCard card : phantoms){
+                card.upgrade();
+            }
+        }
     }
 
     @Override

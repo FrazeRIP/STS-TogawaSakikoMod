@@ -21,10 +21,12 @@ import java.util.ArrayList;
 public class EtherAction extends AbstractGameAction {
     private DamageInfo info;
     private float startingDuration;
+    private  int exhaustCount;
 
-    public EtherAction(AbstractCreature target, DamageInfo info) {
+    public EtherAction(AbstractCreature target, int exhaustCount, DamageInfo info) {
         this.info = info;
         this.setValues(target, info);
+        this.exhaustCount = exhaustCount;
         this.actionType = ActionType.WAIT;
         this.attackEffect = AttackEffect.FIRE;
         this.startingDuration = 0.02f;
@@ -39,13 +41,16 @@ public class EtherAction extends AbstractGameAction {
 //                nonAttackCard.add(card);
 //            }
 //        }
+
 //        for(AbstractCard card : AbstractDungeon.player.hand.group){
+//            if(nonAttackCard.size()>=exhaustCount){return;}
 //            if(card.type != AbstractCard.CardType.ATTACK){
 //                nonAttackCard.add(card);
 //            }
 //        }
 
         for(AbstractCard card : AbstractDungeon.player.drawPile.group){
+            if(nonAttackCard.size()>=exhaustCount){break;}
             if(card.type != AbstractCard.CardType.ATTACK){
                 nonAttackCard.add(card);
             }

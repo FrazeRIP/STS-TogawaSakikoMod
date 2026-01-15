@@ -51,7 +51,7 @@
   },
   "${modID}:Kao": {
     "NAME": "颜",
-    "DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL 每当敌人获得增益效果时，将手牌里这张牌的数字+ !M! 。"
+    "DESCRIPTION": " 保留 。 NL 造成 !D! 点伤害。 NL 每当敌人获得增益效果时，将手牌里这张牌的伤害+ !M! 。"
   },
   "${modID}:SoraNoMusica": {
     "NAME": "无何有之颂乐",
@@ -117,7 +117,7 @@
   },
   "${modID}:Ether": {
     "NAME": "遗忘之光",
-    "DESCRIPTION": " 消耗 抽牌堆中的所有非攻击牌。 NL 每张被 消耗 的牌造成 !D! 点伤害。 NL 将1张 *遗忘 加入牌组。"
+    "DESCRIPTION": " 消耗抽牌堆中至多12张非攻击牌。 NL 每张被 消耗 的牌造成 !D! 点伤害。 NL 将1张 *遗忘 加入牌组。"
   },
   "${modID}:ChoirSChoir": {
     "NAME": "齐唱圣歌",
@@ -342,7 +342,7 @@
   "${modID}:Crychic": {
     "NAME": "Crychic",
     "DESCRIPTION": "将X张随机的 togawasakikomod:幻影 加入到你的手牌，它们本场战斗中的耗能变为0。 NL  消耗 。",
-    "UPGRADE_DESCRIPTION": "将X+1张随机的 togawasakikomod:幻影 加入到你的手牌，它们本场战斗中的耗能变为0。 NL  消耗 。"
+    "UPGRADE_DESCRIPTION": "将X张随机的 togawasakikomod:幻影+ 加入到你的手牌，它们本场战斗中的耗能变为0。 NL  消耗 。"
   },
   "${modID}:Worldview": {
     "NAME": "世界观",
