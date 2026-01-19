@@ -3,15 +3,30 @@
     "NAME": "千早爱音",
     "DIALOG": [
       " 哈哈哈哈哈哈哈!",
-      " 看吧，这漂亮的C和弦！",
-      " 哼哼哼..."
+      " 看吧，这漂亮的C和弦！"
     ],
     "MOVES": [
-      "#yPassive: At the start of your turn, draw #b",
-      " card.",
-      " cards.",
-      " NL #yEvoke: Deal #b",
-      " damage to all enemies."
+      ""
+    ]
+  },
+  "${modID}:ShiinaTakiBoss": {
+    "NAME": "椎名立希",
+    "DIALOG": [
+      " 竟敢无视灯！",
+      " 不许伤害灯！"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:TakamatsuTomoriBoss": {
+    "NAME": "高松灯",
+    "DIALOG": [
+      " 一起组建乐队吧！",
+      " 咕咕嘎嘎！"
+    ],
+    "MOVES": [
+      ""
     ]
   }
 }

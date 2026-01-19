@@ -22,9 +22,9 @@ import togawasakikomod.monsters.SurroundedMonster;
 import togawasakikomod.powers.monsters.ForwardResolvePower;
 import togawasakikomod.util.TextureLoader;
 
-public class ChihayaAnonBoss extends SurroundedMonster {
+public class NagasakiSoyoBoss extends SurroundedMonster {
 
-    public static final String ID =  TogawaSakikoMod.makeID(ChihayaAnonBoss.class.getSimpleName());
+    public static final String ID =  TogawaSakikoMod.makeID(NagasakiSoyoBoss.class.getSimpleName());
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
     public static final String[] DIALOG = monsterStrings.DIALOG;
@@ -34,7 +34,7 @@ public class ChihayaAnonBoss extends SurroundedMonster {
     private static final float hb_y = 50;
     private static final float hb_w = 164;
     private static final float hb_h = 350;
-    private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(ChihayaAnonBoss.class.getSimpleName());
+    private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(NagasakiSoyoBoss.class.getSimpleName());
 
     private static final int triAtkAmount = 8 ;
     private static final int quadAtkAmount = 10;
@@ -45,7 +45,7 @@ public class ChihayaAnonBoss extends SurroundedMonster {
 
     private int moveCount = -1;
 
-    public ChihayaAnonBoss(float offsetX, float offsetY) {
+    public NagasakiSoyoBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
 
         this.damage.add(new DamageInfo((AbstractCreature)this, triAtkAmount));
@@ -105,18 +105,15 @@ public class ChihayaAnonBoss extends SurroundedMonster {
     @Override
     protected void getMove(int i) {
         if(moveCount <0){
-            moveCount = i%3;
+            moveCount = i%2;
         }
 
         switch (moveCount%3){
             case 0:
-                setMove((byte)0, Intent.DEBUFF);
+                setMove((byte)0, Intent.DEFEND_BUFF);
                 break;
             case 1:
-                setMove((byte)1, Intent.ATTACK, (this.damage.get(1)).base,4,true);
-                break;
-            case 2:
-                setMove((byte)2, Intent.ATTACK_BUFF, (this.damage.get(0)).base,3,true);
+                setMove((byte)1, Intent.ATTACK_BUFF, (this.damage.get(0)).base,2,true);
                 break;
         }
         moveCount ++;

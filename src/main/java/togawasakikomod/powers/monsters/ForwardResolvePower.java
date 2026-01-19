@@ -1,16 +1,16 @@
-package togawasakikomod.powers.buffs;
+package togawasakikomod.powers.monsters;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import togawasakikomod.annotations.CharismaticFormCopyEnable;
 import togawasakikomod.powers.BasePower;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
+@CharismaticFormCopyEnable(enable = false)
 public class ForwardResolvePower extends BasePower implements CloneablePowerInterface {
     public static final String POWER_ID = makeID(ForwardResolvePower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;

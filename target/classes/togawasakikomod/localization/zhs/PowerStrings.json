@@ -163,5 +163,19 @@
       "每当受到攻击时，获得 #b",
       " #y活力 。"
     ]
+  },
+  "togawasakikomod:RestlessIdealPower": {
+    "NAME": "躁动的理想",
+    "DESCRIPTIONS": [
+      "每当造成伤害时，在弃牌堆中加入 #b",
+      " 张 #y凡庸 。"
+    ]
+  },
+  "togawasakikomod:EarnestCryPower": {
+    "NAME": "真心的呐喊",
+    "DESCRIPTIONS": [
+      "#r独特。 NL 回合结束时，获得 #b",
+      " 层 #y真言 并获得一层 #y真心的呐喊 。"
+    ]
   }
 }

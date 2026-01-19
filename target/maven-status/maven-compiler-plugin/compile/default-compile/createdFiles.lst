@@ -11,6 +11,7 @@ togawasakikomod\potions\EarlGreyTea.class
 togawasakikomod\relics\TheCompass.class
 togawasakikomod\cards\SakikoDeck\Attacks\AveMujica.class
 togawasakikomod\cards\SakikoDeck\Attacks\Ether.class
+togawasakikomod\monsters\bosses\mygo\ShiinaTakiBoss.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIFire.class
 togawasakikomod\powers\debuffs\MortisPower.class
 togawasakikomod\cards\SakikoDeck\Attacks\BlackBirthday.class
@@ -20,6 +21,7 @@ togawasakikomod\events\AltNeowEvent.class
 togawasakikomod\cards\SpecialDeck\Curses\Timoris.class
 togawasakikomod\powers\buffs\GirlOfSpringPower.class
 togawasakikomod\Actions\TheMoonlightSonataAction.class
+togawasakikomod\annotations\CharismaticFormCopyEnable.class
 togawasakikomod\cards\SakikoDeck\Skills\Greetings.class
 togawasakikomod\util\KeywordInfo.class
 togawasakikomod\cards\SakikoDeck\Skills\AsYourHeartDesires.class
@@ -104,12 +106,12 @@ togawasakikomod\powers\buffs\CrychicPower.class
 togawasakikomod\powers\buffs\PridePower.class
 togawasakikomod\patches\UnremoveablePatcher$RemoveUnremoveableFromPurge.class
 togawasakikomod\cards\SpecialDeck\Curses\Weakness.class
+togawasakikomod\monsters\bosses\mygo\TakamatsuTomoriBoss.class
 togawasakikomod\Actions\CricifuxXAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIIIWater.class
 togawasakikomod\cards\SakikoDeck\Attacks\GeorgetteMeGeorgetteYou.class
 togawasakikomod\patches\AltNeowPatch$Locator.class
 togawasakikomod\potions\HallucinationPotion.class
-togawasakikomod\cards\SakikoDeck\Attacks\DazzlingDamageAction.class
 togawasakikomod\cards\SakikoDeck\Skills\StayElegance.class
 togawasakikomod\relics\FountainDrink$FountainDrinkPatch.class
 togawasakikomod\cards\SakikoDeck\Skills\CountingStars.class
@@ -125,6 +127,7 @@ togawasakikomod\powers\debuffs\TimorisPower.class
 togawasakikomod\Actions\BlackBirthdayAction.class
 togawasakikomod\cards\SakikoDeck\Powers\Passion.class
 togawasakikomod\modifiers\UnremoveableModifier.class
+togawasakikomod\powers\monsters\EarnestCryPower.class
 togawasakikomod\Actions\RandomCardToHandByTypeAction.class
 togawasakikomod\effects\ShowAndExhaustCardEffect.class
 togawasakikomod\relics\MonochromeHairband.class
@@ -187,7 +190,6 @@ togawasakikomod\cards\SpecialDeck\Skills\Desire.class
 togawasakikomod\powers\buffs\FearlessPower.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfMutsumi.class
 togawasakikomod\powers\buffs\CrueltyPower.class
-togawasakikomod\powers\buffs\MonsterVigorPower.class
 togawasakikomod\Actions\RemoveCardFromHandAction.class
 togawasakikomod\patches\ScryCallbackPatch$DoTheCallback.class
 togawasakikomod\cards\SakikoDeck\Skills\PerdereOmnia.class
@@ -212,9 +214,11 @@ togawasakikomod\cards\SakikoDeck\Attacks\ChoirSChoir.class
 togawasakikomod\relics\FountainDrink.class
 togawasakikomod\cards\SpecialDeck\Curses\Mortis.class
 togawasakikomod\cards\SakikoDeck\Skills\QuaerereLumina.class
+togawasakikomod\powers\monsters\ForwardResolvePower.class
 togawasakikomod\powers\buffs\GodsCreationPower$GodsCreationMonsters.class
 togawasakikomod\Actions\AddCardToDeckEXAction.class
 togawasakikomod\powers\buffs\GodsCreationPower.class
+togawasakikomod\Actions\DazzlingDamageAction.class
 togawasakikomod\Actions\ShowAndExhaustCardAction.class
 togawasakikomod\rewards\AltNeowReward$1.class
 togawasakikomod\cards\SakikoDeck\Skills\WishFulfilled.class
@@ -240,11 +244,13 @@ togawasakikomod\cards\SpecialDeck\Powers\Ideal.class
 togawasakikomod\cards\SakikoDeck\Attacks\ImprisonedXII.class
 togawasakikomod\cards\SakikoDeck\Powers\Curiosity.class
 togawasakikomod\Actions\AccompliceAction.class
-togawasakikomod\powers\buffs\ForwardResolvePower.class
+togawasakikomod\monsters\bosses\mygo\NagasakiSoyoBoss.class
 togawasakikomod\Actions\SeizeTheFateAction.class
+togawasakikomod\powers\monsters\RestlessIdealPower.class
 togawasakikomod\patches\ScryCallbackPatch$DoTheCallback$Locator.class
 togawasakikomod\character\TogawaSakiko$Meta.class
 togawasakikomod\patches\AltNeowPatch.class
+togawasakikomod\powers\monsters\MonsterVigorPower.class
 togawasakikomod\cards\SakikoDeck\Skills\OurSong.class
 togawasakikomod\powers\buffs\GodsCreationPower$GodsCreationPlayer.class
 togawasakikomod\powers\debuffs\DazzlingDownPower.class

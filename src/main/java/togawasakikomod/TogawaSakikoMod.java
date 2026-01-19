@@ -8,16 +8,15 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.Prefs;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
@@ -27,15 +26,18 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import togawasakikomod.Actions.CharismaticIntangibleAction;
 import togawasakikomod.annotations.CardEnable;
+import togawasakikomod.annotations.CharismaticFormCopyEnable;
 import togawasakikomod.annotations.RelicEnable;
 import togawasakikomod.cards.BaseCard;
-import togawasakikomod.cards.SakikoDeck.Attacks.DazzlingDamageAction;
+import togawasakikomod.Actions.DazzlingDamageAction;
 import togawasakikomod.cards.SakikoDeck.Attacks.Kao;
 import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.effects.DazzlingAttackEffect;
 import togawasakikomod.monsters.bosses.mygo.ChihayaAnonBoss;
+import togawasakikomod.monsters.bosses.mygo.ShiinaTakiBoss;
+import togawasakikomod.monsters.bosses.mygo.TakamatsuTomoriBoss;
 import togawasakikomod.patches.CustomEnumPatch;
 import togawasakikomod.patches.ObtainRewardEventPatch;
 import togawasakikomod.potions.BasePotion;
@@ -200,8 +202,13 @@ public class TogawaSakikoMod implements
     }
 
     public  static void registerMonsters(){
+        //Register
         BaseMod.addMonster(ChihayaAnonBoss.ID,()-> new ChihayaAnonBoss(0,0));
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(ChihayaAnonBoss.ID, 999));
+        BaseMod.addMonster(ShiinaTakiBoss.ID,()-> new ShiinaTakiBoss(0,0));
+        BaseMod.addMonster(TakamatsuTomoriBoss.ID,()-> new TakamatsuTomoriBoss(0,0));
+
+        //Add to encounter
+        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(TakamatsuTomoriBoss.ID, 999));
     }
 
     public static void registerPotions() {
@@ -433,7 +440,10 @@ public class TogawaSakikoMod implements
                 if(Objects.equals(abstractPower.ID, PainfulStabsPower.POWER_ID)){return;}
                 if(Objects.equals(abstractPower.ID, BeatOfDeathPower.POWER_ID)){return;}
                 if(Objects.equals(abstractPower.ID, SharpHidePower.POWER_ID)){return;}
-                //if(Objects.equals(abstractPower.ID, FlightPower.POWER_ID)){return;}
+                if(abstractPower.getClass().isAnnotationPresent(CharismaticFormCopyEnable.class)){
+                    CharismaticFormCopyEnable enable = abstractPower.getClass().getAnnotation(CharismaticFormCopyEnable.class);
+                    if(!enable.enable()) {return;}
+                }
 
                 AbstractPower copy = null;
 

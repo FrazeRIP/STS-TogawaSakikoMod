@@ -1,4 +1,4 @@
-package togawasakikomod.cards.SakikoDeck.Attacks;
+package togawasakikomod.Actions;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
