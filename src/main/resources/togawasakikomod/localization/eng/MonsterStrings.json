@@ -1,0 +1,16 @@
+﻿{
+  "${modID}:OrbID": {
+    "NAME": "千早爱音",
+    "DIALOG": [
+      "哈哈哈哈哈哈哈",
+      " 看吧，这漂亮的C和旋！"
+    ],
+    "MOVES": [
+      "#yPassive: At the start of your turn, draw #b",
+      " card.",
+      " cards.",
+      " NL #yEvoke: Deal #b",
+      " damage to all enemies."
+    ]
+  }
+}

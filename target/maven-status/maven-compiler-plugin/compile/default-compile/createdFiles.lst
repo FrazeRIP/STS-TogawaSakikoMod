@@ -70,6 +70,7 @@ togawasakikomod\Actions\DatenAction.class
 togawasakikomod\powers\buffs\PerdereOmniaPower.class
 togawasakikomod\rewards\AltNeowReward$NeowRewardType.class
 togawasakikomod\cards\BaseCard$VariableType.class
+togawasakikomod\monsters\bosses\mygo\ChihayaAnonBoss.class
 togawasakikomod\cards\SakikoDeck\Attacks\MementoMori.class
 togawasakikomod\powers\buffs\WishYouGoodLuckPower.class
 togawasakikomod\potions\ChocolateMilkJelly.class
@@ -186,6 +187,7 @@ togawasakikomod\cards\SpecialDeck\Skills\Desire.class
 togawasakikomod\powers\buffs\FearlessPower.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfMutsumi.class
 togawasakikomod\powers\buffs\CrueltyPower.class
+togawasakikomod\powers\buffs\MonsterVigorPower.class
 togawasakikomod\Actions\RemoveCardFromHandAction.class
 togawasakikomod\patches\ScryCallbackPatch$DoTheCallback.class
 togawasakikomod\cards\SakikoDeck\Skills\PerdereOmnia.class
@@ -218,6 +220,7 @@ togawasakikomod\rewards\AltNeowReward$1.class
 togawasakikomod\cards\SakikoDeck\Skills\WishFulfilled.class
 togawasakikomod\Actions\AddCardToDeckEXAction$1.class
 togawasakikomod\cards\SakikoDeck\Attacks\DarkHeaven.class
+togawasakikomod\monsters\SurroundedMonster.class
 togawasakikomod\Actions\StealStrengthAction.class
 togawasakikomod\powers\buffs\DazzlingPower.class
 togawasakikomod\powers\BasePower.class
@@ -237,6 +240,7 @@ togawasakikomod\cards\SpecialDeck\Powers\Ideal.class
 togawasakikomod\cards\SakikoDeck\Attacks\ImprisonedXII.class
 togawasakikomod\cards\SakikoDeck\Powers\Curiosity.class
 togawasakikomod\Actions\AccompliceAction.class
+togawasakikomod\powers\buffs\ForwardResolvePower.class
 togawasakikomod\Actions\SeizeTheFateAction.class
 togawasakikomod\patches\ScryCallbackPatch$DoTheCallback$Locator.class
 togawasakikomod\character\TogawaSakiko$Meta.class

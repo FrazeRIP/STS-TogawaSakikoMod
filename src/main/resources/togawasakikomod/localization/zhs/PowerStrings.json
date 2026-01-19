@@ -156,5 +156,12 @@
       "你的回合开始时，获得 #b",
       " #y格挡 。"
     ]
+  },
+  "${modID}:ForwardResolvePower": {
+    "NAME": "前进的决意",
+    "DESCRIPTIONS": [
+      "每当受到攻击时，获得 #b",
+      " #y活力 。"
+    ]
   }
 }

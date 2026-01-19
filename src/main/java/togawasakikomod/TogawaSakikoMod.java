@@ -15,8 +15,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.Prefs;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
 import com.megacrit.cardcrawl.relics.DuVuDoll;
@@ -33,6 +35,7 @@ import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.effects.DazzlingAttackEffect;
+import togawasakikomod.monsters.bosses.mygo.ChihayaAnonBoss;
 import togawasakikomod.patches.CustomEnumPatch;
 import togawasakikomod.patches.ObtainRewardEventPatch;
 import togawasakikomod.potions.BasePotion;
@@ -161,6 +164,7 @@ public class TogawaSakikoMod implements
     @Override
     public void receivePostInitialize() {
         registerPotions();
+        registerMonsters();
 
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
@@ -193,6 +197,11 @@ public class TogawaSakikoMod implements
                 prefs.flush();
             }
         });
+    }
+
+    public  static void registerMonsters(){
+        BaseMod.addMonster(ChihayaAnonBoss.ID,()-> new ChihayaAnonBoss(0,0));
+        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(ChihayaAnonBoss.ID, 999));
     }
 
     public static void registerPotions() {
@@ -255,6 +264,8 @@ public class TogawaSakikoMod implements
                 localizationPath(lang, "RelicStrings.json"));
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 localizationPath(lang, "UIStrings.json"));
+        BaseMod.loadCustomStringsFile(MonsterStrings.class,
+                localizationPath(lang, "MonsterStrings.json"));
     }
 
     @Override

@@ -156,5 +156,12 @@
       "At the begining of your turn, gain #b",
       " #yBlock ."
     ]
+  },
+  "togawasakikomod:ForwardResolvePower": {
+    "NAME": "Forward Resolve",
+    "DESCRIPTIONS": [
+      "Whenever being attacked, gain #b",
+      " #yVigor ."
+    ]
   }
 }

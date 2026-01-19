@@ -50,6 +50,16 @@ public class TextureLoader {
         return t;
     }
 
+    public static String getMonsterTextureString(final String monsterName){
+        String textureString = imagePath("monsters/" + monsterName + ".png");
+        FileHandle h = Gdx.files.internal(textureString);
+        if (!h.exists())
+        {
+            textureString = imagePath("cards/attack/default.png");
+        }
+        return textureString;
+    }
+
     /**
      * @param filePath - String path to the texture you want to load relative to resources,
      * Example: imagePath("missing.png")
