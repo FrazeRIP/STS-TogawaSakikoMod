@@ -24,6 +24,7 @@ togawasakikomod\Actions\TheMoonlightSonataAction.class
 togawasakikomod\annotations\CharismaticFormCopyEnable.class
 togawasakikomod\cards\SakikoDeck\Skills\Greetings.class
 togawasakikomod\util\KeywordInfo.class
+togawasakikomod\effects\EnemyStanceAuraEffect.class
 togawasakikomod\cards\SakikoDeck\Skills\AsYourHeartDesires.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfSakiko.class
 togawasakikomod\effects\ShowCardAndAddToDiscardPileEffect2.class
@@ -42,6 +43,7 @@ togawasakikomod\Actions\MaskAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\Kao.class
 togawasakikomod\cards\SakikoDeck\Skills\Carefree.class
 togawasakikomod\TogawaSakikoMod.class
+togawasakikomod\patches\MonsterMantraPatch$Comon.class
 togawasakikomod\Actions\NumbersAndFacesAction.class
 togawasakikomod\cards\SakikoDeck\Skills\InnerCry.class
 togawasakikomod\cards\SakikoDeck\Attacks\CrucifixX.class
@@ -119,6 +121,7 @@ togawasakikomod\effects\MusicPulseAttackEffect.class
 togawasakikomod\powers\buffs\EndurancePower.class
 togawasakikomod\powers\buffs\PlayerFilightPower.class
 togawasakikomod\powers\buffs\SharedDestinyPower.class
+togawasakikomod\effects\EnemyDivinityParticleEffect.class
 togawasakikomod\rewards\AltNeowReward$NeowRewardDef.class
 togawasakikomod\Actions\EtherAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\SpringSunlight.class
@@ -222,6 +225,7 @@ togawasakikomod\Actions\DazzlingDamageAction.class
 togawasakikomod\Actions\ShowAndExhaustCardAction.class
 togawasakikomod\rewards\AltNeowReward$1.class
 togawasakikomod\cards\SakikoDeck\Skills\WishFulfilled.class
+togawasakikomod\patches\MonsterMantraPatch.class
 togawasakikomod\Actions\AddCardToDeckEXAction$1.class
 togawasakikomod\cards\SakikoDeck\Attacks\DarkHeaven.class
 togawasakikomod\monsters\SurroundedMonster.class
@@ -244,6 +248,7 @@ togawasakikomod\cards\SpecialDeck\Powers\Ideal.class
 togawasakikomod\cards\SakikoDeck\Attacks\ImprisonedXII.class
 togawasakikomod\cards\SakikoDeck\Powers\Curiosity.class
 togawasakikomod\Actions\AccompliceAction.class
+togawasakikomod\TogawaSakikoMod$TriConsumer.class
 togawasakikomod\monsters\bosses\mygo\NagasakiSoyoBoss.class
 togawasakikomod\Actions\SeizeTheFateAction.class
 togawasakikomod\powers\monsters\RestlessIdealPower.class
@@ -268,6 +273,7 @@ togawasakikomod\cards\SakikoDeck\Attacks\MasqueradeRhapsodyRequest.class
 togawasakikomod\powers\debuffs\DolorisPower.class
 togawasakikomod\Actions\AuthorityRestorationAction.class
 togawasakikomod\patches\GraveCardPatch.class
+togawasakikomod\powers\monsters\MonsterDivinityPower.class
 togawasakikomod\Actions\CrychicAction.class
 togawasakikomod\cards\SpecialDeck\Powers\WhiteKeys.class
 togawasakikomod\cards\SakikoDeck\Attacks\Daten.class
@@ -278,6 +284,7 @@ togawasakikomod\cards\SakikoDeck\Skills\FallenFlowers.class
 togawasakikomod\effects\ShowCardAndObtainEffect2.class
 togawasakikomod\Actions\MatchaParfaitAction.class
 togawasakikomod\cards\SpecialDeck\Skills\Tiredness.class
+togawasakikomod\patches\MonsterMantraPatch$Comon$Locator.class
 togawasakikomod\cards\BaseCard$QuickDynamicVariable.class
 togawasakikomod\powers\buffs\PrimoDieInScaenaPower$EmptyDeckShuffleActionPatch.class
 togawasakikomod\cards\SakikoDeck\Attacks\SoraNoMusica.class

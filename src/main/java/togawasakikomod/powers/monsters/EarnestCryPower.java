@@ -3,6 +3,7 @@ package togawasakikomod.powers.monsters;
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Normality;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -27,10 +28,18 @@ public class EarnestCryPower extends BasePower implements CloneablePowerInterfac
     }
 
     @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        super.atEndOfTurn(isPlayer);
+        if(!isPlayer){
+            addToBot(new ApplyPowerAction(this.owner,this.owner,new MantraPower(this.owner,amount),amount));
+            addToBot(new ApplyPowerAction(this.owner,this.owner,new EarnestCryPower(this.owner,1),1));
+        }
+    }
+
+    @Override
     public void atEndOfRound() {
         super.atEndOfRound();
-        addToBot(new ApplyPowerAction(this.owner,this.owner,new MantraPower(this.owner,amount),amount));
-        addToBot(new ApplyPowerAction(this.owner,this.owner,new EarnestCryPower(this.owner,1),1));
+        AbstractDungeon.actionManager.addToBottom(new RollMoveAction((AbstractMonster) this.owner));
     }
 
     @Override

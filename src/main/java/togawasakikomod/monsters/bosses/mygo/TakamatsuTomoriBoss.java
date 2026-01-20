@@ -15,14 +15,17 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import org.apache.logging.log4j.util.TriConsumer;
 import togawasakikomod.TogawaSakikoMod;
+import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.monsters.SurroundedMonster;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.powers.monsters.EarnestCryPower;
+import togawasakikomod.powers.monsters.MonsterDivinityPower;
 import togawasakikomod.powers.monsters.RestlessIdealPower;
 import togawasakikomod.util.TextureLoader;
 
-public class TakamatsuTomoriBoss extends SurroundedMonster {
+public class TakamatsuTomoriBoss extends SurroundedMonster  implements TriConsumer<AbstractPower, AbstractCreature, AbstractCreature> {
 
     public static final String ID =  TogawaSakikoMod.makeID(TakamatsuTomoriBoss.class.getSimpleName());
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
@@ -45,8 +48,6 @@ public class TakamatsuTomoriBoss extends SurroundedMonster {
     private static final String DAMAGE_MSG = DIALOG[0];
     private static final String DAMAGE_AND_BUFF_MSG = DIALOG[1];
 
-    private int moveCount = -1;
-
     private boolean isUltCasted = false;
 
     public TakamatsuTomoriBoss(float offsetX, float offsetY) {
@@ -55,6 +56,7 @@ public class TakamatsuTomoriBoss extends SurroundedMonster {
         this.flipHorizontal = true;
         this.dialogX = -80.0F * Settings.scale;
         this.dialogY = 50.0F * Settings.scale;
+        TogawaSakikoMod.addListener(this::accept);
     }
 
     public void usePreBattleAction() {
@@ -93,7 +95,22 @@ public class TakamatsuTomoriBoss extends SurroundedMonster {
     }
 
     @Override
+    public void applyStartOfTurnPostDrawPowers() {
+        super.applyStartOfTurnPostDrawPowers();
+        if(hasPower(MonsterDivinityPower.POWER_ID)){
+            AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
+        }
+    }
+
+    @Override
     protected void getMove(int i) {
+        System.out.println("!!!!!!!!!!!!!!Triggered");
+        if(hasPower(MonsterDivinityPower.POWER_ID)){
+            setMove((byte)0,Intent.ATTACK, (this.damage.get(0)).base,action0AtkMultiAmount,true);
+            createIntent();
+            return;
+        }
+
         if(!isUltCasted){
             switch (i%3){
                 case 0:
@@ -117,5 +134,11 @@ public class TakamatsuTomoriBoss extends SurroundedMonster {
                     break;
             }
         }
+    }
+
+    public void accept(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source) {
+//        if(abstractPower instanceof MonsterDivinityPower){
+//            setMove((byte)0,Intent.ATTACK, (this.damage.get(0)).base,action0AtkMultiAmount,true);
+//        }
     }
 }

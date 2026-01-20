@@ -385,11 +385,32 @@ public class TogawaSakikoMod implements
         return i;
     }
 
+        @FunctionalInterface
+        public interface TriConsumer<A, B, C> {
+            void accept(A a, B b, C c);
+        }
+
+        private static final List<TriConsumer<AbstractPower, AbstractCreature, AbstractCreature>> listeners
+                = new ArrayList<>();
+
+        public static void addListener(TriConsumer<AbstractPower, AbstractCreature, AbstractCreature> listener) {
+            listeners.add(listener);
+        }
+
+        public static void removeListener(TriConsumer<AbstractPower, AbstractCreature, AbstractCreature> listener) {
+            listeners.remove(listener);
+        }
+
        //@Override
     public void receivePostPowerApplySubscriber(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source) {
         DazzlingEvent(abstractPower,target,source);
         KaoEvent(abstractPower,target,source);
         CharismaticFormEvent(abstractPower,target,source);
+        for (TriConsumer<AbstractPower, AbstractCreature, AbstractCreature> listener : listeners) {
+            if(listener!=null){
+            listener.accept(abstractPower, target, source);
+            }
+        }
     }
 
     private void DazzlingEvent(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source){
