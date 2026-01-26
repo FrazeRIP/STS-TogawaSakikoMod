@@ -38,5 +38,15 @@
     "MOVES": [
       ""
     ]
+  },
+  "${modID}:WakabaMutsumiBoss": {
+    "NAME": "若叶睦",
+    "DIALOG": [
+      " 祥，移动。",
+      " 我从来没有觉得... NL 在乐队里面开心过..."
+    ],
+    "MOVES": [
+      ""
+    ]
   }
 }

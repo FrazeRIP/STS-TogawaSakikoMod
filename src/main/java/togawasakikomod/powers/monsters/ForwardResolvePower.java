@@ -22,7 +22,7 @@ public class ForwardResolvePower extends BasePower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if(damageAmount>0){
+        if(damageAmount>0 && info.type == DamageInfo.DamageType.NORMAL){
             this.flash();
             addToBot(new ApplyPowerAction(owner,owner,new MonsterVigorPower(owner,amount),amount));
         }

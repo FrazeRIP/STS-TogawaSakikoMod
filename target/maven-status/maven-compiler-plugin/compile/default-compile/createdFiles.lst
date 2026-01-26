@@ -50,6 +50,7 @@ togawasakikomod\cards\SakikoDeck\Attacks\CrucifixX.class
 togawasakikomod\Actions\ExhaustCardFromDrawPileAction.class
 togawasakikomod\Actions\ReplaceCardAction.class
 togawasakikomod\rewards\AltNeowReward.class
+togawasakikomod\patches\BlockEventPatch$AddBlockEventPatcher.class
 togawasakikomod\cards\SakikoDeck\Skills\HeartsBarrier.class
 togawasakikomod\Actions\HeartsBarrierAction.class
 togawasakikomod\character\TogawaSakiko$PlayerDamagedSFX$PlayerDamagedLocator.class
@@ -63,6 +64,7 @@ togawasakikomod\cards\SakikoDeck\Skills\EdgeOfBreakdown.class
 togawasakikomod\cards\SpecialDeck\Powers\Voice.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRegenLostInstanceVar.class
 togawasakikomod\powers\buffs\OurSongPower$OurSongPowerPatcher.class
+togawasakikomod\monsters\bosses\avemujica\WakabaMutsumiBoss.class
 togawasakikomod\potions\BasePotion.class
 togawasakikomod\cards\SakikoDeck\Skills\BandInvitation.class
 togawasakikomod\powers\buffs\PrimoDieInScaenaPower$ShuffleActionPatch.class
@@ -105,6 +107,7 @@ togawasakikomod\cards\SakikoDeck\Skills\Defend.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordReducedPowerInstanceVer.class
 togawasakikomod\cards\SakikoDeck\Skills\Pride.class
 togawasakikomod\powers\buffs\CrychicPower.class
+togawasakikomod\Actions\LoseBlockForEveryoneThenAttackAction.class
 togawasakikomod\powers\buffs\PridePower.class
 togawasakikomod\patches\UnremoveablePatcher$RemoveUnremoveableFromPurge.class
 togawasakikomod\cards\SpecialDeck\Curses\Weakness.class
@@ -112,6 +115,7 @@ togawasakikomod\monsters\bosses\FinalBossMonster.class
 togawasakikomod\monsters\bosses\mygo\TakamatsuTomoriBoss.class
 togawasakikomod\Actions\CricifuxXAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIIIWater.class
+togawasakikomod\patches\BlockEventPatch.class
 togawasakikomod\cards\SakikoDeck\Attacks\GeorgetteMeGeorgetteYou.class
 togawasakikomod\patches\AltNeowPatch$Locator.class
 togawasakikomod\potions\HallucinationPotion.class
@@ -222,6 +226,7 @@ togawasakikomod\cards\SakikoDeck\Skills\QuaerereLumina.class
 togawasakikomod\powers\monsters\ForwardResolvePower.class
 togawasakikomod\powers\buffs\GodsCreationPower$GodsCreationMonsters.class
 togawasakikomod\Actions\AddCardToDeckEXAction.class
+togawasakikomod\patches\BlockEventPatch$LoseBlockEventPatcher.class
 togawasakikomod\powers\buffs\GodsCreationPower.class
 togawasakikomod\Actions\DazzlingDamageAction.class
 togawasakikomod\Actions\ShowAndExhaustCardAction.class
@@ -249,6 +254,7 @@ togawasakikomod\relics\FountainDrink$FountainDrinkPatch$Locator.class
 togawasakikomod\cards\SakikoDeck\Attacks\Kings.class
 togawasakikomod\cards\SpecialDeck\Powers\Ideal.class
 togawasakikomod\cards\SakikoDeck\Attacks\ImprisonedXII.class
+togawasakikomod\powers\monsters\SilentWoundPower.class
 togawasakikomod\cards\SakikoDeck\Powers\Curiosity.class
 togawasakikomod\Actions\AccompliceAction.class
 togawasakikomod\TogawaSakikoMod$TriConsumer.class
@@ -283,6 +289,7 @@ togawasakikomod\cards\SakikoDeck\Attacks\Daten.class
 togawasakikomod\cards\SakikoDeck\Skills\BlackAndWhiteKeys.class
 togawasakikomod\potions\MatchaParfait.class
 togawasakikomod\util\CardStats.class
+togawasakikomod\Actions\MutsumiAttackAmountChangeEvent.class
 togawasakikomod\cards\SakikoDeck\Skills\FallenFlowers.class
 togawasakikomod\effects\ShowCardAndObtainEffect2.class
 togawasakikomod\Actions\MatchaParfaitAction.class
