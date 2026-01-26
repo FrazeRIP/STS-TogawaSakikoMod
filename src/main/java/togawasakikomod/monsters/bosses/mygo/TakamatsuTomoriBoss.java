@@ -19,13 +19,14 @@ import org.apache.logging.log4j.util.TriConsumer;
 import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.monsters.SurroundedMonster;
+import togawasakikomod.monsters.bosses.FinalBossMonster;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.powers.monsters.EarnestCryPower;
 import togawasakikomod.powers.monsters.MonsterDivinityPower;
 import togawasakikomod.powers.monsters.RestlessIdealPower;
 import togawasakikomod.util.TextureLoader;
 
-public class TakamatsuTomoriBoss extends SurroundedMonster  implements TriConsumer<AbstractPower, AbstractCreature, AbstractCreature> {
+public class TakamatsuTomoriBoss extends FinalBossMonster {
 
     public static final String ID =  TogawaSakikoMod.makeID(TakamatsuTomoriBoss.class.getSimpleName());
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
@@ -56,7 +57,6 @@ public class TakamatsuTomoriBoss extends SurroundedMonster  implements TriConsum
         this.flipHorizontal = true;
         this.dialogX = -80.0F * Settings.scale;
         this.dialogY = 50.0F * Settings.scale;
-        TogawaSakikoMod.addListener(this::accept);
     }
 
     public void usePreBattleAction() {
@@ -136,9 +136,4 @@ public class TakamatsuTomoriBoss extends SurroundedMonster  implements TriConsum
         }
     }
 
-    public void accept(AbstractPower abstractPower, AbstractCreature target, AbstractCreature source) {
-//        if(abstractPower instanceof MonsterDivinityPower){
-//            setMove((byte)0,Intent.ATTACK, (this.damage.get(0)).base,action0AtkMultiAmount,true);
-//        }
-    }
 }

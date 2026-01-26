@@ -65,6 +65,7 @@ public class MonsterDivinityPower extends BasePower {
         if (type == com.megacrit.cardcrawl.cards.DamageInfo.DamageType.NORMAL) {
             return damage * 3.0F;
         }
+        this.flash();
         return damage;
     }
 

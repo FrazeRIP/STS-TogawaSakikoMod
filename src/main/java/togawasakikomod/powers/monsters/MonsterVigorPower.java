@@ -26,6 +26,7 @@ public class MonsterVigorPower extends VigorPower {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         super.onAttack(info, damageAmount, target);
+        this.flash();
         addToTop(new ReducePowerAction(this.owner,this.owner,ID,1));
     }
 }

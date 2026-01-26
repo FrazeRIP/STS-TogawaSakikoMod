@@ -18,7 +18,7 @@ import togawasakikomod.powers.BasePower;
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
 @CharismaticFormCopyEnable(enable = false)
-public class EarnestCryPower extends BasePower implements CloneablePowerInterface {
+public class EarnestCryPower extends BasePower{
     public static final String POWER_ID = makeID(EarnestCryPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
@@ -31,6 +31,7 @@ public class EarnestCryPower extends BasePower implements CloneablePowerInterfac
     public void atEndOfTurn(boolean isPlayer) {
         super.atEndOfTurn(isPlayer);
         if(!isPlayer){
+            this.flash();
             addToBot(new ApplyPowerAction(this.owner,this.owner,new MantraPower(this.owner,amount),amount));
             addToBot(new ApplyPowerAction(this.owner,this.owner,new EarnestCryPower(this.owner,1),1));
         }
@@ -45,10 +46,5 @@ public class EarnestCryPower extends BasePower implements CloneablePowerInterfac
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-    }
-
-    @Override
-    public AbstractPower makeCopy() {
-        return new EarnestCryPower(owner,amount);
     }
 }

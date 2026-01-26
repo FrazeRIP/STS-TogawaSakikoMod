@@ -108,6 +108,7 @@ togawasakikomod\powers\buffs\CrychicPower.class
 togawasakikomod\powers\buffs\PridePower.class
 togawasakikomod\patches\UnremoveablePatcher$RemoveUnremoveableFromPurge.class
 togawasakikomod\cards\SpecialDeck\Curses\Weakness.class
+togawasakikomod\monsters\bosses\FinalBossMonster.class
 togawasakikomod\monsters\bosses\mygo\TakamatsuTomoriBoss.class
 togawasakikomod\Actions\CricifuxXAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIIIWater.class
@@ -193,6 +194,7 @@ togawasakikomod\cards\SpecialDeck\Skills\Desire.class
 togawasakikomod\powers\buffs\FearlessPower.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfMutsumi.class
 togawasakikomod\powers\buffs\CrueltyPower.class
+togawasakikomod\Actions\TemporalLongingAction.class
 togawasakikomod\Actions\RemoveCardFromHandAction.class
 togawasakikomod\patches\ScryCallbackPatch$DoTheCallback.class
 togawasakikomod\cards\SakikoDeck\Skills\PerdereOmnia.class
@@ -228,6 +230,7 @@ togawasakikomod\cards\SakikoDeck\Skills\WishFulfilled.class
 togawasakikomod\patches\MonsterMantraPatch.class
 togawasakikomod\Actions\AddCardToDeckEXAction$1.class
 togawasakikomod\cards\SakikoDeck\Attacks\DarkHeaven.class
+togawasakikomod\powers\monsters\TemporalLongingPower.class
 togawasakikomod\monsters\SurroundedMonster.class
 togawasakikomod\Actions\StealStrengthAction.class
 togawasakikomod\powers\buffs\DazzlingPower.class

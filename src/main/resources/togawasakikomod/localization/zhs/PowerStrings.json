@@ -183,5 +183,12 @@
     "DESCRIPTIONS": [
       "#r无法复制。 NL 本回合造成三倍伤害。"
     ]
+  },
+  "${modID}:TemporalLongingPower": {
+    "NAME": "溯时的思念",
+    "DESCRIPTIONS": [
+      "#r无法复制。 NL 每当你打出 #b10 张牌，使所有敌人重新获得所有自上回合起获得的正面效果。 NL 部分行动会随着回合数加强。 NL （当前回合数： #y",
+      " )"
+    ]
   }
 }

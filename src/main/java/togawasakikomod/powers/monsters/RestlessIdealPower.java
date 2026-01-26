@@ -17,7 +17,7 @@ import togawasakikomod.powers.BasePower;
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
 @CharismaticFormCopyEnable(enable = false)
-public class RestlessIdealPower extends BasePower implements CloneablePowerInterface {
+public class RestlessIdealPower extends BasePower {
     public static final String POWER_ID = makeID(RestlessIdealPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
@@ -30,6 +30,7 @@ public class RestlessIdealPower extends BasePower implements CloneablePowerInter
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         super.onAttack(info, damageAmount, target);
         if(this.owner instanceof AbstractMonster && damageAmount>0){
+            this.flash();
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Normality(),1));
         }
     }
@@ -39,8 +40,4 @@ public class RestlessIdealPower extends BasePower implements CloneablePowerInter
         this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
-    @Override
-    public AbstractPower makeCopy() {
-        return new RestlessIdealPower(owner,amount);
-    }
 }

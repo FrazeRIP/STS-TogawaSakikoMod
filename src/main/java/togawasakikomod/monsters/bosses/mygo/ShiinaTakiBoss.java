@@ -17,10 +17,11 @@ import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.monsters.SurroundedMonster;
+import togawasakikomod.monsters.bosses.FinalBossMonster;
 import togawasakikomod.powers.monsters.RestlessIdealPower;
 import togawasakikomod.util.TextureLoader;
 
-public class ShiinaTakiBoss extends SurroundedMonster {
+public class ShiinaTakiBoss extends FinalBossMonster {
 
     public static final String ID =  TogawaSakikoMod.makeID(ShiinaTakiBoss.class.getSimpleName());
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);

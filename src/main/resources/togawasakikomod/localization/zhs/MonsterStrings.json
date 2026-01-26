@@ -28,5 +28,15 @@
     "MOVES": [
       ""
     ]
+  },
+  "${modID}:NagasakiSoyoBoss": {
+    "NAME": "长崎素世",
+    "DIALOG": [
+      " 没有小祥的话... NL 瓦塔希...！",
+      " 不可以！"
+    ],
+    "MOVES": [
+      ""
+    ]
   }
 }

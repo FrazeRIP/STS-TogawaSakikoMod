@@ -19,10 +19,11 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.monsters.SurroundedMonster;
+import togawasakikomod.monsters.bosses.FinalBossMonster;
 import togawasakikomod.powers.monsters.ForwardResolvePower;
 import togawasakikomod.util.TextureLoader;
 
-public class ChihayaAnonBoss extends SurroundedMonster {
+public class ChihayaAnonBoss extends FinalBossMonster {
 
     public static final String ID =  TogawaSakikoMod.makeID(ChihayaAnonBoss.class.getSimpleName());
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);

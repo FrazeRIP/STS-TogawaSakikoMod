@@ -11,7 +11,7 @@ import togawasakikomod.powers.BasePower;
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
 @CharismaticFormCopyEnable(enable = false)
-public class ForwardResolvePower extends BasePower implements CloneablePowerInterface {
+public class ForwardResolvePower extends BasePower {
     public static final String POWER_ID = makeID(ForwardResolvePower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
@@ -23,6 +23,7 @@ public class ForwardResolvePower extends BasePower implements CloneablePowerInte
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if(damageAmount>0){
+            this.flash();
             addToBot(new ApplyPowerAction(owner,owner,new MonsterVigorPower(owner,amount),amount));
         }
         return super.onAttacked(info, damageAmount);
@@ -33,8 +34,4 @@ public class ForwardResolvePower extends BasePower implements CloneablePowerInte
         this.description = DESCRIPTIONS[0] +amount + DESCRIPTIONS[1];
     }
 
-    @Override
-    public AbstractPower makeCopy() {
-        return new ForwardResolvePower(owner,amount);
-    }
 }
