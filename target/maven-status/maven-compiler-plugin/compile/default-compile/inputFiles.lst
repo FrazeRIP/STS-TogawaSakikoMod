@@ -168,6 +168,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\modifiers\SelfRetainModifier.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\modifiers\UnremoveableModifier.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\monsters\bosses\avemujica\WakabaMutsumiBoss.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\monsters\bosses\avemujica\YahataUmiriBoss.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\monsters\bosses\FinalBossMonster.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\monsters\bosses\mygo\ChihayaAnonBoss.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\monsters\bosses\mygo\NagasakiSoyoBoss.java
@@ -227,6 +228,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\monsters\RestlessIdealPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\monsters\SilentWoundPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\monsters\TemporalLongingPower.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\monsters\UnclaimedPromisePower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\BaseRelic.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\BlazingHairband.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\relics\ColorfulNotebook.java

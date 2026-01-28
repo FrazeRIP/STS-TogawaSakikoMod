@@ -1,19 +1,20 @@
 package togawasakikomod.powers.monsters;
 
-import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Normality;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RollMoveAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import togawasakikomod.Actions.TemporalLongingAction;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
+import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 import togawasakikomod.annotations.CharismaticFormCopyEnable;
 import togawasakikomod.monsters.bosses.FinalBossMonster;
 import togawasakikomod.powers.BasePower;
@@ -21,17 +22,14 @@ import togawasakikomod.powers.BasePower;
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
 @CharismaticFormCopyEnable(enable = false)
-public class TemporalLongingPower extends BasePower {
-    public static final String POWER_ID = makeID(TemporalLongingPower.class.getSimpleName());
+public class UnclaimedPromisePower extends BasePower{
+    public static final String POWER_ID = makeID(UnclaimedPromisePower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
-    private final int maxCount = 10;
-
-    public TemporalLongingPower(AbstractCreature owner) {
+    public UnclaimedPromisePower(AbstractCreature owner) {
         super(POWER_ID, TYPE, TURN_BASED, owner, 0);
         amount2 = 1;
-        updateDescription();
     }
 
     @Override
@@ -42,28 +40,8 @@ public class TemporalLongingPower extends BasePower {
     }
 
     @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        super.onPlayCard(card, m);
-        flashWithoutSound();
-        this.amount++;
-        if( this.amount>=maxCount){
-            this.amount = 0;
-            playApplyPowerSfx();
-            addToTop(new TemporalLongingAction());
-        }
-        updateDescription();
-    }
-
-    @Override
-    public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1];
-    }
-
-
-    @Override
     public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
         super.renderAmount(sb, x, y, c);
-
         if (this.amount2 != 0) {
             if (!this.isTurnBased) {
                 float alpha = c.a;
@@ -73,4 +51,18 @@ public class TemporalLongingPower extends BasePower {
             FontHelper.renderFontRightTopAligned(sb, FontHelper.powerAmountFont, Integer.toString(this.amount2), x, y + 15.0F * Settings.scale, this.fontScale, c);
         }
     }
+
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
+    }
+
+    public void ApplyEffect(){
+        if(amount2%2 == 1){
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner,this.owner,new IntangiblePower(this.owner,1),1));
+            AbstractDungeon.actionManager.addToTurnStart(new ReducePowerAction(AbstractDungeon.player,this.owner,IntangiblePlayerPower.POWER_ID,1));
+        }
+    }
+
 }

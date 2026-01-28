@@ -36,6 +36,7 @@ import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.effects.DazzlingAttackEffect;
 import togawasakikomod.monsters.bosses.avemujica.WakabaMutsumiBoss;
+import togawasakikomod.monsters.bosses.avemujica.YahataUmiriBoss;
 import togawasakikomod.monsters.bosses.mygo.ChihayaAnonBoss;
 import togawasakikomod.monsters.bosses.mygo.NagasakiSoyoBoss;
 import togawasakikomod.monsters.bosses.mygo.ShiinaTakiBoss;
@@ -210,9 +211,10 @@ public class TogawaSakikoMod implements
         BaseMod.addMonster(NagasakiSoyoBoss.ID,()-> new NagasakiSoyoBoss(0,0));
         BaseMod.addMonster(TakamatsuTomoriBoss.ID,()-> new TakamatsuTomoriBoss(0,0));
         BaseMod.addMonster(WakabaMutsumiBoss.ID,()-> new WakabaMutsumiBoss(0,0));
+        BaseMod.addMonster(YahataUmiriBoss.ID,()-> new YahataUmiriBoss(0,0));
 
         //Add to encounter
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(WakabaMutsumiBoss.ID, 999));
+        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(YahataUmiriBoss.ID, 999));
     }
 
     public static void registerPotions() {

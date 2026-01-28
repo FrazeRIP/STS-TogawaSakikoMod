@@ -197,5 +197,11 @@
       "#r无法复制。 NL 每当你打出 #b1 张牌，获得 #b",
       " 层 #y多重护甲 。"
     ]
+  },
+  "togawasakikomod:UnclaimedPromisePower": {
+    "NAME": "未得的承诺",
+    "DESCRIPTIONS": [
+      "#r无法复制。 NL 在偶数回合获得 #b1 层 #y无实体 ,并使你失去 #b1 层 #y无实体 。"
+    ]
   }
 }

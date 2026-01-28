@@ -27,6 +27,7 @@ togawasakikomod\util\KeywordInfo.class
 togawasakikomod\effects\EnemyStanceAuraEffect.class
 togawasakikomod\cards\SakikoDeck\Skills\AsYourHeartDesires.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfSakiko.class
+togawasakikomod\monsters\bosses\avemujica\YahataUmiriBoss.class
 togawasakikomod\effects\ShowCardAndAddToDiscardPileEffect2.class
 togawasakikomod\Actions\ChooseCardAndRemoveFormDiscardPileAction.class
 togawasakikomod\rewards\AltNeowReward$NeowRewardDrawback.class
@@ -172,6 +173,7 @@ togawasakikomod\relics\ColorfulNotebook.class
 togawasakikomod\Actions\RemoveAddedLostPowersAction.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordReducedPowerInstanceVer$ReduceLocator.class
 togawasakikomod\powers\buffs\WorldviewPower.class
+togawasakikomod\powers\monsters\UnclaimedPromisePower.class
 togawasakikomod\cards\SpecialDeck\Powers\Radiance.class
 togawasakikomod\Actions\ManualSaveGameAction.class
 togawasakikomod\Actions\DesuWaAction.class
