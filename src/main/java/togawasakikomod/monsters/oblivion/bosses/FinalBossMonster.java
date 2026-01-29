@@ -1,13 +1,11 @@
-package togawasakikomod.monsters.bosses;
+package togawasakikomod.monsters.oblivion.bosses;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.util.TriConsumer;
 import togawasakikomod.TogawaSakikoMod;
-import togawasakikomod.annotations.CharismaticFormCopyEnable;
 import togawasakikomod.monsters.SurroundedMonster;
 
 import java.util.ArrayList;

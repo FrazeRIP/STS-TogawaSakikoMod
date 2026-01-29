@@ -1,4 +1,4 @@
-package togawasakikomod.monsters.bosses.mygo;
+package togawasakikomod.monsters.oblivion.bosses.mygo;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
@@ -16,9 +16,7 @@ import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.TogawaSakikoMod;
-import togawasakikomod.monsters.SurroundedMonster;
-import togawasakikomod.monsters.bosses.FinalBossMonster;
-import togawasakikomod.powers.monsters.ForwardResolvePower;
+import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
 import togawasakikomod.powers.monsters.TemporalLongingPower;
 import togawasakikomod.util.TextureLoader;
 
@@ -52,6 +50,7 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
     }
 
     public void usePreBattleAction() {
+        super.usePreBattleAction();
         power = new TemporalLongingPower(this);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this,this,power));
     }

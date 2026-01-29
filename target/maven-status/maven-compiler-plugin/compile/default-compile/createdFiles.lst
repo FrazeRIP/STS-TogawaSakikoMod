@@ -11,7 +11,6 @@ togawasakikomod\potions\EarlGreyTea.class
 togawasakikomod\relics\TheCompass.class
 togawasakikomod\cards\SakikoDeck\Attacks\AveMujica.class
 togawasakikomod\cards\SakikoDeck\Attacks\Ether.class
-togawasakikomod\monsters\bosses\mygo\ShiinaTakiBoss.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIFire.class
 togawasakikomod\powers\debuffs\MortisPower.class
 togawasakikomod\cards\SakikoDeck\Attacks\BlackBirthday.class
@@ -22,12 +21,12 @@ togawasakikomod\cards\SpecialDeck\Curses\Timoris.class
 togawasakikomod\powers\buffs\GirlOfSpringPower.class
 togawasakikomod\Actions\TheMoonlightSonataAction.class
 togawasakikomod\annotations\CharismaticFormCopyEnable.class
+togawasakikomod\monsters\oblivion\bosses\FinalBossMonster.class
 togawasakikomod\cards\SakikoDeck\Skills\Greetings.class
 togawasakikomod\util\KeywordInfo.class
 togawasakikomod\effects\EnemyStanceAuraEffect.class
 togawasakikomod\cards\SakikoDeck\Skills\AsYourHeartDesires.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfSakiko.class
-togawasakikomod\monsters\bosses\avemujica\YahataUmiriBoss.class
 togawasakikomod\effects\ShowCardAndAddToDiscardPileEffect2.class
 togawasakikomod\Actions\ChooseCardAndRemoveFormDiscardPileAction.class
 togawasakikomod\rewards\AltNeowReward$NeowRewardDrawback.class
@@ -39,6 +38,7 @@ togawasakikomod\cards\BaseCard$1.class
 togawasakikomod\powers\buffs\FreshlySqueezedCucumberPower.class
 togawasakikomod\Actions\SoraNoMusicaAction.class
 togawasakikomod\powers\buffs\HypePower$PreventBlockLossForEnemy.class
+togawasakikomod\monsters\oblivion\bosses\avemujica\YahataUmiriBoss.class
 togawasakikomod\cards\CustomTags.class
 togawasakikomod\Actions\MaskAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\Kao.class
@@ -65,7 +65,6 @@ togawasakikomod\cards\SakikoDeck\Skills\EdgeOfBreakdown.class
 togawasakikomod\cards\SpecialDeck\Powers\Voice.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRegenLostInstanceVar.class
 togawasakikomod\powers\buffs\OurSongPower$OurSongPowerPatcher.class
-togawasakikomod\monsters\bosses\avemujica\WakabaMutsumiBoss.class
 togawasakikomod\potions\BasePotion.class
 togawasakikomod\cards\SakikoDeck\Skills\BandInvitation.class
 togawasakikomod\powers\buffs\PrimoDieInScaenaPower$ShuffleActionPatch.class
@@ -77,7 +76,6 @@ togawasakikomod\Actions\DatenAction.class
 togawasakikomod\powers\buffs\PerdereOmniaPower.class
 togawasakikomod\rewards\AltNeowReward$NeowRewardType.class
 togawasakikomod\cards\BaseCard$VariableType.class
-togawasakikomod\monsters\bosses\mygo\ChihayaAnonBoss.class
 togawasakikomod\cards\SakikoDeck\Attacks\MementoMori.class
 togawasakikomod\powers\buffs\WishYouGoodLuckPower.class
 togawasakikomod\potions\ChocolateMilkJelly.class
@@ -104,16 +102,17 @@ togawasakikomod\powers\buffs\SeizeTheFatePower.class
 togawasakikomod\cards\SakikoDeck\Attacks\TheMoonlightSonata.class
 togawasakikomod\cards\SakikoDeck\Skills\Utopia.class
 togawasakikomod\cards\SakikoDeck\Skills\Crychic.class
+togawasakikomod\monsters\oblivion\bosses\mygo\TakamatsuTomoriBoss.class
 togawasakikomod\cards\SakikoDeck\Skills\Defend.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordReducedPowerInstanceVer.class
+togawasakikomod\monsters\oblivion\bosses\avemujica\WakabaMutsumiBoss.class
+togawasakikomod\monsters\oblivion\bosses\mygo\ChihayaAnonBoss.class
 togawasakikomod\cards\SakikoDeck\Skills\Pride.class
 togawasakikomod\powers\buffs\CrychicPower.class
 togawasakikomod\Actions\LoseBlockForEveryoneThenAttackAction.class
 togawasakikomod\powers\buffs\PridePower.class
 togawasakikomod\patches\UnremoveablePatcher$RemoveUnremoveableFromPurge.class
 togawasakikomod\cards\SpecialDeck\Curses\Weakness.class
-togawasakikomod\monsters\bosses\FinalBossMonster.class
-togawasakikomod\monsters\bosses\mygo\TakamatsuTomoriBoss.class
 togawasakikomod\Actions\CricifuxXAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIIIWater.class
 togawasakikomod\patches\BlockEventPatch.class
@@ -132,6 +131,7 @@ togawasakikomod\rewards\AltNeowReward$NeowRewardDef.class
 togawasakikomod\Actions\EtherAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\SpringSunlight.class
 togawasakikomod\Actions\ForcePlayCardAction.class
+togawasakikomod\monsters\oblivion\minions\NyamuDrumMinion.class
 togawasakikomod\powers\debuffs\TimorisPower.class
 togawasakikomod\Actions\BlackBirthdayAction.class
 togawasakikomod\cards\SakikoDeck\Powers\Passion.class
@@ -165,7 +165,9 @@ togawasakikomod\relics\TheThirdMovement.class
 togawasakikomod\cards\SakikoDeck\Skills\DesuWa.class
 togawasakikomod\relics\BlazingHairband.class
 togawasakikomod\Actions\BodySlamEXAction.class
+togawasakikomod\monsters\oblivion\bosses\mygo\NagasakiSoyoBoss.class
 togawasakikomod\patches\FreeAttackPowerReducePatch.class
+togawasakikomod\monsters\oblivion\bosses\avemujica\YuutenjiNyamuBoss.class
 togawasakikomod\patches\ScryCallbackPatch$Field.class
 togawasakikomod\cards\SakikoDeck\Attacks\HachibouseiDance.class
 togawasakikomod\patches\ObtainRewardEventPatch$ObtainRewardEventPatcher.class
@@ -187,6 +189,7 @@ togawasakikomod\cards\SakikoDeck\Powers\WishYouGoodLuck.class
 togawasakikomod\saveable\KingsSaveable.class
 togawasakikomod\modifiers\SelfRetainModifier.class
 togawasakikomod\cards\SakikoDeck\Skills\ClockOut.class
+togawasakikomod\powers\monsters\UnfadingYearningPower.class
 togawasakikomod\Actions\MakeCardUnremoveableAction.class
 togawasakikomod\potions\OrangeMilkJelly.class
 togawasakikomod\annotations\CardEnable.class
@@ -197,6 +200,7 @@ togawasakikomod\cards\SpecialDeck\Powers\Kindness.class
 togawasakikomod\patches\ObtainRewardEventPatch$Comon$Locator.class
 togawasakikomod\relics\WarmthInfusedPorcelainCup.class
 togawasakikomod\cards\SpecialDeck\Skills\Desire.class
+togawasakikomod\monsters\oblivion\bosses\avemujica\MisumiUikaBoss.class
 togawasakikomod\powers\buffs\FearlessPower.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfMutsumi.class
 togawasakikomod\powers\buffs\CrueltyPower.class
@@ -205,6 +209,7 @@ togawasakikomod\Actions\RemoveCardFromHandAction.class
 togawasakikomod\patches\ScryCallbackPatch$DoTheCallback.class
 togawasakikomod\cards\SakikoDeck\Skills\PerdereOmnia.class
 togawasakikomod\cards\SakikoDeck\Skills\RhinocerosBeetle.class
+togawasakikomod\monsters\oblivion\bosses\mygo\ShiinaTakiBoss.class
 togawasakikomod\relics\TheDoll.class
 togawasakikomod\patches\ScryCallbackPatch.class
 togawasakikomod\cards\SakikoDeck\Skills\RaiseTheBet.class
@@ -260,7 +265,6 @@ togawasakikomod\powers\monsters\SilentWoundPower.class
 togawasakikomod\cards\SakikoDeck\Powers\Curiosity.class
 togawasakikomod\Actions\AccompliceAction.class
 togawasakikomod\TogawaSakikoMod$TriConsumer.class
-togawasakikomod\monsters\bosses\mygo\NagasakiSoyoBoss.class
 togawasakikomod\Actions\SeizeTheFateAction.class
 togawasakikomod\powers\monsters\RestlessIdealPower.class
 togawasakikomod\patches\ScryCallbackPatch$DoTheCallback$Locator.class
@@ -283,6 +287,7 @@ togawasakikomod\cards\SakikoDeck\Attacks\Angles.class
 togawasakikomod\cards\SakikoDeck\Attacks\MasqueradeRhapsodyRequest.class
 togawasakikomod\powers\debuffs\DolorisPower.class
 togawasakikomod\Actions\AuthorityRestorationAction.class
+togawasakikomod\powers\monsters\VoicedGazePower.class
 togawasakikomod\patches\GraveCardPatch.class
 togawasakikomod\powers\monsters\MonsterDivinityPower.class
 togawasakikomod\Actions\CrychicAction.class

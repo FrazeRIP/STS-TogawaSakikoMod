@@ -1,11 +1,10 @@
-package togawasakikomod.monsters.bosses.mygo;
+package togawasakikomod.monsters.oblivion.bosses.mygo;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Normality;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -13,17 +12,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import org.apache.logging.log4j.util.TriConsumer;
 import togawasakikomod.TogawaSakikoMod;
-import togawasakikomod.character.TogawaSakiko;
-import togawasakikomod.monsters.SurroundedMonster;
-import togawasakikomod.monsters.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.powers.monsters.EarnestCryPower;
 import togawasakikomod.powers.monsters.MonsterDivinityPower;
-import togawasakikomod.powers.monsters.RestlessIdealPower;
 import togawasakikomod.util.TextureLoader;
 
 public class TakamatsuTomoriBoss extends FinalBossMonster {
@@ -60,6 +54,7 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
     }
 
     public void usePreBattleAction() {
+        super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, (AbstractPower)new EarnestCryPower(this,1),1));
     }
 

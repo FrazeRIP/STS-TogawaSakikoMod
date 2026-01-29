@@ -42,7 +42,7 @@
   "${modID}:WakabaMutsumiBoss": {
     "NAME": "若叶睦",
     "DIALOG": [
-      " 被爱的人可没有权利选择自己被爱的方式，能被爱就已经很幸运了喵姆。",
+      " 祥，移动。",
       " 我从来没有觉得... NL 在乐队里面开心过..."
     ],
     "MOVES": [
@@ -54,6 +54,34 @@
     "DIALOG": [
       " 毕竟我长得也算漂亮。",
       " 难道... NL 我不值得信任吗？"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:YuutenjiNyamuBoss": {
+    "NAME": "祐天寺若麦",
+    "DIALOG": [
+      " 被爱的人可没有权利选择自己被爱的方式，能被爱就已经很幸运了喵姆。",
+      " 扣你其喵姆喵姆~"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:NyamuDrumMinion": {
+    "NAME": "喵姆的鼓",
+    "DIALOG": [
+      ""
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:MisumiUikaBoss": {
+    "NAME": "三角初华",
+    "DIALOG": [
+      " Saki酱... NL Saki酱...... NL Saki酱......!"
     ],
     "MOVES": [
       ""

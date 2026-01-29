@@ -1,10 +1,8 @@
 package togawasakikomod.Actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import togawasakikomod.cards.SpecialDeck.Skills.Desire;
-import togawasakikomod.monsters.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
 
 public class TemporalLongingAction extends AbstractGameAction
 {

@@ -1,29 +1,29 @@
-package togawasakikomod.monsters.bosses.mygo;
+package togawasakikomod.monsters.oblivion.bosses.avemujica;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Normality;
+import com.megacrit.cardcrawl.cards.status.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
-import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import togawasakikomod.TogawaSakikoMod;
-import togawasakikomod.monsters.SurroundedMonster;
-import togawasakikomod.monsters.bosses.FinalBossMonster;
-import togawasakikomod.powers.monsters.RestlessIdealPower;
+import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.powers.monsters.UnclaimedPromisePower;
 import togawasakikomod.util.TextureLoader;
 
-public class ShiinaTakiBoss extends FinalBossMonster {
+public class YahataUmiriBoss extends FinalBossMonster {
 
-    public static final String ID =  TogawaSakikoMod.makeID(ShiinaTakiBoss.class.getSimpleName());
+    public static final String ID =  TogawaSakikoMod.makeID(YahataUmiriBoss.class.getSimpleName());
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
     public static final String[] DIALOG = monsterStrings.DIALOG;
@@ -33,35 +33,38 @@ public class ShiinaTakiBoss extends FinalBossMonster {
     private static final float hb_y = 50;
     private static final float hb_w = 164;
     private static final float hb_h = 350;
-    private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(ShiinaTakiBoss.class.getSimpleName());
-
-    private static final int action0AtkAmount = 5 ;
-    private static final int action1AtkAmount = 12;
-    private static final int action2BuffAmount = 3;
+    private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(YahataUmiriBoss.class.getSimpleName());
 
     private static final String DAMAGE_MSG = DIALOG[0];
     private static final String DAMAGE_AND_BUFF_MSG = DIALOG[1];
 
     private int moveCount = -1;
+    private int specialCount = 0;
+    private UnclaimedPromisePower power;
 
-    public ShiinaTakiBoss(float offsetX, float offsetY) {
+
+    public YahataUmiriBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
-        this.damage.add(new DamageInfo((AbstractCreature)this, action0AtkAmount));
-        this.damage.add(new DamageInfo((AbstractCreature)this, action1AtkAmount));
+
+        this.damage.add(new DamageInfo((AbstractCreature)this, 8));
+        this.damage.add(new DamageInfo((AbstractCreature)this, 45));
+
         this.flipHorizontal = true;
         this.dialogX = -80.0F * Settings.scale;
         this.dialogY = 50.0F * Settings.scale;
     }
 
     public void usePreBattleAction() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, (AbstractPower)new RestlessIdealPower(this,1),1));
+        super.usePreBattleAction();
+        power =  new UnclaimedPromisePower(this);
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this,power));
     }
 
     @Override
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
-                //5*3
+                //8*3
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -70,41 +73,52 @@ public class ShiinaTakiBoss extends FinalBossMonster {
                 break;
 
             case 1:
-                //12
-                //在手牌中加入一张凡庸
+                //45
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(1)));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Normality()));
                 break;
 
             case 2:
-                //获得仪式3
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction(this, this, new RitualPower(this, action2BuffAmount,false), action2BuffAmount));
+                //向抽牌堆加入晕眩，粘液，伤口，灼伤，虚空各1张。
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new VFXAction(new HeartMegaDebuffEffect()));
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new MakeTempCardInDrawPileAction(new Dazed(), 1, true, false, false, Settings.WIDTH * 0.2F, Settings.HEIGHT / 2.0F));
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new MakeTempCardInDrawPileAction(new Slimed(), 1, true, false, false, Settings.WIDTH * 0.35F, Settings.HEIGHT / 2.0F));
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new MakeTempCardInDrawPileAction(new Wound(), 1, true, false, false, Settings.WIDTH * 0.5F, Settings.HEIGHT / 2.0F));
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new MakeTempCardInDrawPileAction(new Burn(), 1, true, false, false, Settings.WIDTH * 0.65F, Settings.HEIGHT / 2.0F));
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, false, false, Settings.WIDTH * 0.8F, Settings.HEIGHT / 2.0F));
                 break;
+        }
+
+
+        if(!this.isDead && power!=null){
+            power.ApplyEffect();
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
     @Override
     protected void getMove(int i) {
-        if(moveCount <0){
-            moveCount = i%2;
+        if(specialCount>=2){
+            moveCount = -1;
         }
 
-        switch (moveCount%3){
+        if(moveCount <0){
+            moveCount = i;
+            specialCount = 0;
+            setMove((byte)2, Intent.STRONG_DEBUFF);
+            return;
+        }
+
+        switch (moveCount%2){
             case 0:
                 setMove((byte)0,Intent.ATTACK, (this.damage.get(0)).base,3,true);
                 break;
-
             case 1:
-                setMove((byte)1, Intent.ATTACK_DEBUFF, (this.damage.get(1)).base);
-                break;
-
-            case 2:
-                setMove((byte)2, Intent.BUFF);
+                setMove((byte)1, Intent.ATTACK, (this.damage.get(1)).base);
                 break;
         }
         moveCount ++;
+        specialCount++;
     }
 }

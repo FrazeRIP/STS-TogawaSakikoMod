@@ -203,5 +203,17 @@
     "DESCRIPTIONS": [
       "#r无法复制。 NL 在偶数回合获得 #b1 层 #y无实体 ,并使你失去 #b1 层 #y无实体 。"
     ]
+  },
+  "togawasakikomod:UnfadingYearningPower": {
+    "NAME": "不熄的热望",
+    "DESCRIPTIONS": [
+      "#r无法复制。 NL 你的朝向改变时，改变行动意图。"
+    ]
+  },
+  "togawasakikomod:VoicedGazePower": {
+    "NAME": "蕴声的凝视",
+    "DESCRIPTIONS": [
+      "#r无法复制。 NL 每当你打出 #b12 张牌，强制结束你的回合并获得 #b2 点 #y力量 。"
+    ]
   }
 }

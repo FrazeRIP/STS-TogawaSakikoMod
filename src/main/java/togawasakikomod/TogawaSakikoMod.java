@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.Prefs;
 import com.megacrit.cardcrawl.monsters.MonsterInfo;
@@ -35,12 +34,14 @@ import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.effects.DazzlingAttackEffect;
-import togawasakikomod.monsters.bosses.avemujica.WakabaMutsumiBoss;
-import togawasakikomod.monsters.bosses.avemujica.YahataUmiriBoss;
-import togawasakikomod.monsters.bosses.mygo.ChihayaAnonBoss;
-import togawasakikomod.monsters.bosses.mygo.NagasakiSoyoBoss;
-import togawasakikomod.monsters.bosses.mygo.ShiinaTakiBoss;
-import togawasakikomod.monsters.bosses.mygo.TakamatsuTomoriBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.MisumiUikaBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.WakabaMutsumiBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.YahataUmiriBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.YuutenjiNyamuBoss;
+import togawasakikomod.monsters.oblivion.bosses.mygo.ChihayaAnonBoss;
+import togawasakikomod.monsters.oblivion.bosses.mygo.NagasakiSoyoBoss;
+import togawasakikomod.monsters.oblivion.bosses.mygo.ShiinaTakiBoss;
+import togawasakikomod.monsters.oblivion.bosses.mygo.TakamatsuTomoriBoss;
 import togawasakikomod.patches.CustomEnumPatch;
 import togawasakikomod.patches.ObtainRewardEventPatch;
 import togawasakikomod.potions.BasePotion;
@@ -212,6 +213,8 @@ public class TogawaSakikoMod implements
         BaseMod.addMonster(TakamatsuTomoriBoss.ID,()-> new TakamatsuTomoriBoss(0,0));
         BaseMod.addMonster(WakabaMutsumiBoss.ID,()-> new WakabaMutsumiBoss(0,0));
         BaseMod.addMonster(YahataUmiriBoss.ID,()-> new YahataUmiriBoss(0,0));
+        BaseMod.addMonster(YuutenjiNyamuBoss.ID,()-> new YuutenjiNyamuBoss(0,0));
+        BaseMod.addMonster(MisumiUikaBoss.ID,()-> new MisumiUikaBoss(0,0));
 
         //Add to encounter
         BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(YahataUmiriBoss.ID, 999));

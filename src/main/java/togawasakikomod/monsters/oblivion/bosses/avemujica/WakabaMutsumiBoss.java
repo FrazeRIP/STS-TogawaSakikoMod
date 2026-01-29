@@ -1,4 +1,4 @@
-package togawasakikomod.monsters.bosses.avemujica;
+package togawasakikomod.monsters.oblivion.bosses.avemujica;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.Actions.LoseBlockForEveryoneThenAttackAction;
 import togawasakikomod.TogawaSakikoMod;
-import togawasakikomod.monsters.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
 import togawasakikomod.powers.monsters.SilentWoundPower;
 import togawasakikomod.util.TextureLoader;
 
@@ -79,6 +79,7 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
     }
 
     public void usePreBattleAction() {
+        super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new SilentWoundPower(this),0));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this,3),3));
     }
