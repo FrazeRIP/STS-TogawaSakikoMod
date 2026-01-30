@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.Actions.LoseBlockForEveryoneThenAttackAction;
 import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.patches.CustomEnumPatch;
 import togawasakikomod.powers.monsters.SilentWoundPower;
 import togawasakikomod.util.TextureLoader;
 
@@ -116,7 +117,7 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
         if(this.hasPower(PlatedArmorPower.POWER_ID)){
             AbstractPower p = getPower(PlatedArmorPower.POWER_ID);
             if(p.amount>=30){
-                setMove((byte)2, Intent.ATTACK_DEBUFF, blockRemoveAttackInfo.base);
+                setMove((byte)2, CustomEnumPatch.TOGAWASAKIKO_MUTSUMI_ATTACK, blockRemoveAttackInfo.base);
                 return;
             }
         }
@@ -140,7 +141,7 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
         blockRemoveAttackInfo.base = totalBlock;
 
         if(this.nextMove == 2){
-            setMove((byte)2, Intent.ATTACK_DEBUFF, blockRemoveAttackInfo.base);
+            setMove((byte)2, CustomEnumPatch.TOGAWASAKIKO_MUTSUMI_ATTACK, blockRemoveAttackInfo.base);
             createIntent();
         }
     }

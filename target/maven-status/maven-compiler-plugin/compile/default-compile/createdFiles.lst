@@ -155,6 +155,7 @@ togawasakikomod\cards\SpecialDeck\Attacks\Melody.class
 togawasakikomod\character\TogawaSakiko$1.class
 togawasakikomod\Actions\RemoveCardFromDrawPileAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\Strike.class
+togawasakikomod\intents\MutsumiAttackIntent.class
 togawasakikomod\potions\FreshlySqueezedCucumber.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIVEarth.class
 togawasakikomod\util\TriFunction.class

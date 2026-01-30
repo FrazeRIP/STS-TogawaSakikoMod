@@ -1,5 +1,6 @@
 package togawasakikomod;
 
+import actlikeit.RazIntent.CustomIntent;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
@@ -34,6 +35,7 @@ import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
 import togawasakikomod.effects.DazzlingAttackEffect;
+import togawasakikomod.intents.MutsumiAttackIntent;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.MisumiUikaBoss;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.WakabaMutsumiBoss;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.YahataUmiriBoss;
@@ -171,6 +173,7 @@ public class TogawaSakikoMod implements
     public void receivePostInitialize() {
         registerPotions();
         registerMonsters();
+        registerIntents();
 
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
@@ -205,7 +208,7 @@ public class TogawaSakikoMod implements
         });
     }
 
-    public  static void registerMonsters(){
+    private  static void registerMonsters(){
         //Register
         BaseMod.addMonster(ChihayaAnonBoss.ID,()-> new ChihayaAnonBoss(0,0));
         BaseMod.addMonster(ShiinaTakiBoss.ID,()-> new ShiinaTakiBoss(0,0));
@@ -217,10 +220,10 @@ public class TogawaSakikoMod implements
         BaseMod.addMonster(MisumiUikaBoss.ID,()-> new MisumiUikaBoss(0,0));
 
         //Add to encounter
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(YahataUmiriBoss.ID, 999));
+        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(WakabaMutsumiBoss.ID, 999));
     }
 
-    public static void registerPotions() {
+    private static void registerPotions() {
         new AutoAdd(modID) //Loads files from this mod
                 .packageFilter(BasePotion.class) //In the same package as this class
                 .any(BasePotion.class, (info, potion) -> { //Run this code for any classes that extend this class
@@ -230,6 +233,10 @@ public class TogawaSakikoMod implements
                     BaseMod.addPotion(potion.getClass(), null, null, null, potion.ID, potion.playerClass);
                     //playerClass will make a potion character-specific. By default, it's null and will do nothing.
                 });
+    }
+
+    private static void registerIntents(){
+        CustomIntent.add(new MutsumiAttackIntent());
     }
     /*----------Localization----------*/
 

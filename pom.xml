@@ -68,6 +68,13 @@
             <scope>system</scope>
             <systemPath>${steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>actlikeit</groupId>
+            <artifactId>actlikeit</artifactId>
+            <version>1.2.8</version>
+            <scope>system</scope>
+            <systemPath>${steam.path}/workshop/content/646570/1934902042/actlikeit.jar</systemPath>
+        </dependency>
     </dependencies>
 
 

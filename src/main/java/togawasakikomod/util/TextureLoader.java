@@ -60,6 +60,26 @@ public class TextureLoader {
         return textureString;
     }
 
+    public static String getIntentTextureString(final String intentName){
+        String textureString = imagePath("intents/" + intentName + ".png");
+        FileHandle h = Gdx.files.internal(textureString);
+        if (!h.exists())
+        {
+            textureString = imagePath("cards/attack/default.png");
+        }
+        return textureString;
+    }
+
+    public static String getLargeIntentTextureString(final String intentName){
+        String textureString = imagePath("intents/large/" + intentName + ".png");
+        FileHandle h = Gdx.files.internal(textureString);
+        if (!h.exists())
+        {
+            textureString = imagePath("cards/attack/default.png");
+        }
+        return textureString;
+    }
+
     /**
      * @param filePath - String path to the texture you want to load relative to resources,
      * Example: imagePath("missing.png")
