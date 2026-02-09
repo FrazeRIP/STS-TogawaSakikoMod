@@ -1,6 +1,7 @@
 package togawasakikomod;
 
 import actlikeit.RazIntent.CustomIntent;
+import actlikeit.dungeons.CustomDungeon;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.Prefs;
 import com.megacrit.cardcrawl.monsters.MonsterInfo;
 import com.megacrit.cardcrawl.powers.*;
@@ -34,7 +36,9 @@ import togawasakikomod.cards.SakikoDeck.Attacks.Kao;
 import togawasakikomod.cards.SakikoDeck.Skills.Veritas;
 import togawasakikomod.cards.SpecialDeck.Curses.Oblivionis;
 import togawasakikomod.character.TogawaSakiko;
+import togawasakikomod.dungeons.TheOblivion;
 import togawasakikomod.effects.DazzlingAttackEffect;
+import togawasakikomod.events.TheOblivionEvent;
 import togawasakikomod.intents.MutsumiAttackIntent;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.MisumiUikaBoss;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.WakabaMutsumiBoss;
@@ -174,6 +178,8 @@ public class TogawaSakikoMod implements
         registerPotions();
         registerMonsters();
         registerIntents();
+        registerActs();
+        registerEvents();
 
         //This loads the image used as an icon in the in-game mods menu.
         Texture badgeTexture = TextureLoader.getTexture(imagePath("badge.png"));
@@ -209,7 +215,17 @@ public class TogawaSakikoMod implements
     }
 
     private  static void registerMonsters(){
+        String iocnPath = "togawasakikomod/images/ui/map/boss/TheOblivion.png";
+        String iocnOutlinePath = "togawasakikomod/images/ui/map/bossOutline/TheOblivion.png";
+
         //Register
+        BaseMod.addBoss(
+                TheEnding.ID,
+                TheOblivion.ID,
+                iocnPath,
+                iocnOutlinePath
+                );
+
         BaseMod.addMonster(ChihayaAnonBoss.ID,()-> new ChihayaAnonBoss(0,0));
         BaseMod.addMonster(ShiinaTakiBoss.ID,()-> new ShiinaTakiBoss(0,0));
         BaseMod.addMonster(NagasakiSoyoBoss.ID,()-> new NagasakiSoyoBoss(0,0));
@@ -218,9 +234,6 @@ public class TogawaSakikoMod implements
         BaseMod.addMonster(YahataUmiriBoss.ID,()-> new YahataUmiriBoss(0,0));
         BaseMod.addMonster(YuutenjiNyamuBoss.ID,()-> new YuutenjiNyamuBoss(0,0));
         BaseMod.addMonster(MisumiUikaBoss.ID,()-> new MisumiUikaBoss(0,0));
-
-        //Add to encounter
-        BaseMod.addMonsterEncounter(TheCity.ID, new MonsterInfo(WakabaMutsumiBoss.ID, 999));
     }
 
     private static void registerPotions() {
@@ -237,6 +250,13 @@ public class TogawaSakikoMod implements
 
     private static void registerIntents(){
         CustomIntent.add(new MutsumiAttackIntent());
+    }
+    private static void registerActs(){
+        CustomDungeon.addAct(TheEnding.ID, new TheOblivion());
+    }
+
+    private  static void registerEvents(){
+        BaseMod.addEvent(TheOblivionEvent.ID, TheOblivionEvent.class);
     }
     /*----------Localization----------*/
 
@@ -605,6 +625,9 @@ public class TogawaSakikoMod implements
         BaseMod.addAudio(makeID("Sakiko-Hurt1"),audioPath("sakiko/Hurt1.wav"));
         BaseMod.addAudio(makeID("Sakiko-Hurt2"),audioPath("sakiko/Hurt2.wav"));
         BaseMod.addAudio(makeID("Sakiko-Hurt3"),audioPath("sakiko/Hurt3.wav"));
+
+//        BaseMod.addAudio(makeID("Music-GMGU"),audioPath("music/GMGU.wav"));
+//        BaseMod.addAudio(makeID("Music-Haruhikage"),audioPath("music/Haruhikage.wav"));
     }
 
     @Override

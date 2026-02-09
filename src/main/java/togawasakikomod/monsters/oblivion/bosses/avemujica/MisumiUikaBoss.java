@@ -43,7 +43,7 @@ public class MisumiUikaBoss extends FinalBossMonster {
         this.damage.add(new DamageInfo((AbstractCreature)this, 10));
         this.damage.add(new DamageInfo((AbstractCreature)this, 20));
 
-        this.flipHorizontal = true;
+        this.flipHorizontal = flipHorizontal;
         this.dialogX = -80.0F * Settings.scale;
         this.dialogY = 50.0F * Settings.scale;
     }

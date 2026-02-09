@@ -3,6 +3,7 @@ package togawasakikomod.monsters.oblivion.bosses;
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.util.TriConsumer;
 import togawasakikomod.TogawaSakikoMod;
@@ -26,6 +27,12 @@ public abstract class FinalBossMonster extends SurroundedMonster implements TriC
 
     @Override
     protected abstract void getMove(int i) ;
+
+    @Override
+    public void usePreBattleAction() {
+        AbstractDungeon.getCurrRoom().playBgmInstantly("Haruhikage");
+        super.usePreBattleAction();
+    }
 
     @Override
     public void applyStartOfTurnPowers() {
