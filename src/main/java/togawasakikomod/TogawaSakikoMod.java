@@ -497,6 +497,10 @@ public class TogawaSakikoMod implements
                 if(Objects.equals(abstractPower.ID, PainfulStabsPower.POWER_ID)){return;}
                 if(Objects.equals(abstractPower.ID, BeatOfDeathPower.POWER_ID)){return;}
                 if(Objects.equals(abstractPower.ID, SharpHidePower.POWER_ID)){return;}
+                if(Objects.equals(abstractPower.ID, BackAttackPower.POWER_ID)){return;}
+                if(Objects.equals(abstractPower.ID, SurroundedPower.POWER_ID)){return;}
+                if(Objects.equals(abstractPower.ID, MinionPower.POWER_ID)){return;}
+
                 if(abstractPower.getClass().isAnnotationPresent(CharismaticFormCopyEnable.class)){
                     CharismaticFormCopyEnable enable = abstractPower.getClass().getAnnotation(CharismaticFormCopyEnable.class);
                     if(!enable.enable()) {return;}

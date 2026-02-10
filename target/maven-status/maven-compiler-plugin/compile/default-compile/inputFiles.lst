@@ -39,6 +39,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\PurgeRewardAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\RandomCardToHandByIDAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\RandomCardToHandByTypeAction.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\RefreshNyamuIntentAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\RemoveAddedLostPowersAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\RemoveCardFromDeckAction.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\Actions\RemoveCardFromDrawPileAction.java
@@ -223,6 +224,7 @@ X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\PrimoDieInScaenaPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\SeizeTheFatePower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\SharedDestinyPower.java
+X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\StrengthUpPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\WishYouGoodLuckPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\buffs\WorldviewPower.java
 X:\Projects\SlayTheSpire\Repo\STS-TogawaSakikoMod\src\main\java\togawasakikomod\powers\debuffs\DazzlingDownPower.java

@@ -50,13 +50,22 @@ public class TheOblivionMonsterGroup extends MonsterGroup {
         while (firstIndex == secondIndex){
             secondIndex = monsterRng.random(0,monsterPool.length-1);
         }
+
         leftMonsterID = monsterPool[firstIndex];
         rightMonsterID = monsterPool[secondIndex];
+
         if(Objects.equals(rightMonsterID, WakabaMutsumiBoss.ID)){
             String temp = rightMonsterID;
             rightMonsterID = leftMonsterID;
             leftMonsterID = temp;
         }
+
+        if(Objects.equals(leftMonsterID, YuutenjiNyamuBoss.ID)){
+            String temp = leftMonsterID;
+            leftMonsterID = rightMonsterID;
+            rightMonsterID = temp;
+        }
+
         leftMonster = getBossByID(leftMonsterID,true);
         rightMonster = getBossByID(rightMonsterID,false);
         addMonster(0,leftMonster);

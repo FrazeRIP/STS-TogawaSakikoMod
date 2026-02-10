@@ -99,7 +99,6 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
 
     @Override
     protected void getMove(int i) {
-        System.out.println("!!!!!!!!!!!!!!Triggered");
         if(hasPower(MonsterDivinityPower.POWER_ID)){
             setMove((byte)0,Intent.ATTACK, (this.damage.get(0)).base,action0AtkMultiAmount,true);
             createIntent();

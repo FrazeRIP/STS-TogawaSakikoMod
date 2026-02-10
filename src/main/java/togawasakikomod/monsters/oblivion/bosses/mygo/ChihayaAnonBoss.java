@@ -13,12 +13,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.powers.buffs.StrengthUpPower;
+import togawasakikomod.powers.debuffs.TimorisPower;
 import togawasakikomod.powers.monsters.ForwardResolvePower;
 import togawasakikomod.util.TextureLoader;
 
@@ -73,12 +72,12 @@ public class ChihayaAnonBoss extends FinalBossMonster {
                 //给予所有敌人2点力量
                 for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
                     if (m == this) {
-                        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)this, (AbstractPower)new StrengthPower((AbstractCreature)m, this.strAmt), this.strAmt));
+                        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)this, (AbstractPower)new StrengthUpPower((AbstractCreature)m, this.strAmt), this.strAmt));
                         continue;
                     }
 
                     if (!m.isDying) {
-                        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)this, (AbstractPower)new StrengthPower((AbstractCreature)m, this.strAmt), this.strAmt));
+                        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)m, (AbstractCreature)this, (AbstractPower)new StrengthUpPower((AbstractCreature)m, this.strAmt), this.strAmt));
                     }
                 }
                 break;
@@ -96,8 +95,9 @@ public class ChihayaAnonBoss extends FinalBossMonster {
             case 0:
                 //给予玩家2层易伤，
                 //2层虚弱和2层脆弱
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)this, (AbstractPower)new VulnerablePower(AbstractDungeon.player, 2,true), 2));
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)this, (AbstractPower)new TimorisPower(AbstractDungeon.player, 2,true), 2));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)this, (AbstractPower)new WeakPower((AbstractCreature)AbstractDungeon.player, 2,true), 2));
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)this, (AbstractPower)new FrailPower((AbstractCreature)AbstractDungeon.player, 2,true), 2));
                 break;
         }
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));

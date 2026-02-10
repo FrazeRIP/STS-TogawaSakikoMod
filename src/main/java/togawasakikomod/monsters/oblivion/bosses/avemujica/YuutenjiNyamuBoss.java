@@ -40,6 +40,8 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
     private NyamuDrumMinion[] minions = new NyamuDrumMinion[4];
     private int minionPerSpawn = 2;
 
+    public boolean hasBackAttack = false;
+
 
     public static final float[] POSX = new float[] { 210.0F, -220.0F, 180.0F, -250.0F };
     public static final float[] POSY = new float[] { 75.0F, 115.0F, 345.0F, 335.0F };
@@ -98,12 +100,13 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
                 }
                 break;
         }
-
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
     @Override
     protected void getMove(int i) {
+        hasBackAttack = hasPower(BackAttackPower.POWER_ID);
+        System.out.println("----------------------"+hasBackAttack);
 
         int minionsSpawned = 0;
 
@@ -113,7 +116,7 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
             }
         }
 
-        if(minionsSpawned<4 && !this.hasPower(BackAttackPower.POWER_ID)){
+        if(minionsSpawned<4 && !hasBackAttack){
             setMove((byte)3, Intent.UNKNOWN);
             return;
         }

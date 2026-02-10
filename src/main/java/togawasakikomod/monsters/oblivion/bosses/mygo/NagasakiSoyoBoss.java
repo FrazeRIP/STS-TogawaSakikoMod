@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.powers.buffs.StrengthUpPower;
 import togawasakikomod.powers.monsters.TemporalLongingPower;
 import togawasakikomod.util.TextureLoader;
 
@@ -72,7 +73,7 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
                 for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
                     if (!m.isDying) {
                         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m,30));
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthPower(m, 2+xAmount), 2+xAmount));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthUpPower(m, 2+xAmount), 2+xAmount));
                     }
                 }
                 break;
