@@ -1,13 +1,12 @@
 package togawasakikomod.Actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.powers.BackAttackPower;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.YuutenjiNyamuBoss;
 
-public class RefreshNyamuIntentAction extends AbstractGameAction {
+public class RefreshMonsterIntentAction extends AbstractGameAction {
     YuutenjiNyamuBoss m;
 
-   public RefreshNyamuIntentAction(YuutenjiNyamuBoss m){
+   public RefreshMonsterIntentAction(YuutenjiNyamuBoss m){
        this.m = m;
    }
 

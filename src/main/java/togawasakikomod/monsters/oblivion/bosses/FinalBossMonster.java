@@ -76,4 +76,10 @@ public abstract class FinalBossMonster extends SurroundedMonster implements TriC
             addToTop(new ApplyPowerAction(this,this,power,power.amount));
         }
     }
+
+    @Override
+    public void die() {
+        super.die();
+        AbstractDungeon.id = "TheEnding";
+    }
 }

@@ -1,14 +1,9 @@
 package togawasakikomod.powers.monsters;
 
 import basemod.BaseMod;
-import basemod.interfaces.OnPlayerLoseBlockSubscriber;
 import basemod.interfaces.OnPowersModifiedSubscriber;
-import com.megacrit.cardcrawl.actions.common.RollMoveAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BackAttackPower;
-import togawasakikomod.Actions.RefreshNyamuIntentAction;
 import togawasakikomod.annotations.CharismaticFormCopyEnable;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.YuutenjiNyamuBoss;
 import togawasakikomod.powers.BasePower;

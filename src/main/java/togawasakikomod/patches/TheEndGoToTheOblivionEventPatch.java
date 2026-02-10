@@ -18,11 +18,9 @@ import java.util.Objects;
 public class TheEndGoToTheOblivionEventPatch {
     public static SpireReturn<Void> Prefix(ProceedButton __instance) {
         if(AbstractDungeon.player instanceof TogawaSakiko){
-            if( Objects.equals(AbstractDungeon.lastCombatMetricKey, "The Heart")){
+            if(Objects.equals(AbstractDungeon.lastCombatMetricKey, "The Heart")){
                 DungeonHelper.goToAct(TheOblivion.ID);
                 return SpireReturn.Return();
-            }else if(Objects.equals(AbstractDungeon.lastCombatMetricKey, TheOblivion.ID)){
-                return SpireReturn.Continue();
             }
         }
         return SpireReturn.Continue();

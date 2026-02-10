@@ -33,6 +33,7 @@ public class TheOblivion extends CustomDungeon {
 
     public TheOblivion() {
         super(NAME, ID,false);
+        finalAct = true;
         if (scene != null)
             scene.dispose();
         scene = (AbstractScene)new TheOblivionScene();

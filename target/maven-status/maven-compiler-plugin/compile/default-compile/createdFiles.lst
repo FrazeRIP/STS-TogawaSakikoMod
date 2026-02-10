@@ -82,7 +82,6 @@ togawasakikomod\patches\ObtainRewardEventPatch$Comon.class
 togawasakikomod\cards\SakikoDeck\Powers\WishYouGoodLuck.class
 togawasakikomod\annotations\CardEnable.class
 togawasakikomod\cards\SpecialDeck\Powers\Kindness.class
-togawasakikomod\Actions\RefreshNyamuIntentAction.class
 togawasakikomod\patches\ObtainRewardEventPatch$Comon$Locator.class
 togawasakikomod\relics\WarmthInfusedPorcelainCup.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfMutsumi.class
@@ -192,6 +191,7 @@ togawasakikomod\cards\SakikoDeck\Powers\Masks.class
 togawasakikomod\Actions\UpgradeAllCardInDrawPileAction.class
 togawasakikomod\cards\SakikoDeck\Skills\AreTheseLyrics.class
 togawasakikomod\Actions\AveMujicaAction.class
+togawasakikomod\Actions\RefreshMonsterIntentAction.class
 togawasakikomod\powers\buffs\SeizeTheFatePower.class
 togawasakikomod\cards\SakikoDeck\Attacks\TheMoonlightSonata.class
 togawasakikomod\cards\SakikoDeck\Skills\Crychic.class
