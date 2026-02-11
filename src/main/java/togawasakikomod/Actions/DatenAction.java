@@ -25,7 +25,7 @@ public class DatenAction extends AbstractGameAction {
     }
 
     public void update() {
-        ArrayList generatedCards;
+        ArrayList<AbstractCard> generatedCards;
         generatedCards = this.generateCardChoices();
 
         if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
@@ -49,7 +49,6 @@ public class DatenAction extends AbstractGameAction {
                     AbstractDungeon.cardRewardScreen.discoveryCard = null;
                     this.isDone = true;
                 }
-
                 this.retrieveCard = true;
             }
 
@@ -71,7 +70,7 @@ public class DatenAction extends AbstractGameAction {
         if(!derp.isEmpty()){
             for(int i = chooseAmount; i >0;i--){
                 AbstractCard card = group.getRandomCard(AbstractDungeon.cardRandomRng);
-                result.add(card.makeSameInstanceOf());
+                result.add(card);
                 group.removeCard(card);
             }
             return result;

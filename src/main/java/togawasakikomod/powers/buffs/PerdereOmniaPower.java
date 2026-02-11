@@ -53,7 +53,7 @@ public class PerdereOmniaPower extends BasePower implements CloneablePowerInterf
             this.reducePower(1);
             AbstractPlayer p = AbstractDungeon.player;
             addToTop(new ReducePowerAction(p,p,this,0));
-            addToTop(new RemoveCardFromDeckAction(card,true,true,true));
+            addToTop(new RemoveCardFromDeckAction(card));
             addToBot(new DrawCardAction(1));
         }
     }

@@ -42,7 +42,6 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
         this.removeCardFromDeck = removeActualCard;
         this.enduranceCheck = enduranceCheck;
         this.masqueradeCheck = masquerade;
-        this.isForced = isForced;
     }
 
     public void update() {
@@ -106,7 +105,7 @@ public class RemoveCardFromDeckAction extends AbstractGameAction {
             derp.addAll(AbstractDungeon.player.drawPile.group);
             for(AbstractCard card : derp){
                 if(card.cardID.equals(MasqueradeRhapsodyRequest.ID)){
-                    addToTop(new IncreaseMiscAction(card.uuid,card.misc,card.magicNumber));
+                    addToTop(new IncreaseMiscDamageAction(card.uuid,card.misc,card.magicNumber));
                 }
             }
         }

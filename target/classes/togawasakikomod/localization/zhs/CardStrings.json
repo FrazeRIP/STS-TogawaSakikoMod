@@ -38,7 +38,7 @@
   },
   "togawasakikomod:ImprisonedXII": {
     "NAME": "徒囚 XII",
-    "DESCRIPTION": "造成一次 !D! 点伤害。 NL 获得你在本场战斗中打出 *渴望 数量的 [E] 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得你在本场战斗中打出 *渴望 数量的 [E] 。",
     "EXTENDED_DESCRIPTION": [" NL （当前获得 !M! [E] 。）"]
   },
   "togawasakikomod:CrucifixX": {

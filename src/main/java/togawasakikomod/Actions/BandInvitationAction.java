@@ -55,8 +55,10 @@ public class BandInvitationAction extends AbstractGameAction {
                 addToTop(new BandInvitationAction(this.energy - this.tracker));
                 addToTop((AbstractGameAction)new DrawCardAction(1));
             } else {
-                addToTop(new BandInvitationAction(this.energy - this.tracker));
-                addToTop((AbstractGameAction)new EmptyDeckShuffleAction());
+                if(!this.p.discardPile.isEmpty()){
+                    addToTop(new BandInvitationAction(this.energy - this.tracker));
+                    addToTop((AbstractGameAction)new EmptyDeckShuffleAction());
+                }
             }
             this.isDone = true;
             return;

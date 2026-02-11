@@ -35,6 +35,7 @@ public class ImprisonedXII extends BaseCard {
 
     public ImprisonedXII() {
         super(ID, info); //Pass the required information to the BaseCard constructor.
+        setDamage(DAMAGE);
         setMagic(0);
         setCostUpgrade(2);
     }
@@ -50,17 +51,25 @@ public class ImprisonedXII extends BaseCard {
                 ++this.baseMagicNumber;
             }
         }
-
-        if (this.baseMagicNumber > 0) {
-            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-            this.initializeDescription();
-        }
     }
 
     @Override
     public void onMoveToDiscard() {
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
+    }
+
+    @Override
+    public void triggerOnOtherCardPlayed(AbstractCard c) {
+        super.triggerOnOtherCardPlayed(c);
+        this.baseMagicNumber = 0;
+        this.magicNumber = 0;
+
+        for (AbstractCard o : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (o instanceof Desire) {
+                ++this.baseMagicNumber;
+            }
+        }
     }
 
     @Override

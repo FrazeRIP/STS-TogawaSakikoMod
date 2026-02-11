@@ -84,6 +84,14 @@ public class TheOblivion extends CustomDungeon {
         return new TheOblivionScene();
     }
 
+    public String getBodyText() {
+        return  TEXT[3];
+    }
+
+    public String getOptionText() {
+        return  TEXT[2];
+    }
+
     public String getActNumberText() {
         return TEXT[1];
     }

@@ -267,6 +267,7 @@ togawasakikomod\events\TheOblivionEvent.class
 togawasakikomod\monsters\oblivion\bosses\mygo\ShiinaTakiBoss.class
 togawasakikomod\relics\TheDoll.class
 togawasakikomod\patches\ScryCallbackPatch.class
+togawasakikomod\Actions\IncreaseMiscDamageAction.class
 togawasakikomod\cards\SakikoDeck\Skills\RaiseTheBet.class
 togawasakikomod\cards\SakikoDeck\Skills\BudgetBento.class
 togawasakikomod\powers\debuffs\KingsPower.class

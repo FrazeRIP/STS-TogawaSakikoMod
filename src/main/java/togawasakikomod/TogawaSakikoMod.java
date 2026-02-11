@@ -256,7 +256,7 @@ public class TogawaSakikoMod implements
     }
 
     private  static void registerEvents(){
-        BaseMod.addEvent(TheOblivionEvent.ID, TheOblivionEvent.class);
+        //BaseMod.addEvent(TheOblivionEvent.ID, TheOblivionEvent.class);
     }
     /*----------Localization----------*/
 
