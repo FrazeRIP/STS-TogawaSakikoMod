@@ -74,5 +74,20 @@
     "TEXT": [
       "Choose a card and remove it."
     ]
+  },
+  "${modID}:MutsumiAttackIntent": {
+    "TEXT": [
+      "Never once felt joy in a band.",
+      "Remove all #yBlock from you and this enemy. Then #yAttack for damage equal to the total #yBlock removed. NL Currently dealing #b",
+      " damage."
+    ]
+  },
+  "${modID}:TheOblivion": {
+    "TEXT": [
+      "The Oblivion",
+      "Act ?",
+      "#rEnter a special Chapter.",
+      "You hear something. It feels... familiar."
+    ]
   }
 }

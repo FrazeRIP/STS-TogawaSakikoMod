@@ -14,6 +14,8 @@ import java.util.List;
 
 public abstract class FinalBossMonster extends SurroundedMonster implements TriConsumer<AbstractPower, AbstractCreature, AbstractCreature> {
 
+    public static boolean isBGMPlayed = false;
+
     private ArrayList<AbstractPower> currentRoundPowerGains = new ArrayList<>();
     private ArrayList<AbstractPower> previousRoundPowerGains = new ArrayList<>();
 
@@ -30,7 +32,10 @@ public abstract class FinalBossMonster extends SurroundedMonster implements TriC
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.getCurrRoom().playBgmInstantly("Haruhikage");
+        if(!isBGMPlayed){
+            isBGMPlayed = true;
+            AbstractDungeon.getCurrRoom().playBgmInstantly("Haruhikage");
+        }
         super.usePreBattleAction();
     }
 

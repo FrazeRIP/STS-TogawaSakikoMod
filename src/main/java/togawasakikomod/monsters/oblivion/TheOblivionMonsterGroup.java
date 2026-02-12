@@ -38,6 +38,7 @@ public class TheOblivionMonsterGroup extends MonsterGroup {
     public TheOblivionMonsterGroup() {
         super(new AbstractMonster[0]);
         getBosses();
+        FinalBossMonster.isBGMPlayed = false;
     }
 
     public boolean shouldFlipVfx() {

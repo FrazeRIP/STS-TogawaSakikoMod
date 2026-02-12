@@ -23,7 +23,6 @@ public class SeizeTheFate extends BaseCard {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-
     private static final int MAGIC = 6;
 
     public SeizeTheFate() {
@@ -32,10 +31,22 @@ public class SeizeTheFate extends BaseCard {
         setMagic(MAGIC);
     }
 
+    @Override
+    public void update() {
+        super.applyPowers();
+        super.update();
+    }
+
+    @Override
+    public void hover() {
+        applyPowers();
+        super.hover();
+    }
+
     public void applyPowers() {
         this.baseMagicNumber = MAGIC-this.misc;
-        super.applyPowers();
         this.initializeDescription();
+        super.applyPowers();
     }
 
 //    @Override

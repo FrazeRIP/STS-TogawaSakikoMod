@@ -12,8 +12,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BackAttackPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
 import togawasakikomod.monsters.oblivion.minions.NyamuDrumMinion;
@@ -132,5 +134,16 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
                 setMove((byte)2, Intent.ATTACK_DEFEND, (this.damage.get(0)).base);
                 break;
         }
+    }
+
+    @Override
+    public void die() {
+        for(AbstractMonster m : minions){
+            if(m!=null  && !m.isDeadOrEscaped()){
+                addToTop(new SuicideAction(m));
+                addToTop(new VFXAction(new ExplosionSmallEffect(m.hb.cX, m.hb.cY), 0.1F));
+            }
+        }
+        super.die();
     }
 }
