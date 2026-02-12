@@ -46,8 +46,8 @@ public class YahataUmiriBoss extends FinalBossMonster {
     public YahataUmiriBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
 
-        this.damage.add(new DamageInfo((AbstractCreature)this, 8));
-        this.damage.add(new DamageInfo((AbstractCreature)this, 45));
+        this.damage.add(new DamageInfo((AbstractCreature)this, 6));
+        this.damage.add(new DamageInfo((AbstractCreature)this, 36));
 
         this.flipHorizontal = true;
         this.dialogX = -80.0F * Settings.scale;
@@ -64,7 +64,7 @@ public class YahataUmiriBoss extends FinalBossMonster {
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
-                //8*3
+                //6*3
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -73,7 +73,7 @@ public class YahataUmiriBoss extends FinalBossMonster {
                 break;
 
             case 1:
-                //45
+                //36
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(1)));

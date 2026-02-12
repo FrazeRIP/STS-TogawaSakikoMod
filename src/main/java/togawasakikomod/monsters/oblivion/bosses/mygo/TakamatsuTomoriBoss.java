@@ -35,9 +35,9 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
     private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(TakamatsuTomoriBoss.class.getSimpleName());
 
     private static final int action0AtkAmount = 1 ;
-    private static final int action0AtkMultiAmount = 12;
-    private static final int action1BlockAmount = 30;
-    private static final int action1BuffAmount = 2;
+    private static final int action0AtkMultiAmount = 10;
+    private static final int action1BlockAmount = 24;
+    private static final int action1BuffAmount = 1;
     private static final int action2BuffReduceAmount = 2;
 
     private static final String DAMAGE_MSG = DIALOG[0];
@@ -62,7 +62,7 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
-                //1*12
+                //1*10
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 for(int i =0;i<action0AtkMultiAmount;i++){
@@ -71,8 +71,8 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
                 break;
 
             case 1:
-                //30格挡
-                //获得2点力量
+                //24格挡
+                //获得1点力量
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this,action1BlockAmount));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this,this,new StrengthPower(this,action1BuffAmount)));

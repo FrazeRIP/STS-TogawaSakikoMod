@@ -34,8 +34,8 @@ public class ShiinaTakiBoss extends FinalBossMonster {
     private static final float hb_h = 350;
     private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(ShiinaTakiBoss.class.getSimpleName());
 
-    private static final int action0AtkAmount = 5 ;
-    private static final int action1AtkAmount = 12;
+    private static final int action0AtkAmount = 4 ;
+    private static final int action1AtkAmount = 9;
     private static final int action2BuffAmount = 3;
 
     private static final String DAMAGE_MSG = DIALOG[0];
@@ -61,7 +61,7 @@ public class ShiinaTakiBoss extends FinalBossMonster {
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
-                //5*3
+                //4*3
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -70,7 +70,7 @@ public class ShiinaTakiBoss extends FinalBossMonster {
                 break;
 
             case 1:
-                //12
+                //9
                 //在手牌中加入一张凡庸
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));

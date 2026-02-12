@@ -14,6 +14,11 @@ import java.util.Objects;
 
 public class KingsSaveable implements CustomSavable<Boolean> {
     public static boolean IsKing = false;
+
+    public static void SetKing(boolean isKing){
+        IsKing = isKing;
+    }
+
     @Override
     public Boolean onSave() {
         System.out.println("---------------------Save:"+KingsSaveable.class.getSimpleName()+":"+IsKing);
@@ -22,7 +27,7 @@ public class KingsSaveable implements CustomSavable<Boolean> {
 
     @Override
     public void onLoad(Boolean isKing) {
-        IsKing = isKing;
+        SetKing(isKing);
         System.out.println("---------------------Load:"+KingsSaveable.class.getSimpleName()+":"+IsKing);
     }
 
@@ -36,7 +41,8 @@ public class KingsSaveable implements CustomSavable<Boolean> {
     public static class KingsPatch{
         public static void Postfix(AbstractScene __instance)
         {
-            KingsSaveable.IsKing = false;
+            //KingsSaveable.SetKing(false);
+            //System.out.println("---------------------Next Room:"+KingsSaveable.class.getSimpleName()+":"+IsKing);
         }
     }
 }

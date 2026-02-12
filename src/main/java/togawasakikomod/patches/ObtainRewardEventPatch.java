@@ -73,7 +73,8 @@ public class ObtainRewardEventPatch {
                     AbstractDungeon.player.heal(1);
                 }
             }
-            KingsSaveable.IsKing = false;
+            KingsSaveable.SetKing(false);
+            System.out.println("---------------------takeReward:"+KingsSaveable.class.getSimpleName()+":"+KingsSaveable.IsKing);
             return SpireReturn.Continue();
         }
 

@@ -1,16 +1,93 @@
 ﻿{
-  "${modID}:OrbID": {
-    "NAME": "千早爱音",
+  "${modID}:ChihayaAnonBoss": {
+    "NAME": "Chihaya Anon",
     "DIALOG": [
-      "哈哈哈哈哈哈哈",
-      " 看吧，这漂亮的C和旋！"
+      " Hahahahahahaha!",
+      " See? What a beautiful C chord!"
     ],
     "MOVES": [
-      "#yPassive: At the start of your turn, draw #b",
-      " card.",
-      " cards.",
-      " NL #yEvoke: Deal #b",
-      " damage to all enemies."
+      ""
     ]
+  },
+  "${modID}:ShiinaTakiBoss": {
+    "NAME": "Shiina Taki",
+    "DIALOG": [
+      " How dare you ignore Tomori!",
+      " Don't you dare hurt Tomori!"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:TakamatsuTomoriBoss": {
+    "NAME": "Takamatsu Tomori",
+    "DIALOG": [
+      " Let's start a band together!",
+      " Goo goo ga ga!"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:NagasakiSoyoBoss": {
+    "NAME": "Nagasaki Soyo",
+    "DIALOG": [
+      " Without Sakiko... NL I will...!",
+      " No!"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:WakabaMutsumiBoss": {
+    "NAME": "Wakaba Mutsumi",
+    "DIALOG": [
+      " Saki, move.",
+      " I never once felt... NL happy being in a band..."
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:YahataUmiriBoss": {
+    "NAME": "Yahata Umiri",
+    "DIALOG": [
+      " After all, I'm pretty good-looking.",
+      " Could it be... NL that I'm not worthy of trust?"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:YuutenjiNyamuBoss": {
+    "NAME": "Yuutenji Nyamu",
+    "DIALOG": [
+      " Those who are loved don't have the right to choose how they're loved. Being loved at all is already a blessing, nyamu.",
+      " Konichi Nyamu Nyamu~"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:NyamuDrumMinion": {
+    "NAME": "Nyamu's Drum",
+    "DIALOG": [
+      ""
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:MisumiUikaBoss": {
+    "NAME": "Misumi Uika",
+    "DIALOG": [
+      " Saki-chan... NL Saki-chan...... NL Saki-chan......!"
+    ],
+    "MOVES": [
+      ""
+    ]
+  },
+  "${modID}:TheOblivion": {
+    "NAME": "The Oblivion"
   }
 }

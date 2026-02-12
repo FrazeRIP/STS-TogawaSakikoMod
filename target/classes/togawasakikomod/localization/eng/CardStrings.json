@@ -46,7 +46,8 @@
   },
   "togawasakikomod:ImprisonedXII": {
     "NAME": "Imprisoned XII",
-    "DESCRIPTION": "Deal !M! damage. NL Gain [E] for each *Desire played this combat.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E] for each *Desire played this combat.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Gain [E] for each *Desire played this combat.",
     "EXTENDED_DESCRIPTION": [" NL (Currently gain !M! [E] .)"]
   },
   "togawasakikomod:CrucifixX": {
@@ -88,7 +89,7 @@
   },
   "togawasakikomod:BlackBirthday": {
     "NAME": "Black Birthday",
-    "DESCRIPTION": "Remove all buffs. NL For each type of buff removed, deal !D! damage to all enemies. NL Exhaust."
+    "DESCRIPTION": "Remove all powers. NL For each type of power removed, deal !D! damage to all enemies. NL Exhaust."
   },
   "togawasakikomod:IWantToBeYourGod": {
     "NAME": "I Want to Be Your God",

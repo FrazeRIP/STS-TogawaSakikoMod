@@ -636,7 +636,8 @@ public class TogawaSakikoMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        KingsSaveable.IsKing = false;
+        KingsSaveable.SetKing(false);
+        System.out.println("---------------------receiveOnBattleStart:"+KingsSaveable.class.getSimpleName()+":"+KingsSaveable.IsKing);
         PridePower.copies.clear();
        TogawaSakiko.LastRoundPowerLost.clear();
        TogawaSakiko.CurrentRoundPowerLost.clear();

@@ -58,7 +58,8 @@ public class KingsPower extends BasePower
     @Override
     public void onVictory() {
         super.onVictory();
-        KingsSaveable.IsKing = true;
+        KingsSaveable.SetKing(true);
+        System.out.println("---------------------onVictory:"+KingsSaveable.class.getSimpleName()+":"+KingsSaveable.IsKing);
     }
 
 //    @Override
@@ -78,7 +79,7 @@ public class KingsPower extends BasePower
                 locator= ReduceCardReward.RewardCardNumLocator.class,
                 localvars = {"numCards","retVal"})
         public static SpireReturn<Object> ReduceCardRewardAction( @ByRef int[] numCards,@ByRef ArrayList<AbstractCard>[] retVal) {
-            System.out.println("---------------------Reward");
+            System.out.println("---------------------Reward. IsKing:"+KingsSaveable.IsKing);
             if(AbstractDungeon.player.hasPower(KingsPower.POWER_ID) || KingsSaveable.IsKing){
                 numCards[0] = numCards[0] -= 1;
                 if(numCards[0]<0){

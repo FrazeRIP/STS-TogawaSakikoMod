@@ -47,7 +47,7 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
     public WakabaMutsumiBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
 
-        this.damage.add(new DamageInfo((AbstractCreature)this, 10));
+        this.damage.add(new DamageInfo((AbstractCreature)this, 8));
         this.flipHorizontal = true;
         this.dialogX = -80.0F * Settings.scale;
         this.dialogY = 50.0F * Settings.scale;
@@ -89,14 +89,14 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
-                //获得7层多重护甲
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction(this,this,new PlatedArmorPower(this, 7), 7));
+                //获得6层多重护甲
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction(this,this,new PlatedArmorPower(this, 6), 6));
                 break;
 
             case 1:
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
-                //10
+                //8
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
                 //获得2点荆棘
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction(this,this,new ThornsPower(this, 2), 2));

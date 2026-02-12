@@ -44,7 +44,7 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
     public NagasakiSoyoBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
 
-        this.damage.add(new DamageInfo((AbstractCreature)this, 15));
+        this.damage.add(new DamageInfo((AbstractCreature)this, 12));
         this.flipHorizontal = true;
         this.dialogX = -80.0F * Settings.scale;
         this.dialogY = 50.0F * Settings.scale;
@@ -66,20 +66,19 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
 
         switch (this.nextMove){
             case 0 :
-                //8*3
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
-
+                //24格挡
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this,24));
                 //给予所有敌人2+N点力量
                 for (AbstractMonster m : (AbstractDungeon.getMonsters()).monsters) {
                     if (!m.isDying) {
-                        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m,30));
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthUpPower(m, 2+xAmount), 2+xAmount));
                     }
                 }
                 break;
 
             case 1:
-                //15*2
+                //12*2
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));

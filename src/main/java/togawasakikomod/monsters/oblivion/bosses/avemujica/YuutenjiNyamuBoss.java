@@ -49,7 +49,7 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
     public YuutenjiNyamuBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
 
-        this.damage.add(new DamageInfo((AbstractCreature)this, 18));
+        this.damage.add(new DamageInfo((AbstractCreature)this, 14));
         this.flipHorizontal = true;
         this.dialogX = -80.0F * Settings.scale;
         this.dialogY = 50.0F * Settings.scale;
@@ -64,7 +64,7 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
-                //18*2
+                //14*2
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -72,7 +72,7 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
                 break;
 
             case 1:
-                //18
+                //14
                 //给予2层易伤
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
@@ -81,7 +81,7 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
                 break;
 
             case 2:
-                //18
+                //14
                 //20格挡
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));

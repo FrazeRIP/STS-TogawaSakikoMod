@@ -31,20 +31,24 @@ public class NyamuDrumMinion extends AbstractMonster {
 
     public NyamuDrumMinion(float x, float y,boolean flipHorizontal)  {
         super(NAME, ID, 25, 0.0F, 200.0F, 140.0F, 130.0F, IMAGE_URL, x, y-200);
-        this.damage.add(new DamageInfo(this,6));
-        this.damage.add(new DamageInfo(this, 19));
+        this.damage.add(new DamageInfo(this,5));
+        this.damage.add(new DamageInfo(this, 15));
         this.flipHorizontal = flipHorizontal;
     }
 
     public void takeTurn() {
         switch (this.nextMove) {
             case 0:
+                //5
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateFastAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction(AbstractDungeon.player, this.damage
                         .get(0), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                //向抽牌堆加入2张晕眩
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new MakeTempCardInDrawPileAction(new Dazed(), 2,true,true,false));
                 break;
+
             case 1:
+                //15
                 addToBot(new VFXAction(new ExplosionSmallEffect(this.hb.cX, this.hb.cY), 0.1F));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction(AbstractDungeon.player, this.damage
                         .get(1), AbstractGameAction.AttackEffect.BLUNT_HEAVY));

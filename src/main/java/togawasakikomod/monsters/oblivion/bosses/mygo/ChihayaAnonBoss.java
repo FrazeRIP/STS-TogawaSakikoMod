@@ -35,8 +35,8 @@ public class ChihayaAnonBoss extends FinalBossMonster {
     private static final float hb_h = 350;
     private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(ChihayaAnonBoss.class.getSimpleName());
 
-    private static final int triAtkAmount = 8 ;
-    private static final int quadAtkAmount = 10;
+    private static final int triAtkAmount = 6 ;
+    private static final int quadAtkAmount = 8;
     private static final int strAmt = 2;
 
     private static final String DAMAGE_MSG = DIALOG[0];
@@ -63,7 +63,7 @@ public class ChihayaAnonBoss extends FinalBossMonster {
     public void takeTurn() {
         switch (this.nextMove){
             case 2 :
-                //8*3
+                //6*3
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -83,7 +83,7 @@ public class ChihayaAnonBoss extends FinalBossMonster {
                 break;
 
             case 1:
-                //10*4
+                //8*4
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(1)));

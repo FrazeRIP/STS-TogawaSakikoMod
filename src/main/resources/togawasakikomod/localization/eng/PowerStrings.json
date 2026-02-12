@@ -1,4 +1,4 @@
-{
+﻿{
   "${modID}:DazzlingPower": {
     "NAME": "Dazzling",
     "DESCRIPTIONS": [
@@ -160,8 +160,66 @@
   "${modID}:ForwardResolvePower": {
     "NAME": "Forward Resolve",
     "DESCRIPTIONS": [
-      "Whenever being attacked, gain #b",
+      "#rUnclonable. NL Whenever attacked, gain #b",
       " #yVigor ."
+    ]
+  },
+  "${modID}:RestlessIdealPower": {
+    "NAME": "Restless Ideal",
+    "DESCRIPTIONS": [
+      "#rUnclonable. NL Whenever deal damage, shuffle #b",
+      " #yNormality to your discard pile."
+    ]
+  },
+  "${modID}:EarnestCryPower": {
+    "NAME": "Earnest Cry",
+    "DESCRIPTIONS": [
+      "#rUnclonable. NL At end of turn, gain #b",
+      " #yMantra and #b1 #yEarnest #yCry."
+    ]
+  },
+  "${modID}:MonsterDivinityPower": {
+    "NAME": "Divinity",
+    "DESCRIPTIONS": [
+      "#rUnclonable. NL Deal triple damage this turn."
+    ]
+  },
+  "${modID}:TemporalLongingPower": {
+    "NAME": "Temporal Longing",
+    "DESCRIPTIONS": [
+      "#rUnclonable. NL Whenever you play #b10 cards, all enemies regain buffs they obtained since last turn. NL Some actions become stronger as turns pass. NL (Current turn: #y",
+      " )"
+    ]
+  },
+  "${modID}:SilentWoundPower": {
+    "NAME": "Silent Wound",
+    "DESCRIPTIONS": [
+      "#rUnclonable. NL Whenever you play #b1 card, gain #b",
+      " #yPlated #yArmor ."
+    ]
+  },
+  "${modID}:UnclaimedPromisePower": {
+    "NAME": "Unclaimed Promise",
+    "DESCRIPTIONS": [
+      "#rUnclonable. NL On even-numbered turns, gain #b1 stack of #yIntangible, then you lose #b1 stack of #yIntangible."
+    ]
+  },
+  "${modID}:UnfadingYearningPower": {
+    "NAME": "Unfading Yearning",
+    "DESCRIPTIONS": [
+      "#rUnclonable. NL Upon you change facing direction, changes her intent."
+    ]
+  },
+  "${modID}:VoicedGazePower": {
+    "NAME": "Voiced Gaze",
+    "DESCRIPTIONS": [
+      "#rUnclonable. NL Whenever you play #b12 cards, end your turn and gain #b2 #yStrength."
+    ]
+  },
+  "${modID}:StrengthUpPower": {
+    "NAME": "Strength Up",
+    "DESCRIPTIONS": [
+      "At the start of your turn, convert all #yStrength #yUp into #yStrength."
     ]
   }
 }
