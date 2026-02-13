@@ -1,0 +1,29 @@
+﻿{
+  "${modID}:DEV": {
+    "HEADER": "丰川祥子模组制作团队",
+    "NAMES": [
+      "Project Despair 制作组",
+      "Fraze R.I.P",
+      "萨拉",
+      "露米",
+      "主教"
+    ]
+  },
+  "${modID}:SPECIAL_THANKS": {
+    "HEADER": "特别鸣谢",
+    "NAMES": [
+      "For those who helped developing the mod",
+      "QingMu",
+      "器根G刃",
+      "xe08",
+      "杀戮尖塔中文MOD制作社区",
+      "所有在开发阶段参与测试的玩家！"
+    ]
+  },
+  "${modID}:ORIGINAL_DEV": {
+    "HEADER": "杀戮尖塔原制作团队",
+    "NAMES": [
+      "感谢你们制作了如此出色的游戏！"
+    ]
+  }
+}

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.util.TriConsumer;
 import togawasakikomod.TogawaSakikoMod;
+import togawasakikomod.annotations.CharismaticFormCopyEnable;
 import togawasakikomod.monsters.SurroundedMonster;
 
 import java.util.ArrayList;
@@ -50,6 +51,10 @@ public abstract class FinalBossMonster extends SurroundedMonster implements TriC
         if(target != this){return;}
         if(abstractPower.type != AbstractPower.PowerType.BUFF){return;}
         if(!(abstractPower instanceof CloneablePowerInterface)){return;}
+        if(abstractPower.getClass().isAnnotationPresent(CharismaticFormCopyEnable.class)){
+            CharismaticFormCopyEnable enable = abstractPower.getClass().getAnnotation(CharismaticFormCopyEnable.class);
+            if(!enable.enable()) {return;}
+        }
 
         AbstractPower power =((CloneablePowerInterface) abstractPower).makeCopy();
         power.amount = Math.abs(abstractPower.amount);
@@ -85,6 +90,6 @@ public abstract class FinalBossMonster extends SurroundedMonster implements TriC
     @Override
     public void die() {
         super.die();
-        AbstractDungeon.id = "TheEnding";
+        //AbstractDungeon.id = "TheEnding";
     }
 }

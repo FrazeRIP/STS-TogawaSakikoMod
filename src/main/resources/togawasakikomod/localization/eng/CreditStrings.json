@@ -1,0 +1,29 @@
+{
+  "${modID}:DEV": {
+    "HEADER": "Togawa Sakiko Mod Developers",
+    "NAMES": [
+      "Project Despair:",
+      "Fraze R.I.P",
+      "Sarah",
+      "Rumi",
+      "The Bishop"
+    ]
+  },
+  "${modID}:SPECIAL_THANKS": {
+    "HEADER": "Special Thanks",
+    "NAMES": [
+      "For those who helped to develop the mod:",
+      "QingMu",
+      "Ubye Fighter",
+      "xe08",
+      "Chinese STS Modding Community",
+      "All the players who playtested during development!"
+    ]
+  },
+  "${modID}:ORIGINAL_DEV": {
+    "HEADER": "Original Developers",
+    "NAMES": [
+      "Thank you for making such amazing game!"
+    ]
+  }
+}

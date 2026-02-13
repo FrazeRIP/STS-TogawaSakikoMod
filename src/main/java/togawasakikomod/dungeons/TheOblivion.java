@@ -7,16 +7,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.map.MapEdge;
 import com.megacrit.cardcrawl.map.MapGenerator;
 import com.megacrit.cardcrawl.map.MapRoomNode;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import com.megacrit.cardcrawl.scenes.AbstractScene;
-import com.megacrit.cardcrawl.scenes.TheEndingScene;
-import togawasakikomod.monsters.oblivion.bosses.mygo.ChihayaAnonBoss;
+import togawasakikomod.character.TogawaSakiko;
+import togawasakikomod.monsters.oblivion.TheOblivionMonsterGroup;
 import togawasakikomod.scenes.TheOblivionScene;
 
 import java.util.ArrayList;
@@ -77,6 +79,7 @@ public class TheOblivion extends CustomDungeon {
     private void setUpMusic(){
         this.setMainMusic(audioPath("music/GMGU.ogg"));
         this.addTempMusic("Haruhikage", (audioPath("music/Haruhikage.ogg")));
+        this.addTempMusic("GMGU_Short", (audioPath("music/GMGU_Short.mp3")));
     }
 
     @Override
@@ -212,4 +215,35 @@ public class TheOblivion extends CustomDungeon {
     }
 
     protected void initializeShrineList() {}
+
+    @Override
+    public MonsterGroup getBoss() {
+        lastCombatMetricKey = TheOblivion.ID;
+        dungeonMapScreen.map.atBoss = true;
+        return new TheOblivionMonsterGroup();
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return AbstractDungeon.player instanceof TogawaSakiko;
+    }
+
+    @Override
+    public void allowFinalActRewards() {
+        preventFinalActRewards = true;
+    }
+
+    @Override
+    public void Ending(){
+        goToTrueVictoryRoom();
+    }
+
+    private void goToTrueVictoryRoom() {
+        CardCrawlGame.music.fadeOutBGM();
+        MapRoomNode node = new MapRoomNode(3, 4);
+        node.room = new TrueVictoryRoom();
+        AbstractDungeon.nextRoom = node;
+        AbstractDungeon.closeCurrentScreen();
+        AbstractDungeon.nextRoomTransitionStart();
+    }
 }

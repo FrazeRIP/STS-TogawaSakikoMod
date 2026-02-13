@@ -6,7 +6,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import togawasakikomod.cards.SpecialDeck.Skills.Desire;
 import togawasakikomod.character.TogawaSakiko;
+import togawasakikomod.dungeons.TheOblivion;
 import togawasakikomod.effects.ShowCardAndObtainEffect2;
+
+import java.util.Objects;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
@@ -35,6 +38,7 @@ public class BlazingHairband extends BaseRelic{
 
     @Override
     public void onVictory() {
+        if(Objects.equals(AbstractDungeon.id, TheOblivion.ID)){return;}
         this.flash();
         AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat();
         AbstractDungeon.player.masterDeck.group.add(card.makeStatEquivalentCopy());

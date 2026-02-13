@@ -84,6 +84,7 @@ togawasakikomod\annotations\CardEnable.class
 togawasakikomod\cards\SpecialDeck\Powers\Kindness.class
 togawasakikomod\patches\ObtainRewardEventPatch$Comon$Locator.class
 togawasakikomod\relics\WarmthInfusedPorcelainCup.class
+togawasakikomod\screens\SpeicialVictoryScreen.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfMutsumi.class
 togawasakikomod\powers\buffs\CrueltyPower.class
 togawasakikomod\cards\SakikoDeck\Skills\RhinocerosBeetle.class
@@ -140,6 +141,7 @@ togawasakikomod\cards\BaseCard.class
 togawasakikomod\potions\EarlGreyTea.class
 togawasakikomod\relics\TheCompass.class
 togawasakikomod\patches\TheEndGoToTheOblivionEventPatch.class
+togawasakikomod\patches\CutscenePatch.class
 togawasakikomod\cards\SakikoDeck\Attacks\SymbolIFire.class
 togawasakikomod\Actions\MakeCardInDiscardPileAction.class
 togawasakikomod\cards\SakikoDeck\Skills\Veritas.class
@@ -219,6 +221,7 @@ togawasakikomod\Actions\BlackBirthdayAction.class
 togawasakikomod\modifiers\UnremoveableModifier.class
 togawasakikomod\powers\monsters\EarnestCryPower.class
 togawasakikomod\effects\ShowAndExhaustCardEffect.class
+togawasakikomod\patches\actlikeit\ForkEventPatch.class
 togawasakikomod\Actions\KillGainPurgeRewardAction.class
 togawasakikomod\relics\CuteAnimalBandAid.class
 togawasakikomod\cards\SakikoDeck\Attacks\WishToBecomeHuman.class
@@ -252,6 +255,7 @@ togawasakikomod\modifiers\SelfRetainModifier.class
 togawasakikomod\cards\SakikoDeck\Skills\ClockOut.class
 togawasakikomod\powers\monsters\UnfadingYearningPower.class
 togawasakikomod\Actions\MakeCardUnremoveableAction.class
+togawasakikomod\patches\CreditPatch.class
 togawasakikomod\potions\OrangeMilkJelly.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfTaki.class
 togawasakikomod\cards\SakikoDeck\Skills\Perfection.class
@@ -305,6 +309,7 @@ togawasakikomod\powers\debuffs\DazzlingDownPower.class
 togawasakikomod\Actions\CountingStarsAction.class
 togawasakikomod\Actions\CharismaticIntangibleAction.class
 togawasakikomod\relics\BaseRelic$1.class
+togawasakikomod\patches\MusicMasterPatch.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRegenLostInstanceVar$RemoveLocator.class
 togawasakikomod\Actions\RemoveCardFromDeckAction.class
 togawasakikomod\cards\SakikoDeck\Attacks\MasqueradeRhapsodyRequest.class

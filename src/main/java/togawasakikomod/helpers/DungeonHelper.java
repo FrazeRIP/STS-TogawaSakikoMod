@@ -16,15 +16,14 @@ import com.megacrit.cardcrawl.vfx.combat.BattleStartEffect;
 import java.util.ArrayList;
 
 public class DungeonHelper {
-    public static void goToAct(String nextAct) {
-        CardCrawlGame.nextDungeon = nextAct;
-
+    public static void goToAct(String dungeonID) {
+        CardCrawlGame.nextDungeon = dungeonID;
         AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
-        if (AbstractDungeon.currMapNode.room instanceof GoToNextDungeonPatch.ForkEventRoom && ((GoToNextDungeonPatch.ForkEventRoom) AbstractDungeon.currMapNode.room).originalRoom != null) {
-            AbstractDungeon.currMapNode.room = ((GoToNextDungeonPatch.ForkEventRoom) AbstractDungeon.currMapNode.room).originalRoom;
+        if (AbstractDungeon.currMapNode.room instanceof GoToNextDungeonPatch.ForkEventRoom && ((GoToNextDungeonPatch.ForkEventRoom)AbstractDungeon.currMapNode.room).originalRoom != null) {
+            AbstractDungeon.currMapNode.room = ((GoToNextDungeonPatch.ForkEventRoom)AbstractDungeon.currMapNode.room).originalRoom;
         }
-        GenericEventDialog.hide();
 
+        GenericEventDialog.hide();
         CardCrawlGame.mode = CardCrawlGame.GameMode.GAMEPLAY;
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         AbstractDungeon.fadeOut();

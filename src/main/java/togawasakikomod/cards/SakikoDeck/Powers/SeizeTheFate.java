@@ -33,13 +33,15 @@ public class SeizeTheFate extends BaseCard {
 
     @Override
     public void update() {
-        super.applyPowers();
+        this.baseMagicNumber = MAGIC-this.misc;
+        this.initializeDescription();
         super.update();
     }
 
     @Override
     public void hover() {
-        applyPowers();
+        this.baseMagicNumber = MAGIC-this.misc;
+        this.initializeDescription();
         super.hover();
     }
 
@@ -48,12 +50,6 @@ public class SeizeTheFate extends BaseCard {
         this.initializeDescription();
         super.applyPowers();
     }
-
-//    @Override
-//    public void initializeDescription() {
-//        this.baseMagicNumber = this.misc;
-//        super.initializeDescription();
-//    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

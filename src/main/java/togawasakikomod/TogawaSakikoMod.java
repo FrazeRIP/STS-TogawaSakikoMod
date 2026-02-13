@@ -107,6 +107,7 @@ public class TogawaSakikoMod implements
     public static String makeID(String id) {
         return modID + ":" + id;
     }
+    public static boolean isGameClear = false;
 
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     public static void initialize() {
@@ -309,6 +310,8 @@ public class TogawaSakikoMod implements
                 localizationPath(lang, "UIStrings.json"));
         BaseMod.loadCustomStringsFile(MonsterStrings.class,
                 localizationPath(lang, "MonsterStrings.json"));
+        BaseMod.loadCustomStringsFile(CreditStrings.class,
+                localizationPath(lang, "CreditStrings.json"));
     }
 
     @Override
@@ -626,12 +629,9 @@ public class TogawaSakikoMod implements
         BaseMod.addAudio(makeID("MusicPulseAttackEffect"),audioPath("vfx/MusicPulseAttackEffect.wav"));
         BaseMod.addAudio(makeID("DazzlingAttackEffect"),audioPath("vfx/DazzlingAttackEffect.wav"));
 
-        BaseMod.addAudio(makeID("Sakiko-Hurt1"),audioPath("sakiko/Hurt1.wav"));
+        BaseMod.addAudio(makeID("Sakiko-Hurt1"), audioPath("sakiko/Hurt1.wav"));
         BaseMod.addAudio(makeID("Sakiko-Hurt2"),audioPath("sakiko/Hurt2.wav"));
         BaseMod.addAudio(makeID("Sakiko-Hurt3"),audioPath("sakiko/Hurt3.wav"));
-
-//        BaseMod.addAudio(makeID("Music-GMGU"),audioPath("music/GMGU.wav"));
-//        BaseMod.addAudio(makeID("Music-Haruhikage"),audioPath("music/Haruhikage.wav"));
     }
 
     @Override

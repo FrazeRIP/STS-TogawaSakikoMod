@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import togawasakikomod.cards.SpecialDeck.Skills.Desire;
 import togawasakikomod.character.TogawaSakiko;
+import togawasakikomod.dungeons.TheOblivion;
 import togawasakikomod.effects.ShowCardAndObtainEffect2;
+
+import java.util.Objects;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
@@ -21,6 +24,7 @@ public class MonochromeHairband extends BaseRelic{
 
     @Override
     public void onVictory() {
+        if(Objects.equals(AbstractDungeon.id, TheOblivion.ID)){return;}
         this.flash();
         AbstractDungeon.player.masterDeck.group.add(new Desire());
         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect2(new Desire(), (float) Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
