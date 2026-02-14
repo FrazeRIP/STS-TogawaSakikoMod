@@ -15,7 +15,11 @@ import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.TogawaSakikoMod;
+import togawasakikomod.helpers.DungeonHelper;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.MisumiUikaBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.WakabaMutsumiBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.YuutenjiNyamuBoss;
 import togawasakikomod.powers.buffs.StrengthUpPower;
 import togawasakikomod.powers.debuffs.TimorisPower;
 import togawasakikomod.powers.monsters.ForwardResolvePower;
@@ -27,6 +31,7 @@ public class ChihayaAnonBoss extends FinalBossMonster {
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
     public static final String[] DIALOG = monsterStrings.DIALOG;
+    public static final String[] MOVES = monsterStrings.MOVES;
 
     private static final int MAX_HEALTH = 550;
     private static final float hb_x = 0;
@@ -39,14 +44,14 @@ public class ChihayaAnonBoss extends FinalBossMonster {
     private static final int quadAtkAmount = 8;
     private static final int strAmt = 2;
 
-    private static final String DAMAGE_MSG = DIALOG[0];
-    private static final String DAMAGE_AND_BUFF_MSG = DIALOG[1];
-
     private int moveCount = -1;
+
+    public boolean isCChordPlayed = false;
+    public boolean isLastDialoguePlayed = false;
+    public boolean isUikaDialoguePlayed = false;
 
     public ChihayaAnonBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
-
         this.damage.add(new DamageInfo((AbstractCreature)this, triAtkAmount));
         this.damage.add(new DamageInfo((AbstractCreature)this, quadAtkAmount));
         this.flipHorizontal = true;
@@ -56,15 +61,48 @@ public class ChihayaAnonBoss extends FinalBossMonster {
 
     public void usePreBattleAction() {
         super.usePreBattleAction();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, (AbstractPower)new ForwardResolvePower(this,1),1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, (AbstractPower)new ForwardResolvePower(this,2),2));
+    }
+
+    @Override
+    protected void openDialogue() {
+        if(DungeonHelper.checkSpecificTypeMonsterExist(MisumiUikaBoss.ID)){
+            //"是不是打扰到你们的私人时间了？",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[2],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        if(DungeonHelper.checkSpecificTypeMonsterExist(YuutenjiNyamuBoss.ID)){
+            //"是喵梦亲！ NL 我是你频道的超忠实粉丝！"
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[4],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        {
+            //"诶...? NL 我打祥子？！",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
     }
 
     @Override
     public void takeTurn() {
         switch (this.nextMove){
             case 2 :
+                if(oppositeMonster!=null && !oppositeMonster.isDeadOrEscaped()&& oppositeMonster instanceof WakabaMutsumiBoss){
+                    WakabaMutsumiBoss mutsumi = (WakabaMutsumiBoss) oppositeMonster;
+                    if(mutsumi.isTeachPlayed && !isLastDialoguePlayed){
+                        //"这，这样啊...",
+                        AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[1]));
+                        isLastDialoguePlayed = true;
+                    }
+                }
+                else{
+
+                    if(!DungeonHelper.checkSpecificTypeMonsterExist(MisumiUikaBoss.ID)){
+                        //"哼哼，如何，很地道吧？"
+                        AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[2]));
+                    }
+                }
+
                 //6*3
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -84,7 +122,21 @@ public class ChihayaAnonBoss extends FinalBossMonster {
 
             case 1:
                 //8*4
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
+                if(oppositeMonster!=null && !oppositeMonster.isDeadOrEscaped()&& oppositeMonster instanceof WakabaMutsumiBoss){
+                    WakabaMutsumiBoss mutsumi = (WakabaMutsumiBoss) oppositeMonster;
+                    if(!mutsumi.isTeachPlayed && !isCChordPlayed){
+                        //"哼哼，如何，我的C和弦？",
+                        AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0]));
+                        isCChordPlayed = true;
+                    }
+                }
+                else{
+                    if(!DungeonHelper.checkSpecificTypeMonsterExist(MisumiUikaBoss.ID)){
+                        //"~But~ ~the~ ~eternal~ ~summer~ ~shall~ ~not~ ~fade~ ~",
+                        AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[1]));
+                    }
+                }
+
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(1)));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(1)));
@@ -93,6 +145,12 @@ public class ChihayaAnonBoss extends FinalBossMonster {
                 break;
 
             case 0:
+                //"不好意思！",
+                if(DungeonHelper.checkSpecificTypeMonsterExist(MisumiUikaBoss.ID) && !isUikaDialoguePlayed){
+                    AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[3]));
+                    isUikaDialoguePlayed = true;
+                }
+
                 //给予玩家2层易伤，
                 //2层虚弱和2层脆弱
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)this, (AbstractPower)new TimorisPower(AbstractDungeon.player, 2,true), 2));

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -16,8 +17,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BackAttackPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
+import togawasakikomod.Actions.TrueWaitAction;
 import togawasakikomod.TogawaSakikoMod;
+import togawasakikomod.helpers.DungeonHelper;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.mygo.ChihayaAnonBoss;
+import togawasakikomod.monsters.oblivion.bosses.mygo.ShiinaTakiBoss;
 import togawasakikomod.monsters.oblivion.minions.NyamuDrumMinion;
 import togawasakikomod.powers.monsters.UnfadingYearningPower;
 import togawasakikomod.util.TextureLoader;
@@ -28,6 +33,7 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
     public static final String[] DIALOG = monsterStrings.DIALOG;
+    public static final String[] MOVES = monsterStrings.MOVES;
 
     private static final int MAX_HEALTH = 550;
     private static final float hb_x = 0;
@@ -36,14 +42,10 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
     private static final float hb_h = 350;
     private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(YuutenjiNyamuBoss.class.getSimpleName());
 
-    private static final String DAMAGE_MSG = DIALOG[0];
-    private static final String DAMAGE_AND_BUFF_MSG = DIALOG[1];
-
     private NyamuDrumMinion[] minions = new NyamuDrumMinion[4];
     private int minionPerSpawn = 2;
 
     public boolean hasBackAttack = false;
-
 
     public static final float[] POSX = new float[] { 210.0F, -220.0F, 180.0F, -250.0F };
     public static final float[] POSY = new float[] { 75.0F, 115.0F, 345.0F, 335.0F };
@@ -63,11 +65,34 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
     }
 
     @Override
+    protected void openDialogue() {
+        if(DungeonHelper.checkSpecificTypeMonsterExist(ChihayaAnonBoss.ID)){
+            //"啊啦，是可爱的小粉丝呢~",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+            AbstractDungeon.actionManager.addToBottom(new TrueWaitAction(FIRST_DIALOGUE_LENGTH/2));
+            //"就用我们的合奏作今天的特别节目吧~",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[1],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        if(DungeonHelper.checkSpecificTypeMonsterExist(ShiinaTakiBoss.ID)){
+            //"咱的努力总算有了回报，喵姆超感动！"
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[2],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        {
+            //"被爱的人， NL 可没有权利选择自己被爱的方式。",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+            AbstractDungeon.actionManager.addToBottom(new TrueWaitAction(FIRST_DIALOGUE_LENGTH/2));
+            //"能被爱就已经很幸运了喵姆。",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[1],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+    }
+
+    @Override
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
                 //14*2
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -76,7 +101,6 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
             case 1:
                 //14
                 //给予2层易伤
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player,this, new VulnerablePower(AbstractDungeon.player,2,true),2));
@@ -91,6 +115,10 @@ public class YuutenjiNyamuBoss extends FinalBossMonster {
                 break;
 
             case 3:
+                //"这个BPM，小菜一碟！"
+                AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[2]));
+
+                //生成鼓
                 int minionsSpawned = 0, i;
                 for (i = 0; minionsSpawned < this.minionPerSpawn && i < this.minions.length; i++) {
                     if (this.minions[i] == null || this.minions[i].isDeadOrEscaped()) {

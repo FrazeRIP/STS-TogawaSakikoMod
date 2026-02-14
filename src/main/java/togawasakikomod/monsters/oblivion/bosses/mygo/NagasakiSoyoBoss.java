@@ -16,7 +16,12 @@ import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.TogawaSakikoMod;
+import togawasakikomod.helpers.DungeonHelper;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.MisumiUikaBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.WakabaMutsumiBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.YahataUmiriBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.YuutenjiNyamuBoss;
 import togawasakikomod.powers.buffs.StrengthUpPower;
 import togawasakikomod.powers.monsters.TemporalLongingPower;
 import togawasakikomod.util.TextureLoader;
@@ -27,6 +32,7 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
     public static final String[] DIALOG = monsterStrings.DIALOG;
+    public static final String[] MOVES = monsterStrings.MOVES;
 
     private static final int MAX_HEALTH = 550;
     private static final float hb_x = 0;
@@ -34,9 +40,6 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
     private static final float hb_w = 164;
     private static final float hb_h = 350;
     private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(NagasakiSoyoBoss.class.getSimpleName());
-
-    private static final String DAMAGE_MSG = DIALOG[0];
-    private static final String DAMAGE_AND_BUFF_MSG = DIALOG[1];
 
     private int moveCount = -1;
     TemporalLongingPower power;
@@ -57,6 +60,34 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
     }
 
     @Override
+    protected void openDialogue() {
+        if(DungeonHelper.checkSpecificTypeMonsterExist(TakamatsuTomoriBoss.ID)){
+            //"小灯的话总是这么直白呢。",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        if(DungeonHelper.checkSpecificTypeMonsterExist(ShiinaTakiBoss.ID)){
+            //"这次，不会再让小祥逃走了。",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[1],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        if(DungeonHelper.checkSpecificTypeMonsterExist(WakabaMutsumiBoss.ID)){
+            //"尽管如此，也不该将一切当作没发生过。",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[2],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        if(DungeonHelper.checkSpecificTypeMonsterExist(YahataUmiriBoss.ID)){
+            //"Ave mujica的贝斯手？"
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[3],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        {
+            //"为什么想说的话总是说不出口呢。",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+    }
+
+    @Override
     public void takeTurn() {
         int xAmount = 0;
         if(this.hasPower(TemporalLongingPower.POWER_ID)){
@@ -66,7 +97,7 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
 
         switch (this.nextMove){
             case 0 :
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
+
                 //24格挡
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this,24));
                 //给予所有敌人2+N点力量
@@ -78,8 +109,10 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
                 break;
 
             case 1:
+                //"没有发现你的不幸福，我很抱歉。",
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, MOVES[1]));
+
                 //12*2
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -110,5 +143,9 @@ public class NagasakiSoyoBoss extends FinalBossMonster {
                 break;
         }
         moveCount ++;
+    }
+
+    public void buffDialogue(){
+        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, MOVES[2]));
     }
 }

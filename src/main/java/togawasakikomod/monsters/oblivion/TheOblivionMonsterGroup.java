@@ -41,27 +41,80 @@ public class TheOblivionMonsterGroup extends MonsterGroup {
         FinalBossMonster.isBGMPlayed = false;
     }
 
+    public TheOblivionMonsterGroup(String leftMonsterID, String rightMonsterID) {
+        super(new AbstractMonster[0]);
+        this.leftMonsterID = leftMonsterID;
+        this.rightMonsterID = rightMonsterID;
+        getBosses();
+        FinalBossMonster.isBGMPlayed = false;
+    }
+
     public boolean shouldFlipVfx() {
         return ((AbstractMonster) this.monsters.get(1)).isDying;
     }
 
     public void getBosses(){
-        int firstIndex = monsterRng.random(0,monsterPool.length-1);
-        int secondIndex = monsterRng.random(0,monsterPool.length-1);
-        while (firstIndex == secondIndex){
-            secondIndex = monsterRng.random(0,monsterPool.length-1);
+        if(leftMonsterID == null || rightMonsterID == null){
+            int firstIndex = monsterRng.random(0,monsterPool.length-1);
+            int secondIndex = monsterRng.random(0,monsterPool.length-1);
+            while (firstIndex == secondIndex){
+                secondIndex = monsterRng.random(0,monsterPool.length-1);
+            }
+            leftMonsterID = monsterPool[firstIndex];
+            rightMonsterID = monsterPool[secondIndex];
         }
 
-        leftMonsterID = monsterPool[firstIndex];
-        rightMonsterID = monsterPool[secondIndex];
-
+        //睦左
         if(Objects.equals(rightMonsterID, WakabaMutsumiBoss.ID)){
             String temp = rightMonsterID;
             rightMonsterID = leftMonsterID;
             leftMonsterID = temp;
         }
 
+        //猫右
         if(Objects.equals(leftMonsterID, YuutenjiNyamuBoss.ID)){
+            String temp = leftMonsterID;
+            leftMonsterID = rightMonsterID;
+            rightMonsterID = temp;
+        }
+
+        //素世左 海玲右
+        if(Objects.equals(rightMonsterID, NagasakiSoyoBoss.ID) && Objects.equals(leftMonsterID, YahataUmiriBoss.ID)){
+            String temp = leftMonsterID;
+            leftMonsterID = rightMonsterID;
+            rightMonsterID = temp;
+        }
+
+        //素世左 立希右
+        if(Objects.equals(rightMonsterID, NagasakiSoyoBoss.ID) && Objects.equals(leftMonsterID, ShiinaTakiBoss.ID)){
+            String temp = leftMonsterID;
+            leftMonsterID = rightMonsterID;
+            rightMonsterID = temp;
+        }
+
+        //灯左 素世右
+        if(Objects.equals(rightMonsterID, TakamatsuTomoriBoss.ID) && Objects.equals(leftMonsterID, NagasakiSoyoBoss.ID)){
+            String temp = leftMonsterID;
+            leftMonsterID = rightMonsterID;
+            rightMonsterID = temp;
+        }
+
+        //初华左 灯右
+        if(Objects.equals(rightMonsterID, MisumiUikaBoss.ID) && Objects.equals(leftMonsterID, TakamatsuTomoriBoss.ID)){
+            String temp = leftMonsterID;
+            leftMonsterID = rightMonsterID;
+            rightMonsterID = temp;
+        }
+
+        //海玲左 立希右
+        if(Objects.equals(rightMonsterID, YahataUmiriBoss.ID) && Objects.equals(leftMonsterID, ShiinaTakiBoss.ID)){
+            String temp = leftMonsterID;
+            leftMonsterID = rightMonsterID;
+            rightMonsterID = temp;
+        }
+
+        //爱音左 初华右
+        if(Objects.equals(rightMonsterID, ChihayaAnonBoss.ID) && Objects.equals(leftMonsterID, MisumiUikaBoss.ID)){
             String temp = leftMonsterID;
             leftMonsterID = rightMonsterID;
             rightMonsterID = temp;
@@ -69,6 +122,8 @@ public class TheOblivionMonsterGroup extends MonsterGroup {
 
         leftMonster = getBossByID(leftMonsterID,true);
         rightMonster = getBossByID(rightMonsterID,false);
+        leftMonster.setOppositeMonster(rightMonster);
+        rightMonster.setOppositeMonster(leftMonster);
         addMonster(0,leftMonster);
         addMonster(1,rightMonster);
     }

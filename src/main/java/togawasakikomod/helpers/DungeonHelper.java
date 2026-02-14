@@ -9,11 +9,13 @@ import com.megacrit.cardcrawl.events.GenericEventDialog;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.map.MapEdge;
 import com.megacrit.cardcrawl.map.MapRoomNode;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.DungeonTransitionScreen;
 import com.megacrit.cardcrawl.vfx.combat.BattleStartEffect;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class DungeonHelper {
     public static void goToAct(String dungeonID) {
@@ -58,5 +60,29 @@ public class DungeonHelper {
         AbstractDungeon.getCurrRoom().onPlayerEntry();
         AbstractDungeon.scene.nextRoom(node.room);
         AbstractDungeon.rs = (node.room.event instanceof AbstractImageEvent) ? AbstractDungeon.RenderScene.EVENT : AbstractDungeon.RenderScene.NORMAL;
+    }
+
+    public static boolean checkSpecificTypeMonsterExist(String monsterID){
+        AbstractRoom room = AbstractDungeon.getCurrRoom();
+        if(room!=null && room.monsters!=null && room.monsters.monsters!=null){
+            for(AbstractMonster m : room.monsters.monsters){
+                if(Objects.equals(m.id, monsterID) && !m.isDeadOrEscaped()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static AbstractMonster checkSpecificTypeMonsterExistAndReturn(String monsterID){
+        AbstractRoom room = AbstractDungeon.getCurrRoom();
+        if(room!=null && room.monsters!=null && room.monsters.monsters!=null){
+            for(AbstractMonster m : room.monsters.monsters){
+                if(Objects.equals(m.id, monsterID) && !m.isDeadOrEscaped()){
+                    return m;
+                }
+            }
+        }
+        return null;
     }
 }

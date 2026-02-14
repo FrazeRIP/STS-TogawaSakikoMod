@@ -228,6 +228,7 @@ togawasakikomod\cards\SakikoDeck\Attacks\WishToBecomeHuman.class
 togawasakikomod\patches\ReducedPowerRecorderPatch$RecordRemovedPowerInstanceVar.class
 togawasakikomod\cards\SakikoDeck\Powers\SeizeTheFate.class
 togawasakikomod\patches\FreeAttackPowerReducePatch$ReplaceAmountPatch$1.class
+togawasakikomod\Actions\TrueWaitAction.class
 togawasakikomod\util\GeneralUtils.class
 togawasakikomod\cards\SpecialDeck\Attacks\Melody.class
 togawasakikomod\dungeons\TheOblivion.class
@@ -255,7 +256,6 @@ togawasakikomod\modifiers\SelfRetainModifier.class
 togawasakikomod\cards\SakikoDeck\Skills\ClockOut.class
 togawasakikomod\powers\monsters\UnfadingYearningPower.class
 togawasakikomod\Actions\MakeCardUnremoveableAction.class
-togawasakikomod\patches\CreditPatch.class
 togawasakikomod\potions\OrangeMilkJelly.class
 togawasakikomod\cards\SakikoDeck\Attacks\PhantomOfTaki.class
 togawasakikomod\cards\SakikoDeck\Skills\Perfection.class

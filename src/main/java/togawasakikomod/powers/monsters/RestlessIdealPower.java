@@ -1,6 +1,7 @@
 package togawasakikomod.powers.monsters;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnDrawPileShufflePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -12,18 +13,24 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import togawasakikomod.annotations.CharismaticFormCopyEnable;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.YahataUmiriBoss;
 import togawasakikomod.powers.BasePower;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
 
 @CharismaticFormCopyEnable(enable = false)
-public class RestlessIdealPower extends BasePower {
+public class RestlessIdealPower extends BasePower{
     public static final String POWER_ID = makeID(RestlessIdealPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
+    YahataUmiriBoss boss = null;
+
     public RestlessIdealPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        if(this.owner!=null && this.owner instanceof YahataUmiriBoss){
+            boss = (YahataUmiriBoss) owner;
+        }
     }
 
     @Override

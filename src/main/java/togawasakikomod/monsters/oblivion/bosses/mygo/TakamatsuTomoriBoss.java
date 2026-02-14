@@ -14,7 +14,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import togawasakikomod.TogawaSakikoMod;
+import togawasakikomod.helpers.DungeonHelper;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.MisumiUikaBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.YuutenjiNyamuBoss;
 import togawasakikomod.powers.buffs.DazzlingPower;
 import togawasakikomod.powers.monsters.EarnestCryPower;
 import togawasakikomod.powers.monsters.MonsterDivinityPower;
@@ -26,6 +29,7 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
     public static final String[] DIALOG = monsterStrings.DIALOG;
+    public static final String[] MOVES = monsterStrings.MOVES;
 
     private static final int MAX_HEALTH = 550;
     private static final float hb_x = 0;
@@ -35,15 +39,14 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
     private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(TakamatsuTomoriBoss.class.getSimpleName());
 
     private static final int action0AtkAmount = 1 ;
-    private static final int action0AtkMultiAmount = 10;
+    private static final int action0AtkMultiAmount = 12;
     private static final int action1BlockAmount = 24;
     private static final int action1BuffAmount = 1;
     private static final int action2BuffReduceAmount = 2;
-
-    private static final String DAMAGE_MSG = DIALOG[0];
-    private static final String DAMAGE_AND_BUFF_MSG = DIALOG[1];
-
     private boolean isUltCasted = false;
+
+    private boolean isDialogue1Played = false;
+    private boolean isDialogue2Played = false;
 
     public TakamatsuTomoriBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
@@ -59,11 +62,34 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
     }
 
     @Override
+    protected void openDialogue() {
+        if(DungeonHelper.checkSpecificTypeMonsterExist(NagasakiSoyoBoss.ID)){
+            //"小祥... NL 来组乐队吧！",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        if(DungeonHelper.checkSpecificTypeMonsterExist(MisumiUikaBoss.ID)){
+            //"嗯，我也一样。"
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[1],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        {
+            //"小祥... NL 我想对你说...",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+    }
+
+    @Override
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
-                //1*10
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
+                //"我们各自向前走，一定会有答案。"
+                if(hasPower(MonsterDivinityPower.POWER_ID) && !isDialogue2Played){
+                    isDialogue2Played = true;
+                    AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, MOVES[2]));
+                }
+
+                //1*12
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 for(int i =0;i<action0AtkMultiAmount;i++){
                     AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -71,9 +97,13 @@ public class TakamatsuTomoriBoss extends FinalBossMonster {
                 break;
 
             case 1:
+                //"现在的我， NL 谈不上幸福与否。 NL 但是...",
+                if(!isDialogue1Played){
+                    isDialogue1Played = true;
+                    AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, MOVES[1]));
+                }
                 //24格挡
                 //获得1点力量
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this,action1BlockAmount));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this,this,new StrengthPower(this,action1BuffAmount)));
                 break;

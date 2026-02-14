@@ -2,71 +2,94 @@
   "${modID}:ChihayaAnonBoss": {
     "NAME": "Chihaya Anon",
     "DIALOG": [
-      " Hahahahahahaha!",
-      " See? What a beautiful C chord!"
+      "Hehe, well? How's my C chord?",
+      "I-I see...",
+      "Did I interrupt your private time?",
+      "Oops—sorry!",
+      "It's Nyamuchi! I'm a super loyal fan of your channel!"
     ],
     "MOVES": [
-      ""
+      "Eh? I'm up against Sakiko?!",
+      "~But~ ~the~ ~eternal~ ~summer~ ~shall~ ~not~ ~fade~ ~",
+      "Hehe—well? Pretty authentic, right?"
     ]
   },
   "${modID}:ShiinaTakiBoss": {
     "NAME": "Shiina Taki",
     "DIALOG": [
-      " How dare you ignore Tomori!",
-      " Don't you dare hurt Tomori!"
+      "That's exactly what I was thinking.",
+      "Don't ignore Tomori!",
+      "Don't you dare hurt Tomori!",
+      "Huh?",
+      "The drummer on the other side... I feel like I've heard Anon mention her before..."
     ],
     "MOVES": [
-      ""
+      "I heard about what happened to you.",
+      "We all have things we must face.",
+      "Don't think you can run."
     ]
   },
   "${modID}:TakamatsuTomoriBoss": {
     "NAME": "Takamatsu Tomori",
     "DIALOG": [
-      " Let's start a band together!",
-      " Goo goo ga ga!"
+      "Sakiko... NL let's start a band!",
+      "Yeah, me too."
     ],
     "MOVES": [
-      ""
+      "Sakiko, there's something I want to tell you.",
+      "Right now, I can't really say whether I'm happy or not, but—",
+      "If we each keep moving forward, we'll find our answer someday."
     ]
   },
   "${modID}:NagasakiSoyoBoss": {
     "NAME": "Nagasaki Soyo",
     "DIALOG": [
-      " Without Sakiko... NL I will...!",
-      " No!"
+      "Tomori's words are always so straightforward.",
+      "This time… I won't let Sakiko run away again.",
+      "Sakiko… let's start a band.",
+      "The bassist of Ave Mujica?"
     ],
     "MOVES": [
-      ""
+      "Why is it that the words I want to say never come out?",
+      "I didn't notice your unhappiness… I am sorry.",
+      "I probably won't ever be able to forget CRYCHIC…"
     ]
   },
   "${modID}:WakabaMutsumiBoss": {
     "NAME": "Wakaba Mutsumi",
     "DIALOG": [
-      " Saki, move.",
-      " I never once felt... NL happy being in a band..."
+      "Guitar, I can teach you.",
+      "Why... NL Why do I mess everything up every time?"
     ],
     "MOVES": [
-      ""
+      "Saki.",
+      "...",
+      "I never once thought... NL being in a band was fun."
     ]
   },
   "${modID}:YahataUmiriBoss": {
     "NAME": "Yahata Umiri",
     "DIALOG": [
-      " After all, I'm pretty good-looking.",
-      " Could it be... NL that I'm not worthy of trust?"
+      "You could say I'm part of MyGO too. Nice to meet you.",
+      "Shiina-san, are you thinking of joining our band as well?",
+      "Just kidding."
     ],
     "MOVES": [
-      ""
+      "I thought Ave Mujica had already ceased activities entirely.",
+      "Show me your resolve, Togawa-san."
     ]
   },
   "${modID}:YuutenjiNyamuBoss": {
     "NAME": "Yuutenji Nyamu",
     "DIALOG": [
-      " Those who are loved don't have the right to choose how they're loved. Being loved at all is already a blessing, nyamu.",
-      " Konichi Nyamu Nyamu~"
+      "Oh my, what an adorable little fan~",
+      "Let's make our duet as today's special feature~",
+      "All my hard work finally paid off—Nyamu's super touched!"
     ],
     "MOVES": [
-      ""
+      "Those who are loved don't get to choose how they're loved.",
+      "Just being loved is already a blessing, nya~",
+      "This BPM? Piece of cake!"
     ]
   },
   "${modID}:NyamuDrumMinion": {
@@ -81,10 +104,14 @@
   "${modID}:MisumiUikaBoss": {
     "NAME": "Misumi Uika",
     "DIALOG": [
-      " Saki-chan... NL Saki-chan...... NL Saki-chan......!"
+      "Yes—Anon-chan, could you excuse us for a moment?",
+      "My lyrics...There's something I want to convey to Sakiko."
     ],
     "MOVES": [
-      ""
+      "I've been waiting...always waiting for you... NL Sakiko...",
+      "So even sorrow, pain, and despair...eventually fade away...",
+      "Please look at me. Only me.",
+      "Saki-chan... NL Saki-chan...! NL @Saki-chan...!!!@"
     ]
   },
   "${modID}:TheOblivion": {

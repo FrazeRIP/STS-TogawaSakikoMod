@@ -2,13 +2,17 @@ package togawasakikomod.powers.monsters;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import togawasakikomod.Actions.TemporalLongingAction;
 import togawasakikomod.annotations.CharismaticFormCopyEnable;
+import togawasakikomod.monsters.oblivion.bosses.mygo.NagasakiSoyoBoss;
 import togawasakikomod.powers.BasePower;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
@@ -18,13 +22,16 @@ public class TemporalLongingPower extends BasePower {
     public static final String POWER_ID = makeID(TemporalLongingPower.class.getSimpleName());
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-
+    NagasakiSoyoBoss boss = null;
     private final int maxCount = 10;
 
     public TemporalLongingPower(AbstractCreature owner) {
         super(POWER_ID, TYPE, TURN_BASED, owner, 0);
         amount2 = 1;
         updateDescription();
+        if(this.owner instanceof NagasakiSoyoBoss){
+            boss = (NagasakiSoyoBoss) this.owner;
+        }
     }
 
     @Override
@@ -43,6 +50,9 @@ public class TemporalLongingPower extends BasePower {
             this.amount = 0;
             playApplyPowerSfx();
             addToTop(new TemporalLongingAction());
+            if(this.boss!=null && !this.boss.isDeadOrEscaped()){
+                boss.buffDialogue();
+            }
         }
         updateDescription();
     }

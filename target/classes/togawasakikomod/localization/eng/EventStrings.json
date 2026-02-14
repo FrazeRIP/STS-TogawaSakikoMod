@@ -18,14 +18,13 @@
       "Select card to remove. (You can also stick extra text like this in here.)"
     ]
   },
-  "togawasakikomod:TheOblivionEventRoom": {
-    "NAME": "选择...",
+  "togawasakikomod:GetForked": {
+    "NAME": "Intersection",
     "DESCRIPTIONS": [
-      "前面就心脏，但是你听到了其他的声音..."
+      "#r@A thunderous tremor@ rumbles close at hand. NL Within it, you hear another voice whisper. NL Is this the Heart’s rapture… or a syllable you have long forgotten?"
     ],
     "OPTIONS": [
-      "[ 接近这些声音 ] 跳过这个章节，进入一个特殊的章节。",
-      "[ 不在意 ] 继续这个章节。"
+      ""
     ]
   }
 }

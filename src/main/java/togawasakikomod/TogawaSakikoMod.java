@@ -6,6 +6,7 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -40,6 +41,8 @@ import togawasakikomod.dungeons.TheOblivion;
 import togawasakikomod.effects.DazzlingAttackEffect;
 import togawasakikomod.events.TheOblivionEvent;
 import togawasakikomod.intents.MutsumiAttackIntent;
+import togawasakikomod.monsters.oblivion.TheOblivionMonsterGroup;
+import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.MisumiUikaBoss;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.WakabaMutsumiBoss;
 import togawasakikomod.monsters.oblivion.bosses.avemujica.YahataUmiriBoss;
@@ -235,6 +238,31 @@ public class TogawaSakikoMod implements
         BaseMod.addMonster(YahataUmiriBoss.ID,()-> new YahataUmiriBoss(0,0));
         BaseMod.addMonster(YuutenjiNyamuBoss.ID,()-> new YuutenjiNyamuBoss(0,0));
         BaseMod.addMonster(MisumiUikaBoss.ID,()-> new MisumiUikaBoss(0,0));
+
+
+        addDebugTheObvilionBosses();
+    }
+
+    private static void addDebugTheObvilionBosses() {
+        ArrayList<FinalBossMonster> monsterPool = new ArrayList<FinalBossMonster>();
+        monsterPool.add(new ChihayaAnonBoss(0,0));
+        monsterPool.add(new ShiinaTakiBoss(0,0));
+        monsterPool.add(new NagasakiSoyoBoss(0,0));
+        monsterPool.add(new TakamatsuTomoriBoss(0,0));
+        monsterPool.add(new WakabaMutsumiBoss(0,0));
+        monsterPool.add(new YahataUmiriBoss(0,0));
+        monsterPool.add(new YuutenjiNyamuBoss(0,0));
+        monsterPool.add(new MisumiUikaBoss(0,0));
+
+        while (monsterPool.size()>1){
+            FinalBossMonster mainM = monsterPool.get(0);
+            monsterPool.remove(mainM);
+            for (FinalBossMonster m : monsterPool){
+                BaseMod.addMonster(makeID(mainM.getClass().getSimpleName()+"&"+m.getClass().getSimpleName()),()->new TheOblivionMonsterGroup(mainM.id,m.id));
+                BaseMod.addMonster(makeID(m.getClass().getSimpleName()+"&"+mainM.getClass().getSimpleName()),()->new TheOblivionMonsterGroup(m.id,mainM.id));
+            }
+        }
+        //BaseMod.addMonster(makeID(ChihayaAnonBoss.class.getSimpleName()+"&"+ShiinaTakiBoss.class.getSimpleName()),()->new TheOblivionMonsterGroup(ChihayaAnonBoss.ID,ShiinaTakiBoss.ID));
     }
 
     private static void registerPotions() {
@@ -248,6 +276,7 @@ public class TogawaSakikoMod implements
                     //playerClass will make a potion character-specific. By default, it's null and will do nothing.
                 });
     }
+
 
     private static void registerIntents(){
         CustomIntent.add(new MutsumiAttackIntent());

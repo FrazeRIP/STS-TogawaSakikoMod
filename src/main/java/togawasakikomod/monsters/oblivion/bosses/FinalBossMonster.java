@@ -1,8 +1,10 @@
 package togawasakikomod.monsters.oblivion.bosses;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.util.TriConsumer;
@@ -16,9 +18,12 @@ import java.util.List;
 public abstract class FinalBossMonster extends SurroundedMonster implements TriConsumer<AbstractPower, AbstractCreature, AbstractCreature> {
 
     public static boolean isBGMPlayed = false;
+    protected static final float FIRST_DIALOGUE_LENGTH = 3f;
 
     private ArrayList<AbstractPower> currentRoundPowerGains = new ArrayList<>();
     private ArrayList<AbstractPower> previousRoundPowerGains = new ArrayList<>();
+
+    protected FinalBossMonster oppositeMonster = null;
 
     public FinalBossMonster(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
@@ -33,11 +38,13 @@ public abstract class FinalBossMonster extends SurroundedMonster implements TriC
 
     @Override
     public void usePreBattleAction() {
+        super.usePreBattleAction();
         if(!isBGMPlayed){
             isBGMPlayed = true;
             AbstractDungeon.getCurrRoom().playBgmInstantly("Haruhikage");
         }
-        super.usePreBattleAction();
+        openDialogue();
+        AbstractDungeon.player.movePosition(Settings.WIDTH / 2.0F, AbstractDungeon.floorY);
     }
 
     @Override
@@ -92,4 +99,11 @@ public abstract class FinalBossMonster extends SurroundedMonster implements TriC
         super.die();
         //AbstractDungeon.id = "TheEnding";
     }
+
+
+    public void setOppositeMonster(FinalBossMonster m){
+        oppositeMonster = m;
+    }
+
+    protected abstract void openDialogue();
 }

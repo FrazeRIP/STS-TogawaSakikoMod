@@ -239,6 +239,7 @@ public class TheOblivion extends CustomDungeon {
     }
 
     private void goToTrueVictoryRoom() {
+        CardCrawlGame.music.fadeOutTempBGM();
         CardCrawlGame.music.fadeOutBGM();
         MapRoomNode node = new MapRoomNode(3, 4);
         node.room = new TrueVictoryRoom();

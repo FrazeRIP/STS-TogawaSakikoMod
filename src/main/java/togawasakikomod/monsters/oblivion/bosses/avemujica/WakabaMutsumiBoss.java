@@ -16,7 +16,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import togawasakikomod.Actions.LoseBlockForEveryoneThenAttackAction;
 import togawasakikomod.TogawaSakikoMod;
+import togawasakikomod.helpers.DungeonHelper;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.mygo.ChihayaAnonBoss;
+import togawasakikomod.monsters.oblivion.bosses.mygo.NagasakiSoyoBoss;
 import togawasakikomod.patches.CustomEnumPatch;
 import togawasakikomod.powers.monsters.SilentWoundPower;
 import togawasakikomod.util.TextureLoader;
@@ -29,6 +32,7 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
     public static final String[] DIALOG = monsterStrings.DIALOG;
+    public static final String[] MOVES = monsterStrings.MOVES;
 
     private static final int MAX_HEALTH = 550;
     private static final float hb_x = 0;
@@ -37,12 +41,10 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
     private static final float hb_h = 350;
     private static final String IMAGE_URL = TextureLoader.getMonsterTextureString(WakabaMutsumiBoss.class.getSimpleName());
 
-    private static final String DAMAGE_MSG = DIALOG[0];
-    private static final String DAMAGE_AND_BUFF_MSG = DIALOG[1];
-
     private int moveCount = -1;
     private DamageInfo blockRemoveAttackInfo = new DamageInfo(this,0);
 
+    public boolean isTeachPlayed = false;
 
     public WakabaMutsumiBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
@@ -86,15 +88,41 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
     }
 
     @Override
+    protected void openDialogue() {
+        if(DungeonHelper.checkSpecificTypeMonsterExist(NagasakiSoyoBoss.ID)){
+            //"为什么... NL 我每次都会搞砸..."
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[1],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        {
+            //"祥。",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+    }
+
+    @Override
     public void takeTurn() {
         switch (this.nextMove){
             case 0 :
+                if(oppositeMonster!=null && !oppositeMonster.isDeadOrEscaped()&& oppositeMonster instanceof ChihayaAnonBoss){
+                    ChihayaAnonBoss anon = (ChihayaAnonBoss) oppositeMonster;
+                    if(anon.isCChordPlayed && !isTeachPlayed){
+                        //"吉他，我可以教你的。",
+                        AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+                        isTeachPlayed = true;
+                    }else{
+                        //"..."
+                        AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, MOVES[1]));
+                    }
+                }else{
+                    //"..."
+                    AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, MOVES[1]));
+                }
                 //获得6层多重护甲
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction(this,this,new PlatedArmorPower(this, 6), 6));
                 break;
 
             case 1:
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
                 //8
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
@@ -103,7 +131,9 @@ public class WakabaMutsumiBoss extends FinalBossMonster {
                 break;
 
             case 2:
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
+                //"我从来没有觉得... NL 组乐队开心过..."
+                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, MOVES[2]));
+
                 //清除所有角色的格挡，
                 //造成等量伤害。
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new LoseBlockForEveryoneThenAttackAction(AbstractDungeon.player,this,DamageInfo.DamageType.NORMAL,AbstractGameAction.AttackEffect.BLUNT_HEAVY));

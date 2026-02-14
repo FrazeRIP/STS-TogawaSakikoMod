@@ -67,6 +67,9 @@ public class TogawaSakiko extends CustomPlayer {
     public static final float HURT_AUDIO_COOLDOWN = 1f;
     public static float HurtAudioTimer = 0f;
 
+    public static final String CHARACTER_SPRITE_PATH = characterPath("image.png");
+    public static final String CHARACTER_ALT_SPRITE_PATH = characterPath("image_alt.png");
+
     //This static class is necessary to avoid certain quirks of Java classloading when registering the character.
     public static class Meta {
         //These are used to identify your character, as well as your character's card color.
@@ -157,7 +160,7 @@ public class TogawaSakiko extends CustomPlayer {
                 SHOULDER_1,
                 CORPSE,
                 getLoadout(),
-                -10F, -10.0F, 164, 323, //Character hitbox. x y position, then width and height.
+                -10F, -10.0F, 168, 200.0F, //Character hitbox. x y position, then width and height.
                 new EnergyManager(ENERGY_PER_TURN));
 
 //        super(getNames()[0], Meta.TOGAWA_SAKIKO,

@@ -16,7 +16,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import togawasakikomod.TogawaSakikoMod;
 import togawasakikomod.cards.SpecialDeck.Curses.*;
+import togawasakikomod.helpers.DungeonHelper;
 import togawasakikomod.monsters.oblivion.bosses.FinalBossMonster;
+import togawasakikomod.monsters.oblivion.bosses.mygo.ChihayaAnonBoss;
+import togawasakikomod.monsters.oblivion.bosses.mygo.TakamatsuTomoriBoss;
 import togawasakikomod.powers.monsters.UnclaimedPromisePower;
 import togawasakikomod.powers.monsters.VoicedGazePower;
 import togawasakikomod.util.TextureLoader;
@@ -27,6 +30,7 @@ public class MisumiUikaBoss extends FinalBossMonster {
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
     public static final String[] DIALOG = monsterStrings.DIALOG;
+    public static final String[] MOVES = monsterStrings.MOVES;
 
     private static final int MAX_HEALTH = 550;
     private static final float hb_x = 0;
@@ -40,10 +44,10 @@ public class MisumiUikaBoss extends FinalBossMonster {
     public MisumiUikaBoss(float offsetX, float offsetY) {
         super(NAME, ID, MAX_HEALTH, hb_x, hb_y, hb_w, hb_h, IMAGE_URL, offsetX, offsetY-35);
 
-        this.damage.add(new DamageInfo((AbstractCreature)this, 8));
+        this.damage.add(new DamageInfo((AbstractCreature)this, 44));
         this.damage.add(new DamageInfo((AbstractCreature)this, 20));
+        this.flipHorizontal = true;
 
-        this.flipHorizontal = flipHorizontal;
         this.dialogX = -80.0F * Settings.scale;
         this.dialogY = 50.0F * Settings.scale;
     }
@@ -51,6 +55,24 @@ public class MisumiUikaBoss extends FinalBossMonster {
     public void usePreBattleAction() {
         super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this,new VoicedGazePower(this)));
+    }
+
+    @Override
+    protected void openDialogue() {
+        if(DungeonHelper.checkSpecificTypeMonsterExist(TakamatsuTomoriBoss.ID)){
+            //"我的歌词，想传达给小祥。"
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[1],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        if(DungeonHelper.checkSpecificTypeMonsterExist(ChihayaAnonBoss.ID)){
+            //"是的，还请小爱音回避一下。",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, DIALOG[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
+        else
+        {
+            //"一直，一直在等你... NL 小祥...",
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[0],FIRST_DIALOGUE_LENGTH,FIRST_DIALOGUE_LENGTH));
+        }
     }
 
     @Override
@@ -69,16 +91,19 @@ public class MisumiUikaBoss extends FinalBossMonster {
                 break;
 
             case 1 :
-                //8*4
+                //"Saki酱... NL Saki酱...! NL @Saki酱...!!!@"
+                AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[3]));
+
+                //44
                 //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_AND_BUFF_MSG));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction) new AnimateSlowAttackAction((AbstractCreature) this));
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
-                AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new DamageAction((AbstractCreature)AbstractDungeon.player, this.damage.get(0)));
                 break;
 
             case 2:
+                //"请看着我，只看着我。",
+                AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[2]));
+
                 //给队友99格挡
                 //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new TalkAction((AbstractCreature)this, DAMAGE_MSG));
                 for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters){
@@ -106,7 +131,7 @@ public class MisumiUikaBoss extends FinalBossMonster {
                 break;
             case 1:
             case 3:
-                setMove((byte)1,Intent.ATTACK, (this.damage.get(0)).base,4,true);
+                setMove((byte)1,Intent.ATTACK, (this.damage.get(0)).base);
                 break;
             case 2:
                 int monsterCount = 0;
@@ -124,5 +149,10 @@ public class MisumiUikaBoss extends FinalBossMonster {
                 break;
         }
         moveCount ++;
+    }
+
+    public void skipTurnDialogue(){
+        //"原来连悲伤、痛苦和绝望也会逝去...",
+        AbstractDungeon.actionManager.addToBottom(new TalkAction(this, MOVES[1]));
     }
 }

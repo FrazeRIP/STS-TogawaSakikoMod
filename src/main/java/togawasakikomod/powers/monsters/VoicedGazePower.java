@@ -16,6 +16,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
 import togawasakikomod.annotations.CharismaticFormCopyEnable;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.MisumiUikaBoss;
+import togawasakikomod.monsters.oblivion.bosses.avemujica.YahataUmiriBoss;
 import togawasakikomod.powers.BasePower;
 
 import static togawasakikomod.TogawaSakikoMod.makeID;
@@ -26,8 +28,13 @@ public class VoicedGazePower extends BasePower {
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
 
+    MisumiUikaBoss boss;
+
     public VoicedGazePower(AbstractCreature owner) {
         super(POWER_ID, TYPE, TURN_BASED, owner,0);
+        if(this.owner!=null && this.owner instanceof MisumiUikaBoss){
+            boss = (MisumiUikaBoss) owner;
+        }
     }
 
     public void playApplyPowerSfx() {
@@ -46,6 +53,7 @@ public class VoicedGazePower extends BasePower {
             AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLD, true));
             AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
             addToBot((AbstractGameAction)new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 2), 2));
+            boss.skipTurnDialogue();
         }
         updateDescription();
     }
