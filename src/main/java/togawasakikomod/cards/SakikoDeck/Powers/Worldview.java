@@ -23,7 +23,6 @@ public class Worldview extends BaseCard {
 
     public Worldview() {
         super(ID, info);
-        cardsToPreview = new Melody();
         setInnate(false,true);
     }
 

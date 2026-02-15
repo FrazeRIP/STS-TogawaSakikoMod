@@ -21,7 +21,7 @@
   "${modID}:GetForked": {
     "NAME": "Intersection",
     "DESCRIPTIONS": [
-      "#r@A thunderous tremor@ rumbles close at hand. NL Within it, you hear another voice whisper. NL Is this the Heart’s rapture… or a syllable you have long forgotten?"
+      "#r@A@ r@thunderous@ r@tremor@ rumbles close at hand. NL Within it, you hear another voice whisper. NL Is this the Heart’s rapture... or a syllable you have long forgotten?"
     ],
     "OPTIONS": [
       ""
